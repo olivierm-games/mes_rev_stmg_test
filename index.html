@@ -12,34 +12,65 @@
   <body>
     <header>
       <div class="night-mode-element" id="header">
-        <div id="index-link-container">
-          <a href="#" id="index-link" class="night-mode-element">Mes révisions<br/>STMG</a>
+
+        <div id="header-menu-index-container">
+          <a href="javascript:void(0)" onclick="onMenu()" class="material-icons-round night-mode-element" id="menu-s">menu</a>
+          <a href="#" id="index-link" class="night-mode-element col-10 col-s-10">Mes révisions<br/>STMG</a>
         </div>
+        <!-- <a href="javascript:void(0)" onclick="onMenu()" class="material-icons-round night-mode-element" id="menu">menu</a> -->
+
+        <!-- <div id="index-link-container"> -->
+          <!-- <a href="#" id="index-link" class="night-mode-element col-10 col-s-10">Mes révisions<br/>STMG</a> -->
+        <!-- </div> -->
 
         <div id="header-links">
           <span class="header-link night-mode-element">Cours 1<sup>ère</sup></span>
           <span class="header-link night-mode-element">Cours T<sup>le</sup></span>
           <span class="header-link night-mode-element">Cours Pédagogiques</span>
           <span class="header-link night-mode-element">Quiz</span>
+          <a href="javascript:void(0)" onclick="onToggleNightMode()" class="material-icons-round night-mode-element" id="night-mode">dark_mode</a>
         </div>
 
-        <div id="icons-container">
-          <a href="javascript:void(0)" onclick="onToggleNightMode()" class="material-icons-round night-mode-element" id="night-mode">dark_mode</a>
-          <div id="menu-bars-container" onclick="onMenu(this)" class="night-mode-element">
+        <!-- <div id="icons-container"> -->
+          <!-- <a href="javascript:void(0)" onclick="onToggleNightMode()" class="material-icons-round night-mode-element" id="night-mode">dark_mode</a> -->
+          <!-- <div id="menu-bars-container" onclick="onMenu(this)" class="night-mode-element">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
-          </div>
-        </div>
+          </div> -->
+        <!-- </div> -->
       </div>
     </header>
 
-    <div id="side-nav" class="night-mode-element">
+    <aside id="side-nav" class="night-mode-element">
+      <span class="side-nav-item">Cours 1<sup>ère</sup></span>
+      <span class="side-nav-item side-nav-item-l">Économie</span>
+      <span class="side-nav-item side-nav-item-l">Chapitre 1 : Blabla bla bla</span>
+        <span class="side-nav-item side-nav-item-l">Droit</span>
+          <span class="side-nav-item side-nav-item-l">Management</span>
+      <span class="side-nav-item">Cours T<sup>le</sup></span>
+      <span class="side-nav-item side-nav-item-l">Économie</span>
+        <span class="side-nav-item side-nav-item-l">Droit</span>
+          <span class="side-nav-item side-nav-item-l">Management</span>
+      <span class="side-nav-item">Cours Pédagogiques</span>
+      <span class="side-nav-item">Quiz</span>
+    </aside>
+    <main>
+      <p>This is the main content of the page</p>
+    </main>
+    <!-- <aside id="side-nav-l" class="night-mode-element">
+      <span class="side-nav-item">Cours 1<sup>ère</sup> to be complexified</span>
+      <span class="side-nav-item">Cours T<sup>le</sup></span>
+      <span class="side-nav-item">Cours Pédagogiques</span>
+      <span class="side-nav-item">Quiz</span>
+    </aside> -->
+
+    <!-- <div id="side-nav" class="night-mode-element">
       <span class="side-nav-item">Cours 1<sup>ère</sup></span>
       <span class="side-nav-item">Cours T<sup>le</sup></span>
       <span class="side-nav-item">Cours Pédagogiques</span>
       <span class="side-nav-item">Quiz</span>
-    </div>
+    </div>-->
 
     <script src="js/init_night_mode.js"></script>
     <script>
