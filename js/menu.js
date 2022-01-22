@@ -14,6 +14,7 @@ let isSideNaveOpen=false;
 
 function onMenu() {
   isSideNaveOpen=!isSideNaveOpen;
+  console.log("isSideNaveOpen: "+isSideNaveOpen);
   if(isSideNaveOpen) {
     document.getElementById("side-nav").style.width="250px";
     if(window.matchMedia('(max-width: 921px)').matches) {
