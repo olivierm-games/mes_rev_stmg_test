@@ -90,7 +90,7 @@ a:active {text-decoration: none;}
 
 #index-link:hover, .material-icons-round:hover { color: #323232FF; }
 
-@media screen and (min-width: 922px) {
+@media (min-width: 922px) {
 /* @media (max-width: 680px) { */
   #menu-bars-container {
     padding-right: var(--header-padding);
