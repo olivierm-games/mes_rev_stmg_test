@@ -171,9 +171,17 @@ a:active {text-decoration: none;}
   background-color: #45235F;
 }
 
-.side-nav-item:nth-child(1), .side-nav-item:nth-child(2), .side-nav-item:nth-child(3) {
+#side-nav .side-nav-item {
   border-bottom: 0.01em solid #2F2F2F88;
 }
+
+#side-nav:last-child {
+  border-bottom: 0 solid #ffffff00;
+}
+
+/* .side-nav-item:nth-child(1), .side-nav-item:nth-child(2), .side-nav-item:nth-child(3) { */
+  /* border-bottom: 0.01em solid #2F2F2F88; */
+/* } */
 
 .side-nav-item:hover {
   background-color: #ECE5FFAA;
