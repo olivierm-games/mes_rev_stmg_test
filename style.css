@@ -90,11 +90,11 @@ a:active {text-decoration: none;}
 
 #index-link:hover, .material-icons-round:hover { color: #323232FF; }
 
-@media only screen and (min-width: 922px) {
+/* @media only screen and (min-width: 922px) { */
 
-/* }
+/* }*/
 
-@media (max-width: 680px) { */
+@media (max-width: 680px) {
   #menu-bars-container {
     padding-right: var(--header-padding);
     /* margin-right: .2em; */
