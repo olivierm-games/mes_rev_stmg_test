@@ -72,23 +72,19 @@ a:active {text-decoration: none;}
 
 #index-link:hover, .material-icons-round:hover { color: #323232FF; }
 
+  #menu-bars-container {
+    padding-right: var(--header-padding);
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+  }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 1199px) {
-    #menu-bars-container {
-      padding-right: var(--header-padding);
-      height: 24px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      cursor: pointer;
-    }
+  #header-links { display: none; }
 
-    #header-links { display: none; }
-
-    #header { justify-content: space-between;
-}
+  #header { justify-content: space-between; }
 
 @media only screen and (min-width: 1200px) {
   #menu-bars-container { display: none; }
