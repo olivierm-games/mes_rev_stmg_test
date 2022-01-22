@@ -4,42 +4,41 @@
     <meta charset="utf-8">
     <title>Testing index</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/menu.js"></script>
+    <script src="js/on_toggle_night_mode.js"></script>
   </head>
   <body>
-    <header class="mdc-top-app-bar app-bar" id="app-bar">
-      <div class="mdc-top-app-bar__row">
-        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-          <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
-          <span class="mdc-top-app-bar__title">Dismissible Drawer</span>
-        </section>
-      </div>
-  </header>
-  <aside class="mdc-drawer mdc-drawer--dismissible mdc-top-app-bar--fixed-adjust">
-    <div class="mdc-drawer__content">
-      <div class="mdc-list">
-        <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page">
-          <span class="mdc-list-item__ripple"></span>
-          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
-          <span class="mdc-list-item__text">Inbox</span>
-        </a>
-        <a class="mdc-list-item" href="#">
-          <span class="mdc-list-item__ripple"></span>
-          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
-          <span class="mdc-list-item__text">Outgoing</span>
-        </a>
-        <a class="mdc-list-item" href="#">
-          <span class="mdc-list-item__ripple"></span>
-          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
-          <span class="mdc-list-item__text">Drafts</span>
-        </a>
-      </div>
-    </div>
-  </aside>
+    <header>
+      <div class="night-mode-element" id="header">
+        <div id="index-link-container">
+          <a href="#" id="index-link" class="night-mode-element">Mes révisions<br/>STMG</a>
+        </div>
 
-  <div class="mdc-drawer-app-content mdc-top-app-bar--fixed-adjust">
-    <main class="main-content" id="main-content">
-      App Content
-    </main>
-  </div>
+        <div id="header-links">
+          <span class="header-link night-mode-element">Cours 1<sup>ère</sup></span>
+          <span class="header-link night-mode-element">Cours T<sup>le</sup></span>
+          <span class="header-link night-mode-element">Cours Pédagogiques</span>
+          <span class="header-link night-mode-element">Quiz</span>
+        </div>
+
+        <div id="icons-container">
+          <a href="javascript:void(0)" onclick="onToggleNightMode()" class="material-icons-round night-mode-element" id="night-mode">dark_mode</a>
+          <div id="menu-bars-container" onclick="onMenu(this)" class="night-mode-element">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="side-nav" class="night-mode-element">
+      <span class="side-nav-item">Cours 1<sup>ère</sup></span>
+      <span class="side-nav-item">Cours T<sup>le</sup></span>
+      <span class="side-nav-item">Cours Pédagogiques</span>
+      <span class="side-nav-item">Quiz</span>
+    </div>
+
+    <script src="js/init_night_mode.js"></script>
   </body>
 </html>
