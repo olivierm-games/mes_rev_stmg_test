@@ -65,8 +65,6 @@ body {
   display: block;
 }
 
-#menu-bars-container { display: none; }
-
 a:link {text-decoration: none;}
 a:visited {text-decoration: none;}
 a:hover {text-decoration: none;}
@@ -76,7 +74,7 @@ a:active {text-decoration: none;}
 
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) and (min-width: 601px) and (min-width: 768px) {
+@media only screen and (max-width: 1199px) {
     #menu-bars-container {
       padding-right: var(--header-padding);
       height: 24px;
@@ -92,7 +90,7 @@ a:active {text-decoration: none;}
     #header { justify-content: space-between;
 }
 
-@media only screen and (min-width: 992px) and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   #menu-bars-container { display: none; }
 
   #header-links {
@@ -101,7 +99,7 @@ a:active {text-decoration: none;}
     justify-content: center;
     align-items: baseline;
   }
-  
+
   #header {
     display: flex;
     align-items: center;
