@@ -414,8 +414,13 @@
    <script src="js/wait_for_elm.js"></script>
    <script>
       // includeHTML("");
-      await waitForElm("#night-mode");
-      initNightMode();
+      waitForElm('.some-class').then((elm) => {
+         // console.log(elm.textContent);
+         // console.log('Element is ready');
+         initNightMode();
+      });
+      // await waitForElm("#night-mode");
+      // initNightMode();
    </script>
 </body>
 </html>
