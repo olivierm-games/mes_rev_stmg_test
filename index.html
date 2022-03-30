@@ -413,14 +413,10 @@
    <script src="js/include_html.js"></script>
    <script src="js/wait_for_elm.js"></script>
    <script>
-      // includeHTML("");
       waitForElm('#night-mode').then((elm) => {
-         // console.log(elm.textContent);
-         // console.log('Element is ready');
          initNightMode();
+         setHeaderLinksHref("");
       });
-      // await waitForElm("#night-mode");
-      // initNightMode();
    </script>
 </body>
 </html>
