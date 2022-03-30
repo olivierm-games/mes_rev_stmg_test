@@ -1,0 +1,15 @@
+:root {
+   --hover-anim-duration: .25s;
+   --menu-anim-duration: .5s;
+}
+
+header {
+   --header-padding: .8em;
+   --header-link-expand-duration: .8s;
+}
+
+aside {
+   --side-nav-vertical-padding: .4em;
+   --side-nav-anim-duration: .5s;
+   /* --side-nav-long-anim-duration: 1.5s; */
+}

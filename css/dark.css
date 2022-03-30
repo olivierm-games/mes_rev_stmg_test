@@ -1,0 +1,75 @@
+body.night-mode { background: var(--color-background-dark); }
+
+main.night-mode {
+   background-color: var(--color-surface-dark);
+   color: var(--color-on-surface-dark);
+}
+
+.index-link.night-mode, #header-links.night-mode .header-link, #header-links.night-mode a, .material-icons-round.night-mode, a:visited.index-link.night-mode {
+   color: var(--color-on-primary-dark);
+}
+
+header.night-mode { background-color: var(--color-primary-dark); }
+
+#menu-svg.night-mode { fill: var(--color-on-primary-dark); }
+
+#menu-svg.night-mode:hover { fill: var(--color-control-on-primary-dark); }
+
+/* #header-links.night-mode span:hover, #header-links.night-mode #night-mode:hover, .index-link.night-mode:hover {
+   color: var(--color-control-on-primary-dark);
+} */
+
+
+
+#header-links.night-mode .header-link:hover, #header-links.night-mode .header-link:hover .header-link-expandable-text,
+#header-links.night-mode .header-link:hover .material-icons-round, .index-link.night-mode:hover, #header-links.night-mode #night-mode:hover,
+.header-link-expandable-layout.night-mode li:hover {
+   color: var(--color-control-on-primary-dark);
+}
+
+.header-link-expandable-layout.night-mode li {
+   background-color: darkslateblue;
+   /* background-color: var(--color-primary-variant-dark); */
+}
+
+aside.night-mode {
+   background-color: var(--color-primary-variant-dark);
+   color: var(--color-on-primary-dark);
+}
+
+.header-link-expandable-layout.night-mode li:hover {
+   background-color: #21252C;
+}
+
+.side-nav-lvl-0-link.night-mode:hover, .side-nav-lvl-0-link.night-mode.hover {
+   background-color: darkslateblue;
+}
+
+[class^=side-nav-lvl-1-link].night-mode:hover, #cours-1ere-droit.night-mode.hover, #cours-1ere-eco.night-mode.hover, #cours-1ere-mana.night-mode.hover,
+#cours-ter-droit.night-mode.hover, #cours-ter-eco.night-mode.hover, #cours-ter-mana.night-mode.hover {
+/* .side-nav-lvl-1-link.night-mode:hover { */
+   background-color: steelblue;
+}
+
+[class^=side-nav-lvl-2-link].night-mode:hover {
+   background-color: cadetblue;
+}
+
+aside.night-mode::-webkit-scrollbar, body.night-mode::-webkit-scrollbar {
+   background: linear-gradient(90deg, #777, #999, #777);
+}
+
+aside.night-mode::-webkit-scrollbar-thumb, body.night-mode::-webkit-scrollbar-thumb {
+   background: linear-gradient(90deg, #323232AA, #323232EE, #323232AA);
+   box-shadow: 0 0 .5em 0 #292929DD;
+}
+
+.button.night-mode {
+   background-color: var(--color-surface-dark);
+   /* box-shadow: 1px 1px 0.2em 0.1em #323232; */
+   box-shadow: 0 0.4rem 0.6rem rgb(0 0 0 / 50%)
+}
+
+a:link.button.night-mode, a:visited.button.night-mode, a:hover.button.night-mode, a:active.button.night-mode {
+   color: var(--color-on-surface-dark);
+}
