@@ -5,7 +5,7 @@ function waitForElm(selector) {
         }
 
         const observer = new MutationObserver(mutations => {
-           if(typeof mutations.addedNodes===undefined || mutations.addedNodes.length==0) resolve(document.querySelector(selector));
+           if(mutations.addedNodes===undefined || mutations.addedNodes.length==0) resolve(document.querySelector(selector));
 
            mutations.addedNodes.find(node => {
              if(node.matchesSelector(selector)) {
