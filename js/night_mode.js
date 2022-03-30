@@ -1,4 +1,4 @@
-function initNightMode() {
+function initNightMode() {      
    if(window.matchMedia) {
       window.matchMedia("(prefers-color-scheme: dark)").addListener(e => {
          if(e.matches) toggleNightMode("&#xe518;", "clair");

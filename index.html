@@ -23,8 +23,8 @@
 <body class="night-mode-element">
    <header class="night-mode-element show" onclick="onClickMainPageOrHeader(this)">
       <div id="header-menu-index-container">
-         <!-- <div w3-include-html="menu_svg.html"></div> -->
-         <svg xmlns="http://www.w3.org/2000/svg"
+         <div w3-include-html="menu_svg.html"></div>
+         <!-- <svg xmlns="http://www.w3.org/2000/svg"
             width="24px" height="24px"
             viewBox="0 0 24 24"
             fill="#323232CA"
@@ -34,11 +34,11 @@
             <path id="menu-svg-top-bar" d="M3 5H21C22 5,22 7,21 7H3C2 7,2 5,3 5z"/>
             <path id="menu-svg-center-bar" d="M3 11H21C22 11,22 13,21 13H3C2 13,2 11,3 11z"/>
             <path id="menu-svg-bottom-bar" d="M3 17H21C22 17,22 19,21 19H3C2 19,2 17,3 17z"/>
-         </svg>
+         </svg> -->
          <a href="#" class="night-mode-element index-link"><span class="mes-rev">Mes révisions</span>STMG</a>
       </div>
-      <div w3-include-html="header_links.html"></div>
-      <!-- <div id="header-links" class="night-mode-element">
+      <!-- <div w3-include-html="header_links.html"></div> -->
+      <div id="header-links" class="night-mode-element">
          <div class="header-link">
             <div class="header-link-expandable-layout night-mode-element">
                <ul class="header-link-expandable-list">
@@ -54,10 +54,10 @@
             <span class="header-link-expandable-text">Cours T<sup>le</sup></span>
             <span class="material-icons-round night-mode-element">&#xe5c5;</span>
          </div>
-         <span class="header-link">Exercices</span>
-         <span class="header-link">Quiz</span>
+         <!-- <span class="header-link">Exercices</span>
+         <span class="header-link">Quiz</span> -->
          <a onclick="onToggleNightMode()" id="night-mode" class="material-icons-round">&#xe51c;</a>
-      </div> -->
+      </div>
    </header>
    <aside class="night-mode-element">
       <a href="#" id="side-nav-index-link" class="night-mode-element index-link"><span class="mes-rev">Mes révisions</span>STMG</a>
@@ -412,11 +412,9 @@
    <script src="js/night_mode.js"></script>
    <script src="js/include_html.js"></script>
    <script src="js/wait_for_elm.js"></script>
-   <script src="js/set_header_links.js"></script>
    <script>
-      waitForElm('#night-mode').then((elm) => {
+      waitForElm('#menu-svg').then((elm) => {
          initNightMode();
-         setHeaderLinksHref("");
       });
    </script>
 </body>
