@@ -5,22 +5,24 @@ function waitForElm(selector) {
         }
 
         const observer = new MutationObserver(mutations => {
-           console.log("mutations: "+mutations);
-           console.log("added nodes: "+mutations.addedNodes);
-           if(mutations.addedNodes===undefined || mutations.addedNodes.length==0) return resolve(document.querySelector(selector));
+           // console.log("mutations: "+mutations);
+           // console.log("added nodes: "+mutations.addedNodes);
+           console.log("type: "+mutations.type);
+           console.log("target: "+mutations.target);
+          //  if(mutations.addedNodes===undefined || mutations.addedNodes.length==0) return resolve(document.querySelector(selector));
+          //
+          //  mutations.addedNodes.find(node => {
+          //    if(node.matchesSelector(selector)) {
+          //       resolve(document.querySelector(selector));
+          //       observer.disconnect();
+          //    }
+          // });
 
-           mutations.addedNodes.find(node => {
-             if(node.matchesSelector(selector)) {
+
+            if (document.querySelector(selector)) {
                 resolve(document.querySelector(selector));
                 observer.disconnect();
-             }
-          });
-
-
-            // if (document.querySelector(selector)) {
-            //     resolve(document.querySelector(selector));
-            //     observer.disconnect();
-            // }
+            }
         });
 
         observer.observe(document.body, {
