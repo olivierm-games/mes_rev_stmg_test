@@ -37,9 +37,7 @@
          </svg>
          <a href="#" class="night-mode-element index-link"><span class="mes-rev">Mes révisions</span>STMG</a>
       </div>
-      <div w3-include-html="header_links.html">
-
-      </div>
+      <div w3-include-html="header_links.html"></div>
       <!-- <div id="header-links" class="night-mode-element">
          <div class="header-link">
             <div class="header-link-expandable-layout night-mode-element">
@@ -413,8 +411,10 @@
    <script src="js/side_nav_item_expandable.js"></script>
    <script src="js/night_mode.js"></script>
    <script src="js/include_html.js"></script>
+   <script src="js/wait_for_elm.js"></script>
    <script>
-      includeHTML("");
+      // includeHTML("");
+      await waitForElm("#night-mode");
       initNightMode();
    </script>
 </body>
