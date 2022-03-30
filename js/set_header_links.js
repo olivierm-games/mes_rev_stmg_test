@@ -2,8 +2,8 @@ function setHeaderLinksHref(href) {
    var links=document.getElementsByTagName("a");
    var linksCount=links.length;
    for(i=0;i<linksCount; i++) {
-      let concat=href.concat("", links[i].href);
-      links[i].href=concat;
+      // let concat=href+links[i].href;
+      links[i].href=href+links[i].href;
    }
 }
 waitForElm('#night-mode').then((elm) => {
