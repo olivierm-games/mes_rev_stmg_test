@@ -374,8 +374,6 @@
       </ul> -->
    </aside>
    <script src="js/side_nav_collapse_handle.js"></script>
-   <script src="js/include_html.js"></script>
-   <script>includeHTML("");</script>
    <main class="night-mode-element" onclick="onClickMainPageOrHeader(this)">
       <p>This is the main content of the page</p>
       <!-- <div id="menu-icon-rectangle" class="night-mode-element"></div> -->
@@ -413,6 +411,11 @@
    </main>
    <script src="js/side_nav_hover_handler.js"></script>
    <script src="js/side_nav_item_expandable.js"></script>
-   <script src="js/init_night_mode.js"></script>
+   <script src="js/night_mode.js"></script>
+   <script src="js/include_html.js"></script>
+   <script>
+      includeHTML("");
+      initNightMode();
+   </script>
 </body>
 </html>

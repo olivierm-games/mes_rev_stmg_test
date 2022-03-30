@@ -1,9 +1,11 @@
-if(window.matchMedia) {
-   window.matchMedia("(prefers-color-scheme: dark)").addListener(e => {
-      if(e.matches) toggleNightMode("&#xe518;", "clair");
-      else toggleNightMode("&#xe51c;", "sombre");
-   });
-   if(window.matchMedia('(prefers-color-scheme: dark)').matches) toggleNightMode("&#xe518;", "clair");
+function initNightMode() {
+   if(window.matchMedia) {
+      window.matchMedia("(prefers-color-scheme: dark)").addListener(e => {
+         if(e.matches) toggleNightMode("&#xe518;", "clair");
+         else toggleNightMode("&#xe51c;", "sombre");
+      });
+      if(window.matchMedia('(prefers-color-scheme: dark)').matches) toggleNightMode("&#xe518;", "clair");
+   }
 }
 
 function toggleNightModeClasses() {
