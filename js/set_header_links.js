@@ -2,7 +2,6 @@ function setHeaderLinksHref(href) {
    var links=document.getElementsByTagName("a");
    var linksCount=links.length;
    for(i=0;i<linksCount; i++) {
-      // let concat=href+links[i].href;
       links[i].href=href+links[i].href;
    }
 }
