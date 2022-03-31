@@ -412,10 +412,6 @@
    <script src="js/night_mode.js"></script>
    <script src="js/include_html.js"></script>
    <script src="js/wait_for_elm.js"></script>
-   <script>
-      waitForElm('#menu-svg').then((elm) => {
-         initNightMode();
-      });
-   </script>
+   <script>waitForElm('#menu-svg').then((elm) => initNightMode());</script>
 </body>
 </html>
