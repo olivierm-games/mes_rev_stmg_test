@@ -3,10 +3,12 @@
 function initNightMode() {
 
 
-   window.onload=function() {
+   // window.onload=function() {
       console.log(localStorage.getItem("night-mode"));
       if(localStorage!==null) {
          console.log("A night mode preference has been set by the user");
+         if(localStorage.getItem("night-mode")==="true") toggleNightMode("&#xe518;", "clair");
+         else toggleNightMode("&#xe51c;", "sombre");
       } else if(window.matchMedia) {
          window.matchMedia("(prefers-color-scheme: dark)").addListener(e => {
             var isNightMode=e.matches;
@@ -16,7 +18,7 @@ function initNightMode() {
          });
          if(window.matchMedia('(prefers-color-scheme: dark)').matches) toggleNightMode("&#xe518;", "clair");
       }
-   }
+   // }
 
 
    // if(window.matchMedia) {
