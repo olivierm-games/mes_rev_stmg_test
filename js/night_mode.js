@@ -27,7 +27,7 @@ function initNightMode() {
       });
       if(window.matchMedia('(prefers-color-scheme: dark)').matches) toggleNightMode("&#xe518;", "clair");
    }
-   
+
 
 
    // if(window.matchMedia) {
@@ -37,7 +37,7 @@ function initNightMode() {
    //    });
    //    if(window.matchMedia('(prefers-color-scheme: dark)').matches) toggleNightMode("&#xe518;", "clair");
    // }
-// }
+}
 
 function toggleNightModeClasses() {
    const elements=document.getElementsByClassName("night-mode-element");
