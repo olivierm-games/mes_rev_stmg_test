@@ -1,11 +1,31 @@
-function initNightMode() {      
-   if(window.matchMedia) {
-      window.matchMedia("(prefers-color-scheme: dark)").addListener(e => {
-         if(e.matches) toggleNightMode("&#xe518;", "clair");
-         else toggleNightMode("&#xe51c;", "sombre");
-      });
-      if(window.matchMedia('(prefers-color-scheme: dark)').matches) toggleNightMode("&#xe518;", "clair");
+// var isNightMode;
+
+function initNightMode() {
+
+
+   window.onload=function() {
+      console.log(localStorage.getItem("night-mode"));
+      if(localStorage!==null) {
+         log("A night mode preference has been set by the user");
+      } else if(window.matchMedia) {
+         window.matchMedia("(prefers-color-scheme: dark)").addListener(e => {
+            var isNightMode=e.matches;
+            localStorage.setItem("night-mode", isNightMode);
+            if(isNightMode) toggleNightMode("&#xe518;", "clair");
+            else toggleNightMode("&#xe51c;", "sombre");
+         });
+         if(window.matchMedia('(prefers-color-scheme: dark)').matches) toggleNightMode("&#xe518;", "clair");
+      }
    }
+
+
+   // if(window.matchMedia) {
+   //    window.matchMedia("(prefers-color-scheme: dark)").addListener(e => {
+   //       if(e.matches) toggleNightMode("&#xe518;", "clair");
+   //       else toggleNightMode("&#xe51c;", "sombre");
+   //    });
+   //    if(window.matchMedia('(prefers-color-scheme: dark)').matches) toggleNightMode("&#xe518;", "clair");
+   // }
 }
 
 function toggleNightModeClasses() {
