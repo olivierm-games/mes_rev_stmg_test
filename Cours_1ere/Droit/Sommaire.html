@@ -22,7 +22,7 @@
 <body class="night-mode-element">
 	<!-- <div id="haut"></div> -->
 	<header class="night-mode-element show" onclick="onClickMainPageOrHeader(this)"><div id="header-menu-index-container">
-		<div w3-html-include="../../menu_svg.html"></div>
+		<div w3-include-html="../../menu_svg.html"></div>
 		<a href="../../" class="night-mode-element index-link"><span class="mes-rev">Mes révisions</span>STMG</a>
 	</div>
 	<div id="header-links" class="night-mode-element">
@@ -335,12 +335,14 @@
 	<script src="../../js/side_nav_collapse_handle.js"></script>
 	<main class="night-mode-element" onclick="onClickMainPageOrHeader(this)">
 		<h1>Droit 1ère STMG : les chapitres</h1>
+		<div class="card-droit-1ere">
+
 		<h2>Thème 1 : Qu'est-ce que le droit ?</h2>
-		<ul>
-			<!-- <li><u>Thème 1 : Qu'est-ce que le droit ?</u></li> -->
-			<li><a href="Chapitre_1_Les_principes_et_les_fonctions_du_droit.html">Chapitre 1 : Les principes et les fonctions du droit</a></li>
-			<li>Chapitre 2 : Les sources du droit ?</li>
-		</ul>
+			<ul>
+				<li><a href="Chapitre_1_Les_principes_et_les_fonctions_du_droit.html">Chapitre 1 : Les principes et les fonctions du droit</a></li>
+				<li>Chapitre 2 : Les sources du droit ?</li>
+			</ul>
+		</div>
 		<h2>Thème 2 : Comment le droit permet-il de régler le litige ?</h2>
 		<ul>
 			<li><a href="Chapitre_3_Le_litige.html">Chapitre 3 : Le litige</a></li>
