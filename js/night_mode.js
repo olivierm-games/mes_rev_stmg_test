@@ -20,6 +20,7 @@ window.onload=function() {
 function initNightMode() {
 
 
+   console.log("initNightMode: "+storedNightMode);
    if(storedNightMode!==null) {
       if(storedNightMode==="true") toggleNightMode(true, false);
       else toggleNightMode(false, false);
@@ -78,5 +79,8 @@ function toggleNightMode(night, persist) {
    toggleNightModeClasses();
    if(night) toggleNightModeBtn("&#xe518;", "clair");
    else toggleNightModeBtn("&#xe51c;", "sombre");
-   if(persist) localStorage.setItem("night-mode", storedNightMode);
+   if(persist) {
+      console.log("persisting: "+storedNightMode);
+      localStorage.setItem("night-mode", storedNightMode);
+   }
 }
