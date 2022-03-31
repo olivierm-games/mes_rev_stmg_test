@@ -6,7 +6,7 @@ function initNightMode() {
    window.onload=function() {
       console.log(localStorage.getItem("night-mode"));
       if(localStorage!==null) {
-         log("A night mode preference has been set by the user");
+         console.log("A night mode preference has been set by the user");
       } else if(window.matchMedia) {
          window.matchMedia("(prefers-color-scheme: dark)").addListener(e => {
             var isNightMode=e.matches;
