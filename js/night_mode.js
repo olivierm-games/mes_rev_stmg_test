@@ -80,7 +80,7 @@ function toggleNightMode(night, persist) {
    if(night) toggleNightModeBtn("&#xe518;", "clair");
    else toggleNightModeBtn("&#xe51c;", "sombre");
    if(persist) {
-      console.log("persisting: "+storedNightMode);
-      localStorage.setItem("night-mode", storedNightMode);
+      // console.log("persisting: "+storedNightMode);
+      localStorage.setItem("night-mode", night?"true":"false");
    }
 }
