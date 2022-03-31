@@ -2,8 +2,9 @@
 
 
 window.onload=function() {
-   console.log(localStorage.getItem("night-mode"));
-   if(localStorage!==null) {
+   var item=localStorage.getItem("night-mode");
+   console.log(item);
+   if(item!==null) {
       console.log("A night mode preference has been set by the user");
       if(localStorage.getItem("night-mode")==="true") toggleNightMode("&#xe518;", "clair");
       else toggleNightMode("&#xe51c;", "sombre");
