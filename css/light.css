@@ -386,7 +386,7 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
 .card-droit-1ere {
    box-shadow: 2px 1px 0.1em 0.05em #CDCDCD;
    border-radius: .5em;
-   background: repeating-linear-gradient(23deg, red 50px, orange 100px, yellow 150px, green 200px, blue 250px, indigo 300px, violet 350px, red 370px);
+   background: repeating-linear-gradient(23deg, rgb(255 0 0 / 20%) 12.5%, rgb(255 165 0 / 20%) 25%, rgb(255 255 0 / 20%) 37.5%, rgb(0 128 0 / 20%) 50%, rgb(0 0 255 / 20%) 62.5%, rgb(75 0 130 / 20%) 75%, rgb(238 130 238 / 20%) 87.5%, rgb(255 0 0 / 20%) 100%)
    /* filter: blur(.04em); */
    /* -webkit-filter: blur(.04em); */
    /*
