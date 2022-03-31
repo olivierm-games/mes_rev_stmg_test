@@ -1,7 +1,7 @@
 // var isNightMode;
 
 
-window.onload=function() {
+window.onload=initNightMode() {
    var item=localStorage.getItem("night-mode");
    console.log(item);
    if(item!==null) {
@@ -20,7 +20,7 @@ window.onload=function() {
 }
 
 
-function initNightMode() {
+// function initNightMode() {
 
 
    // window.onload=function() {
@@ -48,7 +48,7 @@ function initNightMode() {
    //    });
    //    if(window.matchMedia('(prefers-color-scheme: dark)').matches) toggleNightMode("&#xe518;", "clair");
    // }
-}
+// }
 
 function toggleNightModeClasses() {
    const elements=document.getElementsByClassName("night-mode-element");
