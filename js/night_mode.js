@@ -58,10 +58,14 @@ function initNightMode() {
    // }
 }
 
-function toggleNightModeClasses() {
+function toggleNightModeClasses(night) {
    const elements=document.getElementsByClassName("night-mode-element");
    i=elements.length;
-   for(j=0;j<i;j++) elements[j].classList.toggle("night-mode");
+   if(night) {
+      for(j=0;j<i;j++) elements[j].classList.add("night-mode");
+   } else {
+      for(j=0;j<i;j++) elements[j].classList.remove("night-mode");
+   }
 }
 
 function toggleNightModeBtn(innerHTML, title) {
@@ -76,7 +80,7 @@ function toggleNightModeBtn(innerHTML, title) {
 // }
 
 function toggleNightMode(night, persist) {
-   toggleNightModeClasses();
+   toggleNightModeClasses(night);
    if(night) toggleNightModeBtn("&#xe518;", "clair");
    else toggleNightModeBtn("&#xe51c;", "sombre");
    if(persist) {
