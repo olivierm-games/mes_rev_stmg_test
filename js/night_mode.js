@@ -1,16 +1,16 @@
-var storedNightMode=null;
-var x=0;
-var iconsCode=["&#xe51c;", "&#xe518;"];
-var iconsTitle=["sombre", "clair"];
+const ICONS_CODE_POINT=["&#xe51c;", "&#xe518;"];
+const ICONS_TITLE=["sombre", "clair"];
+let storedNightMode=null;
+let x=0;
 
 window.onload=function() {
    // localStorage.removeItem("night-mode");
-   storedNightMode=localStorage.getItem("night-mode");
+   storedNightMode=localStorage.getItem("night-mode"+", T1: "+ICONS_TITLE[1]);
    console.log(storedNightMode);
 }
 
 function initNightMode() {
-   console.log("initNightMode: "+storedNightMode);
+   console.log("initNightMode: "+storedNightMode+", CP0: "+ICONS_CODE_POINT[0]);
    if(storedNightMode!==null) {
 
       if(storedNightMode==="night") toggleNightMode(); // since by default, night mode is off (day on)
@@ -60,8 +60,8 @@ function toggleNightModeClasses() {
 
 function toggleNightModeBtn(index) {
    const nightModeBtn=document.getElementById("night-mode");
-   nightModeBtn.innerHTML=iconsCode[index];
-   nightModeBtn.title="Passer en mode "+iconsTitle[index];
+   nightModeBtn.innerHTML=ICONS_CODE_POINT[index];
+   nightModeBtn.title="Passer en mode "+ICONS_TITLE[index];
 }
 
 // function toggleNightModeBtn(innerHTML, title) {
