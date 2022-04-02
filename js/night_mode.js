@@ -1,90 +1,81 @@
-var storedNightMode;
-
+var storedNightMode=null;
+var x=0;
+var iconsCode=["&#xe51c;", "&#xe518;"];
+var iconsTitle=["sombre", "clair"];
 
 window.onload=function() {
-   // var item=localStorage.getItem("night-mode");
    storedNightMode=localStorage.getItem("night-mode");
    console.log(storedNightMode);
-   // if(item!==null) {
-   //    console.log("A night mode preference has been set by the user");
-   //    if(localStorage.getItem("night-mode")==="true") toggleNightMode("&#xe518;", "clair");
-   //    else toggleNightMode("&#xe51c;", "sombre");
-   // }
-   // initNightMode();
 }
-
-
-
-
 
 function initNightMode() {
-
-
    console.log("initNightMode: "+storedNightMode);
    if(storedNightMode!==null) {
-      if(storedNightMode==="true") toggleNightMode(true, false);
-      else toggleNightMode(false, false);
-   } else if(window.matchMedia) {
-      window.matchMedia("(prefers-color-scheme: dark)").addListener(e => {
-         // var isNightMode=e.matches;
-         // localStorage.setItem("night-mode", isNightMode);
-         if(e.matches) toggleNightMode(true, true);
-         else toggleNightMode(false, true);
-      });
-      if(window.matchMedia('(prefers-color-scheme: dark)').matches) toggleNightMode(true, false);
-   }
 
+      if(storedNightMode==="night") toggleNightMode(); // since by default, night mode is off (day on)
 
-   // var item=localStorage.getItem("night-mode");
-   // console.log(item);
-   // if(item===null && window.matchMedia) {
-   //    window.matchMedia("(prefers-color-scheme: dark)").addListener(e => {
-   //       var isNightMode=e.matches;
-   //       localStorage.setItem("night-mode", isNightMode);
-   //       if(isNightMode) toggleNightMode("&#xe518;", "clair");
-   //       else toggleNightMode("&#xe51c;", "sombre");
-   //    });
-   //    if(window.matchMedia('(prefers-color-scheme: dark)').matches) toggleNightMode("&#xe518;", "clair");
-   // }
+      // if(storedNightMode==="true") toggleNightMode(true, false);
+      // else toggleNightMode(false, false);
+   } else if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) toggleNightMode();
 
-
-
-   // if(window.matchMedia) {
-   //    window.matchMedia("(prefers-color-scheme: dark)").addListener(e => {
-   //       if(e.matches) toggleNightMode("&#xe518;", "clair");
-   //       else toggleNightMode("&#xe51c;", "sombre");
-   //    });
-   //    if(window.matchMedia('(prefers-color-scheme: dark)').matches) toggleNightMode("&#xe518;", "clair");
-   // }
+   window.matchMedia("(prefers-color-scheme: dark)").addListener(e => {
+      toggleNightMode();
+      saveInLocalStorage();
+   });
 }
 
-function toggleNightModeClasses(night) {
+function toggleNightMode() {
+   toggleNightModeBtn(toggleStoredNightMode());
+   // storedNightMode=storedNightMode==="day"?"night":"day"; // not correct if never stored. Can't always be day)
+   toggleNightModeClasses();
+   toggleNightModeBtn();
+}
+
+function toggleStoredNightMode() {
+   switch (storedNightMode) {
+      case "day":
+         storedNightMode="night";
+         return 1;
+      case "night":
+         storedNightMode="day";
+         return 0;
+      default: return (++x)%2;
+   }
+}
+
+function saveInLocalStorage() {
+   localStorage.setItem("night-mode", storedNightMode);
+}
+
+function toggleNightModeClasses() {
    const elements=document.getElementsByClassName("night-mode-element");
    i=elements.length;
-   if(night) {
-      for(j=0;j<i;j++) elements[j].classList.add("night-mode");
-   } else {
-      for(j=0;j<i;j++) elements[j].classList.remove("night-mode");
-   }
+   for(j=0;j<i;j++) elements[j].classList.toggle("night-mode");
 }
 
-function toggleNightModeBtn(innerHTML, title) {
+function toggleNightModeBtn(index) {
    const nightModeBtn=document.getElementById("night-mode");
-   nightModeBtn.innerHTML=innerHTML;
-   nightModeBtn.title="Passer en mode "+title;
+   nightModeBtn.innerHTML=iconsCode[index];
+   nightModeBtn.title="Passer en mode "+iconsTitle[index];
 }
+
+// function toggleNightModeBtn(innerHTML, title) {
+//    const nightModeBtn=document.getElementById("night-mode");
+//    nightModeBtn.innerHTML=innerHTML;
+//    nightModeBtn.title="Passer en mode "+title;
+// }
 
 // function toggleNightMode(innerHTML, title) {
 //    toggleNightModeClasses();
 //    toggleNightModeBtn(innerHTML, title);
 // }
 
-function toggleNightMode(night, persist) {
-   toggleNightModeClasses(night);
-   if(night) toggleNightModeBtn("&#xe518;", "clair");
-   else toggleNightModeBtn("&#xe51c;", "sombre");
-   if(persist) {
-      // console.log("persisting: "+storedNightMode);
-      localStorage.setItem("night-mode", night?"true":"false");
-   }
-}
+// function toggleNightMode(night, persist) {
+//    toggleNightModeClasses(night);
+//    if(night) toggleNightModeBtn("&#xe518;", "clair");
+//    else toggleNightModeBtn("&#xe51c;", "sombre");
+//    if(persist) {
+//       // console.log("persisting: "+storedNightMode);
+//       localStorage.setItem("night-mode", night?"true":"false");
+//    }
+// }
