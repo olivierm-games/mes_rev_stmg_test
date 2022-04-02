@@ -12,7 +12,7 @@ window.onload=function() {
 function initNightMode() {
    console.log("initNightMode: "+storedNightMode+", CP0: "+ICONS_CODE_POINT[0]);
    if(storedNightMode!==null) {
-      if(storedNightMode==="night") toggleNightMode(); // since by default, night mode is off (day on)
+      if(storedNightMode==="night") toggleNightMode(); // since by default night mode is off (day on)
    } else if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) toggleNightMode();
 
    window.matchMedia("(prefers-color-scheme: dark)").addListener(e => {
@@ -29,20 +29,21 @@ function toggleNightMode() {
 function toggleStoredNightMode() {
    switch (storedNightMode) {
       case "day":
-         storedNightMode="night";
-         return 1;
+      storedNightMode="night";
+      return 1;
       case "night":
-         storedNightMode="day";
-         return 0;
+      storedNightMode="day";
+      return 0;
       default:
-         var result=(x++)%2;
-         console.log(result);
-         return result;
+      var result=(x++)%2;
+      console.log(result);
+      return result;
    }
 }
 
 function saveInLocalStorage() {
-   localStorage.setItem("night-mode", storedNightMode);
+   if(storedNightMode===null) localStorage.setItem("night-mode", document.body.classList.contains("night-mode")?"night":"day");
+   else localStorage.setItem("night-mode", storedNightMode);
 }
 
 function toggleNightModeClasses() {
@@ -57,24 +58,3 @@ function toggleNightModeBtn(index) {
    nightModeBtn.innerHTML=ICONS_CODE_POINT[index];
    nightModeBtn.title="Passer en mode "+ICONS_TITLE[index];
 }
-
-// function toggleNightModeBtn(innerHTML, title) {
-//    const nightModeBtn=document.getElementById("night-mode");
-//    nightModeBtn.innerHTML=innerHTML;
-//    nightModeBtn.title="Passer en mode "+title;
-// }
-
-// function toggleNightMode(innerHTML, title) {
-//    toggleNightModeClasses();
-//    toggleNightModeBtn(innerHTML, title);
-// }
-
-// function toggleNightMode(night, persist) {
-//    toggleNightModeClasses(night);
-//    if(night) toggleNightModeBtn("&#xe518;", "clair");
-//    else toggleNightModeBtn("&#xe51c;", "sombre");
-//    if(persist) {
-//       // console.log("persisting: "+storedNightMode);
-//       localStorage.setItem("night-mode", night?"true":"false");
-//    }
-// }
