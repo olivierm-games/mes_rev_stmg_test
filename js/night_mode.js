@@ -40,7 +40,6 @@ function toggleStoredNightMode() {
          storedNightMode="day";
          return 0;
       default:
-         x++;
          var result=(++x)%2;
          console.log(result);
          return result;
