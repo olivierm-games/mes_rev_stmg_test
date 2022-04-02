@@ -5,7 +5,6 @@ let x=0;
 
 window.onload=function() {
    // localStorage.removeItem("night-mode");
-   storedNightMode=localStorage.getItem("night-mode"+", T1: "+ICONS_TITLE[1]);
    console.log(storedNightMode);
 }
 
@@ -60,6 +59,7 @@ function toggleNightModeClasses() {
 
 function toggleNightModeBtn(index) {
    const nightModeBtn=document.getElementById("night-mode");
+   console.log("i: "+index+", CP: "+ICONS_CODE_POINT[index]+", T: "+ICONS_TITLE[index]);
    nightModeBtn.innerHTML=ICONS_CODE_POINT[index];
    nightModeBtn.title="Passer en mode "+ICONS_TITLE[index];
 }
