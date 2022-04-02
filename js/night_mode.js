@@ -28,7 +28,7 @@ function toggleNightMode() {
    toggleNightModeBtn(toggleStoredNightMode());
    // storedNightMode=storedNightMode==="day"?"night":"day"; // not correct if never stored. Can't always be day)
    toggleNightModeClasses();
-   toggleNightModeBtn();
+   // toggleNightModeBtn();
 }
 
 function toggleStoredNightMode() {
