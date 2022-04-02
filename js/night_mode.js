@@ -35,14 +35,15 @@ function toggleStoredNightMode() {
       storedNightMode="day";
       return 0;
       default:
-      var result=(x++)%2;
-      console.log(result);
-      return result;
+      return (x++)%2;
    }
 }
 
 function saveInLocalStorage() {
-   if(storedNightMode===null) localStorage.setItem("night-mode", document.body.classList.contains("night-mode")?"night":"day");
+   if(storedNightMode===null) {
+      console.log("night mode never stored. Night? "+(document.body.classList.contains("night-mode")));
+      localStorage.setItem("night-mode", document.body.classList.contains("night-mode")?"night":"day");
+   }
    else localStorage.setItem("night-mode", storedNightMode);
 }
 
@@ -54,7 +55,6 @@ function toggleNightModeClasses() {
 
 function toggleNightModeBtn(index) {
    const nightModeBtn=document.getElementById("night-mode");
-   console.log("i: "+index+", CP: "+ICONS_CODE_POINT[index]+", T: "+ICONS_TITLE[index]);
    nightModeBtn.innerHTML=ICONS_CODE_POINT[index];
    nightModeBtn.title="Passer en mode "+ICONS_TITLE[index];
 }
