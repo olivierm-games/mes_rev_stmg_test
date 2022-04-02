@@ -10,7 +10,6 @@ window.onload=function() {
 }
 
 function initNightMode() {
-   console.log("initNightMode: "+storedNightMode+", CP0: "+ICONS_CODE_POINT[0]);
    if(storedNightMode!==null) {
       if(storedNightMode==="night") toggleNightMode(); // since by default night mode is off (day on)
    } else if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) toggleNightMode();
