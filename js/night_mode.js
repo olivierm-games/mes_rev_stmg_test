@@ -5,17 +5,14 @@ let x=0;
 
 window.onload=function() {
    // localStorage.removeItem("night-mode");
+   storedNightMode=localStorage.getItem("night-mode");
    console.log(storedNightMode);
 }
 
 function initNightMode() {
    console.log("initNightMode: "+storedNightMode+", CP0: "+ICONS_CODE_POINT[0]);
    if(storedNightMode!==null) {
-
       if(storedNightMode==="night") toggleNightMode(); // since by default, night mode is off (day on)
-
-      // if(storedNightMode==="true") toggleNightMode(true, false);
-      // else toggleNightMode(false, false);
    } else if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) toggleNightMode();
 
    window.matchMedia("(prefers-color-scheme: dark)").addListener(e => {
@@ -26,9 +23,7 @@ function initNightMode() {
 
 function toggleNightMode() {
    toggleNightModeBtn(toggleStoredNightMode());
-   // storedNightMode=storedNightMode==="day"?"night":"day"; // not correct if never stored. Can't always be day)
    toggleNightModeClasses();
-   // toggleNightModeBtn();
 }
 
 function toggleStoredNightMode() {
