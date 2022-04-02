@@ -4,6 +4,7 @@ var iconsCode=["&#xe51c;", "&#xe518;"];
 var iconsTitle=["sombre", "clair"];
 
 window.onload=function() {
+   localStorage.removeItem("night-mode");
    storedNightMode=localStorage.getItem("night-mode");
    console.log(storedNightMode);
 }
