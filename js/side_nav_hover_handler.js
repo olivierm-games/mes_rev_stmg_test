@@ -1,6 +1,8 @@
 let cours1Ere=document.getElementById("cours-1ere");
 let coursTer=document.getElementById("cours-ter");
 
+
+
 function setParentHoverState(targets, parent) {
    for (var i = 0; i < targets.length; i++) {
       // sets the hover state of cours 1ere when hovering one of its children

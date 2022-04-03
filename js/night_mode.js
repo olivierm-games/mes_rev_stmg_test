@@ -9,9 +9,9 @@ let nightModeIndex=1;
 
 window.onload=function() {
    storedNightMode=localStorage.getItem("night-mode");
-}
+// }
 
-function initNightMode() {
+// function initNightMode() {
    const matchMedia=window.matchMedia;
    console.log(storedNightMode);
    if(storedNightMode!==null) {
