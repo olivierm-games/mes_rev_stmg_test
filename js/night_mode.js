@@ -6,10 +6,10 @@ let storedNightMode=null;
 /** by default 1 for day mode; 0 is night mode. Updated after toggling UI and eventually after storage*/
 let nightModeIndex=1;
 
-window.onload=function() {
-   storedNightMode=localStorage.getItem("night-mode");
+window.onload=function() { storedNightMode=localStorage.getItem("night-mode"); }
+
+function initNightMode() {
    const matchMedia=window.matchMedia;
-   console.log(storedNightMode);
    if(storedNightMode!==null) {
       if(storedNightMode==="night") toggleNightMode(); // since by default night mode is off (day on)
    } else if(matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) toggleNightMode();

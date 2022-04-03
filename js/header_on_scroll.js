@@ -2,7 +2,7 @@ let lastScrollY, currentScrollY;
 let ticking=false;
 let header=null;
 
-window.onload=function() {
+function initHeaderOnScroll() {
    header=document.getElementsByTagName("header")[0];
    document.addEventListener("scroll", onScroll, false);
 }

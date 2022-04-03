@@ -1,6 +1,6 @@
 let cours1Ere=coursTer=cours1ereDroit=cours1ereEco=cours1ereMana=coursTerDroit=coursTerEco=coursTerMana=null;
 
-window.onload=function() {
+function initSideNavHoverHandler() {
    cours1Ere=document.getElementById("cours-1ere");
    coursTer=document.getElementById("cours-ter");
    cours1ereDroit=document.getElementsByClassName("side-nav-lvl-2-link-0-0");
