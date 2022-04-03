@@ -17,7 +17,7 @@ for (var i = 0; i < collapsibles.length; i++) {
                            for(var j=0; j<3; j++) {
                               var level2s=document.getElementsByClassName("side-nav-lvl-2-link-"+i+"-"+j);
                               var level2sLength=level2s.length;
-                              console.log(i+"-"+j+": "+level2sLength);
+                              // console.log(i+"-"+j+": "+level2sLength);
                               for(k=0; k<level2sLength; k++) {
                                  level2s[k].style.borderRight="15px solid transparent";
                               }
@@ -33,7 +33,7 @@ for (var i = 0; i < collapsibles.length; i++) {
                for(var j=0; j<3; j++) {
                   var level2s=document.getElementsByClassName("side-nav-lvl-2-link-"+i+"-"+j);
                   var level2sLength=level2s.length;
-                  console.log(i+"-"+j+": "+level2sLength);
+                  // console.log(i+"-"+j+": "+level2sLength);
                   for(k=0; k<level2sLength; k++) {
                      level2s[k].style.borderRight="0px solid transparent";
                   }

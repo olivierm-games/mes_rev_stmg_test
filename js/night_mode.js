@@ -34,7 +34,7 @@ function toggleStoredNightMode() {
       storedNightMode="day";
       return 0;
       default:
-      return (x++)%2;
+      return (++x)%2;
    }
 }
 
