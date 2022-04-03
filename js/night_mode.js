@@ -2,11 +2,18 @@ const ICONS_CODE_POINT=["&#xe51c;", "&#xe518;"]; // moon, sun
 const ICONS_TITLE=["sombre", "clair"]; // Passer en mode ...
 const STORAGE_KEYS=["day", "night"]; // storage key
 
+let storedNightMode=null;
 /** by default 1 for day mode; 0 is night mode. Updated after toggling UI and eventually after storage*/
 let nightModeIndex=1;
 
+
+window.onload=function() {
+   storedNightMode=localStorage.getItem("night-mode");
+}
+
 function initNightMode() {
-   const storedNightMode=localStorage.getItem("night-mode");
+   // const storedNightMode=localStorage.getItem("night-mode");
+   console.log(storedNightMode);
    if(storedNightMode!==null) {
       if(storedNightMode==="night") toggleNightMode(); // since by default night mode is off (day on)
    } else if(!window.matchMedia) return;
