@@ -63,11 +63,11 @@
    <script src="../../js/include_html.js"></script>
    <script src="../../js/wait_for_elm.js"></script>
 	<script>
-		waitForElm('#menu-svg').then((elm) => {
+		waitForElm('#menu-svg').then(elm => {
 			initNightMode();
 			initHeaderOnScroll();
-		)};
-		waitForElm('#cours-ter-mana-all-container').then((elm) => {
+		});
+		waitForElm('#cours-ter-mana-all-container').then(elm => {
 			setSideNavItemsExpandable();
 			initSideNavHoverHandler();
 		});
