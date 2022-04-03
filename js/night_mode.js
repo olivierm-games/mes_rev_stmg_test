@@ -1,7 +1,9 @@
-const ICONS_CODE_POINT=["&#xe51c;", "&#xe518;"];
-const ICONS_TITLE=["sombre", "clair"];
-const STORAGE_VALUES=["night", "day"];
-let i=1;
+const ICONS_CODE_POINT=["&#xe51c;", "&#xe518;"]; // moon, sun
+const ICONS_TITLE=["sombre", "clair"]; // Passer en mode ...
+const STORAGE_KEYS=["day", "night"]; // storage key
+
+/** by default 1 for day mode; 0 is night mode. Updated after toggling UI and eventually after storage*/
+let nightModeIndex=1;
 
 function initNightMode() {
    const storedNightMode=localStorage.getItem("night-mode");
@@ -13,8 +15,8 @@ function initNightMode() {
 }
 
 function onToggleNightMode() {
-   toggleNightMode();
    saveInLocalStorage();
+   toggleNightMode();
 }
 
 function toggleNightMode() {
@@ -24,20 +26,20 @@ function toggleNightMode() {
 }
 
 function saveInLocalStorage() {
-      console.log("night mode never stored. Night? "+i+": "+STORAGE_VALUES[i]);
-      localStorage.setItem("night-mode", STORAGE_VALUES[i]);
+      console.log("night mode never stored. Night? "+nightModeIndex+": "+STORAGE_KEYS[nightModeIndex]);
+      localStorage.setItem("night-mode", STORAGE_KEYS[nightModeIndex]);
 }
 
 function toggleNightModeClasses() {
    const elements=document.getElementsByClassName("night-mode-element");
-   i=elements.length;
-   for(j=0;j<i;j++) elements[j].classList.toggle("night-mode");
+   var elementsCount=elements.length;
+   for(j=0;j<elementsCount;j++) elements[j].classList.toggle("night-mode");
 }
 
 function toggleNightModeBtn() {
    const nightModeBtn=document.getElementById("night-mode");
-   nightModeBtn.innerHTML=ICONS_CODE_POINT[i];
-   nightModeBtn.title="Passer en mode "+ICONS_TITLE[i];
+   nightModeBtn.innerHTML=ICONS_CODE_POINT[nightModeIndex];
+   nightModeBtn.title="Passer en mode "+ICONS_TITLE[nightModeIndex];
 }
 
-function updateIndex() { i=i==1?0:1; }
+function updateIndex() { nightModeIndex=nightModeIndex==1?0:1; }
