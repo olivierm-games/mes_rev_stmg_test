@@ -1,49 +1,31 @@
 const ICONS_CODE_POINT=["&#xe51c;", "&#xe518;"];
 const ICONS_TITLE=["sombre", "clair"];
-let storedNightMode=null;
-let x=0;
-
-window.onload=function() {
-   // localStorage.removeItem("night-mode");
-   storedNightMode=localStorage.getItem("night-mode");
-   console.log(storedNightMode);
-}
+const STORAGE_VALUES=["night", "day"];
+let i=1;
 
 function initNightMode() {
+   const storedNightMode=localStorage.getItem("night-mode");
    if(storedNightMode!==null) {
       if(storedNightMode==="night") toggleNightMode(); // since by default night mode is off (day on)
-   } else if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) toggleNightMode();
+   } else if(!window.matchMedia) return;
+   if(window.matchMedia('(prefers-color-scheme: dark)').matches) toggleNightMode();
+   window.matchMedia("(prefers-color-scheme: dark)").addListener(e => toggleNightMode());
+}
 
-   window.matchMedia("(prefers-color-scheme: dark)").addListener(e => {
-      toggleNightMode();
-      saveInLocalStorage();
-   });
+function onToggleNightMode() {
+   toggleNightMode();
+   saveInLocalStorage();
 }
 
 function toggleNightMode() {
-   toggleNightModeBtn(toggleStoredNightMode());
+   toggleNightModeBtn();
    toggleNightModeClasses();
-}
-
-function toggleStoredNightMode() {
-   switch (storedNightMode) {
-      case "day":
-      storedNightMode="night";
-      return 1;
-      case "night":
-      storedNightMode="day";
-      return 0;
-      default:
-      return (++x)%2;
-   }
+   updateIndex();
 }
 
 function saveInLocalStorage() {
-   if(storedNightMode===null) {
-      console.log("night mode never stored. Night? "+(document.body.classList.contains("night-mode")));
-      localStorage.setItem("night-mode", document.body.classList.contains("night-mode")?"night":"day");
-   }
-   else localStorage.setItem("night-mode", storedNightMode);
+      console.log("night mode never stored. Night? "+i+": "+STORAGE_VALUES[i]);
+      localStorage.setItem("night-mode", STORAGE_VALUES[i]);
 }
 
 function toggleNightModeClasses() {
@@ -52,8 +34,10 @@ function toggleNightModeClasses() {
    for(j=0;j<i;j++) elements[j].classList.toggle("night-mode");
 }
 
-function toggleNightModeBtn(index) {
+function toggleNightModeBtn() {
    const nightModeBtn=document.getElementById("night-mode");
-   nightModeBtn.innerHTML=ICONS_CODE_POINT[index];
-   nightModeBtn.title="Passer en mode "+ICONS_TITLE[index];
+   nightModeBtn.innerHTML=ICONS_CODE_POINT[i];
+   nightModeBtn.title="Passer en mode "+ICONS_TITLE[i];
 }
+
+function updateIndex() { i=i==1?0:1; }
