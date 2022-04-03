@@ -16,14 +16,16 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 	<script src="../../js/web-font-loader.js"></script>
 	<script src="../../js/menu.js"></script>
+	<script src="../../js/header_on_scroll.js"></script>
+   <script src="../../js/night_mode.js"></script>
+	<script src="../../js/side_nav_collapse_handle.js"></script>
+	<script src="../../js/side_nav_hover_handler.js"></script>
 	<script src="../../js/side_nav_item_expandable.js"></script>
 </head>
 <body class="night-mode-element">
 	<!-- <div id="haut"></div> -->
 	<div w3-include-html="../../header.html"></div>
-	<script src="../../js/header_on_scroll.js"></script>
 	<div w3-include-html="../../side_nav.html"></div>
-	<script src="../../js/side_nav_collapse_handle.js"></script>
 	<main class="night-mode-element" onclick="onClickMainPageOrHeader(this)">
 		<h1>Droit 1ère STMG : les chapitres</h1>
 		<div class="card-droit-1ere">
@@ -58,10 +60,8 @@
 			</ul>
 		</div>
 	</main>
-	<script src="../../js/side_nav_hover_handler.js"></script>
-   <script src="../../js/night_mode.js"></script>
    <script src="../../js/include_html.js"></script>
-   <script src="../../js/wait_for_elm.js"></script>
+   <!-- <script src="../../js/wait_for_elm.js"></script> -->
    <!-- <script>
 		 waitForElm('#menu-svg').then((elm) => initNightMode());
 		 waitForElm('#cours-ter-mana-all-container').then((elm) => setSideNavItemsExpandable());

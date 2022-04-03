@@ -6,12 +6,8 @@ let storedNightMode=null;
 /** by default 1 for day mode; 0 is night mode. Updated after toggling UI and eventually after storage*/
 let nightModeIndex=1;
 
-
 window.onload=function() {
    storedNightMode=localStorage.getItem("night-mode");
-// }
-
-// function initNightMode() {
    const matchMedia=window.matchMedia;
    console.log(storedNightMode);
    if(storedNightMode!==null) {
@@ -31,10 +27,7 @@ function toggleNightMode() {
    updateIndex();
 }
 
-function saveInLocalStorage() {
-   console.log("saved mode: "+STORAGE_KEYS[nightModeIndex]);
-   localStorage.setItem("night-mode", STORAGE_KEYS[nightModeIndex]);
-}
+function saveInLocalStorage() { localStorage.setItem("night-mode", STORAGE_KEYS[nightModeIndex]); }
 
 function toggleNightModeClasses() {
    const elements=document.getElementsByClassName("night-mode-element");

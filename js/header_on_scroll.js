@@ -1,6 +1,6 @@
-var lastScrollY, currentScrollY;
-var ticking=false;
-var header=null;
+let lastScrollY, currentScrollY;
+let ticking=false;
+let header=null;
 
 window.onload=function() {
    header=document.getElementsByTagName("header")[0];

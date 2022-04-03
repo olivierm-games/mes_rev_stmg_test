@@ -15,7 +15,12 @@
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
    <script src="js/web-font-loader.js"></script>
+   <script src="js/header_on_scroll.js"></script>
    <script src="js/menu.js"></script>
+   <script src="js/night_mode.js"></script>
+   <script src="js/side_nav_collapse_handle.js"></script>
+   <script src="js/side_nav_hover_handler.js"></script>
+   <script src="js/side_nav_item_expandable.js"></script>
    <!-- <script src="js/side_nav_collapse_handle.js"></script> -->
 </head>
 <body class="night-mode-element">
@@ -56,7 +61,6 @@
          <a onclick="onToggleNightMode()" id="night-mode" class="material-icons-round">&#xe51c;</a>
       </div>
    </header>
-   <script src="js/header_on_scroll.js"></script>
    <aside class="night-mode-element">
       <a href="#" id="side-nav-index-link" class="night-mode-element index-link"><span class="mes-rev">Mes révisions</span>STMG</a>
       <div id="cours-1ere" class="side-nav-lvl-0-link collapsible-1ere night-mode-element"><!-- onclick="onExpandableSideNavItem(this.id)"-->
@@ -369,7 +373,6 @@
          <li><span>Management</span></li>
       </ul> -->
    </aside>
-   <script src="js/side_nav_collapse_handle.js"></script>
    <main class="night-mode-element" onclick="onClickMainPageOrHeader(this)">
       <p>This is the main content of the page</p>
       <!-- <div id="menu-icon-rectangle" class="night-mode-element"></div> -->
@@ -405,12 +408,5 @@
       <p>Some text, text and more text</p>
       <p>Some text, text and more text</p>
    </main>
-   <script src="js/side_nav_hover_handler.js"></script>
-   <script src="js/side_nav_item_expandable.js"></script>
-   <script src="js/night_mode.js"></script>
-   <!-- <script>initNightMode();</script> -->
-   <!-- <script src="js/include_html.js"></script> -->
-   <!-- <script src="js/wait_for_elm.js"></script> -->
-   <!-- <script>waitForElm('#menu-svg').then((elm) => initNightMode());</script> -->
 </body>
 </html>
