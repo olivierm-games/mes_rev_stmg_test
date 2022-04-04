@@ -4,6 +4,9 @@ body {
    margin: 0;
    background: var(--color-background);
    font-family: 'Roboto';
+
+   height: -webkit-fill-available;
+   display: flex;
 }
 
 header {
@@ -117,7 +120,7 @@ header.show {
 main {
    display: flex;
    flex-direction: column;
-   margin: 36px 0;
+   /* margin: 36px 0; */
    width: 80%;
    position: relative;
    left: 10%;
@@ -127,6 +130,8 @@ main {
    color: var(--color-on-surface);
    box-shadow: 0 0 .2em 0 #2F2F2F;
    border-radius: .2em;
+   
+   margin: 8em 0;
 }
 
 a:visited, a:hover, a:active {
