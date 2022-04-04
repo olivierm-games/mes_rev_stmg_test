@@ -28,7 +28,10 @@ function toggleNightMode() {
    updateIndex();
 }
 
-function saveInLocalStorage() { localStorage.setItem("night-mode", STORAGE_KEYS[nightModeIndex]); }
+function saveInLocalStorage() {
+   console.log("saveInLocalStorage, storing: "+STORAGE_KEYS[nightModeIndex]);
+   localStorage.setItem("night-mode", STORAGE_KEYS[nightModeIndex]);
+}
 
 function toggleNightModeClasses() {
    const elements=document.getElementsByClassName("night-mode-element");
