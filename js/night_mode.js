@@ -6,15 +6,21 @@ let storedNightMode=null;
 /** by default 1 for day mode; 0 is night mode. Updated after toggling UI and eventually after storage*/
 let nightModeIndex=1;
 
-// window.onload=function() { storedNightMode=localStorage.getItem("night-mode"); }
+window.onload=function() {
+   storedNightMode=localStorage.getItem("night-mode");
+   console.log("onload, stored: "+storedNightMode);
+}
 
 function initNightMode() {
-   storedNightMode=localStorage.getItem("night-mode");
    console.log("initNightMode, stored: "+storedNightMode);
+   storedNightMode=localStorage.getItem("night-mode");
    const matchMedia=window.matchMedia;
    if(storedNightMode!==null) {
       if(storedNightMode==="night") toggleNightMode(); // since by default night mode is off (day on)
-   } else if(matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) toggleNightMode();
+   } else if(matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      console.log("match night media");
+      toggleNightMode();
+   }
    if(matchMedia) window.matchMedia("(prefers-color-scheme: dark)").addListener(e => toggleNightMode());
 }
 
@@ -24,6 +30,7 @@ function onToggleNightMode() {
 }
 
 function toggleNightMode() {
+   console.log("toggleNightMode");
    toggleNightModeBtn();
    toggleNightModeClasses();
    updateIndex();
