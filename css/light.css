@@ -418,3 +418,18 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
 li a {
     font-size: 110%;
 }
+
+footer { display: contents; }
+
+footer ul {
+    position: absolute;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--color-surface);
+    bottom: 0;
+    width: -webkit-fill-available;
+    padding: 3em 0;
+    margin: 0;
+    background: linear-gradient(90deg, aliceblue, blue);
+}
