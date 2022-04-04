@@ -76,4 +76,5 @@ a:link.button.night-mode, a:visited.button.night-mode, a:hover.button.night-mode
 
 footer ul.night-mode {
    color: var(--color-surface-dark);
+   /* background:  */
 }
