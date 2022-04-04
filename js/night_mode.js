@@ -9,6 +9,7 @@ let nightModeIndex=1;
 window.onload=function() { storedNightMode=localStorage.getItem("night-mode"); }
 
 function initNightMode() {
+   console.log("initNightMode, stored: "+storedNightMode);
    const matchMedia=window.matchMedia;
    if(storedNightMode!==null) {
       if(storedNightMode==="night") toggleNightMode(); // since by default night mode is off (day on)
