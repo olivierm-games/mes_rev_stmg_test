@@ -1,7 +1,7 @@
 * { box-sizing: border-box; }
 
 html {
-   height: -webkit-fill-available;
+   height: max-content;
 }
 
 body {
@@ -9,7 +9,6 @@ body {
    background: var(--color-background);
    font-family: 'Roboto';
 
-   height: -webkit-fill-available;
    display: flex;
 }
 
@@ -424,6 +423,15 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
 
 }
 
+.info-exclamation {
+    background: radial-gradient(lightpink, hotpink 220%);
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    padding: 0.7em 1em;
+    width: fit-content;
+}
+
 li a {
     font-size: 110%;
 }
@@ -439,7 +447,13 @@ footer ul {
     color: var(--color-surface);
     bottom: 0;
     width: -webkit-fill-available;
-    padding: 1.5em 0;
+    /* padding: 1.5em 0; */
+    padding-top: 1em;
     margin: 0;
     background: linear-gradient(0deg, lightyellow -100%, darkkhaki 70%, darkkhaki 100%);
+}
+
+footer ul li {
+   display: flex;
+   align-items: center;
 }
