@@ -120,7 +120,10 @@ header.show {
    background-color: lightgoldenrodyellow;
 }
 
-#night-mode { margin: var(--header-padding); }
+#night-mode {
+   cursor: pointer;
+   margin: var(--header-padding);
+}
 
 main {
    display: flex;
@@ -137,7 +140,7 @@ main {
    border-radius: .2em;
 
    height: inherit;
-   margin: 8em 0;
+   margin: 5em 0 1em 0;
 }
 
 a:visited, a:hover, a:active {
@@ -166,7 +169,7 @@ a:link { text-decoration: none; }
    transition: color var(--hover-anim-duration);
 }
 
-.material-icons-round, .header-link {
+/*.material-icons-round, */.header-link {
    cursor: pointer;
 }
 
@@ -301,12 +304,6 @@ aside ul, .side-nav-lvl-0-link, [class^=side-nav-lvl-1-link] {
    background-color: ivory;
 }
 
-/* aside > ul > li > ul > li > a > span.material-icons-round {
-   transform: rotate(270deg);
-} */
-
-/* [class^=side-nav-lvl-1-link].close  */
-
 #side-nav-index-link {
    text-align: center;
    margin: .3em;
@@ -351,6 +348,7 @@ h3 {
 
 p {
    text-align: justify;
+   margin-block: 1.5em 0;
 }
 
 table {
@@ -430,13 +428,17 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
 
 }
 
-.info-exclamation {
+.message-tip {
     background: radial-gradient(lightpink, hotpink 220%);
     border-radius: 1em;
     display: flex;
     align-items: center;
     padding: 0.7em 1em;
     width: fit-content;
+}
+
+.message-tip .material-icons-round {
+   padding-right: .4em;
 }
 
 li a {
@@ -451,7 +453,7 @@ footer ul {
     display: flex;
     justify-content: space-evenly;
     font-family: 'Lilita One';
-    color: var(--color-surface);
+    color: var(--color-on-surface);
     bottom: 0;
     width: -webkit-fill-available;
     /* padding: 1.5em 0; */
@@ -460,11 +462,39 @@ footer ul {
     background: linear-gradient(0deg, lightyellow -100%, darkkhaki 70%, darkkhaki 100%);
 }
 
-footer ul li {
+.footer-container {
    display: flex;
-   align-items: center;
+   flex-direction: column;
 }
 
-footer ul li span {
+.footer-container span {
    padding-right: 0.4em;
+}
+
+.footer-text {
+   display: flex;
+   align-items: center;
+   border-bottom: medium solid var(--color-on-surface);
+}
+
+.footer-list {
+   display: flex;
+   flex-direction: column;
+   padding: 1em;
+   background: none;
+   font-family: 'Balsamiq Sans';
+   list-style-type: disc;
+}
+
+.footer-list .material-icons-round {
+   cursor: pointer;
+   padding-left: .4em;
+}
+
+.footer-list li {
+}
+
+.footer-list-item-container {
+   display: flex;
+   align-items: center;
 }

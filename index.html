@@ -374,30 +374,53 @@
       </ul> -->
    </aside>
    <main class="night-mode-element" onclick="onClickMainPageOrHeader(this)">
-      <section>
-         <h3>Bienvenue sur la page d'accueil de ce site de révisions pour le bac STMG !</h3>
-         <div class="important_note">
-            <span class="material-icons-round night-mode-element">&#xe645;</span> Les publicités (bannière en bas de page et plein écran en quittant la page d'accueil) ne s'affichent que sur cette page (page d'accueil).
-         </div>
-         <p>Entre autres, vous pourrez trouver :
-            <ul>
-               <li>des <b>cours de 1ère : <a href="Cours_1ere/Droit/Sommaire.html">Droit</a>, <a href="Cours_1ere/Economie/Sommaire.html">Économie</a>, <a href="Cours_1ere/Management/Sommaire.html">Management</a></b>,</li>
-               <!--TODO add pages and directories (ie SIG)-->
-               <li>des cours de terminale : <a href="Cours_Tle/Droit/Sommaire.html">Droit</a>, <a href="Cours_Tle/Economie/Sommaire.html">Économie</a>, <a href="Cours_Tle/Management/Sommaire.html">Management</a> et <a href="Cours_Tle/SIG/Sommaire.html">Systèmes d'Information de Gestion (SIG)</a>,</li>
-               <li>le calendrier des épreuves,</li><!-- TODO: page and link -->
-               <li>des quiz,</li><!-- TODO: page and link -->
-               <li>des exercices (prochainement),</li><!-- TODO: page and link -->
-            </ul>
-         </p>
-      </section>
+      <h3>Bienvenue sur la page d'accueil de ce site de révisions pour le bac STMG !</h3>
+      <p>Entre autres, vous pourrez trouver :
+         <ul>
+            <li>des <b>cours de 1ère</b> : <a href="Cours_1ere/Droit/Sommaire.html"><b>Droit</b></a>, <a href="Cours_1ere/Economie/Sommaire.html"><b>Économie</b></a>, <a href="Cours_1ere/Management/Sommaire.html"><b>Management</b></a> ;</li>
+            <!--TODO add pages and directories (ie SIG)-->
+            <li>des cours de <b>terminale</b> : <a href="Cours_Tle/Droit/Sommaire.html"><b>Droit</b></a>, <a href="Cours_Tle/Economie/Sommaire.html"><b>Économie</b></a>, <a href="Cours_Tle/Management/Sommaire.html"><b>Management</b></a> et <a href="Cours_Tle/SIG/Sommaire.html"><b>Systèmes d'Information de Gestion (SIG)</b></a>,</li>
+            <li>le calendrier des épreuves,</li><!-- TODO: page and link -->
+            <li>des quiz,</li><!-- TODO: page and link -->
+            <li>des exercices (prochainement),</li><!-- TODO: page and link -->
+         </ul>
+      </p>
+      <div class="message-tip night-mode-element">
+         <span class="material-icons-round night-mode-element">&#xe79a;</span>
+         <span>Les publicités ne s'affichent que <b>sur cette page</b> (accueil) ou en la <b>quittant</b>.<span>
+      </div>
    </main>
    <footer>
-      <ul>
-         <li><span class="material-icons-round night-mode-element">&#xf0dc;</span> À propos</li><!--privacy tip-->
-         <li><span class="material-icons-round night-mode-element">&#xe157;</span> Liens utiles</li><!--link-->
-         <!-- <li><span class="material-icons-round night-mode-element">&#xe878;</span> Calendrier des épreuves</li>
-         <li><span class="material-icons-round night-mode-element">&#xe97f;</span> Annales</li> -->
-         <!-- <li>Simulateur de note</li> -->
+      <ul class="night-mode-element">
+         <li class="footer-container">
+            <span class="footer-text night-mode-element">
+               <span class="material-icons-round night-mode-element">&#xeaf0;</span><!--f0dc-->
+               À propos
+            </span>
+            <ul class="footer-list night-mode-element">
+               <li>Qui suis-je ?</li>
+               <li>Contact</li>
+            </ul>
+         </li><!--privacy tip-->
+         <li class="footer-container">
+            <span class="footer-text night-mode-element">
+               <span class="material-icons-round night-mode-element">&#xe157;</span>
+               Liens utiles
+            </span>
+            <ul class="footer-list night-mode-element">
+               <li>
+                  <span class="footer-list-item-container">
+                     Calendrier des épreuves<span class="material-icons-round night-mode-element">&#xe89e;</span>
+                  </span>
+               </li>
+               <li>
+                  <span class="footer-list-item-container">
+                     Annales<span class="material-icons-round night-mode-element">&#xe89e;</span>
+                  </span>
+               </li>
+            </ul>
+         </li>
+         <!-- TODO: <li>Simulateur de note</li> -->
       </ul>
    </footer>
    <script>

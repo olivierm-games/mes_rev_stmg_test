@@ -74,7 +74,21 @@ a:link.button.night-mode, a:visited.button.night-mode, a:hover.button.night-mode
    color: var(--color-on-surface-dark);
 }
 
+
+.message-tip.night-mode {
+   color: var(--color-surface-dark);
+   background: linear-gradient(0deg, #5b4, #394);
+}
+
 footer ul.night-mode {
    color: var(--color-surface-dark);
-   /* background:  */
+   background: linear-gradient(0deg, #24242466 10%, #242424);
+}
+
+.footer-text.night-mode {
+   border-bottom: medium solid var(--color-surface-dark);
+}
+
+.footer-list.night-mode {
+   background: none;
 }
