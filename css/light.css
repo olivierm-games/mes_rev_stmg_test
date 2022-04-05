@@ -1,7 +1,7 @@
 * { box-sizing: border-box; }
 
 html {
-   height: max-content;
+   height: -webkit-fill-available;
 }
 
 body {
@@ -9,6 +9,7 @@ body {
    background: var(--color-background);
    font-family: 'Roboto';
 
+   height: inherit;
    display: flex;
    flex-direction: column;
 }
@@ -135,6 +136,7 @@ main {
    box-shadow: 0 0 .2em 0 #2F2F2F;
    border-radius: .2em;
 
+   height: inherit;
    margin: 8em 0;
 }
 
