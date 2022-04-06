@@ -375,7 +375,7 @@
    </aside>
    <main class="night-mode-element" onclick="onClickMainPageOrHeader(this)">
       <h3>Bienvenue sur la page d'accueil de ce site de révisions pour le bac STMG !</h3>
-      <p>Entre autres, vous pourrez trouver :
+      <p>Sur ce site, vous pourrez trouver :
          <ul>
             <li>des <b>cours de 1ère</b> : <a href="Cours_1ere/Droit/Sommaire.html"><b>Droit</b></a>, <a href="Cours_1ere/Economie/Sommaire.html"><b>Économie</b></a>, <a href="Cours_1ere/Management/Sommaire.html"><b>Management</b></a> ;</li>
             <!--TODO add pages and directories (ie SIG)-->
@@ -385,10 +385,12 @@
             <li>des exercices (prochainement),</li><!-- TODO: page and link -->
          </ul>
       </p>
-      <div class="message-tip night-mode-element">
+      <div class="message-tip night-mode-element closed">
          <span class="material-icons-round night-mode-element">&#xe79a;</span>
-         <span>Les publicités ne s'affichent que <b>sur cette page</b> (accueil) ou en la <b>quittant</b>.<span>
+         <span class="material-icons-round night-mode-element">&#xe5c5;</span>
+         <span class="message-slider">Les publicités ne s'affichent que <b>sur</b> (ou <b>en quittant</b>) <b>cette page</b>.<span>
       </div>
+      <script src="js/message_expandable.js"></script>
    </main>
    <footer>
       <ul class="night-mode-element">
@@ -410,14 +412,17 @@
             <ul class="footer-list night-mode-element">
                <li>
                   <span class="footer-list-item-container">
-                     Calendrier des épreuves<span class="material-icons-round night-mode-element">&#xe89e;</span>
-                  </span>
-               </li>
-               <li>
-                  <span class="footer-list-item-container">
                      Annales<span class="material-icons-round night-mode-element">&#xe89e;</span>
                   </span>
                </li>
+               <a href="calendrier_epreuves.html">
+                  <li>
+                  <!-- <span class="footer-list-item-container"> -->
+                     Calendrier des épreuves
+                     <!-- <span class="material-icons-round night-mode-element">&#xe89e;</span> -->
+                  <!-- </span> -->
+                  </li>
+               </a>
             </ul>
          </li>
          <!-- TODO: <li>Simulateur de note</li> -->

@@ -140,7 +140,7 @@ main {
    border-radius: .2em;
 
    height: inherit;
-   margin: 5em 0 1em 0;
+   margin: 7em 0 3em 0;
 }
 
 a:visited, a:hover, a:active {
@@ -429,17 +429,36 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
 }
 
 .message-tip {
-    background: radial-gradient(lightpink, hotpink 220%);
+    background: radial-gradient(rgb(255 182 193 / 50%), rgb(255 105 180 / 50%));
     border-radius: 1em;
     display: flex;
     align-items: center;
     padding: 0.7em 1em;
     width: fit-content;
+    cursor: pointer;
+    box-shadow: 0.02em 0.05em 0.1em 0.05em #32323288;
 }
 
-.message-tip .material-icons-round {
-   padding-right: .4em;
+.message-tip span:nth-child(2) {
+   transform-origin: center;
+   transform: rotate(90deg);
+   transition: transform var(--menu-anim-duration);
 }
+
+.message-tip.closed span:nth-child(2) {
+   transform: rotate(-90deg);
+}
+
+.message-slider {
+   transition: max-width var(--menu-anim-duration);
+   overflow: hidden;
+   max-width: 0;
+ white-space: nowrap;
+}
+
+/* .message-tip.closed .message-slider {
+   max-width: 0;
+} */
 
 li a {
     font-size: 110%;
@@ -488,13 +507,21 @@ footer ul {
 
 .footer-list .material-icons-round {
    cursor: pointer;
-   padding-left: .4em;
 }
 
-.footer-list li {
+.footer-list a:link {
+   color: inherit;
+}
+
+.footer-list a:hover {
+   color: inherit;
 }
 
 .footer-list-item-container {
    display: flex;
    align-items: center;
+}
+
+.footer-list-item-container .material-icons-round {
+   transform: scale(.75);
 }
