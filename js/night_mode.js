@@ -13,6 +13,10 @@ window.onload=function() {
 
 function initNightMode() {
    // console.log("initNightMode, stored: "+storedNightMode);
+   if(storedNightMode===null) {
+      storedNightMode=localStorage.getItem("night-mode");
+      console.log("not saved? "+storedNightMode);
+   }
    // storedNightMode=localStorage.getItem("night-mode");
    const matchMedia=window.matchMedia;
    if(storedNightMode!==null) {
