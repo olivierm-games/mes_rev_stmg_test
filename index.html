@@ -21,6 +21,7 @@
    <script src="js/side_nav_collapse_handle.js"></script>
    <script src="js/side_nav_hover_handler.js"></script>
    <script src="js/side_nav_item_expandable.js"></script>
+   <script src="js/header_links_expandable.js"></script>
    <!-- <script src="js/side_nav_collapse_handle.js"></script> -->
 </head>
 <body class="night-mode-element">
@@ -42,15 +43,15 @@
       <!-- <div w3-include-html="header_links.html"></div> -->
       <div id="header-links" class="night-mode-element">
          <div class="header-link">
-            <div class="header-link-expandable-layout night-mode-element">
-               <ul class="header-link-expandable-list">
-                  <li><a href="Cours_1ere\Droit\Sommaire.html"><span class="material-icons-round night-mode-element">&#xeaf6;</span>Droit</a></li>
-                  <li><a href="Cours_1ere\Economie\Sommaire.html"><span class="material-icons-round night-mode-element">&#xe2eb;</span>Économie</a></li>
-                  <li><a href="Cours_1ere\Management\Sommaire.html"><span class="material-icons-round night-mode-element">&#xf049;</span>Management</a></li>
-               </ul>
-            </div>
             <span class="header-link-expandable-text">Cours 1<sup>ère</sup></span>
             <span class="material-icons-round night-mode-element">&#xe5c5;</span>
+            <div class="header-link-expandable-layout night-mode-element">
+               <ul class="header-link-expandable-list">
+                  <li><a href="Cours_1ere/Droit/Sommaire.html"><span class="material-icons-round night-mode-element">&#xeaf6;</span>Droit</a></li>
+                  <li><a href="Cours_1ere/Economie/Sommaire.html"><span class="material-icons-round night-mode-element">&#xe2eb;</span>Économie</a></li>
+                  <li><a href="Cours_1ere/Management/Sommaire.html"><span class="material-icons-round night-mode-element">&#xf049;</span>Management</a></li>
+               </ul>
+            </div>
          </div>
          <div class="header-link">
             <span class="header-link-expandable-text">Cours T<sup>le</sup></span>
@@ -379,10 +380,10 @@
          <ul>
             <li>des <b>cours de 1ère</b> : <a href="Cours_1ere/Droit/Sommaire.html"><b>Droit</b></a>, <a href="Cours_1ere/Economie/Sommaire.html"><b>Économie</b></a>, <a href="Cours_1ere/Management/Sommaire.html"><b>Management</b></a> ;</li>
             <!--TODO add pages and directories (ie SIG)-->
-            <li>des cours de <b>terminale</b> : <a href="Cours_Tle/Droit/Sommaire.html"><b>Droit</b></a>, <a href="Cours_Tle/Economie/Sommaire.html"><b>Économie</b></a>, <a href="Cours_Tle/Management/Sommaire.html"><b>Management</b></a> et <a href="Cours_Tle/SIG/Sommaire.html"><b>Systèmes d'Information de Gestion (SIG)</b></a>,</li>
-            <li>le calendrier des épreuves,</li><!-- TODO: page and link -->
+            <li>des cours de <b>terminale</b> : <a href="Cours_Tle/Droit/Sommaire.html"><b>Droit</b></a>, <a href="Cours_Tle/Economie/Sommaire.html"><b>Économie</b></a>, <a href="Cours_Tle/Management/Sommaire.html"><b>Management</b></a> et <a href="Cours_Tle/SIG/Sommaire.html"><b>Systèmes d'Information de Gestion (SIG)</b></a> ;</li>
+            <li>le calendrier des épreuves ;</li><!-- TODO: page and link -->
             <li>des quiz,</li><!-- TODO: page and link -->
-            <li>des exercices (prochainement),</li><!-- TODO: page and link -->
+            <li>des exercices (prochainement) ;</li><!-- TODO: page and link -->
          </ul>
       </p>
       <div class="message-tip night-mode-element closed">
@@ -392,8 +393,8 @@
       </div>
       <script src="js/message_expandable.js"></script>
    </main>
-   <footer>
-      <ul class="night-mode-element">
+   <footer class="night-mode-element">
+      <ul>
          <li class="footer-container">
             <span class="footer-text night-mode-element">
                <span class="material-icons-round night-mode-element">&#xeaf0;</span><!--f0dc-->
@@ -433,6 +434,7 @@
       initNightMode();
       initSideNavHoverHandler();
       setSideNavItemsExpandable();
+      setHeaderLinksExpandable();
    </script>
 </body>
 </html>

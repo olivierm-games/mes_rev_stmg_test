@@ -3,7 +3,6 @@
 
    #header-links {
       display: flex;
-      flex-grow: 6;
       justify-content: flex-end;
       align-items: center;
       transform-style: preserve-3d;
@@ -15,16 +14,78 @@
       transform-style: preserve-3d;
    }
 
-   .header-link {
-      flex-direction: column;
-      align-items: center;
-      transform: translateZ(0px);
-      width: 175px;
-   }
-
    header {
       z-index: 1500;
       transform-style: preserve-3d;
+   }
+
+   .header-link {
+      flex-direction: column;
+      align-items: center;
+      width: 175px;
+      font-family: 'Comfortaa', 'Arial';
+      font-weight: 600;
+      font-style: italic;
+      transform-style: preserve-3d;
+      height: inherit;
+      justify-content: center;
+   }
+
+   .header-link:hover, .header-link:hover .header-link-expandable-text, .header-link:hover .material-icons-round, .index-link:hover/*, .material-icons-round:hover*/ {
+      color: var(--color-control-on-primary);
+   }
+
+   .header-link-expandable-text { padding-top: var(--header-padding); }
+
+   .header-link-expandable-layout {
+      position: absolute;
+      justify-content: center;
+      transition: top var(--header-link-expand-duration);
+      overflow: hidden;
+      top: -1000px;
+      transform: translateZ(-1px);
+      background-color: khaki;
+      border-radius: 0 0 .3em .3em;
+      box-shadow: 0 0 0.2em 0.01em #2f2f2f66;
+   }
+
+   /* .header-link:hover .header-link-expandable-layout { */
+      /* top: 100%; */
+      /* bottom: 0; */
+   /* } */
+
+   .header-link-expandable-list {
+      flex-direction: column;
+      padding-inline-start: 0;
+      margin-block: 0;
+   }
+
+   .header-link-expandable-list li {
+      /* background-color: khaki; */
+      padding: var(--header-padding);
+      width: 100%;
+      transition: background-color var(--hover-anim-duration);
+   }
+
+   .header-link-expandable-list li a {
+      align-items: center;
+   }
+
+   .header-link-expandable-list span {
+      padding-right: .4em;
+   }
+
+   .header-link-expandable-list li:hover {
+      /* color: var(--color-control-on-primary); */
+      background-color: lightgoldenrodyellow;
+   }
+
+   .header-link-expandable-list li a:link, .header-link-expandable-list li a:visited {
+      color: var(--color-on-primary);
+   }
+
+   .header-link-expandable-list li:hover a {
+      color: var(--color-control-on-primary);
    }
 
    aside {

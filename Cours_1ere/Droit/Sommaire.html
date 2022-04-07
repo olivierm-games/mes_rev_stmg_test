@@ -21,6 +21,7 @@
 	<script src="../../js/side_nav_collapse_handle.js"></script>
 	<script src="../../js/side_nav_hover_handler.js"></script>
 	<script src="../../js/side_nav_item_expandable.js"></script>
+   <script src="../../js/header_links_expandable.js"></script>
 </head>
 <body class="night-mode-element">
 	<div w3-include-html="../../header.html"></div>
@@ -70,6 +71,9 @@
 		waitForElm('#cours-ter-mana-all-container').then(elm => {
 			setSideNavItemsExpandable();
 			initSideNavHoverHandler();
+		});
+		waitForElm('#header-links').then(elm => {
+			setHeaderLinksExpandable();
 		});
 	</script>
 	<!-- <footer>
