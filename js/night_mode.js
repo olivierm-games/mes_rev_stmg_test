@@ -19,7 +19,7 @@ function initNightMode() {
       if(storedNightMode==="night") {
          console.log("saved night, toggling. Shouldn't if refreshing?");
          toggleNightMode(); // since by default night mode is off (day on)
-      }
+      } else console.log("saved light");
    } else if(matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       // console.log("match night media");
       toggleNightMode();
