@@ -16,7 +16,10 @@ function initNightMode() {
    // storedNightMode=localStorage.getItem("night-mode");
    const matchMedia=window.matchMedia;
    if(storedNightMode!==null) {
-      if(storedNightMode==="night") toggleNightMode(); // since by default night mode is off (day on)
+      if(storedNightMode==="night") {
+         console.log("saved night, toggling. Shouldn't if refreshing?");
+         toggleNightMode(); // since by default night mode is off (day on)
+      }
    } else if(matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       // console.log("match night media");
       toggleNightMode();
