@@ -1,6 +1,13 @@
-html {
-   height: 100%;
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
 }
+
+/* html {
+   height: 100%;
+} */
 
 * { box-sizing: border-box; }
 
@@ -9,13 +16,19 @@ body {
    position: absolute;
    width: 100%;
    /* min-height: 100%; */
-   margin: 0;
+   /* margin: 0; */
    background: var(--color-background);
    font-family: 'Roboto';
+   padding-bottom: 7em;
 
-   height: inherit;
+   /* height: inherit; */
    /* display: flex; */
    /* flex-direction: column; */
+}
+
+#all-container {
+   position: relative;
+   min-height: 100%;
 }
 
 header {
@@ -413,6 +426,7 @@ footer {
    left: 0;
    right: 0;
    padding: 1.5em 0;
+   height: 7em;
    background: linear-gradient(0deg, lightyellow -100%, darkkhaki 70%, darkkhaki 100%);
 }
 
@@ -455,6 +469,10 @@ footer ul {
 
 .footer-list .material-icons-round {
    cursor: pointer;
+}
+
+.footer-list li {
+   padding: .5em 0 0 0;
 }
 
 .footer-list a:link {
