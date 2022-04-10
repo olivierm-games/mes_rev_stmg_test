@@ -66,16 +66,20 @@
 	   <script src="../../js/include_html.js"></script>
 	   <script src="../../js/wait_for_elm.js"></script>
 		<script>
-			waitForElm('#menu-svg').then(elm => {
-				initNightMode();
+			// waitForElm('#menu-svg').then(elm => {
+			// 	initNightMode();
+				// initHeaderOnScroll();
+			// });
+			waitForElm('#header-links').then(elm => {
 				initHeaderOnScroll();
+				setHeaderLinksExpandable();
 			});
 			waitForElm('#cours-ter-mana-all-container').then(elm => {
 				setSideNavItemsExpandable();
 				initSideNavHoverHandler();
 			});
-			waitForElm('#header-links').then(elm => {
-				setHeaderLinksExpandable();
+			waitForElm('footer').then(elm => {
+				initNightMode();
 			});
 		</script>
 		<!-- <footer>
