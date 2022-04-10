@@ -1,4 +1,4 @@
-body.night-mode { background: var(--color-background-dark); }
+#all-container.night-mode { background: var(--color-background-dark); }
 
 main.night-mode {
    background-color: var(--color-surface-dark);

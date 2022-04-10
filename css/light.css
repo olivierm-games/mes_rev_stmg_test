@@ -17,9 +17,9 @@ body {
    width: 100%;
    /* min-height: 100%; */
    /* margin: 0; */
-   background: var(--color-background);
+   /* background: var(--color-background); */
    font-family: 'Roboto';
-   padding-top: 6em;
+   /* padding-top: 6em; */
 
    /* height: inherit; */
    /* display: flex; */
@@ -29,7 +29,9 @@ body {
 #all-container {
    position: relative;
    min-height: 100%;
+   padding-top: 6em;
    padding-bottom: 11.5em;
+   background: var(--color-background);
 }
 
 header {
