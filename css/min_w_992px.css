@@ -120,6 +120,10 @@
       transition: left .5s, width .5s;
    }
 
+   #fab-back-to-top {
+      transform: translateX(24px);
+   }
+
    .side-nav-item-l {
       display: block;
    }

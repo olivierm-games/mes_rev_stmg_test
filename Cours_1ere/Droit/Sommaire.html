@@ -17,7 +17,7 @@
 	<script src="../../js/header_links_expandable.js"></script>
 	<script src="../../js/header_on_scroll.js"></script>
 	<script src="../../js/menu.js"></script>
-   <script src="../../js/night_mode.js"></script>
+	<script src="../../js/night_mode.js"></script>
 	<script src="../../js/side_nav_collapse_handle.js"></script>
 	<script src="../../js/side_nav_hover_handler.js"></script>
 	<script src="../../js/side_nav_item_expandable.js"></script>
@@ -63,20 +63,20 @@
 		</main>
 		<div w3-include-html="../../footer.html"></div>
 	</div>
-   <script src="../../js/include_html.js"></script>
-   <script src="../../js/wait_for_elm.js"></script>
+	<script src="../../js/include_html.js"></script>
+	<script src="../../js/wait_for_elm.js"></script>
 	<script>
-		waitForElm('#header-links').then(elm => {
-			initHeaderOnScroll();
-			setHeaderLinksExpandable();
-		});
-		waitForElm('#cours-ter-mana-all-container').then(elm => {
-			setSideNavItemsExpandable();
-			initSideNavHoverHandler();
-		});
-		waitForElm('footer').then(elm => {
-			initNightMode();
-		});
+	waitForElm('#header-links').then(elm => {
+		initHeaderOnScroll();
+		setHeaderLinksExpandable();
+	});
+	waitForElm('#cours-ter-mana-all-container').then(elm => {
+		setSideNavItemsExpandable();
+		initSideNavHoverHandler();
+	});
+	waitForElm('footer').then(elm => {
+		initNightMode();
+	});
 	</script>
-	</body>
+</body>
 </html>

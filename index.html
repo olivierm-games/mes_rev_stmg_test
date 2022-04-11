@@ -22,9 +22,11 @@
    <script src="js/side_nav_hover_handler.js"></script>
    <script src="js/side_nav_item_expandable.js"></script>
    <script src="js/header_links_expandable.js"></script>
+   <script src="js/fab_back_to_top.js"></script>
    <!-- <script src="js/side_nav_collapse_handle.js"></script> -->
 </head>
 <body>
+   <span id="haut"></span>
    <div id="all-container" class="night-mode-element">
       <header class="night-mode-element" onclick="onClickMainPageOrHeader(this)">
          <div id="header-menu-index-container">
@@ -398,6 +400,7 @@
          </div>
          <script src="js/message_expandable.js"></script>
       </main>
+      <a href="#haut"><button id="fab-back-to-top"><span class="material-icons-round night-mode-element">&#xe5d8;</span></button></a>
       <footer class="night-mode-element">
          <ul>
             <li class="footer-container">
@@ -434,13 +437,14 @@
             <!-- TODO: <li>Simulateur de note</li> -->
          </ul>
       </footer>
-      <script>
-         initHeaderOnScroll();
-         initNightMode();
-         initSideNavHoverHandler();
-         setSideNavItemsExpandable();
-         setHeaderLinksExpandable();
-      </script>
    </div>
+   <script>
+      initHeaderOnScroll();
+      initNightMode();
+      initSideNavHoverHandler();
+      setSideNavItemsExpandable();
+      setHeaderLinksExpandable();
+      setFabBackToTop();
+   </script>
 </body>
 </html>

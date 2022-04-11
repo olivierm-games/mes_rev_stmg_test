@@ -1,5 +1,5 @@
 :root {
-   --color-secondary: /* TODO:  */; /* "top of page" button, scrolling progress bar... (accent) bg */
+   --color-secondary: blue; /* "top of page" button, scrolling progress bar... (accent) bg */
    --color-secondary-dark: /* TODO:  */; /* accent dark bg */
 
    --color-on-secondary: /* TODO:  */; /* "top of page" button, scrolling progress bar... (accent) text color */
@@ -25,6 +25,9 @@ body {
 
    --color-on-surface: #263238; /* main text light (same as body) */
    --color-on-surface-dark: #2F2F2F; /* main text dark */
+
+   --color-on-primary: #323232CA; /* header, aside text color light */
+   --color-on-primary-dark: #E9E9E9;
 }
 
 header {
@@ -38,8 +41,6 @@ header, aside {
    --color-primary-variant-dark: #3A3A65;
    /* --color-primary-variant-dark: #282c34; /* Aside bg dark */
 
-   --color-on-primary: #323232CA; /* header, aside text color light */
-   --color-on-primary-dark: #E9E9E9;
    /* --color-on-primary-dark: red; */
 
    --color-control-on-primary: #323232;
