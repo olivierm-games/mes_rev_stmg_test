@@ -44,18 +44,19 @@ header {
    background-color: var(--color-primary);
    box-shadow: 0 0 .2em 0 #292929DD;
    text-align: center;
-   opacity: 0;
-   transform: translateY(-72px);
-   transition: transform .3s 0s cubic-bezier(.4, 0, .6, 1), opacity 0s .3s;
+   /* opacity: 0; */
+   /* transform: translateY(-72px); */
+   /* transition: transform .3s 0s cubic-bezier(.4, 0, .6, 1), opacity 0s .3s; */
    top: 0;
    z-index: 1000;
+   transition: top .3s cubic-bezier(.4, 0, .2, 1);
 }
 
-header.show {
+/* header.show {
     transform: translateY(0);
     transition: transform .3s .3s cubic-bezier(.4, 0, .2, 1), opacity 0s .3s;
     opacity: 1;
-}
+} */
 
 #header-menu-index-container {
    display: flex;

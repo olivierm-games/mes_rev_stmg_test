@@ -31,8 +31,15 @@
       justify-content: center;
    }
 
-   .header-link:hover, .header-link:hover .header-link-expandable-text, .header-link:hover .material-icons-round, .index-link:hover/*, .material-icons-round:hover*/ {
+   .header-link:hover, .header-link:hover .header-link-expandable-text,
+   .index-link:hover, .header-link-expandable-list li:hover a/*, .material-icons-round:hover*/ {
       color: var(--color-control-on-primary);
+   }
+
+   .header-link-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
    }
 
    .header-link-expandable-text { padding-top: var(--header-padding); }
@@ -40,42 +47,30 @@
    .header-link-expandable-layout {
       position: absolute;
       justify-content: center;
-      transition: top var(--header-link-expand-duration);
-      overflow: hidden;
-      top: -1000px;
       transform: translateZ(-1px);
-      background-color: khaki;
+      transition: top var(--header-link-expand-duration);
+      top: -1000px;
+      background: none;
       border-radius: 0 0 .3em .3em;
-      box-shadow: 0 0 0.2em 0.01em #2f2f2f66;
-
-      opacity: 0;
-      transform: translateY(-72px);
-      transition: transform .3s 0s cubic-bezier(.4, 0, .6, 1), opacity 0s .3s;
    }
-
-   .header-link-expandable-layout.show {
-
-       transform: translateY(0);
-       transition: transform .3s .3s cubic-bezier(.4, 0, .2, 1), opacity 0s .3s;
-       opacity: 1;
-   }
-
-   /* .header-link:hover .header-link-expandable-layout { */
-      /* top: 100%; */
-      /* bottom: 0; */
-   /* } */
 
    .header-link-expandable-list {
+      background-color: khaki;
       flex-direction: column;
+      border-radius: inherit;
+      box-shadow: 0 0 0.2em 0.01em #2f2f2f66;
       padding-inline-start: 0;
       margin-block: 0;
    }
 
    .header-link-expandable-list li {
-      /* background-color: khaki; */
       padding: var(--header-padding);
       width: 100%;
       transition: background-color var(--hover-anim-duration);
+   }
+
+   .header-link-expandable-list li:last-child {
+      border-radius: inherit;
    }
 
    .header-link-expandable-list li a {
@@ -98,6 +93,11 @@
    .header-link-expandable-list li:hover a {
       color: var(--color-control-on-primary);
    }
+
+   .header-link-expandable-list li:hover .material-icons-round {
+      color: var(--color-primary);
+   }
+
 
    aside {
       right: 100%;

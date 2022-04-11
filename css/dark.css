@@ -5,7 +5,10 @@ main.night-mode {
    color: var(--color-on-surface-dark);
 }
 
-.index-link.night-mode, #header-links.night-mode .header-link, #header-links.night-mode a, .material-icons-round.night-mode, a:visited.index-link.night-mode {
+.index-link.night-mode, #header-links.night-mode .header-link,
+ #header-links.night-mode #night-mode,
+.material-icons-round.night-mode,
+a:visited.index-link.night-mode {
    color: var(--color-on-primary-dark);
 }
 
@@ -22,22 +25,49 @@ header.night-mode { background-color: var(--color-primary-dark); }
 
 
 #header-links.night-mode .header-link:hover, #header-links.night-mode .header-link:hover .header-link-expandable-text,
-#header-links.night-mode .header-link:hover .material-icons-round, .index-link.night-mode:hover, #header-links.night-mode #night-mode:hover {
+ .index-link.night-mode:hover, #header-links.night-mode #night-mode:hover {
    color: var(--color-control-on-primary-dark);
 }
 
-.header-link-expandable-layout.night-mode /*li*/ {
+
+
+/* #header-links.night-mode .header-link:hover, #header-links.night-mode .header-link:hover .header-link-expandable-text,
+#header-links.night-mode .index-link:hover, .header-link-expandable-list.night-mode li:hover a {
+      color: var(--color-control-on-primary-dark);
+   } */
+
+
+
+.header-link-expandable-list.night-mode {
    background-color: darkslateblue;
+   box-shadow: 0 0 0.4em 0.01em #2f2f2f66;
    /* background-color: var(--color-primary-variant-dark); */
 }
 
-.header-link-expandable-layout.night-mode li:hover {
+.header-link-expandable-list.night-mode li:hover {
    background-color: #21252C;
 }
 
-#header-links.night-mode li:hover a {
+   .header-link-expandable-list.night-mode li a:link, .header-link-expandable-list.night-mode li a:visited {
+      color: var(--color-on-primary-dark);
+   }
+
+   .header-link-expandable-list.night-mode li:hover .material-icons-round {
+      color: var(--color-primary);
+   }
+
+      .header-link-expandable-list.night-mode li:hover a {
+         color: var(--color-control-on-primary-dark);
+         /* color: red; */
+      }
+
+/* .header-link-expandable-list.night-mode li:hover a {
    color: var(--color-control-on-primary-dark);
 }
+
+.header-link-expandable-list.night-mode li:hover .material-icons-round {
+   color: var(--color-primary-dark);
+} */
 
 aside.night-mode {
    background-color: var(--color-primary-variant-dark);
