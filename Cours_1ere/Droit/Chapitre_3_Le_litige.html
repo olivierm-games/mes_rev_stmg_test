@@ -14,60 +14,65 @@
 	   <link rel="stylesheet" href="../../css/min_w_2400px.css">
 	   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
 	   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-	   <script src="../../js/web-font-loader.js"></script>
+		<script src="../../js/header_on_scroll.js"></script>
+		<script src="../../js/header_links_expandable.js"></script>
 	   <script src="../../js/menu.js"></script>
+		<script src="../../js/night_mode.js"></script>
+		<script src="../../js/side_nav_collapse_handle.js"></script>
+      <script src="../../js/side_nav_hover_handler.js"></script>
+      <script src="../../js/side_nav_item_expandable.js"></script>
+		<script src="../../js/web-font-loader.js"></script>
 	</head>
-	<body id="body_droit">
-		<div id="haut"></div>
-		<header>
-			<a href="../../" id="bouton1">Accueil</a>
-			<a href="../Acces_par_matiere.html" id="bouton2">Cours 1ère STMG</a>
-	    <a href="../../Cours_Terminale_STMG/Acces_par_matiere.html" id="bouton3">Cours Terminale STMG</a>
-	    <a id="bouton4">Cours pédagogiques</a>
-	    <a id="bouton5">Quiz STMG</a>
-		</header>
-	   <script src="../../js/header_on_scroll.js"></script>
-		<div id="page">
-  		<h1 id="h1_droit">Chapitre 3 : Le litige</h1>
-			<p><i>Le droit est un système de normes dont l'un des objectifs est de pacifier les relations sociales. La transformation d’un conflit en litige impose la formulation du problème en termes juridiques et la recherche des moyens de droit à l'appui des prétentions des parties. L’étude est menée à partir d’une situation juridique de nature conflictuelle dans laquelle on identifie les éléments du litige (faits, parties, prétentions, problème) et on cherche comment le droit peut résoudre le conflit.</i></p>
-			<p><b>La résolution des litiges suppose le recours au droit</b>. <b>Ce recours est porté</b>, <b>principalement</b>, <b>devant une juridiction de l'État</b>. <b>Le service public de la justice obéit à des principes qui ont notamment pour objectif de protéger les libertés des citoyens</b>. <b>Le procès se déroule selon une procédure en plusieurs étapes</b>. <b>Au cœur de toute prétention judiciaire se trouve la preuve</b>.</p>
-			<h3>I. Conflit, litige et différend</h3>
-			<p>Le litige et le différend portent exclusivement sur l'application du droit ou son interprétation à une situation de fait particulière et demeurent confinés dans les relations entre les parties.</p>
-			<p>Le conflit, au contraire, peut dépasser le domaine du droit et demeurer ancré dans le fait, et du reste, le conflit peut subsister après le règlement du litige en droit.</p>
-			<p>Ainsi, un conflit conjugal, même s'il donne lieu à un divorce, ou un conflit de voisinage, même s'il se résout en dommages-intérêts, peut perdurer au-delà du règlement juridique des différends qu'il a générés.</p>
-			<h3>II. La qualification juridique des faits</h3>
-			<p>La qualification juridique est une étape essentielle en vue de résoudre un cas pratique. Elle consiste à traduire une situation formulée en langage courant en une situation qualifiée juridiquement, c'est-à-dire appréhendée dans sa dimension juridique. Il s'agit d'une phase indispensable pour déterminer la ou les règles applicables, et ainsi proposer une solution justifiée en droit.</p>
-			<p>Dans un premier temps, il convient de reépérer les faits utiles pour décrire le litige, puis de les qualifier juridiquement, c'est-à-dire utiliser des catégories juridiques qui permettront ensuite de faire appel à des règles juridiques.</p>
-			<h3>III. Les parties et leurs prétentions</h3>
-			<p>Comme le précise l'article 4 du Code de procédure civile, « L'objet du litige est déterminé par les prétentions respectives des parties ».</p>
-			<p>À l'appui de leurs prétentions, les parties utilisent des moyens de droit &mdash; les règles juridiques qu'ils estiment justifier leurs demandes &mdash; et des moyens de fait qui justifient l'application de ces règles.</p>
-			<p>Ces prétentions doivent être claires et précises pour que la partie adverse apporte elle aussi des réponses claires et précises à ces demandes. Enfin, si le litige est porté devant les tribunaux, le juge se prononcera sur tout ce qui est demandé et seulement sur ce qui est demandé (article 5 du Code de procédure civile).</p>
-			<h3>IV. La formulation du problème de l'énoncé du litige en termes juridiques</h3>
-			<p>Dans le cadre d'un litige, <b>il est nécessaire d'identifier et de formuler les problèmes juridiques afin de leur appliquer les règles de droit appropriées</b>.</p>
-			<p>Il s'agit de formuler de façon précise la question de droit posée : la question doit contenir elle-même tous les éléments permettant de comprendre le problème.</p>
-			<p>Le problème doit porter sur le droit et être transposable à un autre cas d'espèce similaire (ex. : un transsexuel peut-il obtenir le changement de la mention du sexe à l'état civil ?).</p>
-			<p>La question ne doit pas porter sur les faits (ex. Mme X peut-elle obtenir le changement de son état civil ?).</p>
-			<p>Il est possible de formuler plusieurs problèmes de droit.</p>
-    </div>
-    <footer>
-      <a href="Chapitre_4_La_preuve.html" class="bouton_footer_droit">Chapitre 4</a>
-      <a href="Chapitre_2_Les_sources_du_droit.html" class="bouton_footer_droit">Chapitre 2</a>
-      <a href="#haut" class="bouton_footer_droit">Haut de page</a>
-      <a href="Sommaire.html" class="bouton_footer_droit">Retour au sommaire</a>
-    </footer>
-		<!-- phpmyvisites -->
-		<a href="http://st.free.fr/" title="phpMyVisites | Open source web analytics"
-		onclick="window.open(this.href);return(false);"><script>
-		<!--
-		var a_vars = Array();
-		var pagename='';
+	<body>
+		<div id="all-container" class="night-mode-element">
+			<div w3-include-html="../../header.html"></div>
+			<div w3-include-html="../../side_nav.html"></div>
+			<main class="night-mode-element">
+		  		<h1>Chapitre 3 : Le litige</h1>
+				<p><i>Le droit est un système de normes dont l'un des objectifs est de pacifier les relations sociales. La transformation d’un conflit en litige impose la formulation du problème en termes juridiques et la recherche des moyens de droit à l'appui des prétentions des parties. L’étude est menée à partir d’une situation juridique de nature conflictuelle dans laquelle on identifie les éléments du litige (faits, parties, prétentions, problème) et on cherche comment le droit peut résoudre le conflit.</i></p>
+				<p><b>La résolution des litiges suppose le recours au droit</b>. <b>Ce recours est porté</b>, <b>principalement</b>, <b>devant une juridiction de l'État</b>. <b>Le service public de la justice obéit à des principes qui ont notamment pour objectif de protéger les libertés des citoyens</b>. <b>Le procès se déroule selon une procédure en plusieurs étapes</b>. <b>Au cœur de toute prétention judiciaire se trouve la preuve</b>.</p>
+				<h2>I. Conflit, litige et différend</h2>
+				<p>Le litige et le différend portent exclusivement sur l'application du droit ou son interprétation à une situation de fait particulière et demeurent confinés dans les relations entre les parties.</p>
+				<p>Le conflit, au contraire, peut dépasser le domaine du droit et demeurer ancré dans le fait, et du reste, le conflit peut subsister après le règlement du litige en droit.</p>
+				<p>Ainsi, un conflit conjugal, même s'il donne lieu à un divorce, ou un conflit de voisinage, même s'il se résout en dommages-intérêts, peut perdurer au-delà du règlement juridique des différends qu'il a générés.</p>
+				<h2>II. La qualification juridique des faits</h2>
+				<p>La qualification juridique est une étape essentielle en vue de résoudre un cas pratique. Elle consiste à traduire une situation formulée en langage courant en une situation qualifiée juridiquement, c'est-à-dire appréhendée dans sa dimension juridique. Il s'agit d'une phase indispensable pour déterminer la ou les règles applicables, et ainsi proposer une solution justifiée en droit.</p>
+				<p>Dans un premier temps, il convient de reépérer les faits utiles pour décrire le litige, puis de les qualifier juridiquement, c'est-à-dire utiliser des catégories juridiques qui permettront ensuite de faire appel à des règles juridiques.</p>
+				<h2>III. Les parties et leurs prétentions</h2>
+				<p>Comme le précise l'article 4 du Code de procédure civile, « L'objet du litige est déterminé par les prétentions respectives des parties ».</p>
+				<p>À l'appui de leurs prétentions, les parties utilisent des moyens de droit &mdash; les règles juridiques qu'ils estiment justifier leurs demandes &mdash; et des moyens de fait qui justifient l'application de ces règles.</p>
+				<p>Ces prétentions doivent être claires et précises pour que la partie adverse apporte elle aussi des réponses claires et précises à ces demandes. Enfin, si le litige est porté devant les tribunaux, le juge se prononcera sur tout ce qui est demandé et seulement sur ce qui est demandé (article 5 du Code de procédure civile).</p>
+				<h2>IV. La formulation du problème de l'énoncé du litige en termes juridiques</h2>
+				<p>Dans le cadre d'un litige, <b>il est nécessaire d'identifier et de formuler les problèmes juridiques afin de leur appliquer les règles de droit appropriées</b>.</p>
+				<p>Il s'agit de formuler de façon précise la question de droit posée : la question doit contenir elle-même tous les éléments permettant de comprendre le problème.</p>
+				<p>Le problème doit porter sur le droit et être transposable à un autre cas d'espèce similaire (ex. : un transsexuel peut-il obtenir le changement de la mention du sexe à l'état civil ?).</p>
+				<p>La question ne doit pas porter sur les faits (ex. Mme X peut-elle obtenir le changement de son état civil ?).</p>
+				<p>Il est possible de formuler plusieurs problèmes de droit.</p>
+	    	</main>
+			<nav>
+				<!-- <button type="button" class="night-mode-element"> -->
+				<a href="Chapitre_1_Les_principes_et_les_fonctions_du_droit.html" class="button night-mode-element" title="Les principes et les fonctions du droit">Chapitre 1</a>
+				<a href="Sommaire.html" class="button night-mode-element">Sommaire</a>
+			<!-- </button> -->
+				<a href="Chapitre_4_La_preuve.html" class="button night-mode-element" title="La preuve">Chapitre 4</a>
 
-		var phpmyvisitesSite = 288732;
-		var phpmyvisitesURL = "http://st.free.fr/phpmyvisites.php";
-		//-->
-		</script>
-		<script src="http://st.free.fr/phpmyvisites.js"></script>
-		<img src="http://st.free.fr/phpmyvisites.php" alt="Statistics" style="border:0; color:transparent;" /></a>
-		<!-- /phpmyvisites -->
+			</nav>
+		</div>
+  		<div w3-include-html="../../footer.html"></div>
+  	   <script src="../../js/include_html.js"></script>
+  	   <script src="../../js/wait_for_elm.js"></script>
+  		<script>
+  			waitForElm('#header-links').then(elm => {
+  				initHeaderOnScroll();
+  				setHeaderLinksExpandable();
+  			});
+  			waitForElm('#cours-ter-mana-all-container').then(elm => {
+  				setSideNavItemsExpandable();
+  				initSideNavHoverHandler();
+  			});
+  			waitForElm('footer').then(elm => {
+  				initNightMode();
+  			});
+  		</script>
   </body>
 </html>

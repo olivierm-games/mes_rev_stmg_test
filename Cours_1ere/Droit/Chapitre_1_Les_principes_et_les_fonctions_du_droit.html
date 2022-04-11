@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8"/>
 	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Les principes et les fonctions du droit Chap 1 Droit 1ère</title>
+		<title>Principes/fonctions du droit Chap 1 Droit 1ère</title>
 	   <link rel="stylesheet" href="../../css/light.css">
 	   <link rel="stylesheet" href="../../css/dark.css">
 	   <link rel="stylesheet" href="../../css/colors.css">
@@ -14,386 +14,83 @@
 	   <link rel="stylesheet" href="../../css/min_w_2400px.css">
 	   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
 	   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-	   <script src="../../js/web-font-loader.js"></script>
+		<script src="../../js/header_on_scroll.js"></script>
+		<script src="../../js/header_links_expandable.js"></script>
 	   <script src="../../js/menu.js"></script>
+		<script src="../../js/night_mode.js"></script>
+		<script src="../../js/side_nav_collapse_handle.js"></script>
+      <script src="../../js/side_nav_hover_handler.js"></script>
+      <script src="../../js/side_nav_item_expandable.js"></script>
+		<script src="../../js/web-font-loader.js"></script>
 	</head>
-	<body class="night-mode-element">
-	   <header class="night-mode-element show" onclick="onClickMainPageOrHeader(this)">
-			<div id="header-menu-index-container">
-				<div w3-include-html="../../menu_svg.html"></div>
-	         <a href="../../" class="night-mode-element index-link"><span class="mes-rev">Mes révisions</span>STMG</a>
-	      </div>
-	      <div id="header-links" class="night-mode-element">
-	         <div class="header-link">
-	            <div class="header-link-expandable-layout night-mode-element">
-	               <ul class="header-link-expandable-list">
-	                  <li><a href="Sommaire.html"><span class="material-icons-round night-mode-element">&#xeaf6;</span>Droit</a></li>
-	                  <li><a href="../Economie/Sommaire.html"><span class="material-icons-round night-mode-element">&#xe2eb;</span>Économie</a></li>
-	                  <!-- <li><a href="Cours_1ere/Droit/Sommaire.html"><span class="material-icons-round night-mode-element">&#xea3e;</span>Histoire</a></li> -->
-	                  <li><a href="../Management/Sommaire.html"><span class="material-icons-round night-mode-element">&#xf049;</span>Management</a></li>
-	                  <!-- <li><a href="Cours_1ere/Droit/Sommaire.html"><span class="material-icons-round night-mode-element">&#xea5f;</span>Maths</a></li> -->
-	               </ul>
-	            </div>
-	            <span class="header-link-expandable-text">Cours 1<sup>ère</sup></span>
-	            <span class="material-icons-round night-mode-element">&#xe5c5;</span>
-	         </div>
-	         <div class="header-link">
-	            <span class="header-link-expandable-text">Cours T<sup>le</sup></span>
-	            <span class="material-icons-round night-mode-element">&#xe5c5;</span>
-	         </div>
-	         <!-- <span class="header-link">Exercices</span>
-	         <span class="header-link">Quiz</span> -->
-	         <a onclick="onToggleNightMode()" id="night-mode" class="material-icons-round">&#xe51c;</a>
-	      </div>
-		</header>
-	   <script src="../../js/header_on_scroll.js"></script>
-		<aside class="night-mode-element">
-	      <a href="../../" id="side-nav-index-link" class="night-mode-element index-link"><span class="mes-rev">Mes révisions</span>STMG</a>
-	      <div id="cours-1ere" class="side-nav-lvl-0-link collapsible-1ere night-mode-element"><!-- onclick="onExpandableSideNavItem(this.id)"-->
-	         <span class="material-icons-round night-mode-element">&#xe5c5;</span>
-	         <span>Cours 1<sup>ère</sup></span>
-	      </div>
-	      <ul id="cours-1ere-all-container">
-	         <li>
-	            <div id="cours-1ere-droit" class="side-nav-lvl-1-link-0 close collapsible-1ere night-mode-element">
-	               <span class="material-icons-round night-mode-element">&#xe5c5;</span>
-	               <span>Droit</span>
-	            </div>
-	            <ul id="cours-1ere-droit-all-container" class="close">
-	               <!-- <li class="side-nav-lvl-2-link-0-0 night-mode-element"><a href="Cours_1ere/Droit/Sommaire.html">Sommaire</a></li> -->
-	               <a href="javascript:null">
-	                  <li class="side-nav-lvl-2-link-0-0 night-mode-element">
-	                     Chapitre 1 : Les principes et les fonctions du droit
-	                  </li>
-	               </a>
-	               <a href="Chapitre_3_Le_litige.html">
-	                  <li class="side-nav-lvl-2-link-0-0 night-mode-element">
-	                     Chapitre 3 : Le litige
-	                  </li>
-	               </a>
-	               <a href="Chapitre_4_La_preuve.html">
-	                  <li class="side-nav-lvl-2-link-0-0 night-mode-element">
-	                     Chapitre 4 : La preuve
-	                  </li>
-	               </a>
-	            </ul>
-	         </li>
-	         <li>
-	            <div id="cours-1ere-eco" class="side-nav-lvl-1-link-0 close collapsible-1ere night-mode-element">
-	               <span class="material-icons-round night-mode-element">&#xe5c5;</span>
-	               <span>Économie</span>
-	            </div>
-	            <ul id="cours-1ere-eco-all-container" class="close">
-	               <a href="../Economie/Chapitre_1_Production_repatition_depenses.html">
-	                  <li class="side-nav-lvl-2-link-0-1 night-mode-element">
-	                     Chapitre 1 : Production, répartition, dépenses
-	                  </li>
-	               </a>
-	               <a href="../Economie/Chapitre_2_Les_agents_economiques.html">
-	                  <li class="side-nav-lvl-2-link-0-1 night-mode-element">
-	                     Chapitre 2 : Les agents économiques
-	                  </li>
-	               </a>
-	               <a href="../Economie/Chapitre_3_La_combinaison_des_facteurs_de_production_et_l_evolution_des_technologies.html">
-	                  <li class="side-nav-lvl-2-link-0-1 night-mode-element">
-	                     Chapitre 3 : La combinaison des facteurs de production et l'évolution des technologies
-	                  </li>
-	               </a>
-	            </ul>
-	         </li>
-	         <li>
-	            <div id="cours-1ere-mana" class="side-nav-lvl-1-link-0 close collapsible-1ere night-mode-element">
-	               <span class="material-icons-round night-mode-element">&#xe5c5;</span>
-	               <span>Management</span>
-	            </div>
-	            <ul id="cours-1ere-mana-all-container" class="close">
-	               <a href="../Management/Question_1_Qu_est_ce_qu_une_organisation.html">
-	                  <li class="side-nav-lvl-2-link-0-2 night-mode-element">
-	                     Question 1 : Qu'est-ce qu'une organisation ?
-	                  </li>
-	               </a>
-	               <a href="../Management/Question_2_Qu_apporte_le_management_a_la_gestion_des_organisations.html">
-	                  <li class="side-nav-lvl-2-link-0-2 night-mode-element">
-	                     Question 2 : Qu'apporte le management à la gestion des organisations ?
-	                  </li>
-	               </a>
-	               <a href="..Management/Question_3_La_finalite_de_l_entreprise_se_limite_t_elle_a_la_realisation_d_un_profit.html">
-	                  <li class="side-nav-lvl-2-link-0-2 night-mode-element">
-	                     Question 3 : La finalité de l'entreprise se limite-t-elle à la réalisation d'un profit ?
-	                  </li>
-	               </a>
-	               <a href="../Management/Question_4_Quelles_sont_les_finalites_des_organisations_publiques.html">
-	                  <li class="side-nav-lvl-2-link-0-2 night-mode-element">
-	                     Question 4 : Quelles sont les finalités des organisations publiques ?
-	                  </li>
-	               </a>
-	               <a href="../Management/Question_5_Quel_est_le_role_des_associations.html">
-	                  <li class="side-nav-lvl-2-link-0-2 night-mode-element">
-	                     Question 5 : Quel est le rôle des associations ?
-	                  </li>
-	               </a>
-	               <a href="../Management/Question_6_Quels_sont_les_objectifs_strategiques_des_organisations.html">
-	                  <li class="side-nav-lvl-2-link-0-2 night-mode-element">
-	                     Question 6 : Quels sont les objectifs stratégiques des organisations ?
-	                  </li>
-	               </a>
-	               <a href="../Management/Question_7_Sur_quoi_portent_les_decisions_et_comment_sont_elles_prises.html">
-	                  <li class="side-nav-lvl-2-link-0-2 night-mode-element">
-	                     Question 7 : Sur quoi portent les décisions et comment sont-elles prises ?
-	                  </li>
-	               </a>
-	               <a href="../Management/Question_8_Un_controle_strategique_s_impose_t_il.html">
-						   <li class="side-nav-lvl-2-link-0-2 night-mode-element">
-	                     Question 8 : Un contrôle stratégique s'impose-t-il ?
-	                  </li>
-	               </a>
-	               <a href="../Management/Question_9_Le_systeme_d_information_contribue_t_il_a_l_efficacite_de_la_prise_de_decision.html">
-			           <li class="side-nav-lvl-2-link-0-2 night-mode-element">
-	                     Question 9 : Le système d'information contribue-t-il à l'efficacité de la prise de décision ?
-	                  </li>
-	               </a>
-	               <a href="../Management/Question_10_Quel_mode_de_production_choisir.html">
-	                  <li class="side-nav-lvl-2-link-0-2 night-mode-element">
-	                     Question 10 : Quel mode de production choisir ?
-	                  </li>
-	               </a>
-	               <a href="../Management/Question_11_Une_organisation_du_travail_souple_ou_rigide.html">
-	                  <li class="side-nav-lvl-2-link-0-2 night-mode-element">
-	                     Question 11 : Une organisation du travail souple ou rigide ?
-	                  </li>
-	               </a>
-	               <a href="../Management/Question_12_Comment_assurer_la_coherence_de_l_ensemble_des_taches.html">
-	                  <li class="side-nav-lvl-2-link-0-2 night-mode-element">
-	                     Question 12 : Comment assurer la cohérence de l'ensemble des tâches ?
-	                  </li>
-	               </a>
-	            </ul>
-	         </li>
-	      </ul>
+	<body>
+		<div id="all-container" class="night-mode-element">
+			<div w3-include-html="../../header.html"></div>
+			<div w3-include-html="../../side_nav.html"></div>
+			<main class="night-mode-element" onclick="onClickMainPageOrHeader(this)">
+				<h1>Chapitre 1 : Les principes et les fonctions du droit</h1>
+					<h2>I. Quelles sont les règles fondamentales ?</h2>
+					<p>Le droit est un ensemble de règles qui permet d'organiser la vie des hommes en société, il traduit des valeurs que souhaite véhiculer la République française et repose sur quatre grands principes : Liberté, Égalité, Solidarité et Laïcité.</p>
+					<h2>II. Quelles sont les fonctions du droit ?</h2>
+					<p><u>Le droit a deux fonctions essentielles</u> :</p>
+					<ul>
+						<li>une fonction de <b>pacification</b>, c'est-à-dire qu'il organise et régule les rapports sociaux en mettant en place des règles (exemple : les lois) et en sanctionnant leur non respect ;</li>
+						<li>une fonction d'<b>organisation de la société</b> en fixant un cadre favorisant le développement des activités humaines (exemple : droit de la concurrence).</li>
+					</ul>
+					<p>Pour le baccalauréat, les fonctions du droit sont appréhendées à partir de l’observation des champs les plus divers de la vie en société et notamment ceux de la vie privée, de la vie professionnelle et de la vie économique et sociale.</p>
+					<h2>III. Quels sont les caractères de la règle de droit ?</h2>
+					<table>
+						<caption>Les caractères de la règle de droit</caption>
+						<thead>
+							<tr>
+								<td class="important">Caractères</td>
+								<td class="important">Définitions</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="important">Obligatoire</td>
+								<td>La règle de droit s'applique à toutes les personnes dès lors qu'elles entrent dans son champ d'application sur le territoire national quelle que soit la nationalité des personnes et partout dans le monde pour les ressortissants français</td>
+							</tr>
+							<tr>
+								<td class="important">Général</td>
+								<td>La règle de droit ne s'applique à une personne en particulier, mais à toutes les personnes qui entrent dans une catégorie visée par la règle (exemple : règles concernant les mineurs). Ce principe est directement issu du principe d'égalité des citoyens devant la loi, les emplois publics et les charges publics (Préambule de la Constitution de 1958, Déclaration des Droits de l'Homme et du Citoyen de 1789)</td>
+							</tr>
+							<tr>
+								<td class="important">Coercitif</td>
+								<td>Les pouvoirs publics peuvent utiliser la force publique pour faire respecter une règle de droit et pour sanctionner un manquement à l'obligation de respecter une règle de droit</td>
+							</tr>
+							<tr>
+								<td class="important">Légitime</td>
+								<td>Pour être accepté comme règle par tous, il faut que l'autorité qui a créé cette règle soit considérée comme légitime par les personnes à qui elle s'impose. En France, le législateur tire sa légitimité du suffrage universel</td>
+							</tr>
+						</tbody>
+					</table>
+			</main>
+			<nav>
+				<!-- <button type="button" class="night-mode-element"> -->
+				<a href="Sommaire.html" class="button night-mode-element">Sommaire</a>
+			<!-- </button> -->
+				<a href="Chapitre_3_Le_litige.html" class="button night-mode-element" title="Le litige">Chapitre 3 : Le litige</a>
 
-	      <div id="cours-ter" class="side-nav-lvl-0-link collapsible-ter night-mode-element">
-	         <span class="material-icons-round night-mode-element">&#xe5c5;</span>
-	         <span>Cours T<sup>le</sup></span>
-	      </div>
-	      <ul id="cours-ter-all-container">
-	         <li>
-	            <div id="cours-ter-droit" class="side-nav-lvl-1-link-1 close collapsible-ter night-mode-element">
-	               <span class="material-icons-round night-mode-element">&#xe5c5;</span>
-	               <span>Droit</span>
-	            </div>
-	            <ul id="cours-ter-droit-all-container" class="close">
-	               <a href="../../Cours_Tle/Droit/Chapitre_1_La_responsabilite_civile_et_le_dommage.html">
-	                  <li class="side-nav-lvl-2-link-1-0 night-mode-element">
-	                     Chapitre 1 : La responsabilité civile et le dommage
-	                  </li>
-	               </a>
-	               <a href="../../Cours_Tle/Droit/Chapitre_2_Les_differents_regimes_de_responsabilite_civile.html">
-	                  <li class="side-nav-lvl-2-link-1-0 night-mode-element">
-	                     Chapitre 2 : Les différents régimes de responsabilité civile
-	                  </li>
-	               </a>
-	               <a href="../../Cours_Tle/Droit/Chapitre_3_La_reparation_du_dommage.html">
-	                  <li class="side-nav-lvl-2-link-1-0 night-mode-element">
-	                     Chapitre 3 : La réparation du dommage
-	                  </li>
-	               </a>
-	               <a href="../../Cours_Tle/Droit/Chapitre_4_Le_contrat_de_travail.html">
-	                  <li class="side-nav-lvl-2-link-1-0 night-mode-element">
-	                     Chapitre 4 : Le contrat de travail
-	                  </li>
-	               </a>
-	               <a href="../../Cours_Tle/Droit/Chapitre_5_Les_conditions_de_travail.html">
-	                  <li class="side-nav-lvl-2-link-1-0 night-mode-element">
-	                     Chapitre 5 : Les conditions de travail
-	                  </li>
-	               </a>
-	               <a href="../../Cours_Tle/Droit/Chapitre_6_Les_libertes_individuelles_et_collectives_des_salaries.html">
-	                  <li class="side-nav-lvl-2-link-1-0 night-mode-element">
-	                     Chapitre 6 : Les libertés individuelles et collectives des salariés
-	                  </li>
-	               </a>
-	               <a href="../../Cours_Tle/Droit/Chapitre_7_La_rupture_du_CDI.html">
-	                  <li class="side-nav-lvl-2-link-1-0 night-mode-element">
-	                     Chapitre 7 : La rupture du CDI
-	                  </li>
-	               </a>
-	               <a href="../../Cours_Tle/Droit/Chapitre_8_La_liberte_du_commerce_et_la_concurrence_loyale.html">
-	                  <li class="side-nav-lvl-2-link-1-0 night-mode-element">
-	                     Chapitre 8 : La liberté du commerce et la concurrence loyale
-	                  </li>
-	               </a>
-	               <a href="../../Cours_Tle/Droit/Chapitre_9_Les_pratiques_anticoncurrentielles_et_restrictives_de_concurrence.html">
-	                  <li class="side-nav-lvl-2-link-1-0 night-mode-element">
-	                     Chapitre 9 : Les pratiques anticoncurrentielles et restrictives de concurrence
-	                  </li>
-	               </a>
-	               <a href="../../Cours_Tle/Droit/Chapitre_10_Entreprendre_seul.html">
-	                  <li class="side-nav-lvl-2-link-1-0 night-mode-element">
-	                     Chapitre 10 : Entreprendre seul
-	                  </li>
-	               </a>
-	               <a href="../../Cours_Tle/Droit/Chapitre_11_Entreprendre_en_societe.html">
-	                  <li class="side-nav-lvl-2-link-1-0 night-mode-element">
-	                     Chapitre 11 : Entreprendre en société
-	                  </li>
-	               </a>
-	               <a href="../../Cours_Tle/Droit/Chapitre_12_Le_partenariat.html">
-	                  <li class="side-nav-lvl-2-link-1-0 night-mode-element">
-	                     Chapitre 12 : Le partenariat
-	                  </li>
-	               </a>
-	            </ul>
-	         </li>
-	         <li>
-	            <div id="cours-ter-eco" class="side-nav-lvl-1-link-1 close collapsible-ter night-mode-element">
-	               <span class="material-icons-round night-mode-element">&#xe5c5;</span>
-	               <span>Économie</span>
-	            </div>
-	            <ul id="cours-ter-eco-all-container" class="close">
-	               <a href="../../Cours_Tle/Economie/Chapitre_1_Comment_fonctionne_le_marche_du_travail.html">
-	                  <li class="side-nav-lvl-2-link-1-1 night-mode-element">
-	                     Chapitre 1 : Comment fonctionne le marché du travail ?
-	                  </li>
-	               </a>
-	               <a href="../../Cours_Tle/Economie/Chapitre_2_Quelles_sont_les_causes_du_chomage.html">
-	                  <li class="side-nav-lvl-2-link-1-1 night-mode-element">
-	                     Chapitre 2 : Quelles sont les causes du chômage ?
-	                  </li>
-	               </a>
-	               <a href="../../Cours_Tle/Economie/Chapitre_3_Quels_sont_les_domaines_d_intervention_de_l_etat_en_matiere_sociale.html">
-	                  <li class="side-nav-lvl-2-link-1-1 night-mode-element">
-	                     Chapitre 3 : Quels sont les domaines d'intervention de l'État en matière sociale ?
-	                  </li>
-	               </a>
-	               <a href="../../Cours_Tle/Economie/Chapitre_4_Quelle_est_l_efficacite_de_la_politique_sociale_de_l_etat.html">
-	                  <li class="side-nav-lvl-2-link-1-1 night-mode-element">
-	                     Chapitre 4 : Quelle est l'efficacité de la politique sociale de l'État ?
-	                  </li>
-	               </a>
-	               <a href="../../Cours_Tle/Economie/Chapitre_5_Qu_est_ce_que_l_economie_sociale_et_solidaire.html">
-	                  <li class="side-nav-lvl-2-link-1-1 night-mode-element">
-	                     Chapitre 5 : Qu'est-ce que l'économie sociale et solidaire ?
-	                  </li>
-	               </a>
-	               <a href="../../Cours_Tle/Economie/Chapitre_6_Qu_est_ce_que_la_politique_economique.html">
-	                  <li class="side-nav-lvl-2-link-1-1 night-mode-element">
-	                     Chapitre 6 : Qu'est-ce que la politique économique ?
-	                  </li>
-	               </a>
-	               <a href="../../Cours_Tle/Economie/Chapitre_7_Quelles_sont_les_contraintes_pesant_sur_les_politiques_economiques_de_la_zone_euro.html">
-	                  <li class="side-nav-lvl-2-link-1-1 night-mode-element">
-	                     Chapitre 7 : Quelles sont les contraintes pesant sur les politiques économiques de la zone euro ?
-	                  </li>
-	               </a>
-	               <a href="../../Cours_Tle/Economie/Chapitre_8_Quelles_sont_les_evolutions_recentes_du_commerce_mondial.html">
-	                  <li class="side-nav-lvl-2-link-1-1 night-mode-element">
-	                     Chapitre 8 : Quelles sont les évolutions récentes du commerce mondial ?
-	                  </li>
-	               </a>
-	               <a href="../../Cours_Tle/Economie/Chapitre_9_Quelles_sont_les_pratiques_d_echanges_au_niveau_international.html">
-	                  <li class="side-nav-lvl-2-link-1-1 night-mode-element">
-	                     Chapitre 9 : Quelles sont les pratiques d'échanges au niveau international ?
-	                  </li>
-	               </a>
-	               <a href="../../Cours_Tle/Economie/Chapitre_10_Comment_reguler_les_echanges.html">
-	                  <li class="side-nav-lvl-2-link-1-1 night-mode-element">
-	                     Chapitre 10 : Comment réguler les échanges ?
-	                  </li>
-	               </a>
-	               <a href="../../Cours_Tle/Economie/Chapitre_11_Quels_sont_les_desequilibres_actuels_de_la_croissance.html">
-	                  <li class="side-nav-lvl-2-link-1-1 night-mode-element">
-	                     Chapitre 11 : Quels sont les déséquilibres actuels de la croissance ?
-	                  </li>
-	               </a>
-	               <a href="../../Cours_Tle/Economie/Chapitre_12_Comment_le_developpement_peut_il_etre_durable.html">
-	                  <li class="side-nav-lvl-2-link-1-1 night-mode-element">
-	                     Chapitre 12 : Comment le développement peut-il être durable ?
-	                  </li>
-	               </a>
-	            </ul>
-	         </li>
-	         <li>
-	            <div id="cours-ter-mana" class="side-nav-lvl-1-link-1 close collapsible-ter night-mode-element">
-	               <span class="material-icons-round night-mode-element">&#xe5c5;</span>
-	               <span>Management</span>
-	            </div>
-	            <ul id="cours-ter-mana-all-container" class="close">
-	               <a href="../../Cours_Tle/Management/Question_3_Peut_on_entretenir_durablement_la_motivation_des_hommes_par_la_seule_remuneration.html">
-	                  <li class="side-nav-lvl-2-link-1-2 night-mode-element">
-	                     Question 3 : Peut-on entretenir durablement la motivation des hommes par la seule rémunération ?
-	                  </li>
-	               </a>
-	               <a href="../../Cours_Tle/Management/Question_6_Quelles_sont_les_principales_options_strategiques_pour_les_entreprises.html">
-	                  <li class="side-nav-lvl-2-link-1-2 night-mode-element">
-	                     Question 6 : Quelles sont les principales options stratégiques pour les entreprises ?
-	                  </li>
-	               </a>
-	            </ul>
-	         </li>
-	      </ul>
-	   </aside>
-	   <script src="../../js/side_nav_collapse_handle.js"></script>
-		<main class="night-mode-element" onclick="onClickMainPageOrHeader(this)">
-			<h1>Chapitre 1 : Les principes et les fonctions du droit</h1>
-				<h2>I. Quelles sont les règles fondamentales ?</h2>
-				<p>Le droit est un ensemble de règles qui permet d'organiser la vie des hommes en société, il traduit des valeurs que souhaite véhiculer la République française et repose sur quatre grands principes : Liberté, Égalité, Solidarité et Laïcité.</p>
-				<h2>II. Quelles sont les fonctions du droit ?</h2>
-				<p><u>Le droit a deux fonctions essentielles</u> :</p>
-				<ul>
-					<li>une fonction de <b>pacification</b>, c'est-à-dire qu'il organise et régule les rapports sociaux en mettant en place des règles (exemple : les lois) et en sanctionnant leur non respect ;</li>
-					<li>une fonction d'<b>organisation de la société</b> en fixant un cadre favorisant le développement des activités humaines (exemple : droit de la concurrence).</li>
-				</ul>
-				<p>Pour le baccalauréat, les fonctions du droit sont appréhendées à partir de l’observation des champs les plus divers de la vie en société et notamment ceux de la vie privée, de la vie professionnelle et de la vie économique et sociale.</p>
-				<h2>III. Quels sont les caractères de la règle de droit ?</h2>
-				<table>
-					<caption>Les caractères de la règle de droit</caption>
-					<thead>
-						<tr>
-							<td class="important">Caractères</td>
-							<td class="important">Définitions</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="important">Obligatoire</td>
-							<td>La règle de droit s'applique à toutes les personnes dès lors qu'elles entrent dans son champ d'application sur le territoire national quelle que soit la nationalité des personnes et partout dans le monde pour les ressortissants français</td>
-						</tr>
-						<tr>
-							<td class="important">Général</td>
-							<td>La règle de droit ne s'applique à une personne en particulier, mais à toutes les personnes qui entrent dans une catégorie visée par la règle (exemple : règles concernant les mineurs). Ce principe est directement issu du principe d'égalité des citoyens devant la loi, les emplois publics et les charges publics (Préambule de la Constitution de 1958, Déclaration des Droits de l'Homme et du Citoyen de 1789)</td>
-						</tr>
-						<tr>
-							<td class="important">Coercitif</td>
-							<td>Les pouvoirs publics peuvent utiliser la force publique pour faire respecter une règle de droit et pour sanctionner un manquement à l'obligation de respecter une règle de droit</td>
-						</tr>
-						<tr>
-							<td class="important">Légitime</td>
-							<td>Pour être accepté comme règle par tous, il faut que l'autorité qui a créé cette règle soit considérée comme légitime par les personnes à qui elle s'impose. En France, le législateur tire sa légitimité du suffrage universel</td>
-						</tr>
-					</tbody>
-				</table>
-		</main>
-		<nav>
-			<!-- <button type="button" class="night-mode-element"> -->
-			<a href="Sommaire.html" class="button night-mode-element">
-					Sommaire
-			</a>
-		<!-- </button> -->
-			<a href="Chapitre_3_Le_litige.html" class="button night-mode-element">Chapitre 3 : Le litige</a>
+			</nav>
+		</div>
 
-		</nav>
-		<!-- <div id="page">
-    </div> -->
-    <!-- <footer>
-      <a href="#haut" class="bouton_footer_droit">Haut de page</a>
-      <a href="Sommaire.html" class="bouton_footer_droit">Retour au sommaire</a>
-      <a href="Chapitre_2_Les_sources_du_droit.html" class="bouton_footer_droit">Chapitre 2</a>
-    </footer> -->
-    <script src="../../js/side_nav_hover_handler.js"></script>
-    <script src="../../js/side_nav_item_expandable.js"></script>
-    <script src="../../js/night_mode.js"></script>
-    <script src="../../js/include_html.js"></script>
-    <script src="../../js/wait_for_elm.js"></script>
-    <script>waitForElm('#menu-svg').then((elm) => initNightMode());</script>
-  </body>
+		<div w3-include-html="../../footer.html"></div>
+	   <script src="../../js/include_html.js"></script>
+	   <script src="../../js/wait_for_elm.js"></script>
+		<script>
+			waitForElm('#header-links').then(elm => {
+				initHeaderOnScroll();
+				setHeaderLinksExpandable();
+			});
+			waitForElm('#cours-ter-mana-all-container').then(elm => {
+				setSideNavItemsExpandable();
+				initSideNavHoverHandler();
+			});
+			waitForElm('footer').then(elm => {
+				initNightMode();
+			});
+		</script>
+  	</body>
 </html>
