@@ -81,11 +81,12 @@ main {
    position: relative;
    left: 10%;
    transition: left var(--menu-anim-duration), width var(--menu-anim-duration);
-   padding: 24px 24px 60px 24px;
+   /* padding: 24px 24px 60px 24px; */
    background-color: var(--color-surface);
    color: var(--color-on-surface);
    box-shadow: 0 0 .2em 0 #2F2F2F;
    border-radius: .2em;
+   padding: 1% 1% 2.5% 1%;
 }
 
 #fab-back-to-top {
@@ -288,6 +289,8 @@ aside ul, .side-nav-lvl-0-link, [class^=side-nav-lvl-1-link] {
 h1 {
    font-size: 1.9em;
    font-style: italic;
+    padding: 2%;
+    padding-top: 0;
 }
 
 h2 {
@@ -296,7 +299,6 @@ h2 {
 
 h1, h2 {
    text-decoration-line: underline;
-   padding: 0.2em 0.5em;
    text-decoration-thickness: 0.05em;
    text-underline-offset: 5px;
 }
@@ -335,7 +337,7 @@ caption {
 nav {
    display: flex;
    justify-content: center;
-   margin-bottom: 1em;
+   margin-top: 3em;
 }
 
 .button {
@@ -362,7 +364,7 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
    background: repeating-linear-gradient(23deg, rgb(255 0 0 / 15%) 12.5%, rgb(255 165 0 / 15%) 25%, rgb(255 255 0 / 15%) 37.5%, rgb(0 128 0 / 15%) 50%, rgb(0 0 255 / 15%) 62.5%, rgb(75 0 130 / 15%) 75%, rgb(238 130 238 / 15%) 87.5%, rgb(255 0 0 / 15%) 100%), repeating-linear-gradient(103deg, rgb(255 0 0 / 10%) 12.5%, rgb(255 165 0 / 10%) 25%, rgb(255 255 0 / 15%) 37.5%, rgb(0 128 0 / 15%) 50%, rgb(0 0 255 / 10%) 62.5%, rgb(75 0 130 / 15%) 75%, rgb(238 130 238 / 30%) 87.5%, rgb(255 0 0 / 10%) 100%);
    /* width: max-content; */
    margin: auto;
-   padding: 0 2em;
+   padding: 0 2%;
    /* margin: 0 .5em 2em .5em; */
    /* filter: blur(.04em); */
    /* -webkit-filter: blur(.04em); */
@@ -432,7 +434,7 @@ footer {
    left: 0;
    right: 0;
    padding: 1.5em 0;
-   margin-top: 2em;
+   margin-top: 1.5em;
    height: 8.5em;
    background: linear-gradient(0deg, lightyellow -100%, darkkhaki 70%, darkkhaki 100%);
 }
