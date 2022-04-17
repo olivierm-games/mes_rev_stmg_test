@@ -1,6 +1,20 @@
-var message=document.querySelector(".message-tip");
-var collapsibleText=document.querySelector(".message-slider");
-message.addEventListener("click", function() {
+const messageTip=document.querySelector(".message-tip");
+const messageSlider=document.querySelector(".message-slider");
+const main=document.querySelector('main');
+
+messageTip.addEventListener("click", function() {
+   var tipWidthDeltaSliderWidth=messageTip.clientWidth-messageSlider.clientWidth;
+   var messageMarginS = window.getComputedStyle(main, null).getPropertyValue('padding-left');
+   var messageMarginD=Number(messageMarginS.slice(0, -2))*2;
+   var windowInnerW=window.innerWidth;
+   var messageMaxW=windowInnerW-messageMarginD-tipWidthDeltaSliderWidth;
    this.classList.toggle("closed");
-   collapsibleText.style.maxWidth=collapsibleText.style.maxWidth?null:collapsibleText.scrollWidth+"px";
+   messageSlider.style.maxWidth=messageSlider.style.maxWidth!=="0px"?"0px":messageMaxW+"px";
+   // messageSlider.style.maxHeight=messageSlider.scrollHeight+"px";
 });
+
+// const sliderMaxHeight=messageSlider.scrollHeight;
+console.log("messageSlider.scrollHeight: "+messageSlider.scrollHeight);
+messageSlider.style.height=messageSlider.scrollHeight+"px";
+messageTip.classList.toggle("closed");
+messageSlider.style.maxWidth="0px";

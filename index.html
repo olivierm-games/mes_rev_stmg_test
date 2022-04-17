@@ -28,7 +28,8 @@
 <body>
    <span id="haut"></span>
    <div id="all-container" class="night-mode-element">
-      <header class="night-mode-element" onclick="onClickMainPageOrHeader(this)">
+   <!-- <div id="all-container" class="night-mode-element" onclick="onClickMainPageOrHeader(this)"> -->
+      <header class="night-mode-element">
          <div id="header-menu-index-container">
             <svg xmlns="http://www.w3.org/2000/svg"
                width="24px" height="24px"
@@ -36,7 +37,8 @@
                fill="#323232CA"
                id="menu-svg"
                class="night-mode-element"
-               onclick="onPhoneMenu(true)">
+               onclick="onMenu()">
+               <!-- onclick="onPhoneMenu(true)"> -->
                <path id="menu-svg-top-bar" d="M3 5H21C22 5,22 7,21 7H3C2 7,2 5,3 5z"/>
                <path id="menu-svg-center-bar" d="M3 11H21C22 11,22 13,21 13H3C2 13,2 11,3 11z"/>
                <path id="menu-svg-bottom-bar" d="M3 17H21C22 17,22 19,21 19H3C2 19,2 17,3 17z"/>
@@ -381,7 +383,7 @@
             <li><span>Management</span></li>
          </ul> -->
       </aside>
-      <main class="night-mode-element" onclick="onClickMainPageOrHeader(this)">
+      <main class="night-mode-element">
          <h3>Bienvenue sur la page d'accueil de ce site de révisions pour le bac STMG !</h3>
          <p>Sur ce site, vous pourrez trouver :
             <ul>
@@ -393,7 +395,7 @@
                <li>des exercices (prochainement) ;</li><!-- TODO: page and link -->
             </ul>
          </p>
-         <div class="message-tip night-mode-element closed">
+         <div class="message-tip night-mode-element">
             <span class="material-icons-round night-mode-element">&#xe79a;</span>
             <span class="material-icons-round night-mode-element">&#xe5c5;</span>
             <span class="message-slider">Les publicités ne s'affichent que <b>sur</b> (ou <b>en quittant</b>) <b>cette page</b>.<span>
@@ -441,6 +443,7 @@
    <script>
       initHeaderOnScroll();
       initNightMode();
+      initSideNavCollapseHandle();
       initSideNavHoverHandler();
       setSideNavItemsExpandable();
       setHeaderLinksExpandable();

@@ -113,6 +113,16 @@
       box-shadow: 0 0 0.15em 0 #292929dd;
    }
 
+   main {
+      width: 80%;
+      left: 10%;
+      border-radius: .2em;
+      transition: left var(--menu-anim-duration), width var(--menu-anim-duration);
+      /* padding: 1% 1% 2.5% 1%; */
+      padding: 0;
+      padding-top: 1%;
+   }
+
    main.open {
       width: 70%;
       position: relative;
@@ -126,5 +136,10 @@
 
    .side-nav-item-l {
       display: block;
+   }
+
+   .card-droit-1ere {
+      border-radius: 0 0 .2em .2em;
+      /* margin: auto; */
    }
 }
