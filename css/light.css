@@ -403,6 +403,7 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
     width: fit-content;
     cursor: pointer;
     box-shadow: 0.02em 0.05em 0.1em 0.05em #32323288;
+    margin: 0 0 2% 2%;
 }
 
 .message-tip span:nth-child(2) {

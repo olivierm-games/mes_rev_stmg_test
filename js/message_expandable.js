@@ -1,10 +1,10 @@
 const messageTip=document.querySelector(".message-tip");
 const messageSlider=document.querySelector(".message-slider");
-const main=document.querySelector('main');
+// const main=document.querySelector('main');
 
 messageTip.addEventListener("click", function() {
    var tipWidthDeltaSliderWidth=messageTip.clientWidth-messageSlider.clientWidth;
-   var messageMarginS = window.getComputedStyle(main, null).getPropertyValue('padding-left');
+   var messageMarginS = window.getComputedStyle(messageTip, null).getPropertyValue('margin-left');
    var messageMarginD=Number(messageMarginS.slice(0, -2))*2;
    var windowInnerW=window.innerWidth;
    var messageMaxW=windowInnerW-messageMarginD-tipWidthDeltaSliderWidth;
