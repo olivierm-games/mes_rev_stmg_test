@@ -32,7 +32,8 @@ header.night-mode { background-color: var(--color-primary-dark); }
 
 
 #header-links.night-mode .header-link:hover, #header-links.night-mode .header-link:hover .header-link-expandable-text,
- .index-link.night-mode:hover, #header-links.night-mode #night-mode:hover, #fab-back-to-top:hover > .material-icons-round.night-mode {
+ .index-link.night-mode:hover, #header-links.night-mode #night-mode:hover, #fab-back-to-top:hover > .material-icons-round.night-mode,
+ .message-tip.night-mode:hover span {
    color: var(--color-control-on-primary-dark);
 }
 
@@ -116,8 +117,11 @@ a:link.button.night-mode, a:visited.button.night-mode, a:hover.button.night-mode
 
 
 .message-tip.night-mode {
-   color: var(--color-on-surface-dark);
    background: linear-gradient(0deg, #5b4, #394);
+}
+
+.message-tip.night-mode span {
+   color: var(--color-on-primary-dark);   
 }
 
 footer.night-mode {

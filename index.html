@@ -27,7 +27,7 @@
 <body>
    <span id="haut"></span>
    <div id="all-container" class="night-mode-element">
-   <!-- <div id="all-container" class="night-mode-element" onclick="onClickMainPageOrHeader(this)"> -->
+      <!-- WARNING: START OF: PAY ATTENTION WHEN MODIFTING: HEADER (header.html) -->
       <header class="night-mode-element">
          <div id="header-menu-index-container">
             <svg xmlns="http://www.w3.org/2000/svg"
@@ -37,14 +37,12 @@
                id="menu-svg"
                class="night-mode-element"
                onclick="onMenu()">
-               <!-- onclick="onPhoneMenu(true)"> -->
                <path id="menu-svg-top-bar" d="M3 5H21C22 5,22 7,21 7H3C2 7,2 5,3 5z"/>
                <path id="menu-svg-center-bar" d="M3 11H21C22 11,22 13,21 13H3C2 13,2 11,3 11z"/>
                <path id="menu-svg-bottom-bar" d="M3 17H21C22 17,22 19,21 19H3C2 19,2 17,3 17z"/>
             </svg>
-            <a href="#" class="night-mode-element index-link"><span class="mes-rev">Mes révisions</span>STMG</a>
+            <a href="#haut" class="night-mode-element index-link"><span class="mes-rev">Mes révisions</span>STMG</a>
          </div>
-         <!-- <div w3-include-html="header_links.html"></div> -->
          <div id="header-links" class="night-mode-element">
             <div class="header-link">
                <div class="header-link-expandable-layout">
@@ -70,9 +68,11 @@
             <a onclick="onToggleNightMode()" id="night-mode" class="material-icons-round">&#xe51c;</a>
          </div>
       </header>
+      <!-- WARNING: END OF: PAY ATTENTION WHEN MODIFTING: HEADER (header.html) -->
+      <!-- WARNING: START OF: PAY ATTENTION WHEN MODIFTING: ASIDE (side_nav.html) -->
       <aside class="night-mode-element">
          <a href="#" id="side-nav-index-link" class="night-mode-element index-link"><span class="mes-rev">Mes révisions</span>STMG</a>
-         <div id="cours-1ere" class="side-nav-lvl-0-link collapsible-1ere night-mode-element"><!-- onclick="onExpandableSideNavItem(this.id)"-->
+         <div id="cours-1ere" class="side-nav-lvl-0-link collapsible-1ere night-mode-element">
             <span class="material-icons-round night-mode-element">&#xe5c5;</span>
             <span>Cours 1<sup>ère</sup></span>
          </div>
@@ -382,6 +382,7 @@
             <li><span>Management</span></li>
          </ul> -->
       </aside>
+      <!-- WARNING: END OF: PAY ATTENTION WHEN MODIFTING: ASIDE (side_nav.html) -->
       <main class="night-mode-element">
          <h3>Bienvenue sur ce site de révisions du bac STMG !</h3>
          <p>Sur ce site, vous pourrez trouver :
@@ -401,6 +402,7 @@
          </div>
          <script src="js/message_expandable.js"></script>
       </main>
+      <!-- WARNING: START OF: PAY ATTENTION WHEN MODIFTING: FOOTER and "Fab" (fab_footer.html) -->
       <a href="#haut"><button id="fab-back-to-top"><span class="material-icons-round night-mode-element">&#xe5d8;</span></button></a>
       <footer class="night-mode-element">
          <ul>
@@ -438,6 +440,7 @@
             <!-- TODO: <li>Simulateur de note</li> -->
          </ul>
       </footer>
+      <!-- WARNING: END OF: PAY ATTENTION WHEN MODIFTING: FOOTER and "Fab" (fab_footer.html) -->
    </div>
    <script>
       initHeaderOnScroll();
