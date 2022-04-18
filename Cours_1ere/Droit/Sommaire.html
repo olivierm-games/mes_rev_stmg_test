@@ -22,12 +22,14 @@
 	<script src="../../js/side_nav_hover_handler.js"></script>
 	<script src="../../js/side_nav_item_expandable.js"></script>
 	<script src="../../js/web-font-loader.js"></script>
+   <script src="../../js/fab_back_to_top.js"></script>
 </head>
 <body>
+   <span id="haut"></span>
 	<div id="all-container" class="night-mode-element">
 		<div w3-include-html="../../header.html"></div>
 		<div w3-include-html="../../side_nav.html"></div>
-		<main class="night-mode-element" onclick="onClickMainPageOrHeader(this)">
+		<main class="night-mode-element">
 			<h1>Droit 1ère STMG : les chapitres</h1>
 			<div class="card-droit-1ere">
 				<div class="card-text">
@@ -82,10 +84,12 @@
 	});
 	waitForElm('#cours-ter-mana-all-container').then(elm => {
 		setSideNavItemsExpandable();
+      initSideNavCollapseHandle();
 		initSideNavHoverHandler();
 	});
 	waitForElm('footer').then(elm => {
 		initNightMode();
+		setFabBackToTop();
 	});
 	</script>
 </body>
