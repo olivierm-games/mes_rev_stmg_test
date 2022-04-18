@@ -1,8 +1,15 @@
 #all-container.night-mode { background: var(--color-background-dark); }
 
+main.night-mode a:link { color: steelblue; }
+main.night-mode a:visited { color: #8360cb; }
+
 main.night-mode {
    background-color: var(--color-surface-dark);
    color: var(--color-on-surface-dark);
+}
+
+main.night-mode .card-text {
+   background-color: var(--color-surface-dark);
 }
 
 .index-link.night-mode, #header-links.night-mode .header-link,
@@ -109,7 +116,7 @@ a:link.button.night-mode, a:visited.button.night-mode, a:hover.button.night-mode
 
 
 .message-tip.night-mode {
-   color: var(--color-surface-dark);
+   color: var(--color-on-surface-dark);
    background: linear-gradient(0deg, #5b4, #394);
 }
 
@@ -118,11 +125,11 @@ footer.night-mode {
 }
 
 footer.night-mode ul {
-   color: var(--color-surface-dark);
+   color: var(--color-on-surface-dark);
 }
 
 .footer-text.night-mode {
-   border-bottom: medium solid var(--color-surface-dark);
+   border-bottom: medium solid var(--color-on-surface-dark);
 }
 
 .footer-list.night-mode {

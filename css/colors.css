@@ -21,10 +21,12 @@ body {
    --color-on-background-dark: #2F2F2F; body text dark */
 
    --color-surface: #F0F4FF; /* main background light */
-   --color-surface-dark: #D8D8D8; /* main background dark */
+   --color-surface-dark: #303639; /* main background dark */
+   /* --color-surface-dark: #D8D8D8; */
 
    --color-on-surface: #263238; /* main text light (same as body) */
-   --color-on-surface-dark: #2F2F2F; /* main text dark */
+   --color-on-surface-dark: #DDD; /* main text dark */
+   /* --color-on-surface-dark: #2F2F2F; */
 
    --color-on-primary: #323232CA; /* header, aside text color light */
    --color-on-primary-dark: #E9E9E9;
