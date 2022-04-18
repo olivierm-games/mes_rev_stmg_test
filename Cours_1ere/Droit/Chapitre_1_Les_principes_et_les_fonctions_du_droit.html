@@ -14,8 +14,9 @@
 	   <link rel="stylesheet" href="../../css/min_w_2400px.css">
 	   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
 	   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-		<script src="../../js/header_on_scroll.js"></script>
+		<script src="../../js/fab_back_to_top.js"></script>
 		<script src="../../js/header_links_expandable.js"></script>
+		<script src="../../js/header_on_scroll.js"></script>
 	   <script src="../../js/menu.js"></script>
 		<script src="../../js/night_mode.js"></script>
 		<script src="../../js/side_nav_collapse_handle.js"></script>
@@ -28,7 +29,7 @@
 		<div id="all-container" class="night-mode-element">
 			<div w3-include-html="../../header.html"></div>
 			<div w3-include-html="../../side_nav.html"></div>
-			<main class="night-mode-element" onclick="onClickMainPageOrHeader(this)">
+			<main class="night-mode-element">
 				<h1>Chapitre 1 : Les principes et les fonctions du droit</h1>
 					<h2>I. Quelles sont les règles fondamentales ?</h2>
 					<p>Le droit est un ensemble de règles qui permet d'organiser la vie des hommes en société, il traduit des valeurs que souhaite véhiculer la République française et repose sur quatre grands principes : Liberté, Égalité, Solidarité et Laïcité.</p>
@@ -86,11 +87,13 @@
 				setHeaderLinksExpandable();
 			});
 			waitForElm('#cours-ter-mana-all-container').then(elm => {
-				setSideNavItemsExpandable();
+		      initSideNavCollapseHandle();
 				initSideNavHoverHandler();
+				setSideNavItemsExpandable();
 			});
 			waitForElm('footer').then(elm => {
 				initNightMode();
+				setFabBackToTop();
 			});
 		</script>
   	</body>
