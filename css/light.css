@@ -132,7 +132,7 @@ a:link { text-decoration: none; }
    transition: color var(--hover-anim-duration);
 }
 
-.header-link:hover, .index-link:hover, #night-mode:hover {
+.header-link:hover, .index-link:hover, #night-mode:hover, #fab-back-to-top:hover > .material-icons-round {
    color: var(--color-control-on-primary);
 }
 

@@ -25,7 +25,7 @@ header.night-mode { background-color: var(--color-primary-dark); }
 
 
 #header-links.night-mode .header-link:hover, #header-links.night-mode .header-link:hover .header-link-expandable-text,
- .index-link.night-mode:hover, #header-links.night-mode #night-mode:hover {
+ .index-link.night-mode:hover, #header-links.night-mode #night-mode:hover, #fab-back-to-top:hover > .material-icons-round.night-mode {
    color: var(--color-control-on-primary-dark);
 }
 
