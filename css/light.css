@@ -387,6 +387,7 @@ nav {
    /* box-shadow: 1px 1px 0.2em 0.01em #323232; */
    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
    cursor: pointer;
+   transition: color var(--hover-anim-duration);
 }
 
 a:link.button, a:visited.button, a:hover.button, a:active.button {
