@@ -28,6 +28,9 @@ body {
 
    --color-on-primary: #323232CA; /* header, aside text color light */
    --color-on-primary-dark: #E9E9E9;
+
+   --color-control-on-primary: #323232;
+   --color-control-on-primary-dark: #E2E2E2ED;
 }
 
 header {
@@ -43,6 +46,4 @@ header, aside {
 
    /* --color-on-primary-dark: red; */
 
-   --color-control-on-primary: #323232;
-   --color-control-on-primary-dark: #E2E2E2ED;
 }
