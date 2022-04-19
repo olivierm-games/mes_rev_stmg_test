@@ -15,29 +15,30 @@
 }
 
 body {
-   --color-background: linear-gradient(0deg, #80cbc4, #b2dfdb); /* body background light */
-   --color-background-dark: linear-gradient(0deg, #263238, #37474f); /* body background dark */
+   /*--color-background: linear-gradient(0deg, #80cbc4, #b2dfdb);  body background light
+   --color-background-dark: linear-gradient(0deg, #263238, #37474f);  body background dark */
+   --color-background: powderblue;
+   --color-background-dark: #0B0E11;
    /*--color-on-background: #263238; body text light (no text on bg)
    --color-on-background-dark: #2F2F2F; body text dark */
 
-   --color-surface: #F0F4FF; /* main background light */
+   --color-surface: #FEFEFE; /* main background light */
    --color-surface-dark: #303639; /* main background dark */
-   /* --color-surface-dark: #D8D8D8; */
 
-   --color-on-surface: #263238; /* main text light (same as body) */
-   --color-on-surface-dark: #EAECEF; /* main text dark */
-   /* --color-on-surface-dark: #2F2F2F; */
+   --color-on-primary: #2F343A; /* header, aside text color light */
+   --color-on-primary-dark: #EAECEF;
 
-   --color-on-primary: #323232CA; /* header, aside text color light */
-   --color-on-primary-dark: #E9E9E9;
+   --color-control-on-primary: #C99400;
+   /* --color-control-on-primary: #323232; */
+   /* --color-control-on-primary-dark: #E2E2E2ED; */
+   --color-control-on-primary-dark: #F0B90B;
 
-   --color-control-on-primary: #323232;
-   --color-control-on-primary-dark: #E2E2E2ED;
-}
-
-header {
-   --color-primary: /*#c5cae9;*/#64b5f6; /* header background light */
+   --color-primary: aliceblue; /* header background light */
+   /* --color-primary: #64b5f6; */
    --color-primary-dark: #242424;
+
+   --color-button: #181A20;
+   --color-button-background: #fcd535;
 }
 
 header, aside {

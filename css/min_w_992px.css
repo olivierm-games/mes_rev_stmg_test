@@ -31,10 +31,10 @@
       justify-content: center;
    }
 
-   .header-link:hover, .header-link:hover .header-link-expandable-text,
-   .index-link:hover, .header-link-expandable-list li:hover a/*, .material-icons-round:hover*/ {
+   /* .header-link:hover, .header-link:hover .header-link-expandable-text,
+   .index-link:hover, .header-link-expandable-list li:hover a {
       color: var(--color-control-on-primary);
-   }
+   } */
 
    .header-link-title {
       display: flex;
@@ -55,7 +55,8 @@
    }
 
    .header-link-expandable-list {
-      background-color: khaki;
+      /* background-color: khaki; */
+      background-color: var(--color-primary);
       flex-direction: column;
       border-radius: inherit;
       box-shadow: 0 0 0.2em 0.01em #2f2f2f66;
@@ -78,24 +79,26 @@
    }
 
    .header-link-expandable-list span {
+      transition: color var(--hover-anim-duration);
       padding-right: .4em;
    }
 
    .header-link-expandable-list li:hover {
       /* color: var(--color-control-on-primary); */
-      background-color: lightgoldenrodyellow;
+      /* background-color: lightgoldenrodyellow; */
+      background-color: var(--color-on-primary-dark);
    }
 
    .header-link-expandable-list li a:link, .header-link-expandable-list li a:visited {
       color: var(--color-on-primary);
    }
 
-   .header-link-expandable-list li:hover a {
+   /* .header-link-expandable-list li:hover a {
       color: var(--color-control-on-primary);
-   }
+   } */
 
    .header-link-expandable-list li:hover .material-icons-round {
-      color: var(--color-primary);
+      color: var(--color-control-on-primary);
    }
 
 
@@ -114,7 +117,9 @@
    }
 
    main {
-      width: 80%;
+      /* width: max-content; */
+      max-width: 80%;
+      /* width: 80%; */
       left: 10%;
       border-radius: .2em;
       transition: left var(--menu-anim-duration), width var(--menu-anim-duration);
@@ -124,7 +129,8 @@
    }
 
    main.open {
-      width: 70%;
+      /* width: 70%; */
+      max-width: 70%;
       position: relative;
       left: 30%;
       transition: left .5s, width .5s;
