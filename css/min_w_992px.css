@@ -119,6 +119,7 @@
    main {
       /* width: max-content; */
       max-width: 70%;
+      min-width: 60%;
       /* width: 80%; */
       left: 0; /*for animation*/
       /* left: 10%; */
