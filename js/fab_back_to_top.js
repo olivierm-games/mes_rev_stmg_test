@@ -7,12 +7,10 @@ function setFabBackToTop() {
 }
 
 window.onscroll=function() {
-   // if(allContainer.scrollTop>100) {
    var scrollTop=allContainer.scrollTop;
    // var scrollTop=document.documentElement.scrollTop;
    console.log("scrollTop: "+scrollTop);
    fab.style.opacity=(scrollTop-100)/100;
-   // }
    // clientHeight, scrollTop
    var docHeight=allContainer.offsetHeight;
    console.log("clientHeight: "+docHeight);
