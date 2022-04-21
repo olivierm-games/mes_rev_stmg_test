@@ -110,19 +110,25 @@ main a:hover {
    position: fixed;
    width: 48px;
    height: 48px;
+   bottom: 48px;
+   right: 5%;
    border: none;
    border-radius: 50%;
    opacity: 0;
-   left: 90%;
-   bottom: 15em;
-   transform: translateX(-24px);
+   /* left: 90%; */
+   /* bottom: 15em; */
+   /* transform: translateX(-24px); */
    background-color: #ff8a00CC;
    box-shadow: 0.04em -0.06em 0.15em 0.05em #4e3317aa;
    cursor: pointer;
+   z-index: 1;
 }
 
-#fab-back-to-top span {
+#fab-back-to-top a {
+/* #fab-back-to-top span { */
    font-size: 32px;
+   vertical-align: middle;
+
 }
 
 a:visited, a:hover, a:active {
@@ -327,8 +333,12 @@ h1, h2 {
 }
 
 h3 {
-   padding: 0 3%;
+   padding: 0 4%;
    margin-block-end: 0;
+}
+
+h4 {
+   padding: 0 4.5%;
 }
 
 p {
@@ -397,6 +407,16 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
 
 .card-droit-1ere {
    background-color: indianred;
+}
+
+.card-eco-1ere {
+   background-color: #404245;
+}
+.card-mana-1ere {
+   background-color: seagreen;
+}
+
+.card-droit-1ere, .card-eco-1ere {
    padding: 0 2%;
 }
 
