@@ -1,4 +1,4 @@
-const ICONS_CODE_POINT=["&#xe51c;", "&#xe518;"]; // moon, sun
+const ICONS_CODE=["dark_mode", "light_mode"]; // moon, sun
 const ICONS_TITLE=["sombre", "clair"]; // Passer en mode ...
 const STORAGE_KEYS=["day", "night"]; // storage key
 
@@ -40,7 +40,7 @@ function toggleNightModeClasses() {
 
 function toggleNightModeBtn() {
    const nightModeBtn=document.getElementById("night-mode");
-   nightModeBtn.innerHTML=ICONS_CODE_POINT[nightModeIndex];
+   nightModeBtn.innerHTML=ICONS_CODE[nightModeIndex];
    nightModeBtn.title="Passer en mode "+ICONS_TITLE[nightModeIndex];
 }
 

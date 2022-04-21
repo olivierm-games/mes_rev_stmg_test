@@ -22,15 +22,17 @@ header.night-mode { background-color: var(--color-primary-dark); }
 
 #menu-svg.night-mode { fill: var(--color-on-primary-dark); }
 
-#menu-svg.night-mode:hover { fill: var(--color-control-on-primary-dark); }
+#menu-svg-container:hover > #menu-svg.night-mode { fill: var(--color-control-on-primary-dark); }
+
+/* #menu-svg.night-mode:hover { fill: var(--color-control-on-primary-dark); } */
 
 .header-link.night-mode, .index-link.night-mode, a:link.index-link.night-mode, a:visited.index-link.night-mode, #night-mode.night-mode,
-#fab-back-to-top > .material-icons-round.night-mode/*, .message-tip.night-mode span*/ {
+#fab-back-to-top > .material-icons-round.night-mode {
    color: var(--color-on-primary-dark);
 }
 
 .header-link.night-mode:hover, a:hover.index-link.night-mode, #night-mode.night-mode:hover,
-#fab-back-to-top:hover > .material-icons-round.night-mode/*, .message-tip.night-mode:hover span*/ {
+#fab-back-to-top:hover > .material-icons-round.night-mode {
    color: var(--color-control-on-primary-dark);
 }
 
@@ -75,7 +77,7 @@ aside.night-mode {
 }
 
 [class^=side-nav-lvl-1-link].night-mode:hover, #cours-1ere-droit.night-mode.hover, #cours-1ere-eco.night-mode.hover, #cours-1ere-mana.night-mode.hover,
-#cours-ter-droit.night-mode.hover, #cours-ter-eco.night-mode.hover, #cours-ter-mana.night-mode.hover {
+#cours-tle-droit.night-mode.hover, #cours-tle-eco.night-mode.hover, #cours-tle-mana.night-mode.hover {
 /* .side-nav-lvl-1-link.night-mode:hover { */
    background-color: steelblue;
 }
@@ -97,15 +99,6 @@ a.button.night-mode:hover {
     color: #F0B90DED;
 }
 
-/* .message-tip.night-mode { */
-   /* background: linear-gradient(0deg, #5b4, #394); */
-   /* background-color: var(--color-button-background); */
-/* } */
-
-/* .message-tip.night-mode span { */
-   /* color: var(--color-on-primary-dark); */
-/* } */
-
 #all-container.night-mode h1, #all-container.night-mode h2 {
    text-decoration-color: var(--color-on-primary-dark);
 }
@@ -113,6 +106,9 @@ a.button.night-mode:hover {
 #all-container.night-mode td {
    border-color: var(--color-on-primary-dark);
 }
+
+/* .message-tip.night-mode { opacity: 1; } */
+/* .message-tip.night-mode:hover { opacity: .9; } */
 
 footer.night-mode {
    /* background: linear-gradient(0deg, #24242466 10%, #242424); */

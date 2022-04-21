@@ -1,39 +1,38 @@
 <header class="night-mode-element" onclick="onClickMainPageOrHeader(this)">
    <div id="header-menu-index-container">
-      <svg xmlns="http://www.w3.org/2000/svg"
-         width="24px" height="24px"
-         viewBox="0 0 24 24"
-         id="menu-svg"
-         class="night-mode-element"
-         onclick="onMenu()">
-         <path id="menu-svg-top-bar" d="M3 5H21C22 5,22 7,21 7H3C2 7,2 5,3 5z"/>
-         <path id="menu-svg-center-bar" d="M3 11H21C22 11,22 13,21 13H3C2 13,2 11,3 11z"/>
-         <path id="menu-svg-bottom-bar" d="M3 17H21C22 17,22 19,21 19H3C2 19,2 17,3 17z"/>
-      </svg>
+      <div id="menu-svg-container" onclick="onMenu()">
+         <svg xmlns="http://www.w3.org/2000/svg"
+            width="24px" height="24px"
+            viewBox="0 0 24 24"
+            id="menu-svg"
+            class="night-mode-element">
+            <path id="menu-svg-top-bar" d="M3 5H21C22 5,22 7,21 7H3C2 7,2 5,3 5z"/>
+            <path id="menu-svg-center-bar" d="M3 11H21C22 11,22 13,21 13H3C2 13,2 11,3 11z"/>
+            <path id="menu-svg-bottom-bar" d="M3 17H21C22 17,22 19,21 19H3C2 19,2 17,3 17z"/>
+         </svg>
+      </div>
       <a href="../../" class="night-mode-element index-link"><span class="mes-rev">Mes révisions</span>STMG</a>
    </div>
    <div id="header-links" class="night-mode-element">
       <div class="header-link night-mode-element">
          <div class="header-link-expandable-layout">
             <ul class="header-link-expandable-list night-mode-element">
-               <li><a href="../../Cours_1ere/Droit/Sommaire.html"><span class="material-icons-round night-mode-element">&#xeaf6;</span>Droit</a></li>
-               <li><a href="../../Cours_1ere/Economie/Sommaire.html"><span class="material-icons-round night-mode-element">&#xe2eb;</span>Économie</a></li>
-               <li><a href="../../Cours_1ere/Management/Sommaire.html"><span class="material-icons-round night-mode-element">&#xf049;</span>Management</a></li>
+               <li><a href="../../Cours_1ere/Droit/Sommaire.html"><span class="material-icons-round night-mode-element">balance</span>Droit</a></li>
+               <li><a href="../../Cours_1ere/Economie/Sommaire.html"><span class="material-icons-round night-mode-element">savings</span>Économie</a></li>
+               <li><a href="../../Cours_1ere/Management/Sommaire.html"><span class="material-icons-round night-mode-element">precision_manufacturing</span>Management</a></li>
             </ul>
          </div>
-
          <div class="header-link-title">
             <span class="header-link-expandable-text">Cours 1<sup>ère</sup></span>
-            <span class="material-icons-round night-mode-element">&#xe5c5;</span>
+            <span class="material-icons-round night-mode-element">arrow_drop_drown</span>
          </div>
-
       </div>
       <div class="header-link night-mode-element">
          <span class="header-link-expandable-text">Cours T<sup>le</sup></span>
-         <span class="material-icons-round night-mode-element">&#xe5c5;</span>
+         <span class="material-icons-round night-mode-element">arrow_drop_drown</span>
       </div>
       <!-- <span class="header-link">Exercices</span>
       <span class="header-link">Quiz</span> -->
-      <a onclick="onToggleNightMode()" id="night-mode" class="material-icons-round night-mode-element">&#xe51c;</a>
+      <a onclick="onToggleNightMode()" id="night-mode" class="material-icons-round night-mode-element">dark_mode</a>
    </div>
 </header>
