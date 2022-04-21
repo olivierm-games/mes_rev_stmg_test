@@ -84,13 +84,15 @@ main {
    display: flex;
    flex-direction: column;
    position: relative;
+   min-width: 70%;
    max-width: 100%;
    width: fit-content;
    background-color: var(--color-surface);
    color: var(--color-on-primary);
    box-shadow: 0 0 .2em 0 #2F2F2F;
-    padding: 1%;
-    padding-right: 3%;
+   border-radius: .2em;
+    /* padding: 1%; */
+    margin: auto;
 }
 
 main a {
@@ -336,7 +338,8 @@ p {
 
 main > ul {
    margin-block-start: 0;
-   padding-inline-start: 7%;
+   padding-inline-start: 9%;
+   padding-right: 5%;
 }
 
 u {
@@ -458,6 +461,7 @@ footer {
    margin-top: 1.5em;
    padding-bottom: 1em;
    background-color: var(--color-primary);
+    box-shadow: 0 0 0.3em 0.1em #0003;
 }
 
 footer .footer-title {

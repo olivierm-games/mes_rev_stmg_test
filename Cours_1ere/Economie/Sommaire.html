@@ -14,6 +14,8 @@
 	<link rel="stylesheet" href="../../css/min_w_2400px.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
 	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+	<script src="../../js/web-font-loader.js"></script>
+	<script src="../../js/fab_back_to_top.js"></script>
 	<script src="../../js/header_links_expandable.js"></script>
 	<script src="../../js/header_on_scroll.js"></script>
 	<script src="../../js/menu.js"></script>
@@ -21,14 +23,13 @@
 	<script src="../../js/side_nav_collapse_handle.js"></script>
 	<script src="../../js/side_nav_hover_handler.js"></script>
 	<script src="../../js/side_nav_item_expandable.js"></script>
-	<script src="../../js/web-font-loader.js"></script>
 </head>
 <body>
    <span id="haut"></span>
 	<div id="all-container" class="night-mode-element">
 		<div w3-include-html="../../header.html"></div>
 		<div w3-include-html="../../side_nav.html"></div>
-		<main class="night-mode-element" onclick="onClickMainPageOrHeader(this)">
+		<main class="night-mode-element">
 			<h1>Économie 1ère STMG : les chapitres</h1>
 			<div class="card-eco-1ere">
 				<h2>Thème 1 : Quelles sont les grandes questions économiques et les enjeux actuels ?</h2>
@@ -72,12 +73,14 @@
 		initHeaderOnScroll();
 		setHeaderLinksExpandable();
 	});
-	waitForElm('#cours-ter-mana-all-container').then(elm => {
+	waitForElm('#cours-tle-mana-all-container').then(elm => {
+      initSideNavCollapseHandle();
 		setSideNavItemsExpandable();
 		initSideNavHoverHandler();
 	});
 	waitForElm('footer').then(elm => {
 		initNightMode();
+		setFabBackToTop();
 	});
 	</script>
 </body>

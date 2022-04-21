@@ -118,10 +118,11 @@
 
    main {
       /* width: max-content; */
-      max-width: 80%;
+      max-width: 70%;
       /* width: 80%; */
-      left: 10%;
-      border-radius: .2em;
+      left: 0; /*for animation*/
+      /* left: 10%; */
+      /* border-radius: .2em; */
       transition: left var(--menu-anim-duration), width var(--menu-anim-duration);
       /* padding: 1% 1% 2.5% 1%; */
       padding: 0;
@@ -129,10 +130,10 @@
    }
 
    main.open {
-      /* width: 70%; */
-      max-width: 70%;
+      /* max-width: 70%; */
       position: relative;
-      left: 30%;
+      left: 15%;
+      /* left: 30%; */
       transition: left .5s, width .5s;
    }
 
