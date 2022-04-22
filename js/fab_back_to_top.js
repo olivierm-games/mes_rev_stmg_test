@@ -9,7 +9,9 @@ function setFabBackToTop(fab) {
    windowHeight=window.innerHeight;
 }
 
-window.onscroll=function() {
+window.onscroll=function() {onScrollWindow();}
+
+function onScrollWindow() {
    var docElmScrollTop=document.documentElement.scrollTop;
    fab.style.opacity=Math.min(.9, (docElmScrollTop-100)/100);
    fab.style.bottom=Math.max(48, docElmScrollTop-(allContainerHeight-windowHeight-148))+"px";
