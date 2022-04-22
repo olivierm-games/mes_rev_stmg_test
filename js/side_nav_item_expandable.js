@@ -1,5 +1,3 @@
-// TODO: See if scrollHeight should not be set to lowest levels
-
 function setSideNavItemsExpandable() {
    var collapsibles=[document.getElementsByClassName("collapsible-1ere"), document.getElementsByClassName("collapsible-tle")];
    var coursAllContainers=[collapsibles[0][0].nextElementSibling, collapsibles[1][0].nextElementSibling];
@@ -14,7 +12,6 @@ function setSideNavItemsExpandable() {
             container.classList.toggle("close");
             if(container.style.maxHeight) { // collapse
                container.style.maxHeight=null;
-
             } else { // expand
                container.style.maxHeight=container.scrollHeight+"px";
                if(!this.classList.contains("side-nav-lvl-0-link")) { // lvl 1 collapsible (not cours1ere/tle)
@@ -25,12 +22,8 @@ function setSideNavItemsExpandable() {
          });
       }
    }
+   console.log("coursAllContainers[0].id: "+coursAllContainers[0].id+", coursAllContainers[1].id: "+coursAllContainers[1].id);
    var coursAllContainerMaxHeights=[coursAllContainers[0].scrollHeight, coursAllContainers[1].scrollHeight];
    coursAllContainers[0].style.maxHeight=coursAllContainerMaxHeights[0]+"px";
    coursAllContainers[1].style.maxHeight=coursAllContainerMaxHeights[1]+"px";
 }
-
-
-// function setSideNavItemsExpandable() {
-//
-// }
