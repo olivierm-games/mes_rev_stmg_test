@@ -90,16 +90,17 @@
       initSideNavCollapseHandle();
 		initSideNavHoverHandler();
 	});
-	waitForElm('#cours-tle-all-container').then(elm => {
-		console.log("cours-tle-all-container should be layed out (so as its children): "+elm.id);
+	waitForElm('aside').then(elm => {
+	// waitForElm('#cours-tle-all-container').then(elm => {
+		// console.log("cours-tle-all-container should be layed out (so as its children): "+elm.id);
 		setSideNavItemsExpandable();
 	});
 	waitForElm('footer').then(elm => {
 		initNightMode();
 	});
 	waitForElm('#fab-back-to-top').then(elm => {
-		console.log("fab should be layed out: "+elm.id);
-		setFabBackToTop();
+		// console.log("fab should be layed out: "+elm.id);
+		setFabBackToTop(elm);
 	});
 	</script>
 </body>
