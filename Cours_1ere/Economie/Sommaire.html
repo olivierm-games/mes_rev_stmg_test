@@ -88,10 +88,14 @@
 	waitForElm('#cours-tle-mana-all-container').then(elm => {
       initSideNavCollapseHandle();
 		initSideNavHoverHandler();
+	});
+	waitForElm('#cours-tle-all-container').then(elm => {
 		setSideNavItemsExpandable();
 	});
 	waitForElm('footer').then(elm => {
 		initNightMode();
+	});
+	waitForElm('#fab-back-to-top').then(elm => {
 		setFabBackToTop();
 	});
 	</script>
