@@ -115,20 +115,19 @@ main a:hover {
    border: none;
    border-radius: 50%;
    opacity: 0;
-   /* left: 90%; */
-   /* bottom: 15em; */
-   /* transform: translateX(-24px); */
-   background-color: #ff8a00CC;
-   box-shadow: 0.04em -0.06em 0.15em 0.05em #4e3317aa;
+   color: var(--color-button);
+   /* background-color: #ff8a00CC; */
+   background-color: var(--color-button-background);
    cursor: pointer;
    z-index: 1;
+   font-size: 32px;
+   text-align: center;
+   line-height: 1.4;
+   transition: transform .3s;
 }
 
-#fab-back-to-top a {
-/* #fab-back-to-top span { */
-   font-size: 32px;
-   vertical-align: middle;
-
+#fab-back-to-top:hover {
+   transform: scale(1.15);
 }
 
 a:visited, a:hover, a:active {
@@ -152,12 +151,12 @@ a:link { text-decoration: none; }
    line-height: 0.87;
 }
 
-.header-link, .index-link, a:link.index-link, a:visited.index-link, #night-mode, #fab-back-to-top > .material-icons-round {
+.header-link, .index-link, a:link.index-link, a:visited.index-link, #night-mode {
    color: var(--color-on-primary);
    transition: color var(--hover-anim-duration);
 }
 
-.header-link:hover, a:hover.index-link, #night-mode:hover, #fab-back-to-top:hover > .material-icons-round {
+.header-link:hover, a:hover.index-link, #night-mode:hover {
    color: var(--color-control-on-primary);
 }
 

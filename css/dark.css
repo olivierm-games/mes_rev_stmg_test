@@ -26,16 +26,13 @@ header.night-mode { background-color: var(--color-primary-dark); }
 
 /* #menu-svg.night-mode:hover { fill: var(--color-control-on-primary-dark); } */
 
-.header-link.night-mode, .index-link.night-mode, a:link.index-link.night-mode, a:visited.index-link.night-mode, #night-mode.night-mode,
-#fab-back-to-top > .material-icons-round.night-mode {
+.header-link.night-mode, .index-link.night-mode, a:link.index-link.night-mode, a:visited.index-link.night-mode, #night-mode.night-mode {
    color: var(--color-on-primary-dark);
 }
 
-.header-link.night-mode:hover, a:hover.index-link.night-mode, #night-mode.night-mode:hover,
-#fab-back-to-top:hover > .material-icons-round.night-mode {
+.header-link.night-mode:hover, a:hover.index-link.night-mode, #night-mode.night-mode:hover {
    color: var(--color-control-on-primary-dark);
 }
-
 
 .header-link-expandable-list.night-mode {
    /* background-color: darkslateblue; */

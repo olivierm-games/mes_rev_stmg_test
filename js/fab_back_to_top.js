@@ -13,7 +13,7 @@ window.onscroll=function() {
    var docElmScrollTop=document.documentElement.scrollTop;
    // var scrollTop=document.documentElement.scrollTop;
    // console.log("docElmScrollTop: "+docElmScrollTop);
-   fab.style.opacity=(docElmScrollTop-100)/100;
+   fab.style.opacity=Math.min(.9, (docElmScrollTop-100)/100);
    // clientHeight, scrollTop
    // var allContainerHeight=allContainer.offsetHeight;
    // var windowHeight=window.innerHeight;
