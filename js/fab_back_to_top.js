@@ -12,6 +12,7 @@ function setFabBackToTop() {
       () => styleFab(),
       { passive: true }
    );
+   styleFab();
 }
 
 // window.onscroll=function() {
