@@ -86,16 +86,19 @@
 		setHeaderLinksExpandable();
 	});
 	waitForElm('#cours-tle-mana-all-container').then(elm => {
+		console.log("cours-tle-mana-all-container should be layed out");
       initSideNavCollapseHandle();
 		initSideNavHoverHandler();
 	});
 	waitForElm('#cours-tle-all-container').then(elm => {
+		console.log("cours-tle-all-container should be layed out (so as its children): "+elm.id);
 		setSideNavItemsExpandable();
 	});
 	waitForElm('footer').then(elm => {
 		initNightMode();
 	});
 	waitForElm('#fab-back-to-top').then(elm => {
+		console.log("fab should be layed out: "+elm.id);
 		setFabBackToTop();
 	});
 	</script>
