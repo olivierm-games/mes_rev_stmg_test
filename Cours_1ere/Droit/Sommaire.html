@@ -78,11 +78,11 @@
 	<script src="../../js/include_html.js"></script>
 	<script src="../../js/wait_for_elm.js"></script>
 	<script>
-	waitForElm('#header-links').then(elm => {
+	waitForElm('header').then(elm => {
 		initHeaderOnScroll();
 		setHeaderLinksExpandable();
 	});
-	waitForElm('#cours-tle-mana-all-container').then(elm => {
+	waitForElm('aside').then(elm => {
       initSideNavCollapseHandle();
 		initSideNavHoverHandler();
 		setSideNavItemsExpandable();

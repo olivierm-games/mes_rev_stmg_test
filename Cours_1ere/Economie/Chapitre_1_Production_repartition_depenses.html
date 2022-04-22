@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 	<head>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +31,7 @@
 			<div w3-include-html="../../header.html"></div>
 			<div w3-include-html="../../side_nav.html"></div>
 			<main class="night-mode-element">
-		  		<h1 id="h1_eco">Chapitre 1 : Production, répartition, dépenses</h1>
+		  		<h1>Chapitre 1 : Production, répartition, dépenses</h1>
 		      <h2>I. Qu'est-ce que le problème économique ?</h2>
 		      <h3>A. Les besoins primaires et secondaires</h3>
 		      <p>On peut définir un besoin comme un sentiment de manque ou de privation accompagné du désir de le voir disparaître. On distingue ainsi des <b>besoins primaires</b>, qui correspondent aux exigences naturelles (se nourrir, se loger, se vêtir...) et des <b>besoins secondaires</b>, plus diversifiés (se distraire, se cultiver, etc.).</p>
@@ -113,8 +113,6 @@
 		});
 		waitForElm('footer').then(elm => {
 			initNightMode();
-		});
-		waitForElm('#fab-back-to-top').then(elm => {
 			setFabBackToTop();
 		});
 		</script>
