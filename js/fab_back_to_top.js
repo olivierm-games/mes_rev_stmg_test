@@ -7,11 +7,17 @@ function setFabBackToTop(fab) {
    // fab=document.getElementById('fab-back-to-top');
    allContainerHeight=allContainer.offsetHeight;
    windowHeight=window.innerHeight;
+   window.addEventListener(
+      'scroll',
+      () => styleFab(),
+      { passive: true }
+   );
 }
 
-window.onscroll=function() {onScrollWindow();}
+// window.onscroll=function() {
+// }
 
-function onScrollWindow() {
+function styleFab() {
    var docElmScrollTop=document.documentElement.scrollTop;
    fab.style.opacity=Math.min(.9, (docElmScrollTop-100)/100);
    fab.style.bottom=Math.max(48, docElmScrollTop-(allContainerHeight-windowHeight-148))+"px";

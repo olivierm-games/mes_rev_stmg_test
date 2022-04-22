@@ -1,6 +1,5 @@
 function setSideNavItemsExpandable() {
    var collapsibles=[document.getElementsByClassName("collapsible-1ere"), document.getElementsByClassName("collapsible-tle")];
-   console.log("collapsibles[0][0].id (cours-1ere): "+collapsibles[0][0].id+", collapsibles[1][0].id (cours-tle): "+collapsibles[1][0].id);
    var coursAllContainers=[collapsibles[0][0].nextElementSibling, collapsibles[1][0].nextElementSibling];
    const collapsiblesCount=collapsibles.length;
 
@@ -23,7 +22,6 @@ function setSideNavItemsExpandable() {
          });
       }
    }
-   console.log("coursAllContainers[0].id: "+coursAllContainers[0].id+", coursAllContainers[1].id: "+coursAllContainers[1].id);
    var coursAllContainerMaxHeights=[coursAllContainers[0].scrollHeight, coursAllContainers[1].scrollHeight];
    coursAllContainers[0].style.maxHeight=coursAllContainerMaxHeights[0]+"px";
    coursAllContainers[1].style.maxHeight=coursAllContainerMaxHeights[1]+"px";

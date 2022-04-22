@@ -81,25 +81,21 @@
 	<script src="../../js/include_html.js"></script>
 	<script src="../../js/wait_for_elm.js"></script>
 	<script>
-	waitForElm('#header-links').then(elm => {
+	waitForElm('header').then(elm => {
+	// waitForElm('#header-links').then(elm => {
 		initHeaderOnScroll();
 		setHeaderLinksExpandable();
 	});
-	waitForElm('#cours-tle-mana-all-container').then(elm => {
-		console.log("cours-tle-mana-all-container should be layed out");
+	waitForElm('aside').then(elm => {
+	// waitForElm('#cours-tle-mana-all-container').then(elm => {
       initSideNavCollapseHandle();
 		initSideNavHoverHandler();
-	});
-	waitForElm('aside').then(elm => {
-	// waitForElm('#cours-tle-all-container').then(elm => {
-		// console.log("cours-tle-all-container should be layed out (so as its children): "+elm.id);
 		setSideNavItemsExpandable();
 	});
 	waitForElm('footer').then(elm => {
 		initNightMode();
 	});
 	waitForElm('#fab-back-to-top').then(elm => {
-		// console.log("fab should be layed out: "+elm.id);
 		setFabBackToTop(elm);
 	});
 	</script>

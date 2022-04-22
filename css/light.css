@@ -422,7 +422,7 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
 .card-text {
    width: fit-content;
    margin: 2em .1%;
-   background-color: #FFFFFFBB;
+   background-color: var(--color-surface);
    border-radius: .5em;
    padding: 0 2.5% .01% 2.5%;
    box-shadow: 0 0 1em 0.1em #00000020;
