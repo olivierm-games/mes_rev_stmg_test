@@ -1,25 +1,28 @@
 let allContainer=null;
 let fab=null;
+let docElmScrollTop=0, allContainerHeight=0, windowHeight=0;
 
 function setFabBackToTop() {
    allContainer=document.getElementById("all-container");
    fab=document.getElementById("fab-back-to-top");
+   allContainerHeight=allContainer.offsetHeight;
+   windowHeight=window.innerHeight;
 }
 
 window.onscroll=function() {
-   var scrollTop=allContainer.scrollTop;
+   var docElmScrollTop=document.documentElement.scrollTop;
    // var scrollTop=document.documentElement.scrollTop;
-   console.log("scrollTop: "+scrollTop);
-   fab.style.opacity=(scrollTop-100)/100;
+   // console.log("docElmScrollTop: "+docElmScrollTop);
+   fab.style.opacity=(docElmScrollTop-100)/100;
    // clientHeight, scrollTop
-   var docHeight=allContainer.offsetHeight;
-   console.log("clientHeight: "+docHeight);
-   var fabBottom=Math.max(48, scrollTop-docHeight-148);
-   fab.style.bottom=fabBottom+"px";
-   // if(scrollTop>=(clientHeight-150)) {
-   //    fab.style.bottom="px";
-   // } else fab.style.bottom="48px";
+   // var allContainerHeight=allContainer.offsetHeight;
+   // var windowHeight=window.innerHeight;
+   // console.log("allContainerHeight: "+allContainerHeight);
+   // console.log("windowHeight: "+windowHeight);
+
+   fab.style.bottom=Math.max(48, docElmScrollTop-(allContainerHeight-windowHeight-148))+"px";
+
+   // var fabBottom=Math.max(48, docElmScrollTop-(allContainerHeight-windowHeight-148));
+   // console.log("fabBottom: "+(docElmScrollTop-(allContainerHeight-windowHeight-148)));
+   // fab.style.bottom=fabBottom+"px";
 }
-// scrollTop-(clientHeight-150)>0 =>
-// 180-(380-150)=180-230=-50<0 => scroll position is higher than the limit
-// 280-(380-148)=280-232=48>0 => scroll position is lower than the limit, fab should be at scrollTop-clientHeight-148
