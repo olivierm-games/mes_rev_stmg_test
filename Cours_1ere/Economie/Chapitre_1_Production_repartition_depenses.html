@@ -4,6 +4,7 @@
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Production, répartition, dépense Chap 1 Éco 1ère</title>
+		<link rel="stylesheet" href="chap_1_eco_fun.css">
 		<link rel="stylesheet" href="../../css/light.css">
 		<link rel="stylesheet" href="../../css/dark.css">
 		<link rel="stylesheet" href="../../css/colors.css">
@@ -23,7 +24,7 @@
 		<script src="../../js/side_nav_collapse_handle.js"></script>
 		<script src="../../js/side_nav_hover_handler.js"></script>
 		<script src="../../js/side_nav_item_expandable.js"></script>
-		<script src="../../js/canvas.js"></script>
+		<!-- <script src="../../js/canvas.js"></script> -->
 	</head>
 	<body>
 		<span id="haut"></span>
@@ -80,7 +81,47 @@
 		        <li><b>Investissement</b> : opération consistant à obtenir des biens de productions (machines, bâtiments, équipements, etc.) ;</li>
 		      </ul>
 		      <p><u>Le fonctionnement de l'économie</u> :</p>
-					<canvas id="canevas_circuit_eco" width="600" height="400"></canvas>
+				<!-- <div id="eco-1ere-c1-eco-fun-container">
+					<div class="eco-1ere-c1-eco-fun-choice">Production</div>
+					<span class="material-icons-round night-mode-element eco-1ere-c1-eco-fun-choice-arrow-straight">arrow_upward</span>
+					<div id="eco-1ere-c1-eco-fun-subcontainer-0">
+						<span class="material-icons-round night-mode-element eco-1ere-c1-eco-fun-choice-arrow-curved" style="transform: rotate(300deg);">redo</span>
+						<div id="eco-1ere-c1-eco-fun-society-choice">Choix de société</div>
+						<span class="material-icons-round night-mode-element eco-1ere-c1-eco-fun-choice-arrow-curved" style="transform: rotate(60deg);">redo</span>
+					</div>
+					<div id="eco-1ere-c1-eco-fun-subcontainer-1">
+						<span class="material-icons-round night-mode-element eco-1ere-c1-eco-fun-choice-arrow-straight" style="transform: rotate(240deg);">arrow_upward</span>
+						<span class="material-icons-round night-mode-element eco-1ere-c1-eco-fun-choice-arrow-straight" style="transform: rotate(120deg);">arrow_upward</span>
+					</div>
+					<div id="eco-1ere-c1-eco-fun-subcontainer-2">
+						<div class="eco-1ere-c1-eco-fun-choice">Investissement et consommation</div>
+						<span class="material-icons-round night-mode-element eco-1ere-c1-eco-fun-choice-arrow-curved" style="transform: rotate(180deg);">redo</span>
+						<div class="eco-1ere-c1-eco-fun-choice">Répartition de la richesse</div>
+					</div>
+				</div> -->
+
+				<div class="eco-1ere-c1-fun-container">
+					<div id="eco-1ere-c1-fun-top-container">
+						<span class="material-icons-round night-mode-element eco-1ere-c1-fun-choice-arrow-curved" style="transform: rotate(300deg);">redo</span>
+						<div id="eco-1ere-c1-fun-subcontainer-0">
+							<div class="eco-1ere-c1-fun-choice">Production</div>
+							<span class="material-icons-round night-mode-element eco-1ere-c1-fun-choice-arrow-straight">arrow_upward</span>
+							<div id="eco-1ere-c1-fun-society-choice">Choix de société</div>
+							<div id="eco-1ere-c1-fun-subcontainer-1">
+								<span class="material-icons-round night-mode-element eco-1ere-c1-fun-choice-arrow-straight" style="transform: rotate(240deg);">arrow_upward</span>
+								<span class="material-icons-round night-mode-element eco-1ere-c1-fun-choice-arrow-straight" style="transform: rotate(120deg);">arrow_upward</span>
+							</div>
+						</div>
+						<span class="material-icons-round night-mode-element eco-1ere-c1-fun-choice-arrow-curved" style="transform: rotate(60deg);">redo</span>
+					</div>
+					<div id="eco-1ere-c1-fun-subcontainer-2">
+						<div class="eco-1ere-c1-fun-choice">Investissement et consommation</div>
+						<span class="material-icons-round night-mode-element eco-1ere-c1-fun-choice-arrow-curved" style="position: absolute; transform: rotate(180deg) translateY(-30px);">redo</span>
+						<div class="eco-1ere-c1-fun-choice">Répartition de la richesse</div>
+					</div>
+				</div>
+
+					<!-- <canvas id="canevas_circuit_eco" width="600" height="400"></canvas> -->
 		      <h3>B. Quoi produire ?</h3>
 		      <p>Face à des besoins illimités et à des ressources limitées, il faut faire des choix, des arbitrages.</p>
 		      <p>C'est le rôle de la science économique qui étudie donc plus précisément <i>la production</i>, <i>la répartition</i> et <i>la consommation</i>.</p>

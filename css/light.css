@@ -369,9 +369,10 @@ table {
 
 }
 
-td.important {
+#all-container td.important {
    text-align: center;
    font-weight: bold;
+   min-width: 130px;
 }
 
 caption {
@@ -440,7 +441,15 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
     background-color: var(--color-button-background);
     transition: opacity var(--hover-anim-duration);
     opacity: .9;
+    min-height: 52px;
 }
+
+.message-tip.closed > .message-slider {
+   transition: font-size .6s, opacity .6s;
+   font-size: 0;
+   opacity: 0;
+}
+
 
 
 .message-tip span {
@@ -462,8 +471,9 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
 }
 
 .message-slider {
-   transition: max-width 1s;
-   overflow: hidden;
+   /* transition: max-width 1s; */
+   transition: font-size .6s, opacity .6s;
+   /* overflow: hidden; */
    padding: 1% 0;
 }
 
