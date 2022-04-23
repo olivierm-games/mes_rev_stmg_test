@@ -1,21 +1,37 @@
 <!DOCTYPE html>
-<html lang="fr">
-	<head>
-		<meta charset="utf-8"/>
-		<link rel="stylesheet" href="../../css/page_css.css" />
-		<title>Qu'apporte le management à la gestion des organisations ? Question 2 Management 1ère STMG</title>
-	</head>
-	<body id="body_mana">
-		<div id="haut"></div>
-		<header>
-			<a href="../../" id="bouton1">Accueil</a>
-			<a href="../Acces_par_matiere.html" id="bouton2">Cours 1ère STMG</a>
- 			<a href="../../Cours_Terminale_STMG/Acces_par_matiere.html" id="bouton3">Cours Terminale STMG</a>
-  		<a id="bouton4">Cours pédagogiques</a>
-			<a id="bouton5">Quiz STMG</a>
-		</header>
-		<div id="page">
-			<h1 id="h1_mana">Question 2 : Qu'apporte le management à la gestion des organisations ?</h1>
+<html lang="fr" dir="ltr">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Qu'apporte le management à la gestion des organisations ? Quest 2 Mana 1ère</title>
+	<link rel="stylesheet" href="chap_1_eco_fun.css">
+	<link rel="stylesheet" href="../../css/light.css">
+	<link rel="stylesheet" href="../../css/dark.css">
+	<link rel="stylesheet" href="../../css/colors.css">
+	<link rel="stylesheet" href="../../css/dimens.css">
+	<link rel="stylesheet" href="../../css/max_w_600px.css">
+	<link rel="stylesheet" href="../../css/min_w_600px.css">
+	<link rel="stylesheet" href="../../css/min_w_992px.css">
+	<link rel="stylesheet" href="../../css/min_w_2400px.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+	<script src="../../js/web-font-loader.js"></script>
+	<script src="../../js/fab_back_to_top.js"></script>
+	<script src="../../js/header_links_expandable.js"></script>
+	<script src="../../js/header_on_scroll.js"></script>
+	<script src="../../js/menu.js"></script>
+	<script src="../../js/night_mode.js"></script>
+	<script src="../../js/side_nav_collapse_handle.js"></script>
+	<script src="../../js/side_nav_hover_handler.js"></script>
+	<script src="../../js/side_nav_item_expandable.js"></script>
+</head>
+<body>
+	<span id="haut"></span>
+	<div id="all-container" class="night-mode-element">
+		<div w3-include-html="../../header.html"></div>
+		<div w3-include-html="../../side_nav.html"></div>
+		<main class="night-mode-element">
+			<h1>Question 2 : Qu'apporte le management à la gestion des organisations ?</h1>
 			<h2>I. Qu'est-ce que le management ?</h2>
 			<p><u>Il consiste à diriger une organisation en prenant les décisions nécessaires à son bon fonctionnement, il englobe 4 fonctions principales :</u></p>
 			<ul>
@@ -48,26 +64,30 @@
 				<li><b>la législation</b> ;</li>
 				<li><b>etc.</b></li>
 			</ul>
-		</div>
-		<footer>
-			<a href="#haut" class="bouton_footer_mana">Haut de page</a>
-			<a href="Sommaire.html" class="bouton_footer_mana">Retour au sommaire</a>
-			<a href="Question_3_La_finalite_de_l_entreprise_se_limite_t_elle_a_la_realisation_d_un_profit.html" class="bouton_footer_mana">Question 3</a>
-			<a href="Question_1_Qu_est_ce_qu_une_organisation.html" class="bouton_footer_mana">Question 1</a>
-		</footer>
-		<!-- phpmyvisites -->
-		<a href="http://st.free.fr/" title="phpMyVisites | Open source web analytics"
-		onclick="window.open(this.href);return(false);"><script>
-		<!--
-		var a_vars = Array();
-		var pagename='';
-
-		var phpmyvisitesSite = 288732;
-		var phpmyvisitesURL = "http://st.free.fr/phpmyvisites.php";
-		//-->
-		</script>
-		<script src="http://st.free.fr/phpmyvisites.js"></script>
-		<img src="http://st.free.fr/phpmyvisites.php" alt="Statistics" style="border:0; color:transparent;" /></a>
-		<!-- /phpmyvisites -->
-	</body>
+		</main>
+		<nav>
+			<a href="Sommaire.html" class="button night-mode-element">Sommaire</a>
+			<a href="Question_1_Qu_est_ce_qu_une_organisation.html" class="button night-mode-element" title="Qu'est-ce qu'une organisation ?">Question 1</a>
+			<a href="Question_3_La_finalite_de_l_entreprise_se_limite_t_elle_a_la_realisation_d_un_profit.html" class="button night-mode-element" title="La finalité de l'entreprise se limite-t-elle à la réalisation d'un profit ?">Question 3</a>
+		</nav>
+		<div w3-include-html="../../fab_footer.html"></div>
+	</div>
+	<script src="../../js/include_html.js"></script>
+	<script src="../../js/wait_for_elm.js"></script>
+	<script>
+	waitForElm('header').then(elm => {
+		initHeaderOnScroll();
+		setHeaderLinksExpandable();
+	});
+	waitForElm('aside').then(elm => {
+		initSideNavCollapseHandle();
+		initSideNavHoverHandler();
+		setSideNavItemsExpandable();
+	});
+	waitForElm('footer').then(elm => {
+		initNightMode();
+		setFabBackToTop();
+	});
+	</script>
+</body>
 </html>
