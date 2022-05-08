@@ -69,7 +69,7 @@
    width: -webkit-fill-available;
 }
 
-.eco-1ere-c1-fun-container { margin-bottom: 2em; }
+.eco-1ere-c1-fun-container { margin: 2em 0; }
 
 .eco-1ere-c1-fun-container, #eco-1ere-c1-fun-top-container, #eco-1ere-c1-fun-subcontainer-0 {
    display: flex;

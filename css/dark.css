@@ -100,7 +100,7 @@ a.button.night-mode:hover {
    text-decoration-color: var(--color-on-primary-dark);
 }
 
-#all-container.night-mode td {
+#all-container.night-mode td, #all-container.night-mode th {
    border-color: var(--color-on-primary-dark);
 }
 
