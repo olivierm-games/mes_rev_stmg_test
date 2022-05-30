@@ -15,9 +15,6 @@ function setFabBackToTop() {
    styleFab();
 }
 
-// window.onscroll=function() {
-// }
-
 function styleFab() {
    var docElmScrollTop=document.documentElement.scrollTop;
    fab.style.opacity=Math.min(.9, (docElmScrollTop-100)/100);

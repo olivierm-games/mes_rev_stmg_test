@@ -96,42 +96,4 @@
    .header-link-expandable-list li:hover .material-icons-round {
       color: var(--color-control-on-primary);
    }
-
-   aside {
-      right: 100%;
-      width: 30%;
-      /* height: 100%; */
-      bottom: auto;
-      z-index: 800;
-   }
-
-   aside.open {
-      right: 70%;
-      bottom: auto;
-      box-shadow: 0 0 0.15em 0 #292929dd;
-   }
-
-   main {
-      max-width: 70%;
-      min-width: 60%;
-      left: 0; /*for animation*/
-      transition: left var(--menu-anim-duration), width var(--menu-anim-duration);
-      padding: 0;
-      padding-top: 1%;
-   }
-
-   main.open {
-      position: relative;
-      left: 15%;
-      transition: left .5s, width .5s;
-   }
-
-   .side-nav-item-l {
-      display: block;
-   }
-
-   .card-droit-1ere {
-      border-radius: 0 0 .2em .2em;
-   }
-
 }

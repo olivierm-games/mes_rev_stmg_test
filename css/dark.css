@@ -107,6 +107,7 @@ a.button.night-mode:hover {
 /* .message-tip.night-mode { opacity: 1; } */
 /* .message-tip.night-mode:hover { opacity: .9; } */
 
+
 footer.night-mode {
    /* background: linear-gradient(0deg, #24242466 10%, #242424); */
    background-color: var(--color-primary-dark);
