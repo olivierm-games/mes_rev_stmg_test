@@ -674,14 +674,21 @@ li a {
     font-size: 105%;
 }
 
+.popup-target {
+   display: inline;
+}
+
 .popup-target-text {
    color: royalblue;
    cursor: pointer;
+
+   display: inline-block;
 }
 
 .popup-container {
    position: absolute;
    display: none;
+   color: var(--color-on-primary);
    /* opacity: 0;
    transition: opacity .5s; */
    background-color: var(--color-surface);
