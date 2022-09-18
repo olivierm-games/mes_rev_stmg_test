@@ -97,6 +97,7 @@
    #header-links :not(#night-mode) {
       display: flex;
       transform-style: preserve-3d;
+      font-size: 32px;
    }
 
    header {
@@ -181,7 +182,7 @@
    .header-link-expandable-list li:hover .material-icons-round {
       color: var(--color-control-on-primary);
    }
-   
+
    #cours-1ere {margin-top: 64px;}
 }
 
