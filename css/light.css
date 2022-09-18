@@ -415,7 +415,8 @@ table ul {
 
 #all-container td, #all-container th {
    border: 0.01em solid var(--color-on-primary);
-   padding: 1%;
+   padding: 8px;
+   /* padding: 1%; */
    /* text-align: justify; */
 
 }
