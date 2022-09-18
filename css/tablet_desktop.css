@@ -1,0 +1,105 @@
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+   :root {font-size: 17px;}
+
+   .col-s-1 {width: 8.33%;}
+   .col-s-2 {width: 16.66%;}
+   .col-s-3 {width: 25%;}
+   .col-s-4 {width: 33.33%;}
+   .col-s-5 {width: 41.66%;}
+   .col-s-6 {width: 50%;}
+   .col-s-7 {width: 58.33%;}
+   .col-s-8 {width: 66.66%;}
+   .col-s-9 {width: 75%;}
+   .col-s-10 {width: 83.33%;}
+   .col-s-11 {width: 91.66%;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+   :root {font-size: 18px;}
+
+   .col-m-1 {width: 8.33%;}
+   .col-m-2 {width: 16.66%;}
+   .col-m-3 {width: 25%;}
+   .col-m-4 {width: 33.33%;}
+   .col-m-5 {width: 41.66%;}
+   .col-m-6 {width: 50%;}
+   .col-m-7 {width: 58.33%;}
+   .col-m-8 {width: 66.66%;}
+   .col-m-9 {width: 75%;}
+   .col-m-10 {width: 83.33%;}
+   .col-m-11 {width: 91.66%;}
+
+   aside {
+      right: 100%;
+      width: 25%;
+      /* height: 100%; */
+      bottom: auto;
+      z-index: 800;
+   }
+
+   aside.open {
+      right: 75%;
+      /* bottom: auto; */
+      box-shadow: 0 0 0.15em 0 #292929dd;
+   }
+
+   main {
+      max-width: 75%;
+      min-width: 65%;
+      left: 0; /*for animation*/
+      transition: left var(--menu-anim-duration), width var(--menu-anim-duration);
+      padding: 0;
+      padding-top: 1%;
+      border-radius: .2em;
+   }
+
+   main.open {
+      position: relative;
+      left: 12.5%;
+      transition: left .5s, width .5s;
+   }
+
+   .side-nav-item-l {
+      display: block;
+   }
+
+   .card-droit-1ere {
+      border-radius: 0 0 .2em .2em;
+   }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+   :root {font-size: 19px;}
+
+   .col-1 {width: 8.33%;}
+   .col-2 {width: 16.66%;}
+   .col-3 {width: 25%;}
+   .col-4 {width: 33.33%;}
+   .col-5 {width: 41.66%;}
+   .col-6 {width: 50%;}
+   .col-7 {width: 58.33%;}
+   .col-8 {width: 66.66%;}
+   .col-9 {width: 75%;}
+   .col-10 {width: 83.33%;}
+   .col-11 {width: 91.66%;}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+   :root {font-size: 20px;}
+
+   .col-l-1 {width: 8.33%;}
+   .col-l-2 {width: 16.66%;}
+   .col-l-3 {width: 25%;}
+   .col-l-4 {width: 33.33%;}
+   .col-l-5 {width: 41.66%;}
+   .col-l-6 {width: 50%;}
+   .col-l-7 {width: 58.33%;}
+   .col-l-8 {width: 66.66%;}
+   .col-l-9 {width: 75%;}
+   .col-l-10 {width: 83.33%;}
+   .col-l-11 {width: 91.66%;}
+}

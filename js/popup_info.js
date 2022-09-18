@@ -19,5 +19,5 @@ for(var i=0; i<targetsCount; i++) {
    // popupContainers[i].addEventListener('touchend', function() {toggleShow(this), {passive: true}});
 }
 
-function toggleShow(target) { target.nextElementSibling.classList.toggle('show'); }
+function toggleShow(target) { target.nextElementSibling.nextElementSibling.classList.toggle('show'); }
 // function toggleShow(target) { target.lastElementChild.classList.toggle('show'); }

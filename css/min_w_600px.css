@@ -1,11 +1,18 @@
 @media only screen and (min-width: 600px) {
+/* @media only screen and (min-width: 600px) { */
    :root {
-      font-size: 100%;
+      /* font-size: 100%; */
+      /* font-size: 95%; */
+      font-size: 16px;
    }
 
    .eco-1ere-c1-fun-choice-arrow-curved.material-icons-round {
       font-size: 80px;
       height: 80px;
+   }
+
+   .h4-container ul {
+      margin-inline-start: 2%;
    }
 
 }
