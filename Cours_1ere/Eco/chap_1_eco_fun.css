@@ -8,7 +8,8 @@
    height: 60px;
    width: 180px;
    justify-content: center;
-   box-shadow: 0 0 0.2em 0.01em #0003;
+   box-shadow: 1px 1px #0008;
+   /* box-shadow: 0 0 0.2em 0.01em #0003; */
 }
 
 .eco-1ere-c1-fun-choice.night-mode {
@@ -22,7 +23,7 @@
    display: flex;
    align-items: center;
    text-align: center;
-   box-shadow: 0 0 0.2em 0.01em #0003;
+   box-shadow: 1px 1px #0008;
 }
 
 #eco-1ere-c1-fun-society-choice.night-mode {
