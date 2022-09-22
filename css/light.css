@@ -306,11 +306,17 @@ a [class^=side-nav-lvl-2-link] {
 h1 {
    font-size: 1.9em;
    font-style: italic;
-    padding: 0 2%;
+   padding: 1% 2% 3% 2%;
+   width: -webkit-fill-available;
+   margin-block: 0;
+
+    /* padding: 0 2%; */
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
 }
+
+#all-container h1 {box-shadow: 0 -0.2em 0.2em -0.2em inset grey;}
 
 h2 {
    font-size: 1.4em;
