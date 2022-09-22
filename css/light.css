@@ -318,7 +318,7 @@ h1 {
 
 /* #all-container h1 {box-shadow: 0 -0.2em 0.2em -0.2em inset grey;} */
 /* #all-container h1 {background: linear-gradient(0deg, #222, #BBB 0.1%, var(--color-surface) 4%, var(--color-surface));} */
-#all-container h1 {background: linear-gradient(0deg, var(--color-background-dark), var(--color-primary-dark) 0.1%, var(--color-surface-dark) 4%, var(--color-surface-dark));}
+#all-container h1 {background: linear-gradient(0deg, var(--color-surface-dark), #8885 0.1%, var(--color-surface) 2%, var(--color-surface));}
 
 h2 {
    font-size: 1.4em;
