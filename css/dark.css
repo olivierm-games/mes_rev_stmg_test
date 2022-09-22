@@ -96,7 +96,8 @@ a.button.night-mode:hover {
     color: #F0B90DED;
 }
 
-#all-container.night-mode h1 {box-shadow: 0 -0.65em 0.65em -0.65em inset var(--color-background-dark);}
+/* #all-container.night-mode h1 {box-shadow: 0 -0.65em 0.65em -0.65em inset var(--color-background-dark);} */
+#all-container.night-mode h1 {background: linear-gradient(0deg, var(--color-background-dark), var(--color-primary-dark) 0.1%, var(--color-surface-dark) 4%, var(--color-surface-dark));}
 
 #all-container.night-mode h1, #all-container.night-mode h2 {
    text-decoration-color: var(--color-on-primary-dark);
