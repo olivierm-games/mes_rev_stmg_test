@@ -397,6 +397,7 @@ p, .popup-p {
    text-align: justify;
    margin-inline: 4%;
    margin-block: .3em;
+   overflow: auto;
 }
 
 main > ul {
@@ -414,7 +415,7 @@ table {
    border-collapse: collapse;
    margin: .5em 0 1em 0;
    columns: auto;
-   width: -webkit-fill-available;
+   max-width: -webkit-fill-available;
 }
 
 table ul {
@@ -743,6 +744,13 @@ p.cite a {
 
 .cite a cite {
    display: contents;
+}
+
+.img-float {
+   float: left;
+   padding: 0 1%;
+   margin: 0 2% 0 0;
+   max-width: 50%;
 }
 
 footer {
