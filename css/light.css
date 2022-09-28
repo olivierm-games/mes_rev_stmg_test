@@ -402,7 +402,10 @@ p, .popup-p {
    text-align: justify;
    margin-inline: 4%;
    margin-block: .3em;
-   overflow: auto;
+}
+
+.float-img-container {
+   display: inline-block;
 }
 
 main > ul {
@@ -759,9 +762,9 @@ p.cite a {
 
 .img-float {
    float: left;
-   padding: 0 1%;
-   margin: 0 2% 0 0;
-   max-width: 50%;
+   padding: 1%;
+   /* margin: 0 2% 0 0; */
+   max-width: 33.33%;
 }
 
 footer {
