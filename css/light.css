@@ -648,6 +648,13 @@ a:active.button {
    margin-block-start: 1em;
 }
 
+#all-container td.borderless {
+   border: none;
+   text-align: center;
+}
+
+#all-container td.denominator {border-top: 0.01em solid var(--color-on-primary);}
+
 .message-tip {
     border-radius: 1em;
     display: flex;

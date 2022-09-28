@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>La résolution de tous les problèmes de gestion est-elle automatisable ? Question 3 SIG Systèmes d'information de gestion Terminale STMG</title>
 	<link rel="stylesheet" href="../../css/light.css">
@@ -166,7 +166,7 @@
 				<p>La <b>structure alternative</b> propose <b>plusieurs séquences d'instruction</b> possibles. Le programme réalise le choix ce celle à exécuter selon résultat d'une condition. Cela contribue à l'automatisation et permet de ne concevoir qu'un seul programme traitant plusieurs cas, plutôt que plusieurs programmes.</p>
 				<div class="h3-container">
 					<h3>A. Conditions</h3>
-					<p>Une condition est exprimée à l'aide d'opérateurs de comparaison : >, >=, &lt;, &lt;=, == (égal à), != (différent de).<br />Le résultat d'une condition est booléen : la condition est vérifiée (<i>True</i>) ou non (<i>False</i>).<br />Une condition peur relier plusieurs sous conditions par des opérateurs logiques : ET (&& en PHP), OU (||).</p>
+					<p>Une condition est exprimée à l'aide d'opérateurs de comparaison : >, >=, &lt;, &lt;=, == (égal à), != (différent de).<br>Le résultat d'une condition est booléen : la condition est vérifiée (<i>True</i>) ou non (<i>False</i>).<br>Une condition peur relier plusieurs sous conditions par des opérateurs logiques : ET (&& en PHP), OU (||).</p>
 				</div>
 				<div class="h3-container">
 					<h3>B. Structure alternative simple</h3>
@@ -309,7 +309,7 @@
 								<td class="td_left td_sig_bord_g pad_left_indent">}</td>
 							</tr>
 							<tr>
-								<td colspan="2" class="td_sig td_top_gauche">On remarque l'imbrication d'une structure dans une autre afin de pouvoir traiter 3 cas.<div class="marge_top_bot"><u>Lignes exécutées avec des exemples</u> :</div>age = 17 : lignes 1 et 2 ;<br />age = 35 : lignes 1, 3, 4, 5, 6, 9 ;<br />age = 44 : lignes 1, 3, 4, 5, 7, 8, 9 ;<br /></td>
+								<td colspan="2" class="td_sig td_top_gauche">On remarque l'imbrication d'une structure dans une autre afin de pouvoir traiter 3 cas.<div class="marge_top_bot"><u>Lignes exécutées avec des exemples</u> :</div>age = 17 : lignes 1 et 2 ;<br>age = 35 : lignes 1, 3, 4, 5, 6, 9 ;<br>age = 44 : lignes 1, 3, 4, 5, 7, 8, 9 ;<br></td>
 								<td class="td_sig td_top_gauche">Attention : un mauvais ordonnancement des cas peut conduire à des résultats faux comme ici : la première branche du premier if sera exécutée dès que le nombre dépasse 18 (par exemple 50 affichera "Senior").</td>
 							</tr>
 						</tbody>
@@ -461,7 +461,7 @@
 							<tbody>
 								<tr>
 									<td class="td_left">while (condition)</td>
-									<td rowspan="4" class="td_sig_bord_g">Tant que (while) la condition booléenne est vérifiée, exécuter l'(les) instruction(s).<br />Il se peut qu'il n'y ai aucune itération si la condition est d'emblée vérifiée.</td>
+									<td rowspan="4" class="td_sig_bord_g">Tant que (while) la condition booléenne est vérifiée, exécuter l'(les) instruction(s).<br>Il se peut qu'il n'y ai aucune itération si la condition est d'emblée vérifiée.</td>
 								</tr>
 								<tr>
 									<td class="pad_left_indent td_left">{</td>
@@ -713,7 +713,7 @@
 										<ul>
 											<li><span class="text_turquoise">mysql_num_rows</span>(<span class="text_red">$resultat</span>) : retourne le nombre entier d'enregistrements contenu dans <span class="text_red">$resultat</span>.</li>
 										</ul>
-										<br />Un <b>enregistrement</b> est une « ligne » comportant des valeurs pour un à plusieurs attributs (ceux projetés dans l'ordre <i>SELECT)</i>. Un <b>jeu d'enregistrements</b> est un ensemble d'enregistrements (dans l'ordre éventuellement précisé par la clause <i>ORDER BY)</i>.
+										<br>Un <b>enregistrement</b> est une « ligne » comportant des valeurs pour un à plusieurs attributs (ceux projetés dans l'ordre <i>SELECT)</i>. Un <b>jeu d'enregistrements</b> est un ensemble d'enregistrements (dans l'ordre éventuellement précisé par la clause <i>ORDER BY)</i>.
 									</li>
 								</ul>
 							</div>
@@ -723,12 +723,12 @@
 								<p>Pour traiter tous les enregistrements de listes, on procède généralement à une <b>lecture séquentielle</b> (du premier au dernier) à l'aide d'une structure itérative (« jusqu'à ce qu'il n'y ai plus d'enregistrements à lire dans le jeu d'enregistrements ») :</p>
 								<div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between;">
 									<p style="padding-right: 2%;"><span class="text_red">$enreg</span>=<span class="text_turquoise">mysql_fetch_array</span>(<span class="text_red">$resultat</span>);
-										<br /><span class="text_purple">while</span>(<span class="text_red">$enreg</span>!=<span class="text_orange">False</span>)
-										<br />&nbsp;&nbsp; {
-											<br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="text_red">$enreg</span>=<span class="text_turquoise">mysql_fetch_array</span>(<span class="text_red">$resultat</span>);
-											<br />&nbsp;&nbsp; }</p>
+										<br><span class="text_purple">while</span>(<span class="text_red">$enreg</span>!=<span class="text_orange">False</span>)
+										<br>&nbsp;&nbsp; {
+											<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text_red">$enreg</span>=<span class="text_turquoise">mysql_fetch_array</span>(<span class="text_red">$resultat</span>);
+											<br>&nbsp;&nbsp; }</p>
 											<p style="padding-left: 2%;">affectation à <span class="text_red">$enreg</span> du premier enregistrement du jeu d'enregistrements <span class="text_red">$resultat</span>.
-												<br /><br />lecture de l'enregistrement suivant, si on était au dernier, <span class="text_red">$enreg</span> reçoit la valeur <i>False</i>.</p>
+												<br><br>lecture de l'enregistrement suivant, si on était au dernier, <span class="text_red">$enreg</span> reçoit la valeur <i>False</i>.</p>
 											</div>
 											<p>La valeur de chaque attribut de l'enregistrement en cours est ainsi accessible : <span class="text_red">$enreg</span>[<span class="text_vert">'libAttribut'</span>].</p>
 							</div>

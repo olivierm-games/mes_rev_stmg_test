@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Comment peut-on produire de l'information à partir de données contenues dans une base ? Question 4 SIG Systèmes d'information de gestion Terminale STMG</title>
 		<link rel="stylesheet" href="../../css/light.css">
@@ -189,10 +189,10 @@
 						<p>Ces différentes données constituent les <b>attributs</b> de la relation. On appelle <b>ocurrence</b> de la relation un ensemble d'occurrences de ses attributs caractérisant un membre de la relation.</p>
 						<div class="exemp_sig">
 							<p><u>Exemple</u> : dans une base de données de gestion des ressources humaines, les données <b>nom</b>, <b>prenom</b>, <b>dateEmbauche</b>, <b>salaire</b> et <b>poste</b> caractérisent un salarié et peuvent donc être regroupées dans une relation <b>salarie</b> (sans accent par convention) présentée ainsi (avec ses attributs entre parenthèses) :
-							<br />salarie (nom, prenom, dateEmbauche, salaire, poste)
-							<br />("Arist", "Léa", '05/08/2003', 1630.41, "logisticienne") est occurrence de cette relation.
-							<br />Les valeurs des attributs de type alphanumérique, dates et heures doivent être placées entre guillemets ou apostrophes.
-							<br />À noter que le <b>salaire</b> est mémorisé sans le symbole monétaire €, c'est une valeur numérique (nécessaire pour les calculs) à laquelle on peut adjoindre, à l'affichage, le symbole €.</p>
+							<br>salarie (nom, prenom, dateEmbauche, salaire, poste)
+							<br>("Arist", "Léa", '05/08/2003', 1630.41, "logisticienne") est occurrence de cette relation.
+							<br>Les valeurs des attributs de type alphanumérique, dates et heures doivent être placées entre guillemets ou apostrophes.
+							<br>À noter que le <b>salaire</b> est mémorisé sans le symbole monétaire €, c'est une valeur numérique (nécessaire pour les calculs) à laquelle on peut adjoindre, à l'affichage, le symbole €.</p>
 						</div>
 						<p>Chaque attribut ne peut contenir, pour une occurrence d'un salarié donné, qu'une seule valeur à un instant donné.</p>
 						<div class="exemp_sig">
@@ -262,7 +262,7 @@
 						<p>À une occurrence de la relation A, déterminée par une valeur de sa clé primaire, on ne peut associer qu'une seule occurrence de la relation B et donc une seul occurrence de sa clé primaire : la clé primaire de la relation B est donc en dépendance fonctionnelle de la clé primaire de la relation A, ce qui implique que la clé primaire de la relation B peut donc constituer un attribut de la relation A, attribut constituant une clé étrangère. <b>Une clé étrangère met donc en œuvre une règle de gestion</b>.</p>
 						<div class="exemp_sig">
 							<p><u>Exemple</u> : La relation <b>salarie</b> dépend de la relation <b>service</b> d'une part, et de la relation <b>poste</b> d'autre part (indépendamment).
-								<br />La relation <b>absence</b> dépend de la relation <b>salarie</b>.</p>
+								<br>La relation <b>absence</b> dépend de la relation <b>salarie</b>.</p>
 								<p>Les trois dépendances mises en évidences donnent donc lieu à trois clés étrangères (placées dans les relations dépendantes) :</p>
 								<table class="tab_ss_bord">
 									<tbody>
@@ -425,13 +425,13 @@
 						<h3>B. La création de tables</h3>
 						<p>La création d'une table consiste à lister ses champs (on retrouve les attributs constitués dans le modèle relationnel), avec leur type et à créer ses clés primaire et étrangère(s) :</p>
 						<p><span class="text_purple">CREATE TABLE</span> nom_table (
-							<br /><span class="pad_left_3_indent">champ1 <span class="text_blue" title="int, varchar, float, date...">Type de données</span>[,</span>
-							<br /><span class="pad_left_3_indent">champ2 <span class="text_blue" title="int, varchar, float, date...">Type de données</span>]</span>
-							<br /><span class="text_purple pad_left_3_indent">PRIMARY KEY</span> (Champ clé primaire [,...]),
-							<br /><span class="pad_left_3_indent">[<span class="text_purple">CONSTRAINT</span> Nom de la contrainte] <span class="text_purple">FOREIGN KEY</span> (champ clé étrangère [,...])</span>
-							<br /><span class="text_purple pad_left_3_indent">REFERENCES</span> Nom de la table source (champ concerné [,...])
-							<br />);
-							<br /><br />
+							<br><span class="pad_left_3_indent">champ1 <span class="text_blue" title="int, varchar, float, date...">Type de données</span>[,</span>
+							<br><span class="pad_left_3_indent">champ2 <span class="text_blue" title="int, varchar, float, date...">Type de données</span>]</span>
+							<br><span class="text_purple pad_left_3_indent">PRIMARY KEY</span> (Champ clé primaire [,...]),
+							<br><span class="pad_left_3_indent">[<span class="text_purple">CONSTRAINT</span> Nom de la contrainte] <span class="text_purple">FOREIGN KEY</span> (champ clé étrangère [,...])</span>
+							<br><span class="text_purple pad_left_3_indent">REFERENCES</span> Nom de la table source (champ concerné [,...])
+							<br>);
+							<br><br>
 						</p>
 						<div class="exemp_sig" style="padding-bottom: 5%;">
 							<p><u>Exemple</u> : <u>Considérons le schéma relationnel suivant</u> :</p>
@@ -468,11 +468,11 @@
 						<div class="flex_box">
 							<div class="flex_box_1">
 								<p><span class="text_purple">CREATE TABLE</span> service (
-									<br /><span class="pad_left_3_indent">num <span class="text_blue">INT</span> <span class="text_purple">AUTO_INCREMENT</span>,</span>
-									<br /><span class="pad_left_3_indent">libelle <span class="text_blue">VARCHAR</span>(<span class="text_vert">20</span>) <span class="text_purple">NOT</span> <span class="text_blue">NULL</span>,</span>
-									<br /><span class="pad_left_3_indent">budget <span class="text_blue">FLOAT</span>,</span>
-									<br /><span class="text_purple pad_left_3_indent">PRIMARY KEY</span> (num)
-									<br />);
+									<br><span class="pad_left_3_indent">num <span class="text_blue">INT</span> <span class="text_purple">AUTO_INCREMENT</span>,</span>
+									<br><span class="pad_left_3_indent">libelle <span class="text_blue">VARCHAR</span>(<span class="text_vert">20</span>) <span class="text_purple">NOT</span> <span class="text_blue">NULL</span>,</span>
+									<br><span class="pad_left_3_indent">budget <span class="text_blue">FLOAT</span>,</span>
+									<br><span class="text_purple pad_left_3_indent">PRIMARY KEY</span> (num)
+									<br>);
 								</p>
 							</div>
 							<div class="flex_box_2">
@@ -482,31 +482,31 @@
 							</div>
 						</div>
 						<p><span class="text_purple">CREATE TABLE</span> qualification (
-							<br /><span class="pad_left_3_indent">num <span class="text_blue">INT</span> <span class="text_purple">AUTO_INCREMENT</span>,</span>
-							<br /><span class="pad_left_3_indent">libelle <span class="text_blue">VARCHAR</span>(<span class="text_vert">20</span>) <span class="text_purple">NOT</span> <span class="text_blue">NULL</span>,</span>
-							<br /><span class="pad_left_3_indent">niveau <span class="text_blue">VARCHAR</span>(<span class="text_vert">1</span>) <span class="text_purple">NOT</span> <span class="text_blue">NULL</span>,</span>
-							<br /><span class="text_purple pad_left_3_indent">PRIMARY KEY</span> (num)
-							<br />);
+							<br><span class="pad_left_3_indent">num <span class="text_blue">INT</span> <span class="text_purple">AUTO_INCREMENT</span>,</span>
+							<br><span class="pad_left_3_indent">libelle <span class="text_blue">VARCHAR</span>(<span class="text_vert">20</span>) <span class="text_purple">NOT</span> <span class="text_blue">NULL</span>,</span>
+							<br><span class="pad_left_3_indent">niveau <span class="text_blue">VARCHAR</span>(<span class="text_vert">1</span>) <span class="text_purple">NOT</span> <span class="text_blue">NULL</span>,</span>
+							<br><span class="text_purple pad_left_3_indent">PRIMARY KEY</span> (num)
+							<br>);
 						</p>
 						<p><span class="text_purple">CREATE TABLE</span> salarie (
-							<br /><span class="pad_left_3_indent">num <span class="text_blue">INT</span> <span class="text_purple">AUTO_INCREMENT</span>,</span>
-							<br /><span class="pad_left_3_indent">nom <span class="text_blue">VARCHAR</span>(<span class="text_vert">25</span>) <span class="text_purple">NOT</span> <span class="text_blue">NULL</span>,</span>
-							<br /><span class="pad_left_3_indent">prenom <span class="text_blue">VARCHAR</span>(<span class="text_vert">1</span>) <span class="text_purple">NOT</span> <span class="text_blue">NULL</span>,</span>
-							<br /><span class="pad_left_3_indent">date_embauche <span class="text_blue">DATE</span> <span class="text_purple">NOT</span><span class="text_blue"> NULL</span>,</span>
-							<br /><span class="pad_left_3_indent">salaire <span class="text_blue">FLOAT</span>,</span>
-							<br /><span class="pad_left_3_indent">num_service <span class="text_blue">INT</span>,</span>
-							<br /><span class="text_purple pad_left_3_indent">PRIMARY KEY</span> (num),
-							<br /><span class="text_purple pad_left_3_indent">FOREIGN KEY</span> (num_service) <span class="text_purple">REFERENCES</span> service(num)
-							<br />);
+							<br><span class="pad_left_3_indent">num <span class="text_blue">INT</span> <span class="text_purple">AUTO_INCREMENT</span>,</span>
+							<br><span class="pad_left_3_indent">nom <span class="text_blue">VARCHAR</span>(<span class="text_vert">25</span>) <span class="text_purple">NOT</span> <span class="text_blue">NULL</span>,</span>
+							<br><span class="pad_left_3_indent">prenom <span class="text_blue">VARCHAR</span>(<span class="text_vert">1</span>) <span class="text_purple">NOT</span> <span class="text_blue">NULL</span>,</span>
+							<br><span class="pad_left_3_indent">date_embauche <span class="text_blue">DATE</span> <span class="text_purple">NOT</span><span class="text_blue"> NULL</span>,</span>
+							<br><span class="pad_left_3_indent">salaire <span class="text_blue">FLOAT</span>,</span>
+							<br><span class="pad_left_3_indent">num_service <span class="text_blue">INT</span>,</span>
+							<br><span class="text_purple pad_left_3_indent">PRIMARY KEY</span> (num),
+							<br><span class="text_purple pad_left_3_indent">FOREIGN KEY</span> (num_service) <span class="text_purple">REFERENCES</span> service(num)
+							<br>);
 						</p>
 						<p><span class="text_purple">CREATE TABLE</span> competence (
-							<br /><span class="pad_left_3_indent">num_salarie <span class="text_blue">INT</span>,</span>
-							<br /><span class="pad_left_3_indent">num_qualif <span class="text_blue">INT</span>,</span>
-							<br /><span class="pad_left_3_indent">date_acq <span class="text_blue">DATE</span> <span class="text_purple">NOT</span><span class="text_blue"> NULL</span>,</span>
-							<br /><span class="text_purple pad_left_3_indent">PRIMARY KEY</span> (num_salarie, num_qualif),
-							<br /><span class="text_purple pad_left_3_indent">FOREIGN KEY</span> (num_salarie) <span class="text_purple">REFERENCES</span> salarie(num),
-							<br /><span class="text_purple pad_left_3_indent">FOREIGN KEY</span> (num_qualif) <span class="text_purple">REFERENCES</span> qualification(num)
-							<br />);
+							<br><span class="pad_left_3_indent">num_salarie <span class="text_blue">INT</span>,</span>
+							<br><span class="pad_left_3_indent">num_qualif <span class="text_blue">INT</span>,</span>
+							<br><span class="pad_left_3_indent">date_acq <span class="text_blue">DATE</span> <span class="text_purple">NOT</span><span class="text_blue"> NULL</span>,</span>
+							<br><span class="text_purple pad_left_3_indent">PRIMARY KEY</span> (num_salarie, num_qualif),
+							<br><span class="text_purple pad_left_3_indent">FOREIGN KEY</span> (num_salarie) <span class="text_purple">REFERENCES</span> salarie(num),
+							<br><span class="text_purple pad_left_3_indent">FOREIGN KEY</span> (num_qualif) <span class="text_purple">REFERENCES</span> qualification(num)
+							<br>);
 						</p>
 					</div>
 					<div class="h3-container">
@@ -574,11 +574,11 @@
 						<p class="marge_bot_3 pad_left_indent"><span class="text_purple">INSERT INTO</span> nom_table (champ2[, champ5,...]) <span class="text_purple">VALUES</span> (valeur_champ2 [, valeur_champ5,...]);</p>
 						<div class="exemp_sig">
 							<p><u>Exemple</u> : <u>Insérons deux salariés dans la relation suivante</u> :</p>
-							<p>salarie (num, nom, prenom, date_embauche, salaire, poste)<br />num est auto-incrémenté.</p>
+							<p>salarie (num, nom, prenom, date_embauche, salaire, poste)<br>num est auto-incrémenté.</p>
 							<div class="pad_left_3_indent">
 								<p><span class="text_purple">INSERT INTO</span> salarie <span class="text_purple">VALUES</span>
-								<br /><span class="pad_left_3_indent">(<span class="text_blue">NULL</span>, <span class="text_red">'Arist'</span>, <span class="text_red">'Léa'</span>, <span class="text_red">'2003-08-05'</span>, <span class="text_vert">1630.41</span>, <span class="text_red">'logisticienne'</span>),</span>
-								<br /><span class="pad_left_3_indent">(<span class="text_blue">NULL</span>, <span class="text_red">"Lakab"</span>, <span class="text_red">"Karim"</span>, <span class="text_red">'2011-12-22'</span>, , <span class="text_red">"ingénieur informatique"</span>);</span></p>
+								<br><span class="pad_left_3_indent">(<span class="text_blue">NULL</span>, <span class="text_red">'Arist'</span>, <span class="text_red">'Léa'</span>, <span class="text_red">'2003-08-05'</span>, <span class="text_vert">1630.41</span>, <span class="text_red">'logisticienne'</span>),</span>
+								<br><span class="pad_left_3_indent">(<span class="text_blue">NULL</span>, <span class="text_red">"Lakab"</span>, <span class="text_red">"Karim"</span>, <span class="text_red">'2011-12-22'</span>, , <span class="text_red">"ingénieur informatique"</span>);</span></p>
 							</div>
 							<p>Les valeurs sont insérées dans l'ordre des champs de la table.</p>
 							<p><span class="text_blue">NULL</span> est utilisé pour la valeur auto-incrémentée (les salariés recevront un numéro de salarié égal à celui du dernier salarié inséré +1 pour le premier et donc +2 pour le second).</p>
@@ -586,7 +586,7 @@
 							<p>Le salaire du deuxième salarié n'a pas encore été déterminé d'où l'absence de valeur entre les deux virgules correspondant à ce champ.</p>
 							<p>Par conséquent, l'insertion du deuxième salarié aurait pu aussi se faire en spécifiant les colonnes insérées (sans le salaire, ni le num car il est auto-incrémenté) :</p>
 							<div class="pad_left_3_indent">
-								<p><span class="text_purple">INSERT INTO</span> salarie (nom, prenom, date_embauche, poste) <span class="text_purple">VALUES</span><br /><span class="pad_left_3_indent">(<span class="text_red">"Lakab"</span>, <span class="text_red">"Karim"</span>, <span class="text_red">'2011-12-22'</span>, <span class="text_red">"ingénieur informatique"</span>);</span></p>
+								<p><span class="text_purple">INSERT INTO</span> salarie (nom, prenom, date_embauche, poste) <span class="text_purple">VALUES</span><br><span class="pad_left_3_indent">(<span class="text_red">"Lakab"</span>, <span class="text_red">"Karim"</span>, <span class="text_red">'2011-12-22'</span>, <span class="text_red">"ingénieur informatique"</span>);</span></p>
 							</div>
 						</div>
 						<p>On notera qu'il est possible d'insérer des enregistrements par une requête <span class="text_purple">SELECT</span> (projetant un nombre de valeurs correspondant au nombre de champs) grâce à l'enchaînement <span class="text_purple">INSERT INTO</span> ... <span class="text_purple">SELECT</span>, non documenté ici.</p>
@@ -602,8 +602,8 @@
 						<p><u>Syntaxe</u> :</p>
 						<div class="pad_left_indent marge_bot_4">
 							<span class="text_purple">UPDATE</span> nom_table
-							<br /><span class="text_purple">SET</span> champ_maj_1 = nouvelle_valeur [, champ_maj_2 = nouvelle_valeur...]
-							<br />[<span class="text_purple">WHERE</span> critere_restriction_1 <span class="text_purple">AND</span>/<span class="text_purple">OR</span> critere_restriction_2...];
+							<br><span class="text_purple">SET</span> champ_maj_1 = nouvelle_valeur [, champ_maj_2 = nouvelle_valeur...]
+							<br>[<span class="text_purple">WHERE</span> critere_restriction_1 <span class="text_purple">AND</span>/<span class="text_purple">OR</span> critere_restriction_2...];
 						</div>
 						<div class="exemp_sig">
 							<p><u>Exemples</u> :</p>
@@ -615,7 +615,7 @@
 							<p class="text_blue"><u>Ex 2 : Léa Arist (salarié n°29) est désormais responsable commerciale</u> :</p>
 							<div class="pad_left_indent">
 								<span class="text_purple">UPDATE</span> salarie <span class="text_purple">SET</span> poste = <span class="text_red">"responsable commerciale"</span>
-								<br /><span class="text_purple">WHERE</span> num = <span class="text_vert">29</span>;
+								<br><span class="text_purple">WHERE</span> num = <span class="text_vert">29</span>;
 							</div>
 							<p><i>On opère la restriction sur la salariée par sa clé primaire, du fait qu'elle lui est unique</i>.</p>
 						</div>
@@ -630,7 +630,7 @@
 						<p><u>Syntaxe</u> :</p>
 						<div class="pad_left_indent marge_bot_3">
 							<span class="text_purple">DELETE FROM</span> nom_table
-							<br />[<span class="text_purple">WHERE</span> critere_restriction_1 <span class="text_purple">AND</span>/<span class="text_purple">OR</span> critere_restriction_2...];
+							<br>[<span class="text_purple">WHERE</span> critere_restriction_1 <span class="text_purple">AND</span>/<span class="text_purple">OR</span> critere_restriction_2...];
 						</div>
 						<div class="exemp_sig">
 							<p><u>Exemple</u> : Dans une relation commande (num, date, numClient), la commande n°2476 a été annulée, elle peut donc être supprimé.</p>
@@ -978,7 +978,7 @@
 						<p><u>Syntaxe</u> :</p>
 						<div class="pad_left_indent marge_bot_4">
 							<span class="text_purple">SELECT</span> champ_projete_1 [, champ_projete_2...] <span class="text_purple">FROM</span> nom_table
-							<br />[<span class="text_purple">ORDER BY</span> champ_tri_1 [DESC], champ_tri_2 [DESC]...];
+							<br>[<span class="text_purple">ORDER BY</span> champ_tri_1 [DESC], champ_tri_2 [DESC]...];
 						</div>
 						<p>Les tris ont lieu selon l'ordre spécifié dans la clause <span class="text_purple">ORDER BY</span>. Pour chaque critère de tri, le classement peut être ascendant (<span class="text_purple">ASC</span> par défaut si non spécifié) ou descendant (<span class="text_purple">DESC</span> à spécifier).</p>
 						<div class="exemp_sig">
@@ -1049,7 +1049,7 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td class="pad_left_indent"><span class="text_purple">SELECT</span> salarie.*, libelle <span class="text_purple">FROM</span> salarie, service<br /><span class="text_purple">ORDER BY</span> nom, prenom;</td>
+										<td class="pad_left_indent"><span class="text_purple">SELECT</span> salarie.*, libelle <span class="text_purple">FROM</span> salarie, service<br><span class="text_purple">ORDER BY</span> nom, prenom;</td>
 									</tr>
 									<tr>
 										<td><i>En l'absence de jointure, le SGBDR ne « sait » pas comment associer les tables et projette pour chaque ligne de la première table, l'ensemble des lignes de la seconde. Si les tables <b>service</b> et <b>salarie</b> comporte respectivement 5 et 10 enregistrements, 50 seront projetés (au lieu des 10 souhaités).</i></td>
@@ -1059,7 +1059,7 @@
 							<table class="tab_ss_bord marge_bot_3 marge_top_neg2">
 								<tbody>
 									<tr>
-										<td class="pad_left_indent"><span class="text_purple">SELECT</span> salarie.*, libelle <span class="text_purple">FROM</span> salarie, service<br /><span class="text_purple">WHERE</span> service.num = salarie.num_service<br /><span class="text_purple">ORDER BY</span> nom, prenom;</td>
+										<td class="pad_left_indent"><span class="text_purple">SELECT</span> salarie.*, libelle <span class="text_purple">FROM</span> salarie, service<br><span class="text_purple">WHERE</span> service.num = salarie.num_service<br><span class="text_purple">ORDER BY</span> nom, prenom;</td>
 									</tr>
 									<tr>
 										<td><div class="marge_bot_1"><i>Le critère de jointure associe la clé primaire num de la table <b>service</b> à la clé étrangère num_service de la table <b>salarie</b> qui lui fait référence</i>.</div>
@@ -1152,7 +1152,7 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> <span class="text_purple">MIN</span>(date_embauche) <span class="text_purple">FROM</span> salarie<br /><span class="text_purple">WHERE</span> poste=<span class="text_red">"ingénieur"</span>;</td>
+										<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> <span class="text_purple">MIN</span>(date_embauche) <span class="text_purple">FROM</span> salarie<br><span class="text_purple">WHERE</span> poste=<span class="text_red">"ingénieur"</span>;</td>
 										<td class="td_haut_gauche"><i>la date la plus ancienne est la minimale</i>.</td>
 									</tr>
 								</tbody>
@@ -1163,7 +1163,7 @@
 										<td colspan="2"><u>Mais pas</u></td>
 									</tr>
 									<tr>
-										<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> <span class="text_purple">MIN</span>(date_embauche), nom <span class="text_purple">FROM</span> salarie<br /><span class="text_purple">WHERE</span> poste=<span class="text_red">"ingénieur"</span>;</td>
+										<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> <span class="text_purple">MIN</span>(date_embauche), nom <span class="text_purple">FROM</span> salarie<br><span class="text_purple">WHERE</span> poste=<span class="text_red">"ingénieur"</span>;</td>
 										<td class="td_haut_gauche"><i>Malgrès son aspect intuitif, <u>cette requête ne fonctionne pas</u>. On ne peut pas projeter une fonction d'agrégat avec un simple enregistrement (à moins d'utiliser la clause <span class="text_purple">GROUP BY</span>, <a href="#group_by" class="approf_sig">voir</a>)</i>.</td>
 									</tr>
 								</tbody>
@@ -1303,9 +1303,9 @@
 								<tbody>
 									<tr>
 										<td class="td_larg_55 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> libelle, <span class="text_purple">SUM</span>(salaire)
-										<br /><span class="text_purple">FROM</span> salarie, service
-										<br /><span class="text_purple">WHERE</span> service.num = salarie.numService
-										<br /><span class="text_purple">GROUP BY</span> libelle;</td>
+										<br><span class="text_purple">FROM</span> salarie, service
+										<br><span class="text_purple">WHERE</span> service.num = salarie.numService
+										<br><span class="text_purple">GROUP BY</span> libelle;</td>
 										<td class="td_haut_gauche"><i>Tous les salaires de salariés d'un même service seront totalisés ; il y aura autant d'enregistrements-résultat que de services</i>.</td>
 									</tr>
 								</tbody>
@@ -1317,9 +1317,9 @@
 									</tr>
 									<tr>
 										<td class="td_larg_55 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT SUM</span>(salaire)
-										<br /><span class="text_purple">FROM</span> salarie, service
-										<br /><span class="text_purple">WHERE</span> service.num = salarie.numService
-										<br /><span class="text_purple">GROUP BY</span> libelle;</td>
+										<br><span class="text_purple">FROM</span> salarie, service
+										<br><span class="text_purple">WHERE</span> service.num = salarie.numService
+										<br><span class="text_purple">GROUP BY</span> libelle;</td>
 										<td class="td_haut_gauche"><i>Cette requête délivre un résultat exact mais inexploitable : juste des totaux sans projeter les services associés</i>.</td>
 									</tr>
 								</tbody>
@@ -1333,9 +1333,9 @@
 								<tbody>
 									<tr>
 										<td class="td_larg_55 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> nom, <span class="text_purple">COUNT</span>(*)
-										<br /><span class="text_purple">FROM</span> salarie, competence
-										<br /><span class="text_purple">WHERE</span> salarie.num = competence.numSalarie
-										<br /><span class="text_purple">GROUP BY</span> num, nom;</td>
+										<br><span class="text_purple">FROM</span> salarie, competence
+										<br><span class="text_purple">WHERE</span> salarie.num = competence.numSalarie
+										<br><span class="text_purple">GROUP BY</span> num, nom;</td>
 										<td class="td_haut_gauche"><i>Le regroupement par numéro (clé primaire) assure que la requête traitera chaque enregistrement ; tous les champs figurant dans <span class="text_purple">SELECT</span> doivent être placés dans <span class="text_purple">GROUP BY</span>, qui peut porter des champs supplémentaires</i>.</td>
 									</tr>
 								</tbody>
@@ -1349,11 +1349,11 @@
 								<tbody>
 									<tr>
 										<td class="td_larg_55 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> libelle, <span class="text_purple">AVG</span>(salaire) <span class="text_purple">AS</span> salMoy
-										<br /><span class="text_purple">FROM</span> salarie, service
-										<br /><span class="text_purple">WHERE</span> libelle &lt;> "direction"
-										<br /><span class="text_purple">AND</span> service.num = salarie.numService
-										<br /><span class="text_purple">GROUP BY</span> service.num, libelle
-										<br /><span class="text_purple">ORDER BY</span> salMoy <span class="text_purple">DESC</span>;</td>
+										<br><span class="text_purple">FROM</span> salarie, service
+										<br><span class="text_purple">WHERE</span> libelle &lt;> "direction"
+										<br><span class="text_purple">AND</span> service.num = salarie.numService
+										<br><span class="text_purple">GROUP BY</span> service.num, libelle
+										<br><span class="text_purple">ORDER BY</span> salMoy <span class="text_purple">DESC</span>;</td>
 										<td class="td_haut_gauche"><i>Le regroupement par numéro (clé primaire) assure que la requête traitera chaque enregistrement ; tous les champs figurant dans <span class="text_purple">SELECT</span> doivent être placés dans <span class="text_purple">GROUP BY</span>, qui peut porter des champs supplémentaires</i>.</td>
 									</tr>
 								</tbody>
@@ -1373,10 +1373,10 @@
 								<tbody>
 									<tr>
 										<td class="td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> libelle, <span class="text_purple">COUNT</span>(*)
-										<br /><span class="text_purple">FROM</span> salarie, service
-										<br /><span class="text_purple">WHERE</span> service.num = salarie.numService
-										<br /><span class="text_purple">GROUP BY</span> service.num, libelle
-										<br /><span class="text_purple">HAVING</span> <span class="text_purple">COUNT</span>(*)>=<span class="text_vert">4</span>;</td>
+										<br><span class="text_purple">FROM</span> salarie, service
+										<br><span class="text_purple">WHERE</span> service.num = salarie.numService
+										<br><span class="text_purple">GROUP BY</span> service.num, libelle
+										<br><span class="text_purple">HAVING</span> <span class="text_purple">COUNT</span>(*)>=<span class="text_vert">4</span>;</td>
 									</tr>
 								</tbody>
 							</table>
@@ -1389,11 +1389,11 @@
 								<tbody>
 									<tr>
 										<td class="td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> libelle, <span class="text_purple">COUNT</span>(*)
-										<br /><span class="text_purple">FROM</span> salarie, service
-										<br /><span class="text_purple">WHERE</span> service.num = salarie.numService
-										<br /><span class="text_purple">GROUP BY</span> service.num, libelle
-										<br /><span class="text_purple">HAVING</span> salMoy&lt;=<span class="text_vert">2000</span>
-										<br /><span class="text_purple">ORDER BY</span> salMoy <span class="text_purple">DESC</span>;</td>
+										<br><span class="text_purple">FROM</span> salarie, service
+										<br><span class="text_purple">WHERE</span> service.num = salarie.numService
+										<br><span class="text_purple">GROUP BY</span> service.num, libelle
+										<br><span class="text_purple">HAVING</span> salMoy&lt;=<span class="text_vert">2000</span>
+										<br><span class="text_purple">ORDER BY</span> salMoy <span class="text_purple">DESC</span>;</td>
 									</tr>
 								</tbody>
 							</table>
@@ -1406,10 +1406,10 @@
 								<tbody>
 									<tr>
 										<td class="td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> libelle, <span class="text_purple">AVG</span>(salaire) <span class="text_purple">AS</span> salMoy
-										<br /><span class="text_purple">FROM</span> salarie, service
-										<br /><span class="text_purple">WHERE</span> salaire&lt;=<span class="text_vert">2000</span> <span class="text_purple">AND</span> service.num = salarie.numService
-										<br /><span class="text_purple">GROUP BY</span> service.num, libelle
-										<br /><span class="text_purple">ORDER BY</span> salMoy <span class="text_purple">DESC</span>;</td>
+										<br><span class="text_purple">FROM</span> salarie, service
+										<br><span class="text_purple">WHERE</span> salaire&lt;=<span class="text_vert">2000</span> <span class="text_purple">AND</span> service.num = salarie.numService
+										<br><span class="text_purple">GROUP BY</span> service.num, libelle
+										<br><span class="text_purple">ORDER BY</span> salMoy <span class="text_purple">DESC</span>;</td>
 									</tr>
 								</tbody>
 							</table>
