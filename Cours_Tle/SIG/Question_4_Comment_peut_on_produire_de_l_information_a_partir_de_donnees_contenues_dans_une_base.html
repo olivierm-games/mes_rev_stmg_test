@@ -1,1393 +1,1481 @@
 <!DOCTYPE html>
-<html lang="fr">
-	<head>
-		<meta charset="utf-8"/>
-		<link rel="stylesheet" href="../../css/page_css.css"/>
+<html lang="fr" dir="ltr">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Comment peut-on produire de l'information à partir de données contenues dans une base ? Question 4 SIG Systèmes d'information de gestion Terminale STMG</title>
+		<link rel="stylesheet" href="../../css/light.css">
+		<link rel="stylesheet" href="../../css/dark.css">
+		<link rel="stylesheet" href="../../css/colors.css">
+		<link rel="stylesheet" href="../../css/dimens.css">
+		<link rel="stylesheet" href="../../css/tablet_desktop.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+		<script src="../../js/web-font-loader.js"></script>
+		<script src="../../js/fab_back_to_top.js"></script>
+		<script src="../../js/header_links_expandable.js"></script>
+		<script src="../../js/header_on_scroll.js"></script>
+		<script src="../../js/menu.js"></script>
+		<script src="../../js/night_mode.js"></script>
+		<script src="../../js/side_nav_collapse_handle.js"></script>
+		<script src="../../js/side_nav_hover_handler.js"></script>
+		<script src="../../js/side_nav_item_expandable.js"></script>
 	</head>
-	<body id="body_sig">
-		<div id="haut"></div>
-		<header>
-			<a href="../../" id="bouton1">Accueil</a>
-      <a href="../../Cours_1ere_STMG/Acces_par_matiere.html" id="bouton2">Cours 1ère STMG</a>
-      <a href="../Acces_par_matiere.html" id="bouton3">Cours Terminale STMG</a>
-	    <a id="bouton4">Cours pédagogiques</a>
-	    <a id="bouton5">Quiz STMG</a>
-		</header>
-		<div id="page">
-			<h1 id="h1_sig">Question 4 : Comment peut-on produire de l'information à partir de données contenues dans une base ?</h1>
-      <h2>I. Les bases de données</h2>
-      <p>Une base de données est un <b>ensemble organisé de données</b>, <b>stocké sur un support informatique</b>. Les bases de données sont intégrées à des applications comportant des modules de traitement et des interfaces d'accès.</p>
-      <p>Une base de données met principalement en œuvre la fonction de <b>mémorisation du système d'information</b>, mais la façon dont elle est organisée conditionne également les fonctions d'acquisition et de transformation (pour produire de nouvelles informations).</p>
-      <h3>A. Les bases de données des SI</h3>
-      <p>Une organisation dispose en général de plusieurs bases de données liées à ses différentes applications couvrant ses différents domaines (gestion des ressources humaines, logistique, gestion commerciale...). Les PGI (progiciels de gestion intégrés) tendent à fédérer ces domaines autour d'une application unique (avec des modules) et une base de données unique.</p>
-      <p><u>Les bases de données sont bien souvent <b>partagées en réseau</b> entre plusieurs utilisateurs afin de permettre</u> :</p>
-      <ul>
-        <li>l'acquisition des données par différents utilisateurs dans leur métier,</li>
-        <li>la mémorisation d'un ensemble de données concernant un domaine,</li>
-        <li>la transformation par les différents utilisateurs selon leurs besoins,</li>
-        <li>la diffusion des « bonnes » informations aux « bons » utilisateurs au « bon » moment.</li>
-      </ul>
-      <h3>B. L'organisation des bases de données</h3>
-      <p>Il existe plusieurs modèles d'organisation des bases de données, nous ne traiterons que des bases de données relationnelles (définies dans les années 1970).</p>
-      <p>Les logiciels permettant de gérer de telles bases sont des <b>SGBDR</b> : système de gestion de bases de données relationnelles. Citons par exemple : Microsoft Access, Libre Office Base, MySQL, PostGreSQL, Oracle, Microsoft SQL Server...</p>
-      <p><u>Les étapes de conception et d'administration d'une base de données consistent à</u> :</p>
-      <ol>
-        <li>définir les <b>besoins</b> de l'organisation (et donc des utilisateurs),</li>
-        <li>recenser et caractériser les <b>données</b> permettant de répondre à ces besoins (établir un dictionnaire des données),</li>
-        <li>mettre en évidence les liens entre ces données afin d'organiser la <b>base de données</b> selon un schéma relationnel qui respecte les règles du modèle relationnel,</li>
-        <li>implanter sous un <b>SGBDR</b> la base de données correspondant au schéma relationnel,</li>
-        <li>définir les <b>utilisateurs</b> et leurs droits.</li>
-      </ol>
-      <p><i>En Terminale STMG SIG, nous n'aurons pas à concevoir des bases de données complètes mais plutôt à faire évoluer des bases pré-existantes et surtout à les exploiter. Mais une vision complète de la démarche de conception peut éclairer dans ces tâches</i>.</p>
-      <p>Le principe essentiel d'organisation des bases de données relationnelles est la <b>non-redondance des données</b> : chaque donnée n'est saisie et stockée qu'une seule fois, ce qui permet un gain de temps, limite les risques d'erreur, réduit le volume de stockage et facilite le traitement.</p>
-      <p>Une base données peut-être vu comme un ensemble de tableaux, appelés tables, liés entre eux.</p>
-      <p>Chaque <b>table</b> concerne un groupe homogène de données représentant des « objets » réels (les clients, les fournisseurs, les produits, les salariés...) ou abstraits (des catégories, une vente...). Chaque ligne d'une table, appelée <b>enregistrement</b>, concerne un « membre » de ce groupe (un client précis, un fournisseur, un produit, un salarié, une catégorie, une vente...).</p>
-      <h3>C. Le langage SQL</h3>
-      <p>Le langage de gestion des bases de données relationnelles est le SQL (<i>Structured Query Language</i> : « langage de requête structuré »). <u>Il comporte différentes branches correspondant aux principales fonctionnalités d'un SGBDR</u> :</p>
-      <ul>
-        <li>définir la structure d'une base de données ;</li>
-        <li>traiter des données :
-          <ul>
-            <li>manipuler (implanter, mettre à jour, supprimer),</li>
-            <li>interroger (rechercher) ;</li>
-          </ul>
-        </li>
-        <li>tout en assurant leur intégrité (cohérence), leur sécurité et la gestion d'un contexte multi-utilisateurs.</li>
-      </ul>
-      <table class="tab_sig">
-        <thead>
-          <tr>
-            <td class="td_milieu td_background_sig">Subdivisions</td>
-            <td class="td_milieu td_background_sig td_sig">Sigle</td>
-            <td class="td_milieu td_background_sig">Liens</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="td_sig pad_left_indent">Langage de définition des données</td>
-            <td class="td_milieu">LDD</td>
-            <td class="td_milieu td_sig"><a href="#LDD" class="approf_sig">V</a></td>
-          </tr>
-          <tr>
-            <td class="pad_left_indent td_sig">Langage de manipulation des données</td>
-            <td class="td_milieu td_sig">LMD</td>
-            <td class="td_milieu"><a href="#LMD" class="approf_sig">VI</a></td>
-          </tr>
-          <tr>
-            <td class="pad_left_indent td_sig">Langage d'interrogation des données</td>
-            <td class="td_milieu">LID</td>
-            <td class="td_milieu td_sig"><a href="#LID" class="approf_sig">VIII</a></td>
-          </tr>
-        </tbody>
-      </table>
-      <h2>II. De l'information aux données</h2>
-      <p><b>Les données sont les éléments de base constituant une information</b>. Une donnée est la représentation d'une valeur sous une forme conventionnelle (par exemple JJ/MM/AAAA pour une date), destinée à facilité sa mémorisation et sa transformation (en de nouvelles informations).</p>
-      <h3>A. Relation et attribut</h3>
-      <p><b>Une relation</b> (devenant une table dans les SGBDR) <b>rassemble des données caractérisant un même « objet »</b> (au sens objet de l'information, ce peut-être une personne, une catégorie, un objet physique, un document, une temporalité...). Chaque donnée retenue constituera un <b>attribut</b> d'une des <b>relations</b> de la base de données.</p>
-      <p>Chaque attribut représente une « unité » d'information. Il est <b>nommé</b> en évitant, par convention, les caractères accentués et les espaces, grâce à l'une des 2 techniques suivantes :</p>
-      <table class="tab_sig">
-        <thead>
-          <tr>
-            <td class="td_centre td_sig td_background_sig">Technique</td>
-            <td class="td_centre td_sig td_background_sig">Traduction</td>
-            <td class="td_centre td_sig td_background_sig">Donnée</td>
-            <td class="td_centre td_sig td_background_sig">Libellé</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="td_sig">Camel Caps</td>
-            <td class="td_sig">Camel : chameau ; Caps : majuscules</td>
-            <td class="td_sig">Une date de naissance</td>
-            <td class="td_sig">dateNaiss</td>
-          </tr>
-          <tr>
-            <td class="td_sig">Underscore</td>
-            <td class="td_sig">tiret bas</td>
-            <td class="td_sig">Une date de naissance</td>
-            <td class="td_sig">date_naiss</td>
-          </tr>
-        </tbody>
-      </table>
-      <p><i>Le nom d'un attribut est libre mais il est conseillé bien sûr qu'il soit signifiant par rapport à son contenu</i>.</p>
-      <p>Chaque valeur prise par un attribut est appelée <b>occurrence</b>. Exemple : 10/12/1996 et 05/09/1997 sont deux occurrences de l'attribut dateNaiss pour deux personnes différentes.</p>
-      <h3>B. Recensement des données nécessaires</h3>
-      <p>Il convient de <b>décomposer</b> les données selon un niveau pertinent par rapport aux besoins futurs de transformation.</p>
-			<div class="exemp_sig">
-				<p><u>Exemple</u> : <b>Raphaël Dorol</b> pourrait être une occurrence d'un attribut <b>identité</b> mais il semble plus pertinent de considérer que <b>Raphaël</b> est une occurrence d'une donnée <b>prénom</b> et <b>Dorol</b> une occurrence d'un attribut <b>nom</b>, permettant ensuite une exploitation séparée des noms et des prénoms.</p>
-			</div>
-      <p>Il est sous-jacent que les données recensées devront être acquises. Cependant certaines données peuvent être obtenues automatiquement par transformation d'autres données (données dites « calculées ») ce qui permettra d'économiser leur acquisition.</p>
-      <p>Selon les règles du modèle relationnel, les données calculées n'ont pas à être prises en compte dans le schéma relationnel d'une base de données. Toutefois, certaines de ces données sont intégrées, lors de l'implantation du schéma relationnel sous forme d'une base de données, s'il existe une raison de les stocker indépendamment de leur possibilité de calcul automatique (par exemple si les données sources ont disparu ou changé de valeur).</p>
-      <h3>C. Le dictionnaire des données</h3>
-      <p><u>À l'issue de ces étapes on peut établir un <b>dictionnaire des données</b> de la base</u> :</p>
-      <table class="tab_sig">
-        <thead>
-          <tr>
-            <td class="td_centre td_sig td_background_sig">Attribut</td>
-            <td class="td_centre td_sig td_background_sig">Type de données de l'attribut</td>
-            <td class="td_centre td_sig td_background_sig">Longueur</td>
-            <td class="td_centre td_sig td_background_sig">Commentaire</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>...</td>
-            <td class="td_sig_bord_g_d">...</td>
-            <td class="td_sig_bord_g_d">...</td>
-            <td>...</td>
-          </tr>
-          <tr>
-            <td class="td_sig_bord_h_dot">...</td>
-            <td class="td_sig_bord_g_d td_sig_bord_h_dot">...</td>
-            <td class="td_sig_bord_g_d td_sig_bord_h_dot">...</td>
-            <td class="td_sig_bord_h_dot">...</td>
-          </tr>
-        </tbody>
-      </table>
-			<p>Le choix du <b>type de données</b> permet d'optimiser les volumes mobilisés en stockage de la donnée et en mémoire lors de ses traitements de transformation. <u>Les principaux types de données sont</u> :</p>
-			<ul>
-				<li>le type <b>alphanumérique</b> (tous les caractères), en spécifiant généralement le nombre maximal de caractères,</li>
-				<li>le type <b>numérique</b> (avec des sous-typpes : entier, réel...),</li>
-				<li>le type <b>date/heure</b> (avec des sous-types : date seule, heure seule...)</li>
-				<li>le type booléen (vrai/faux mis en œuvre généralement avec les valeurs 1/0 ou True/False).</li>
-			</ul>
-			<p>Toute occurrence d'un attribut devra respecter une <b>contrainte d'intégrité de domaine</b>, c'est-à-dire présenter une valeur correspondant au type associé à l'attribut.</p>
-			<h2>III. Le modèle relationnel - Notion de relation</h2>
-			<h3>A. La relation</h3>
-			<p><b>Une relation  rassemble</b> donc <b>des données caractérisant un même objet</b> (d'information). La relation est nommée de façon signifiante par rapport à l'objet qu'elle caractérise.</p>
-			<p>Ces différentes données constituent les <b>attributs</b> de la relation. On appelle <b>ocurrence</b> de la relation un ensemble d'occurrences de ses attributs caractérisant un membre de la relation.</p>
-			<div class="exemp_sig">
-				<p><u>Exemple</u> : dans une base de données de gestion des ressources humaines, les données <b>nom</b>, <b>prenom</b>, <b>dateEmbauche</b>, <b>salaire</b> et <b>poste</b> caractérisent un salarié et peuvent donc être regroupées dans une relation <b>salarie</b> (sans accent par convention) présentée ainsi (avec ses attributs entre parenthèses) :
-					<br />salarie (nom, prenom, dateEmbauche, salaire, poste)
-					<br />("Arist", "Léa", '05/08/2003', 1630.41, "logisticienne") est occurrence de cette relation.
-					<br />Les valeurs des attributs de type alphanumérique, dates et heures doivent être placées entre guillemets ou apostrophes.
-					<br />À noter que le <b>salaire</b> est mémorisé sans le symbole monétaire €, c'est une valeur numérique (nécessaire pour les calculs) à laquelle on peut adjoindre, à l'affichage, le symbole €.</p>
-			</div>
-			<p>Chaque attribut ne peut contenir, pour une occurrence d'un salarié donné, qu'une seule valeur à un instant donné.</p>
-			<div class="exemp_sig">
-				<p><u>Exemple</u> : Si le salaire d'un salarié augmente, sa nouvelle valeur remplacera l'ancienne (qui sera « perdue », sauf si l'organisation des données prévoit de conserver l'historique des salaires).</p>
-			</div>
-			<h3>B. La clé primaire</h3>
-			<p>La <b>clé primaire</b> est un attribut ou un groupe d'attributs dont la valeur permet d'<b>identifier</b> de façon sûre, certaine et unique une occurrence de la relation ; c'est la <b>contrainte de clé ou contrainte de relation</b>.</p>
-			<p><u>Cela induit 3 caractéristiques obligatoirement et simultanément réunies pour toute occurrence de la relation</u> :</p>
-			<ul>
-				<li>l'<b>existence</b> d'une valeur non vide pour cette clé primaire,</li>
-				<li>l'<b>unicité</b> de cette valeur (aucune autre occurrence ne peut porter la même valeur de clé primaire),</li>
-				<li>la <b>stabilité</b> de cette valeur, cette troisème caractéristique étant liée au fait que la clé primaire peut servir à établir le lien avec d'autres relations or si sa valeur change, le lien sera rompu.</li>
-			</ul>
-			<p>Il y a une seule clé primaire par relation (mais elle peut-être constituée de plusieurs attributs, c'est leur ensemble qui forme la clé primaire d'une relation et leur ensemble de valeurs qui doit respecter les contraintes précédentes).</p>
-			<p>Il peut-être difficile de trouver un attribut ou groupe d'attributs respectant de façon certaine les trois contraintes d'une clé primaire pour toutes les occurrences possibles (passées ou à venir). Dans ce cas on crée généralement un nouvel attribut (numéro, code) destiné à être clé primaire, signifiant ou non (simple numéro auto-incrémenté).</p>
-			<h3>C. La dépendance fonctionnelle</h3>
-			<p>Dans chaque relation, les attributs doivent être en dépendance fonctionnelle élémentaire et directe de la clé primaire (c'est la contrainte d'intégrité de relation).</p>
-			<p>La dépendance fonctionnelle d'une donnée B par rapport à une donnée A signifie que pour une valeur connue de A, il n'existe qu'une et une seule valeur possible, à un instant précis, de B.</p>
-			<div class="exemp_sig">
-				<p><u>Exemple</u> : dans la relation <b>eleve</b> (numInterne, INE, nom, prenom, dateNaissance, adresseRue, adresseCP, adresseVille), le nom est bien en dépendance fonctionnelle de numInterne car pour un numéro interne, il n'y aura qu'un seul nom d'élève correspondant (la réciproque n'étant pas nécessairement vraie).</p>
-			</div>
-			<p><b>Pour une valeur donnée de la clé primaire, chaque attribut d'une relation ne peut contenir, à un moment donné, qu'une seule valeur du fait de sa dépendance fonctionnelle à la clé primaire</b>.</p>
-			<h2>IV. Le modèle relationnel - Liens entre relations</h2>
-			<p>Le recensement des données nécessaires à un domaine du SI puis leur regroupement en relations, conduit à mettre en évidence <b>plusieurs relations</b> (et parfois des données que l'on n'a pas réussi à « placer » car n'étant pas en dépendance fonctionnelle élémentaire, d'une seule clé primaire).</p>
-			<p>Le principe de la base de données est justement d'établir des « liens » entre ces relations (a priori il n'y a pas de relation « isolée », sauf éventuellement des relations ne stockant que des paramètres indépendants : taux de TVA, etc.). Ces liens représentent des <b>règles de gestion</b> : règles décrivant une réalité (le schéma modélise une réalité) et toujours respectées.</p>
-			<p>Lorsqu'il apparaît que deux relations ont un lien, il faut « quantifier » ce lien, c'est-à-dire établir avec combien d'occurrences d'une relation, une occurrence de l'autre relation peut-être associée.</p>
-			<h3>A. Lien de un à plusieurs</h3>
-			<table class="tab_sig">
-				<thead>
-					<tr>
-						<td class="td_centre td_background_sig">Exemples d'occurrences d'une relation A associées avec une seule occurrence d'une relation B</td>
-						<td class="td_milieu td_background_sig td_larg_4"><u>et</u></td>
-						<td class="td_centre td_background_sig">d'occurrences d'une relation B pouvant être associées avec plusieurs occurrences d'une relation A</td>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td class="td_milieu"><i>un salarié n'appartient (à un instant) qu'à un seul service</i></td>
-						<td></td>
-						<td class="td_milieu"><i>un service peut compter plusieurs salariés</i></td>
-					</tr>
-					<tr>
-						<td class="td_sig_bord_h_dot td_milieu"><i>un salarié n'occupe (à un instant) qu'un seul poste</i></td>
-						<td class="td_sig_bord_h_dot td_milieu"></td>
-						<td class="td_sig_bord_h_dot td_milieu"><i>plusieurs salariés peuvent occuper un même type de poste</i></td>
-					</tr>
-					<tr>
-						<td class="td_sig_bord_h_dot td_milieu"><i>une absence ne concerne qu'un seul salarié</i></td>
-						<td class="td_sig_bord_h_dot td_milieu"></td>
-						<td class="td_sig_bord_h_dot td_milieu"><i>un salarié peut avoir plusieurs absences</i></td>
-					</tr>
-				</tbody>
-				<tfoot>
-					<tr>
-						<td colspan="3" class="td_milieu"><b>La relation A dépend de la relation B</b></td>
-					</tr>
-				</tfoot>
-			</table>
-			<p>À une occurrence de la relation A, déterminée par une valeur de sa clé primaire, on ne peut associer qu'une seule occurrence de la relation B et donc une seul occurrence de sa clé primaire : la clé primaire de la relation B est donc en dépendance fonctionnelle de la clé primaire de la relation A, ce qui implique que la clé primaire de la relation B peut donc constituer un attribut de la relation A, attribut constituant une clé étrangère. <b>Une clé étrangère met donc en œuvre une règle de gestion</b>.</p>
-			<div class="exemp_sig">
-				<p><u>Exemple</u> : La relation <b>salarie</b> dépend de la relation <b>service</b> d'une part, et de la relation <b>poste</b> d'autre part (indépendamment).
-				<br />La relation <b>absence</b> dépend de la relation <b>salarie</b>.</p>
-				<p>Les trois dépendances mises en évidences donnent donc lieu à trois clés étrangères (placées dans les relations dépendantes) :</p>
-				<table class="tab_ss_bord">
-					<tbody>
-						<tr>
-							<td><b>service</b> (num, libelle, budget)</td>
-						</tr>
-						<tr>
-							<td class="pad_left_indent marge_bot_2">clé primaire : num</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord">
-				<tbody>
-						<tr>
-							<td><b>poste</b> (num, libelle, statut)</td>
-						</tr>
-						<tr>
-							<td class="pad_left_indent marge_bot_1">clé primaire : num</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord">
-					<tbody>
-						<tr>
-							<td colspan="2"><b>salarie</b> (num, nom, prenom, dateEmbauche, salaire, numService, numPoste)</td>
-						</tr>
-						<tr>
-							<td colspan="2" class="pad_left_indent marge_bot_1">clé primaire : num</td>
-						</tr>
-						<tr>
-							<td rowspan="2" class=" pad_left_indent width_10 td_left">clé&nbsp;étrangères&nbsp;:</td>
-							<td class="width_90 td_left pad_left_3_indent">numService en référence à num de la relation service</td>
-						</tr>
-						<tr>
-							<td class="marge_bot_1 pad_left_3_indent">numPoste en référence à num de la relation poste</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord">
-					<tbody>
-						<tr>
-							<td><b>absence</b> (num, date, motif, numSalarie)</td>
-						</tr>
-						<tr>
-							<td class="pad_left_indent">clé primaire : num</td>
-						</tr>
-						<tr>
-							<td class="pad_left_indent">clé étrangère : numSalarie en référence à num de la relation salarie</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<h3>B. Les clés étrangères</h3>
-			<p>Une clé « étrangère » est ainsi qualifiée car elle tire ses valeurs de la clé primaire à laquelle elle fait référence. <u>En ce sens</u> :</p>
-			<ul>
-				<li>elle doit posséder le même type de données que sa clé primaire de référence,</li>
-				<li>elle ne doit pas « créer » ses propres valeurs (elle ne peut donc pas être auto-incrémentée) et ne peut que reprendre des valeurs pré-existantes de sa clé primaire de référence.</li>
-			</ul>
-			<p>La mise en œuvre de ces deux contraintes sous un SGBDR, garantissant la cohérence de la base de données, se nomme la <b>contrainte d'intégrité réfentielle</b>.</p>
-			<p><u>Par contre, une clé étrangère pour toute occurrence de la relation n'est pas soumise aux trois contraintes essentielles d'une clé primaire</u> :</p>
-			<ul>
-				<li>elle peut éventuellement être vide (Null), selon le contexte,</li>
-				<li>elle peut ne pas être unique,</li>
-				<li>elle peut ne pas être stable.</li>
-			</ul>
-			<p>Une relation peut n'avoir aucune clé étrangère ou en avoir une à plusieurs, indépendantes les unes des autres.</p>
-			<h3>C. Lien de plusieurs à plusieurs</h3>
-			<table class="tab_sig">
-				<thead>
-					<tr>
-						<td class="td_centre td_background_sig">Exemple d'occurrence d'une relation A pouvant être associée avec plusieurs occurrences d'une relation B</td>
-						<td class="td_milieu td_background_sig td_larg_4"><u>et</u></td>
-						<td class="td_centre td_background_sig">d'occurrence d'une relation B pouvant être associées avec plusieurs occurrences d'une relation A</td>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td class="td_milieu"><i>un salarié peut posséder plusieurs qualifications</i></td>
-						<td></td>
-						<td class="td_milieu"><i>une qualification peut être possédée par plusieurs salariés</i></td>
-					</tr>
-				</tbody>
-				<tfoot>
-					<tr>
-						<td colspan="3" class="td_milieu"><b>La relation A ne dépend pas de la relation B et réciproquement</b></td>
-					</tr>
-				</tfoot>
-			</table>
-			<p>La clé primaire d'une relation issue du lien de plusieurs à plusieurs comporte au minimum deux attributs mais peut en comporter davantage si cela est nécessaire pour respecter la contrainte d'unicité.</p>
-			<h2 id="LDD">V. SQL - Langage de définition des données</h2>
-			<p><u>Le langage de définition des données permet d'agir sur la structure de la base, il s'agit entre autre de</u> :</p>
-			<ul>
-				<li>créer des tables,</li>
-				<li>les modifier (ajouter ou supprimer des champs et/ou des contraintes de clé),</li>
-				<li>les supprimer.</li>
-			</ul>
-			<h3>A. Les types de données</h3>
-			<p>Les principaux types de données sont pris en charge par les SGBDR, avec de nombreux sous-types. <u>Voici les plus courants</u> :</p>
-			<table class="tab_sig">
-				<thead>
-					<tr>
-						<td class="td_sig td_background_sig td_milieu">Type de données</td>
-						<td class="td_sig td_background_sig td_milieu">Type SQL</td>
-						<td class="td_sig td_background_sig td_milieu">Description</td>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td rowspan="2" class="td_sig">Alphanumérique</td>
-						<td>char(n)</td>
-						<td class="td_sig_bord_g">Chaîne de caractères de longueur fixe n (n&lt;16383)</td>
-					</tr>
-					<tr>
-						<td class="td_sig_bord_h_dot td_sig_bord_b">varchar(n)</td>
-						<td class="td_sig_bord_h_dot td_sig_bord_g td_sig_bord_b">Chaîne de caractères de n caractères maximum (n&lt;16383)</td>
-					</tr>
-					<tr>
-						<td rowspan="3" class="td_sig">Numérique</td>
-						<td>integer</td>
-						<td class="td_sig_bord_g">Entier de 32 bits (valeurs possibles de -2<sup>31</sup> à 2<sup>31</sup> -1)</td>
-					</tr>
-					<tr>
-						<td class="td_sig_bord_h_dot">float</td>
-						<td class="td_sig_bord_h_dot td_sig_bord_g">Réels (saisir les décimales après un point)</td>
-					</tr>
-					<tr>
-						<td class="td_sig_bord_h_dot td_sig_bord_b">decimal(n[,d])</td>
-						<td class="td_sig_bord_h_dot td_sig_bord_g td_sig_bord_b">Nombre de n chiffres [dont d décimales (facultatif)]</td>
-					</tr>
-					<tr>
-						<td rowspan="3" class="td_sig">Date/Heure</td>
-						<td>date</td>
-						<td class="td_sig_bord_g">Date sous la forme AAAA/MM/JJ</td>
-					</tr>
-					<tr>
-						<td class="td_sig_bord_h_dot">time</td>
-						<td class="td_sig_bord_h_dot td_sig_bord_g">Heure sous la forme 12:54:24.85</td>
-					</tr>
-					<tr>
-						<td class="td_sig_bord_h_dot">timestamp</td>
-						<td class="td_sig_bord_h_dot td_sig_bord_g">Date et heure</td>
-					</tr>
-					<tr>
-						<td class="td_sig">Booléen</td>
-						<td class="td_sig">boolean</td>
-						<td class="td_sig">0 ou False pour FAUX, 1 ou True pour VRAI</td>
-					</tr>
-				</tbody>
-			</table>
-			<h3>B. La création de tables</h3>
-			<p>La création d'une table consiste à lister ses champs (on retrouve les attributs constitués dans le modèle relationnel), avec leur type et à créer ses clés primaire et étrangère(s) :</p>
-			<p><span class="text_purple">CREATE TABLE</span> nom_table (
-			<br /><span class="pad_left_3_indent">champ1 <span class="text_blue" title="int, varchar, float, date...">Type de données</span>[,</span>
-			<br /><span class="pad_left_3_indent">champ2 <span class="text_blue" title="int, varchar, float, date...">Type de données</span>]</span>
-			<br /><span class="text_purple pad_left_3_indent">PRIMARY KEY</span> (Champ clé primaire [,...]),
-			<br /><span class="pad_left_3_indent">[<span class="text_purple">CONSTRAINT</span> Nom de la contrainte] <span class="text_purple">FOREIGN KEY</span> (champ clé étrangère [,...])</span>
-			<br /><span class="text_purple pad_left_3_indent">REFERENCES</span> Nom de la table source (champ concerné [,...])
-			<br />);
-			<br /><br />
-			</p>
-			<div class="exemp_sig" style="padding-bottom: 5%;">
-				<p><u>Exemple</u> : <u>Considérons le schéma relationnel suivant</u> :</p>
-				<p><b>service</b> (num, libelle, budget)</p>
-					<div class="pad_left_indent marge_top_neg2">
-						clé primaire : num (auto-incrémenté)
+	<body>
+		<span id="haut"></span>
+		<div id="all-container" class="night-mode-element">
+			<div w3-include-html="../../header.html"></div>
+			<div w3-include-html="../../side_nav.html"></div>
+			<main class="night-mode-element">
+				<h1>Question 4 : Comment peut-on produire de l'information à partir de données contenues dans une base ?</h1>
+				<section class="h2-container">
+					<h2>I. Les bases de données</h2>
+					<p>Une base de données est un <b>ensemble organisé de données</b>, <b>stocké sur un support informatique</b>. Les bases de données sont intégrées à des applications comportant des modules de traitement et des interfaces d'accès.</p>
+					<p>Une base de données met principalement en œuvre la fonction de <b>mémorisation du système d'information</b>, mais la façon dont elle est organisée conditionne également les fonctions d'acquisition et de transformation (pour produire de nouvelles informations).</p>
+					<div class="h3-container">
+						<h3>A. Les bases de données des SI</h3>
+						<p>Une organisation dispose en général de plusieurs bases de données liées à ses différentes applications couvrant ses différents domaines (gestion des ressources humaines, logistique, gestion commerciale...). Les PGI (progiciels de gestion intégrés) tendent à fédérer ces domaines autour d'une application unique (avec des modules) et une base de données unique.</p>
+						<p><u>Les bases de données sont bien souvent <b>partagées en réseau</b> entre plusieurs utilisateurs afin de permettre</u> :</p>
+						<ul>
+							<li>l'acquisition des données par différents utilisateurs dans leur métier,</li>
+							<li>la mémorisation d'un ensemble de données concernant un domaine,</li>
+							<li>la transformation par les différents utilisateurs selon leurs besoins,</li>
+							<li>la diffusion des « bonnes » informations aux « bons » utilisateurs au « bon » moment.</li>
+						</ul>
 					</div>
-				<p><b>qualification</b> (num, libelle, niveau)</p>
-					<div class="pad_left_indent marge_top_neg2">
-						clé primaire : num (auto-incrémenté)
+					<div class="h3-container">
+						<h3>B. L'organisation des bases de données</h3>
+						<p>Il existe plusieurs modèles d'organisation des bases de données, nous ne traiterons que des bases de données relationnelles (définies dans les années 1970).</p>
+						<p>Les logiciels permettant de gérer de telles bases sont des <b>SGBDR</b> : système de gestion de bases de données relationnelles. Citons par exemple : Microsoft Access, Libre Office Base, MySQL, PostGreSQL, Oracle, Microsoft SQL Server...</p>
+						<p><u>Les étapes de conception et d'administration d'une base de données consistent à</u> :</p>
+						<ol>
+							<li>définir les <b>besoins</b> de l'organisation (et donc des utilisateurs),</li>
+							<li>recenser et caractériser les <b>données</b> permettant de répondre à ces besoins (établir un dictionnaire des données),</li>
+							<li>mettre en évidence les liens entre ces données afin d'organiser la <b>base de données</b> selon un schéma relationnel qui respecte les règles du modèle relationnel,</li>
+							<li>implanter sous un <b>SGBDR</b> la base de données correspondant au schéma relationnel,</li>
+							<li>définir les <b>utilisateurs</b> et leurs droits.</li>
+						</ol>
+						<p><i>En Terminale STMG SIG, nous n'aurons pas à concevoir des bases de données complètes mais plutôt à faire évoluer des bases pré-existantes et surtout à les exploiter. Mais une vision complète de la démarche de conception peut éclairer dans ces tâches</i>.</p>
+						<p>Le principe essentiel d'organisation des bases de données relationnelles est la <b>non-redondance des données</b> : chaque donnée n'est saisie et stockée qu'une seule fois, ce qui permet un gain de temps, limite les risques d'erreur, réduit le volume de stockage et facilite le traitement.</p>
+						<p>Une base données peut-être vu comme un ensemble de tableaux, appelés tables, liés entre eux.</p>
+						<p>Chaque <b>table</b> concerne un groupe homogène de données représentant des « objets » réels (les clients, les fournisseurs, les produits, les salariés...) ou abstraits (des catégories, une vente...). Chaque ligne d'une table, appelée <b>enregistrement</b>, concerne un « membre » de ce groupe (un client précis, un fournisseur, un produit, un salarié, une catégorie, une vente...).</p>
 					</div>
-				<p><b>salarie</b> (num, nom, prenom, date_embauche, salaire, indemnite, poste, num_service)</p>
-					<div class="pad_left_indent marge_top_neg2">
-						clé primaire : num (auto-incrémenté)
+					<div class="h3-container">
+						<h3>C. Le langage SQL</h3>
+						<p>Le langage de gestion des bases de données relationnelles est le SQL (<i>Structured Query Language</i> : « langage de requête structuré »). <u>Il comporte différentes branches correspondant aux principales fonctionnalités d'un SGBDR</u> :</p>
+						<ul>
+							<li>définir la structure d'une base de données ;</li>
+							<li>traiter des données :
+								<ul>
+									<li>manipuler (implanter, mettre à jour, supprimer),</li>
+									<li>interroger (rechercher) ;</li>
+								</ul>
+							</li>
+							<li>tout en assurant leur intégrité (cohérence), leur sécurité et la gestion d'un contexte multi-utilisateurs.</li>
+						</ul>
+						<table class="tab_sig">
+							<thead>
+								<tr>
+									<td class="td_milieu td_background_sig">Subdivisions</td>
+									<td class="td_milieu td_background_sig td_sig">Sigle</td>
+									<td class="td_milieu td_background_sig">Liens</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="td_sig pad_left_indent">Langage de définition des données</td>
+									<td class="td_milieu">LDD</td>
+									<td class="td_milieu td_sig"><a href="#LDD" class="approf_sig">V</a></td>
+								</tr>
+								<tr>
+									<td class="pad_left_indent td_sig">Langage de manipulation des données</td>
+									<td class="td_milieu td_sig">LMD</td>
+									<td class="td_milieu"><a href="#LMD" class="approf_sig">VI</a></td>
+								</tr>
+								<tr>
+									<td class="pad_left_indent td_sig">Langage d'interrogation des données</td>
+									<td class="td_milieu">LID</td>
+									<td class="td_milieu td_sig"><a href="#LID" class="approf_sig">VIII</a></td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
-					<div class="pad_left_indent">
-						clé étrangère : num_service en référence à num de la relation service
+				</section>
+				<section class="h2-container">
+					<h2>II. De l'information aux données</h2>
+					<p><b>Les données sont les éléments de base constituant une information</b>. Une donnée est la représentation d'une valeur sous une forme conventionnelle (par exemple JJ/MM/AAAA pour une date), destinée à facilité sa mémorisation et sa transformation (en de nouvelles informations).</p>
+					<div class="h3-container">
+						<h3>A. Relation et attribut</h3>
+						<p><b>Une relation</b> (devenant une table dans les SGBDR) <b>rassemble des données caractérisant un même « objet »</b> (au sens objet de l'information, ce peut-être une personne, une catégorie, un objet physique, un document, une temporalité...). Chaque donnée retenue constituera un <b>attribut</b> d'une des <b>relations</b> de la base de données.</p>
+						<p>Chaque attribut représente une « unité » d'information. Il est <b>nommé</b> en évitant, par convention, les caractères accentués et les espaces, grâce à l'une des 2 techniques suivantes :</p>
+						<table class="tab_sig">
+							<thead>
+								<tr>
+									<td class="td_centre td_sig td_background_sig">Technique</td>
+									<td class="td_centre td_sig td_background_sig">Traduction</td>
+									<td class="td_centre td_sig td_background_sig">Donnée</td>
+									<td class="td_centre td_sig td_background_sig">Libellé</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="td_sig">Camel Caps</td>
+									<td class="td_sig">Camel : chameau ; Caps : majuscules</td>
+									<td class="td_sig">Une date de naissance</td>
+									<td class="td_sig">dateNaiss</td>
+								</tr>
+								<tr>
+									<td class="td_sig">Underscore</td>
+									<td class="td_sig">tiret bas</td>
+									<td class="td_sig">Une date de naissance</td>
+									<td class="td_sig">date_naiss</td>
+								</tr>
+							</tbody>
+						</table>
+						<p><i>Le nom d'un attribut est libre mais il est conseillé bien sûr qu'il soit signifiant par rapport à son contenu</i>.</p>
+						<p>Chaque valeur prise par un attribut est appelée <b>occurrence</b>. Exemple : 10/12/1996 et 05/09/1997 sont deux occurrences de l'attribut dateNaiss pour deux personnes différentes.</p>
 					</div>
-				<p><b>competence</b> (num_salarie, num_qualif, date_acq)</p>
-					<div class="pad_left_indent marge_top_neg2">
-						clé primaire : num_salarie, num_qualif
+					<div class="h3-container">
+						<h3>B. Recensement des données nécessaires</h3>
+						<p>Il convient de <b>décomposer</b> les données selon un niveau pertinent par rapport aux besoins futurs de transformation.</p>
+						<div class="exemp_sig">
+							<p><u>Exemple</u> : <b>Raphaël Dorol</b> pourrait être une occurrence d'un attribut <b>identité</b> mais il semble plus pertinent de considérer que <b>Raphaël</b> est une occurrence d'une donnée <b>prénom</b> et <b>Dorol</b> une occurrence d'un attribut <b>nom</b>, permettant ensuite une exploitation séparée des noms et des prénoms.</p>
+						</div>
+						<p>Il est sous-jacent que les données recensées devront être acquises. Cependant certaines données peuvent être obtenues automatiquement par transformation d'autres données (données dites « calculées ») ce qui permettra d'économiser leur acquisition.</p>
+						<p>Selon les règles du modèle relationnel, les données calculées n'ont pas à être prises en compte dans le schéma relationnel d'une base de données. Toutefois, certaines de ces données sont intégrées, lors de l'implantation du schéma relationnel sous forme d'une base de données, s'il existe une raison de les stocker indépendamment de leur possibilité de calcul automatique (par exemple si les données sources ont disparu ou changé de valeur).</p>
 					</div>
-					<div class="pad_left_indent">
-						clés étrangères :
-						<div class="li_align_text">
-							<ul>
-								<li class="li_ss_pt" id="li_pad_top_l">num_salarie en référence à num de la relation salarie</li>
-								<li class="li_ss_pt li_pad_0_5">num_qualif en référence à num de la relation qualification</li>
-							</ul>
+					<div class="h3-container">
+						<h3>C. Le dictionnaire des données</h3>
+						<p><u>À l'issue de ces étapes on peut établir un <b>dictionnaire des données</b> de la base</u> :</p>
+						<table class="tab_sig">
+							<thead>
+								<tr>
+									<td class="td_centre td_sig td_background_sig">Attribut</td>
+									<td class="td_centre td_sig td_background_sig">Type de données de l'attribut</td>
+									<td class="td_centre td_sig td_background_sig">Longueur</td>
+									<td class="td_centre td_sig td_background_sig">Commentaire</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>...</td>
+									<td class="td_sig_bord_g_d">...</td>
+									<td class="td_sig_bord_g_d">...</td>
+									<td>...</td>
+								</tr>
+								<tr>
+									<td class="td_sig_bord_h_dot">...</td>
+									<td class="td_sig_bord_g_d td_sig_bord_h_dot">...</td>
+									<td class="td_sig_bord_g_d td_sig_bord_h_dot">...</td>
+									<td class="td_sig_bord_h_dot">...</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>Le choix du <b>type de données</b> permet d'optimiser les volumes mobilisés en stockage de la donnée et en mémoire lors de ses traitements de transformation. <u>Les principaux types de données sont</u> :</p>
+						<ul>
+							<li>le type <b>alphanumérique</b> (tous les caractères), en spécifiant généralement le nombre maximal de caractères,</li>
+							<li>le type <b>numérique</b> (avec des sous-typpes : entier, réel...),</li>
+							<li>le type <b>date/heure</b> (avec des sous-types : date seule, heure seule...)</li>
+							<li>le type booléen (vrai/faux mis en œuvre généralement avec les valeurs 1/0 ou True/False).</li>
+						</ul>
+						<p>Toute occurrence d'un attribut devra respecter une <b>contrainte d'intégrité de domaine</b>, c'est-à-dire présenter une valeur correspondant au type associé à l'attribut.</p>
+					</div>
+				</section>
+				<section class="h2-container">
+					<h2>III. Le modèle relationnel - Notion de relation</h2>
+					<div class="h3-container">
+						<h3>A. La relation</h3>
+						<p><b>Une relation  rassemble</b> donc <b>des données caractérisant un même objet</b> (d'information). La relation est nommée de façon signifiante par rapport à l'objet qu'elle caractérise.</p>
+						<p>Ces différentes données constituent les <b>attributs</b> de la relation. On appelle <b>ocurrence</b> de la relation un ensemble d'occurrences de ses attributs caractérisant un membre de la relation.</p>
+						<div class="exemp_sig">
+							<p><u>Exemple</u> : dans une base de données de gestion des ressources humaines, les données <b>nom</b>, <b>prenom</b>, <b>dateEmbauche</b>, <b>salaire</b> et <b>poste</b> caractérisent un salarié et peuvent donc être regroupées dans une relation <b>salarie</b> (sans accent par convention) présentée ainsi (avec ses attributs entre parenthèses) :
+							<br />salarie (nom, prenom, dateEmbauche, salaire, poste)
+							<br />("Arist", "Léa", '05/08/2003', 1630.41, "logisticienne") est occurrence de cette relation.
+							<br />Les valeurs des attributs de type alphanumérique, dates et heures doivent être placées entre guillemets ou apostrophes.
+							<br />À noter que le <b>salaire</b> est mémorisé sans le symbole monétaire €, c'est une valeur numérique (nécessaire pour les calculs) à laquelle on peut adjoindre, à l'affichage, le symbole €.</p>
+						</div>
+						<p>Chaque attribut ne peut contenir, pour une occurrence d'un salarié donné, qu'une seule valeur à un instant donné.</p>
+						<div class="exemp_sig">
+							<p><u>Exemple</u> : Si le salaire d'un salarié augmente, sa nouvelle valeur remplacera l'ancienne (qui sera « perdue », sauf si l'organisation des données prévoit de conserver l'historique des salaires).</p>
 						</div>
 					</div>
-				</div>
-				<p class="marge_top_6"><u>Voici les requêtes de création de table correspondantes</u> :</p>
-				<div class="flex_box">
-					<div class="flex_box_1">
-						<p><span class="text_purple">CREATE TABLE</span> service (
-						<br /><span class="pad_left_3_indent">num <span class="text_blue">INT</span> <span class="text_purple">AUTO_INCREMENT</span>,</span>
-						<br /><span class="pad_left_3_indent">libelle <span class="text_blue">VARCHAR</span>(<span class="text_vert">20</span>) <span class="text_purple">NOT</span> <span class="text_blue">NULL</span>,</span>
-						<br /><span class="pad_left_3_indent">budget <span class="text_blue">FLOAT</span>,</span>
-						<br /><span class="text_purple pad_left_3_indent">PRIMARY KEY</span> (num)
-						<br />);
+					<div class="h3-container">
+						<h3>B. La clé primaire</h3>
+						<p>La <b>clé primaire</b> est un attribut ou un groupe d'attributs dont la valeur permet d'<b>identifier</b> de façon sûre, certaine et unique une occurrence de la relation ; c'est la <b>contrainte de clé ou contrainte de relation</b>.</p>
+						<p><u>Cela induit 3 caractéristiques obligatoirement et simultanément réunies pour toute occurrence de la relation</u> :</p>
+						<ul>
+							<li>l'<b>existence</b> d'une valeur non vide pour cette clé primaire,</li>
+							<li>l'<b>unicité</b> de cette valeur (aucune autre occurrence ne peut porter la même valeur de clé primaire),</li>
+							<li>la <b>stabilité</b> de cette valeur, cette troisème caractéristique étant liée au fait que la clé primaire peut servir à établir le lien avec d'autres relations or si sa valeur change, le lien sera rompu.</li>
+						</ul>
+						<p>Il y a une seule clé primaire par relation (mais elle peut-être constituée de plusieurs attributs, c'est leur ensemble qui forme la clé primaire d'une relation et leur ensemble de valeurs qui doit respecter les contraintes précédentes).</p>
+						<p>Il peut-être difficile de trouver un attribut ou groupe d'attributs respectant de façon certaine les trois contraintes d'une clé primaire pour toutes les occurrences possibles (passées ou à venir). Dans ce cas on crée généralement un nouvel attribut (numéro, code) destiné à être clé primaire, signifiant ou non (simple numéro auto-incrémenté).</p>
+					</div>
+					<div class="h3-container">
+						<h3>C. La dépendance fonctionnelle</h3>
+						<p>Dans chaque relation, les attributs doivent être en dépendance fonctionnelle élémentaire et directe de la clé primaire (c'est la contrainte d'intégrité de relation).</p>
+						<p>La dépendance fonctionnelle d'une donnée B par rapport à une donnée A signifie que pour une valeur connue de A, il n'existe qu'une et une seule valeur possible, à un instant précis, de B.</p>
+						<div class="exemp_sig">
+							<p><u>Exemple</u> : dans la relation <b>eleve</b> (numInterne, INE, nom, prenom, dateNaissance, adresseRue, adresseCP, adresseVille), le nom est bien en dépendance fonctionnelle de numInterne car pour un numéro interne, il n'y aura qu'un seul nom d'élève correspondant (la réciproque n'étant pas nécessairement vraie).</p>
+						</div>
+						<p><b>Pour une valeur donnée de la clé primaire, chaque attribut d'une relation ne peut contenir, à un moment donné, qu'une seule valeur du fait de sa dépendance fonctionnelle à la clé primaire</b>.</p>
+					</div>
+				</section>
+				<section class="h2-container">
+					<h2>IV. Le modèle relationnel - Liens entre relations</h2>
+					<p>Le recensement des données nécessaires à un domaine du SI puis leur regroupement en relations, conduit à mettre en évidence <b>plusieurs relations</b> (et parfois des données que l'on n'a pas réussi à « placer » car n'étant pas en dépendance fonctionnelle élémentaire, d'une seule clé primaire).</p>
+					<p>Le principe de la base de données est justement d'établir des « liens » entre ces relations (a priori il n'y a pas de relation « isolée », sauf éventuellement des relations ne stockant que des paramètres indépendants : taux de TVA, etc.). Ces liens représentent des <b>règles de gestion</b> : règles décrivant une réalité (le schéma modélise une réalité) et toujours respectées.</p>
+					<p>Lorsqu'il apparaît que deux relations ont un lien, il faut « quantifier » ce lien, c'est-à-dire établir avec combien d'occurrences d'une relation, une occurrence de l'autre relation peut-être associée.</p>
+					<div class="h3-container">
+						<h3>A. Lien de un à plusieurs</h3>
+						<table class="tab_sig">
+							<thead>
+								<tr>
+									<th class="td_centre td_background_sig">Exemples d'occurrences d'une relation A associées avec une seule occurrence d'une relation B</th>
+									<th class="td_milieu td_background_sig td_larg_4"><u>et</u></th>
+									<th class="td_centre td_background_sig">d'occurrences d'une relation B pouvant être associées avec plusieurs occurrences d'une relation A</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="td_milieu"><i>un salarié n'appartient (à un instant) qu'à un seul service</i></td>
+									<td></td>
+									<td class="td_milieu"><i>un service peut compter plusieurs salariés</i></td>
+								</tr>
+								<tr>
+									<td class="td_sig_bord_h_dot td_milieu"><i>un salarié n'occupe (à un instant) qu'un seul poste</i></td>
+									<td class="td_sig_bord_h_dot td_milieu"></td>
+									<td class="td_sig_bord_h_dot td_milieu"><i>plusieurs salariés peuvent occuper un même type de poste</i></td>
+								</tr>
+								<tr>
+									<td class="td_sig_bord_h_dot td_milieu"><i>une absence ne concerne qu'un seul salarié</i></td>
+									<td class="td_sig_bord_h_dot td_milieu"></td>
+									<td class="td_sig_bord_h_dot td_milieu"><i>un salarié peut avoir plusieurs absences</i></td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="3" class="td_milieu"><b>La relation A dépend de la relation B</b></td>
+								</tr>
+							</tfoot>
+						</table>
+						<p>À une occurrence de la relation A, déterminée par une valeur de sa clé primaire, on ne peut associer qu'une seule occurrence de la relation B et donc une seul occurrence de sa clé primaire : la clé primaire de la relation B est donc en dépendance fonctionnelle de la clé primaire de la relation A, ce qui implique que la clé primaire de la relation B peut donc constituer un attribut de la relation A, attribut constituant une clé étrangère. <b>Une clé étrangère met donc en œuvre une règle de gestion</b>.</p>
+						<div class="exemp_sig">
+							<p><u>Exemple</u> : La relation <b>salarie</b> dépend de la relation <b>service</b> d'une part, et de la relation <b>poste</b> d'autre part (indépendamment).
+								<br />La relation <b>absence</b> dépend de la relation <b>salarie</b>.</p>
+								<p>Les trois dépendances mises en évidences donnent donc lieu à trois clés étrangères (placées dans les relations dépendantes) :</p>
+								<table class="tab_ss_bord">
+									<tbody>
+										<tr>
+											<td><b>service</b> (num, libelle, budget)</td>
+										</tr>
+										<tr>
+											<td class="pad_left_indent marge_bot_2">clé primaire : num</td>
+										</tr>
+									</tbody>
+								</table>
+								<table class="tab_ss_bord">
+									<tbody>
+										<tr>
+											<td><b>poste</b> (num, libelle, statut)</td>
+										</tr>
+										<tr>
+											<td class="pad_left_indent marge_bot_1">clé primaire : num</td>
+										</tr>
+									</tbody>
+								</table>
+								<table class="tab_ss_bord">
+									<tbody>
+										<tr>
+											<td colspan="2"><b>salarie</b> (num, nom, prenom, dateEmbauche, salaire, numService, numPoste)</td>
+										</tr>
+										<tr>
+											<td colspan="2" class="pad_left_indent marge_bot_1">clé primaire : num</td>
+										</tr>
+										<tr>
+											<td rowspan="2" class=" pad_left_indent width_10 td_left">clé&nbsp;étrangères&nbsp;:</td>
+											<td class="width_90 td_left pad_left_3_indent">numService en référence à num de la relation service</td>
+										</tr>
+										<tr>
+											<td class="marge_bot_1 pad_left_3_indent">numPoste en référence à num de la relation poste</td>
+										</tr>
+									</tbody>
+								</table>
+								<table class="tab_ss_bord">
+									<tbody>
+										<tr>
+											<td><b>absence</b> (num, date, motif, numSalarie)</td>
+										</tr>
+										<tr>
+											<td class="pad_left_indent">clé primaire : num</td>
+										</tr>
+										<tr>
+											<td class="pad_left_indent">clé étrangère : numSalarie en référence à num de la relation salarie</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+					</div>
+					<div class="h3-container">
+						<h3>B. Les clés étrangères</h3>
+						<p>Une clé « étrangère » est ainsi qualifiée car elle tire ses valeurs de la clé primaire à laquelle elle fait référence. <u>En ce sens</u> :</p>
+						<ul>
+							<li>elle doit posséder le même type de données que sa clé primaire de référence,</li>
+							<li>elle ne doit pas « créer » ses propres valeurs (elle ne peut donc pas être auto-incrémentée) et ne peut que reprendre des valeurs pré-existantes de sa clé primaire de référence.</li>
+						</ul>
+						<p>La mise en œuvre de ces deux contraintes sous un SGBDR, garantissant la cohérence de la base de données, se nomme la <b>contrainte d'intégrité réfentielle</b>.</p>
+						<p><u>Par contre, une clé étrangère pour toute occurrence de la relation n'est pas soumise aux trois contraintes essentielles d'une clé primaire</u> :</p>
+						<ul>
+							<li>elle peut éventuellement être vide (Null), selon le contexte,</li>
+							<li>elle peut ne pas être unique,</li>
+							<li>elle peut ne pas être stable.</li>
+						</ul>
+						<p>Une relation peut n'avoir aucune clé étrangère ou en avoir une à plusieurs, indépendantes les unes des autres.</p>
+					</div>
+					<div class="h3-container">
+						<h3>C. Lien de plusieurs à plusieurs</h3>
+						<table class="tab_sig">
+							<thead>
+								<tr>
+									<td class="td_centre td_background_sig">Exemple d'occurrence d'une relation A pouvant être associée avec plusieurs occurrences d'une relation B</td>
+									<td class="td_milieu td_background_sig td_larg_4"><u>et</u></td>
+									<td class="td_centre td_background_sig">d'occurrence d'une relation B pouvant être associées avec plusieurs occurrences d'une relation A</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="td_milieu"><i>un salarié peut posséder plusieurs qualifications</i></td>
+									<td></td>
+									<td class="td_milieu"><i>une qualification peut être possédée par plusieurs salariés</i></td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="3" class="td_milieu"><b>La relation A ne dépend pas de la relation B et réciproquement</b></td>
+								</tr>
+							</tfoot>
+						</table>
+						<p>La clé primaire d'une relation issue du lien de plusieurs à plusieurs comporte au minimum deux attributs mais peut en comporter davantage si cela est nécessaire pour respecter la contrainte d'unicité.</p>
+					</div>
+				</section>
+				<section class="h2-container">
+					<h2 id="LDD">V. SQL - Langage de définition des données</h2>
+					<p><u>Le langage de définition des données permet d'agir sur la structure de la base, il s'agit entre autre de</u> :</p>
+					<ul>
+						<li>créer des tables,</li>
+						<li>les modifier (ajouter ou supprimer des champs et/ou des contraintes de clé),</li>
+						<li>les supprimer.</li>
+					</ul>
+					<div class="h3-container">
+						<h3>A. Les types de données</h3>
+						<p>Les principaux types de données sont pris en charge par les SGBDR, avec de nombreux sous-types. <u>Voici les plus courants</u> :</p>
+						<table class="tab_sig">
+							<thead>
+								<tr>
+									<td class="td_sig td_background_sig td_milieu">Type de données</td>
+									<td class="td_sig td_background_sig td_milieu">Type SQL</td>
+									<td class="td_sig td_background_sig td_milieu">Description</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="2" class="td_sig">Alphanumérique</td>
+									<td>char(n)</td>
+									<td class="td_sig_bord_g">Chaîne de caractères de longueur fixe n (n&lt;16383)</td>
+								</tr>
+								<tr>
+									<td class="td_sig_bord_h_dot td_sig_bord_b">varchar(n)</td>
+									<td class="td_sig_bord_h_dot td_sig_bord_g td_sig_bord_b">Chaîne de caractères de n caractères maximum (n&lt;16383)</td>
+								</tr>
+								<tr>
+									<td rowspan="3" class="td_sig">Numérique</td>
+									<td>integer</td>
+									<td class="td_sig_bord_g">Entier de 32 bits (valeurs possibles de -2<sup>31</sup> à 2<sup>31</sup> -1)</td>
+								</tr>
+								<tr>
+									<td class="td_sig_bord_h_dot">float</td>
+									<td class="td_sig_bord_h_dot td_sig_bord_g">Réels (saisir les décimales après un point)</td>
+								</tr>
+								<tr>
+									<td class="td_sig_bord_h_dot td_sig_bord_b">decimal(n[,d])</td>
+									<td class="td_sig_bord_h_dot td_sig_bord_g td_sig_bord_b">Nombre de n chiffres [dont d décimales (facultatif)]</td>
+								</tr>
+								<tr>
+									<td rowspan="3" class="td_sig">Date/Heure</td>
+									<td>date</td>
+									<td class="td_sig_bord_g">Date sous la forme AAAA/MM/JJ</td>
+								</tr>
+								<tr>
+									<td class="td_sig_bord_h_dot">time</td>
+									<td class="td_sig_bord_h_dot td_sig_bord_g">Heure sous la forme 12:54:24.85</td>
+								</tr>
+								<tr>
+									<td class="td_sig_bord_h_dot">timestamp</td>
+									<td class="td_sig_bord_h_dot td_sig_bord_g">Date et heure</td>
+								</tr>
+								<tr>
+									<td class="td_sig">Booléen</td>
+									<td class="td_sig">boolean</td>
+									<td class="td_sig">0 ou False pour FAUX, 1 ou True pour VRAI</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="h3-container">
+						<h3>B. La création de tables</h3>
+						<p>La création d'une table consiste à lister ses champs (on retrouve les attributs constitués dans le modèle relationnel), avec leur type et à créer ses clés primaire et étrangère(s) :</p>
+						<p><span class="text_purple">CREATE TABLE</span> nom_table (
+							<br /><span class="pad_left_3_indent">champ1 <span class="text_blue" title="int, varchar, float, date...">Type de données</span>[,</span>
+							<br /><span class="pad_left_3_indent">champ2 <span class="text_blue" title="int, varchar, float, date...">Type de données</span>]</span>
+							<br /><span class="text_purple pad_left_3_indent">PRIMARY KEY</span> (Champ clé primaire [,...]),
+							<br /><span class="pad_left_3_indent">[<span class="text_purple">CONSTRAINT</span> Nom de la contrainte] <span class="text_purple">FOREIGN KEY</span> (champ clé étrangère [,...])</span>
+							<br /><span class="text_purple pad_left_3_indent">REFERENCES</span> Nom de la table source (champ concerné [,...])
+							<br />);
+							<br /><br />
+						</p>
+						<div class="exemp_sig" style="padding-bottom: 5%;">
+							<p><u>Exemple</u> : <u>Considérons le schéma relationnel suivant</u> :</p>
+							<p><b>service</b> (num, libelle, budget)</p>
+							<div class="pad_left_indent marge_top_neg2">
+								clé primaire : num (auto-incrémenté)
+							</div>
+							<p><b>qualification</b> (num, libelle, niveau)</p>
+							<div class="pad_left_indent marge_top_neg2">
+								clé primaire : num (auto-incrémenté)
+							</div>
+							<p><b>salarie</b> (num, nom, prenom, date_embauche, salaire, indemnite, poste, num_service)</p>
+							<div class="pad_left_indent marge_top_neg2">
+								clé primaire : num (auto-incrémenté)
+							</div>
+							<div class="pad_left_indent">
+								clé étrangère : num_service en référence à num de la relation service
+							</div>
+							<p><b>competence</b> (num_salarie, num_qualif, date_acq)</p>
+							<div class="pad_left_indent marge_top_neg2">
+								clé primaire : num_salarie, num_qualif
+							</div>
+							<div class="pad_left_indent">
+								clés étrangères :
+								<div class="li_align_text">
+									<ul>
+										<li class="li_ss_pt" id="li_pad_top_l">num_salarie en référence à num de la relation salarie</li>
+										<li class="li_ss_pt li_pad_0_5">num_qualif en référence à num de la relation qualification</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<p class="marge_top_6"><u>Voici les requêtes de création de table correspondantes</u> :</p>
+						<div class="flex_box">
+							<div class="flex_box_1">
+								<p><span class="text_purple">CREATE TABLE</span> service (
+									<br /><span class="pad_left_3_indent">num <span class="text_blue">INT</span> <span class="text_purple">AUTO_INCREMENT</span>,</span>
+									<br /><span class="pad_left_3_indent">libelle <span class="text_blue">VARCHAR</span>(<span class="text_vert">20</span>) <span class="text_purple">NOT</span> <span class="text_blue">NULL</span>,</span>
+									<br /><span class="pad_left_3_indent">budget <span class="text_blue">FLOAT</span>,</span>
+									<br /><span class="text_purple pad_left_3_indent">PRIMARY KEY</span> (num)
+									<br />);
+								</p>
+							</div>
+							<div class="flex_box_2">
+								<p><i>num n'a pas été explicitement spécifié <span class="text_purple">NOT</span> <span class="text_blue">NULL</span> puisqu'il est de fait en étant clé primaire</i>.</p>
+								<p><i>Le paramètre <span class="text_purple">AUTO_INCREMENT</span>, associé à un entier, s'écrit différemment selon les SGBDR</i>.</p>
+								<p><i>Le libellé du service ne pourra pas dépasser 20 caractères (espaces inclus)</i>.</p>
+							</div>
+						</div>
+						<p><span class="text_purple">CREATE TABLE</span> qualification (
+							<br /><span class="pad_left_3_indent">num <span class="text_blue">INT</span> <span class="text_purple">AUTO_INCREMENT</span>,</span>
+							<br /><span class="pad_left_3_indent">libelle <span class="text_blue">VARCHAR</span>(<span class="text_vert">20</span>) <span class="text_purple">NOT</span> <span class="text_blue">NULL</span>,</span>
+							<br /><span class="pad_left_3_indent">niveau <span class="text_blue">VARCHAR</span>(<span class="text_vert">1</span>) <span class="text_purple">NOT</span> <span class="text_blue">NULL</span>,</span>
+							<br /><span class="text_purple pad_left_3_indent">PRIMARY KEY</span> (num)
+							<br />);
+						</p>
+						<p><span class="text_purple">CREATE TABLE</span> salarie (
+							<br /><span class="pad_left_3_indent">num <span class="text_blue">INT</span> <span class="text_purple">AUTO_INCREMENT</span>,</span>
+							<br /><span class="pad_left_3_indent">nom <span class="text_blue">VARCHAR</span>(<span class="text_vert">25</span>) <span class="text_purple">NOT</span> <span class="text_blue">NULL</span>,</span>
+							<br /><span class="pad_left_3_indent">prenom <span class="text_blue">VARCHAR</span>(<span class="text_vert">1</span>) <span class="text_purple">NOT</span> <span class="text_blue">NULL</span>,</span>
+							<br /><span class="pad_left_3_indent">date_embauche <span class="text_blue">DATE</span> <span class="text_purple">NOT</span><span class="text_blue"> NULL</span>,</span>
+							<br /><span class="pad_left_3_indent">salaire <span class="text_blue">FLOAT</span>,</span>
+							<br /><span class="pad_left_3_indent">num_service <span class="text_blue">INT</span>,</span>
+							<br /><span class="text_purple pad_left_3_indent">PRIMARY KEY</span> (num),
+							<br /><span class="text_purple pad_left_3_indent">FOREIGN KEY</span> (num_service) <span class="text_purple">REFERENCES</span> service(num)
+							<br />);
+						</p>
+						<p><span class="text_purple">CREATE TABLE</span> competence (
+							<br /><span class="pad_left_3_indent">num_salarie <span class="text_blue">INT</span>,</span>
+							<br /><span class="pad_left_3_indent">num_qualif <span class="text_blue">INT</span>,</span>
+							<br /><span class="pad_left_3_indent">date_acq <span class="text_blue">DATE</span> <span class="text_purple">NOT</span><span class="text_blue"> NULL</span>,</span>
+							<br /><span class="text_purple pad_left_3_indent">PRIMARY KEY</span> (num_salarie, num_qualif),
+							<br /><span class="text_purple pad_left_3_indent">FOREIGN KEY</span> (num_salarie) <span class="text_purple">REFERENCES</span> salarie(num),
+							<br /><span class="text_purple pad_left_3_indent">FOREIGN KEY</span> (num_qualif) <span class="text_purple">REFERENCES</span> qualification(num)
+							<br />);
 						</p>
 					</div>
-					<div class="flex_box_2">
-						<p><i>num n'a pas été explicitement spécifié <span class="text_purple">NOT</span> <span class="text_blue">NULL</span> puisqu'il est de fait en étant clé primaire</i>.</p>
-						<p><i>Le paramètre <span class="text_purple">AUTO_INCREMENT</span>, associé à un entier, s'écrit différemment selon les SGBDR</i>.</p>
-						<p><i>Le libellé du service ne pourra pas dépasser 20 caractères (espaces inclus)</i>.</p>
+					<div class="h3-container">
+						<h3>C. La suppression d'une table</h3>
+						<p><u>La suppression d'une table supprime également de manière irréversible son contenu</u> :</p>
+						<div class="pad_left_indent">
+							<span class="text_purple">DROP TABLE</span> nom_table;
+						</div>
 					</div>
-				</div>
-				<p><span class="text_purple">CREATE TABLE</span> qualification (
-				<br /><span class="pad_left_3_indent">num <span class="text_blue">INT</span> <span class="text_purple">AUTO_INCREMENT</span>,</span>
-				<br /><span class="pad_left_3_indent">libelle <span class="text_blue">VARCHAR</span>(<span class="text_vert">20</span>) <span class="text_purple">NOT</span> <span class="text_blue">NULL</span>,</span>
-				<br /><span class="pad_left_3_indent">niveau <span class="text_blue">VARCHAR</span>(<span class="text_vert">1</span>) <span class="text_purple">NOT</span> <span class="text_blue">NULL</span>,</span>
-				<br /><span class="text_purple pad_left_3_indent">PRIMARY KEY</span> (num)
-				<br />);
-				</p>
-				<p><span class="text_purple">CREATE TABLE</span> salarie (
-				<br /><span class="pad_left_3_indent">num <span class="text_blue">INT</span> <span class="text_purple">AUTO_INCREMENT</span>,</span>
-				<br /><span class="pad_left_3_indent">nom <span class="text_blue">VARCHAR</span>(<span class="text_vert">25</span>) <span class="text_purple">NOT</span> <span class="text_blue">NULL</span>,</span>
-				<br /><span class="pad_left_3_indent">prenom <span class="text_blue">VARCHAR</span>(<span class="text_vert">1</span>) <span class="text_purple">NOT</span> <span class="text_blue">NULL</span>,</span>
-				<br /><span class="pad_left_3_indent">date_embauche <span class="text_blue">DATE</span> <span class="text_purple">NOT</span><span class="text_blue"> NULL</span>,</span>
-				<br /><span class="pad_left_3_indent">salaire <span class="text_blue">FLOAT</span>,</span>
-				<br /><span class="pad_left_3_indent">num_service <span class="text_blue">INT</span>,</span>
-				<br /><span class="text_purple pad_left_3_indent">PRIMARY KEY</span> (num),
-				<br /><span class="text_purple pad_left_3_indent">FOREIGN KEY</span> (num_service) <span class="text_purple">REFERENCES</span> service(num)
-				<br />);
-				</p>
-				<p><span class="text_purple">CREATE TABLE</span> competence (
-				<br /><span class="pad_left_3_indent">num_salarie <span class="text_blue">INT</span>,</span>
-				<br /><span class="pad_left_3_indent">num_qualif <span class="text_blue">INT</span>,</span>
-				<br /><span class="pad_left_3_indent">date_acq <span class="text_blue">DATE</span> <span class="text_purple">NOT</span><span class="text_blue"> NULL</span>,</span>
-				<br /><span class="text_purple pad_left_3_indent">PRIMARY KEY</span> (num_salarie, num_qualif),
-				<br /><span class="text_purple pad_left_3_indent">FOREIGN KEY</span> (num_salarie) <span class="text_purple">REFERENCES</span> salarie(num),
-				<br /><span class="text_purple pad_left_3_indent">FOREIGN KEY</span> (num_qualif) <span class="text_purple">REFERENCES</span> qualification(num)
-				<br />);
-				</p>
-			<h3>C. La suppression d'une table</h3>
-			<p><u>La suppression d'une table supprime également de manière irréversible son contenu</u> :</p>
-				<div class="pad_left_indent">
-					<span class="text_purple">DROP TABLE</span> nom_table;
-				</div>
-			<h3>D. La modification de la structure d'une table</h3>
-			<p><u>Deux types de modification sont possibles</u> :</p>
-			<table class="tab_sig">
-				<thead>
-					<tr>
-						<td class="td_sig td_background_sig td_large">Type de modification</td>
-						<td class="td_sig td_background_sig td_large">Élément modifié</td>
-						<td class="td_sig td_background_sig td_large">Syntaxe en SQL</td>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td rowspan="3" class="td_sig td_milieu">Ajout</td>
-						<td class="td_sig">un champ</td>
-						<td class="td_sig"><span class="text_purple">ALTER TABLE</span> nom_table <span class="text_purple">ADD</span> champ_ajoute_1 <span class="text_blue">Type</span> [, champ_ajoute_2 <span class="text_blue">Type</span>,...];</td>
-					</tr>
-					<tr>
-						<td class="td_sig">une clé primaire</td>
-						<td class="td_sig"><span class="text_purple">ALTER TABLE</span> nom_table <span class="text_purple">ADD PRIMARY KEY</span> (champ_cle_primaire [,...]);</td>
-					</tr>
-					<tr>
-						<td class="td_sig">une clé étrangère</td>
-						<td class="td_sig"><span class="text_purple">ALTER TABLE</span> nom_table <span class="text_purple">ADD FOREIGN KEY</span> (champ_cle_etrangere [,...]) <span class="text_purple">REFERENCES</span> nom_table_source (champ_table_source [,...]);</td>
-					</tr>
-					<tr>
-						<td rowspan="2" class="td_sig td_milieu">Suppression</td>
-						<td class="td_sig">un champ</td>
-						<td class="td_sig"><span class="text_purple">ALTER TABLE</span> nom_table <span class="text_purple">DROP</span> champ_supp_1 [, champ_supp_2,...];</td>
-					</tr>
-					<tr>
-						<td class="td_sig">une clé</td>
-						<td class="td_sig"><span class="text_purple">ALTER TABLE</span> nom_table <span class="text_purple">DROP PRIMARY KEY</span>;</td>
-					</tr>
-				</tbody>
-			</table>
-			<h2 id="LMD">VI. SQL - Langage de manipulation des données</h2>
-			<p><u>Le langage de manipulation des données permet la modification du contenu d'une table selon trois actions</u> :</p>
-			<ul>
-				<li>insérer un à plusieurs nouveaux enregistrements dans la table,</li>
-				<li>mettre à jour les valeurs d'un à plusieurs champs d'un ou plusieurs enregistrement de la table,</li>
-				<li>supprimer un à plusieurs enregistrements de la table.</li>
-			</ul>
-			<h3>A. L'insertion d'enregistrements</h3>
-			<p>L'instruction <span class="text_purple">INSERT</span> est complété par la clause <span class="text_purple">INTO</span>, qui indique le nom de la table complétée, en précisant éventuellement les colonnes (champs) affectées (les collones omises prendront la valeur <span class="text_purple">NULL</span> par défaut).</p>
-			<p>L'utilisation de la clause <span class="text_purple">VALUES</span> permet de créer un ou des enregistrements dont les valeurs sont passées en paramètres. Les données sont affectées aux champs dans l'ordre dans lequel ces champs ont été déclarés dans la clause <span class="text_purple">INTO</span>.</p>
-			<p><u>Il y a deux manières principales pour insérer des enregistrements</u> :</p>
-			<div class="pad_left_indent">
-				<span class="text_purple">INSERT INTO</span> nom_table <span class="text_purple">VALUES</span> (valeur_champ1 [, valeur_champ2,...]);
-			</div>
-			<p>et</p>
-			<p class="marge_bot_3 pad_left_indent"><span class="text_purple">INSERT INTO</span> nom_table (champ2[, champ5,...]) <span class="text_purple">VALUES</span> (valeur_champ2 [, valeur_champ5,...]);</p>
-			<div class="exemp_sig">
-				<p><u>Exemple</u> : <u>Insérons deux salariés dans la relation suivante</u> :</p>
-				<p>salarie (num, nom, prenom, date_embauche, salaire, poste)
-				<br />num est auto-incrémenté.</p>
-				<div class="pad_left_3_indent">
-					<p><span class="text_purple">INSERT INTO</span> salarie <span class="text_purple">VALUES</span>
-					<br /><span class="pad_left_3_indent">(<span class="text_blue">NULL</span>, <span class="text_red">'Arist'</span>, <span class="text_red">'Léa'</span>, <span class="text_red">'2003-08-05'</span>, <span class="text_vert">1630.41</span>, <span class="text_red">'logisticienne'</span>),</span>
-					<br /><span class="pad_left_3_indent">(<span class="text_blue">NULL</span>, <span class="text_red">"Lakab"</span>, <span class="text_red">"Karim"</span>, <span class="text_red">'2011-12-22'</span>, , <span class="text_red">"ingénieur informatique"</span>);</span></p>
-				</div>
-				<p>Les valeurs sont insérées dans l'ordre des champs de la table.</p>
-				<p><span class="text_blue">NULL</span> est utilisé pour la valeur auto-incrémentée (les salariés recevront un numéro de salarié égal à celui du dernier salarié inséré +1 pour le premier et donc +2 pour le second).</p>
-				<p>La partie décimale du salaire est notée à l'aide d'un point puisque la virgule sert de séparateur des valeurs insérées.</p>
-				<p>Le salaire du deuxième salarié n'a pas encore été déterminé d'où l'absence de valeur entre les deux virgules correspondant à ce champ.</p>
-				<p>Par conséquent, l'insertion du deuxième salarié aurait pu aussi se faire en spécifiant les colonnes insérées (sans le salaire, ni le num car il est auto-incrémenté) :</p>
-				<div class="pad_left_3_indent">
-					<p><span class="text_purple">INSERT INTO</span> salarie (nom, prenom, date_embauche, poste) <span class="text_purple">VALUES</span><br /><span class="pad_left_3_indent">(<span class="text_red">"Lakab"</span>, <span class="text_red">"Karim"</span>, <span class="text_red">'2011-12-22'</span>, <span class="text_red">"ingénieur informatique"</span>);</span></p>
-				</div>
-			</div>
-			<p>On notera qu'il est possible d'insérer des enregistrements par une requête <span class="text_purple">SELECT</span> (projetant un nombre de valeurs correspondant au nombre de champs) grâce à l'enchaînement <span class="text_purple">INSERT INTO</span> ... <span class="text_purple">SELECT</span>, non documenté ici.</p>
-			<h3>B. La mise à jour de champs d'enregistrements</h3>
-			<p><u>La modification de données consiste à mettre à jour les valeurs d'un à plusieurs champs d'un à plusieurs enregistrements d'une table</u> :</p>
-			<ul>
-				<li>cette table est désignée par l'instruction <span class="text_purple">UPDATE</span>,</li>
-				<li>la ou les modification(s) à effectuer sont précisée(s) dans la clause <span class="text_purple">SET</span> en affectant (=) sa nouvelle valeur à chaque champ mis à jour (cette nouvelle valeur peut éventuellement être issue d'un calcul ou d'une sous-requête d'interrogation),</li>
-				<li>les enregistrements concernés par ces mises à jour peuvent être limités à l'aide de <b>critères de restriction</b> portés par les clauses <span class="text_purple">WHERE</span> (voir <a href="#criteres_restriction" class="approf_sig">partie VII</a>) ; en l'absence de telles restrictions, tous les enregistrements sont concernés.</li>
-			</ul>
-			<p><u>Syntaxe</u> :</p>
-				<div class="pad_left_indent marge_bot_4">
-					<span class="text_purple">UPDATE</span> nom_table
-					<br /><span class="text_purple">SET</span> champ_maj_1 = nouvelle_valeur [, champ_maj_2 = nouvelle_valeur...]
-					<br />[<span class="text_purple">WHERE</span> critere_restriction_1 <span class="text_purple">AND</span>/<span class="text_purple">OR</span> critere_restriction_2...];
-				</div>
-			<div class="exemp_sig">
-				<p><u>Exemples</u> :</p>
-				<p class="text_blue"><u>Ex 1 : Tous les salariés bénéficient d'une augmentation forfaitaire de 12€</u> :</p>
-				<div class="pad_left_indent">
-					<span class="text_purple">UPDATE</span> salarie <span class="text_purple">SET</span> salaire = salaire + <span class="text_vert">12</span>;
-				</div>
-				<p><i>Si le salaire de Karim est encore à Null lors de l'exécution de cette requête, il le restera (Null + 12 donne Null)</i>.</p>
-				<p class="text_blue"><u>Ex 2 : Léa Arist (salarié n°29) est désormais responsable commerciale</u> :</p>
-				<div class="pad_left_indent">
-					<span class="text_purple">UPDATE</span> salarie <span class="text_purple">SET</span> poste = <span class="text_red">"responsable commerciale"</span>
-					<br /><span class="text_purple">WHERE</span> num = <span class="text_vert">29</span>;
-				</div>
-				<p><i>On opère la restriction sur la salariée par sa clé primaire, du fait qu'elle lui est unique</i>.</p>
-			</div>
-			<h3>C. La suppression d'enregistrements</h3>
-			<p><u>La suppression (irréversible) d'enregistrements</u> :</p>
-			<ul>
-				<li>se fait grâce à l'instruction <span class="text_purple">DELETE</span> sur une table spécifiée par la clause <span class="text_purple">FROM</span>,</li>
-				<li>les enregistrements concernés par cette suppression peuvent être limités à l'aide de <a href="#restrictions" class="approf_sig" title="Lien vers partie VII">critères de restriction</a> portés par la clause <span class="text_purple">WHERE</span> ; en l'absence de telles restrictions, tous les enregistrements de la table sont concernés.</li>
-			</ul>
-			<p><u>Syntaxe</u> :</p>
-				<div class="pad_left_indent marge_bot_3">
-					<span class="text_purple">DELETE FROM</span> nom_table
-					<br />[<span class="text_purple">WHERE</span> critere_restriction_1 <span class="text_purple">AND</span>/<span class="text_purple">OR</span> critere_restriction_2...];
-				</div>
-			<div class="exemp_sig">
-				<p><u>Exemple</u> : Dans une relation commande (num, date, numClient), la commande n°2476 a été annulée, elle peut donc être supprimé.</p>
-				<table class="tab_ss_bord  marge_bot_3">
-					<tbody>
-						<tr>
-							<td class="pad_left_indent"><span class="text_purple">DELETE FROM</span> commande <span class="text_purple">WHERE</span> num = <span class="text_vert">2476</span>;</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<h3>D. Une mise en perspective</h3>
-			<p>On notera que la saisie directe de requêtes SQL de manipulation n'a pas lieu d'être hors tâches d'administration de la base. Dans la plupart du temps ces requêtes sont insérées dans des programmes et leurs différentes valeurs (insérées, mises à jour) sont apportées par le programme à partir de différentes sources (traitement, formulaires...).</p>
-			<h2 id="restrictions">VII. Critères de restriction</h2>
-			<p>Les restrictions consistent à restreindre la portée de certaines requêtes aux seuls enregistrements respectant ces critères. La clause <span class="text_purple">WHERE</span> est le premier critère utilisé.</p>
-			<p><u>Des critères de restriction peuvent être utilisés par des requêtes</u> :</p>
-			<ul>
-				<li>d'interrogation (<span class="text_purple">SELECT</span>) : ils peuvent alors porter sur une à plusieurs tables (avec des <a href="#jointures" class="approf_sig" title="Lien vers partie VIII">critères de jointure</a>),</li>
-				<li>de mise à jour (<span class="text_purple">UPDATE</span>) et de suppression (<span class="text_purple">DELETE</span>) pour déterminer quels sont les enregistrements d'une table concernés par ces manipulations.</li>
-			</ul>
-			<p>Un critère de restriction associe généralement une expression liée aux champs, à une ou des valeurs définies. <u>La mise en relation de ces expressions avec ces valeurs se fait au moyen</u> :</p>
-			<ul>
-				<li>d'opérateur de comparaison : =, >, &lt;, >=, &lt;=, &lt;> (différent de ; dans certaines versions SQL, il est noté !=) ;</li>
-				<li>d'opérateurs SQL :
+					<div class="h3-container">
+						<h3>D. La modification de la structure d'une table</h3>
+						<p><u>Deux types de modification sont possibles</u> :</p>
+						<table class="tab_sig">
+							<thead>
+								<tr>
+									<td class="td_sig td_background_sig td_large">Type de modification</td>
+									<td class="td_sig td_background_sig td_large">Élément modifié</td>
+									<td class="td_sig td_background_sig td_large">Syntaxe en SQL</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="3" class="td_sig td_milieu">Ajout</td>
+									<td class="td_sig">un champ</td>
+									<td class="td_sig"><span class="text_purple">ALTER TABLE</span> nom_table <span class="text_purple">ADD</span> champ_ajoute_1 <span class="text_blue">Type</span> [, champ_ajoute_2 <span class="text_blue">Type</span>,...];</td>
+								</tr>
+								<tr>
+									<td class="td_sig">une clé primaire</td>
+									<td class="td_sig"><span class="text_purple">ALTER TABLE</span> nom_table <span class="text_purple">ADD PRIMARY KEY</span> (champ_cle_primaire [,...]);</td>
+								</tr>
+								<tr>
+									<td class="td_sig">une clé étrangère</td>
+									<td class="td_sig"><span class="text_purple">ALTER TABLE</span> nom_table <span class="text_purple">ADD FOREIGN KEY</span> (champ_cle_etrangere [,...]) <span class="text_purple">REFERENCES</span> nom_table_source (champ_table_source [,...]);</td>
+								</tr>
+								<tr>
+									<td rowspan="2" class="td_sig td_milieu">Suppression</td>
+									<td class="td_sig">un champ</td>
+									<td class="td_sig"><span class="text_purple">ALTER TABLE</span> nom_table <span class="text_purple">DROP</span> champ_supp_1 [, champ_supp_2,...];</td>
+								</tr>
+								<tr>
+									<td class="td_sig">une clé</td>
+									<td class="td_sig"><span class="text_purple">ALTER TABLE</span> nom_table <span class="text_purple">DROP PRIMARY KEY</span>;</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+				<section class="h2-container">
+					<h2 id="LMD">VI. SQL - Langage de manipulation des données</h2>
+					<p><u>Le langage de manipulation des données permet la modification du contenu d'une table selon trois actions</u> :</p>
 					<ul>
-						<li><span class="text_purple">BETWEEN</span> : qui sélectionne des valeurs dans une plage donnée ; les valeurs peuvent être des nombres, du texte ou des dates ; l'opérateur est inclusif, les valeurs données sont incluses dans la requête,</li>
-						<li><span class="text_purple">LIKE</span> : permettant de faire des recherches en utilisant des "jokers", c'est-à-dire des caractères qui représentent n'importe quel caractère ('&amp;' représente n'importe quelle chaîne de caractères, quelle que soit sa longueur et '_' représente un seul caractère, voir exemples plus bas),</li>
-						<li><span class="text_purple">IN</span> : qui permet de restreindre des valeurs (à placer entre parenthèses), il raccourci l'utilisation de multiples conditions <span class="text_purple">OR</span>.</li>
-						<li><span class="text_purple">NOT</span> : opérateur de négation,</li>
-						<li><span class="text_purple">AND</span> et <span class="text_purple">OR</span> servent à filtrer des enregistrements basés sur plus d'une condition :
+						<li>insérer un à plusieurs nouveaux enregistrements dans la table,</li>
+						<li>mettre à jour les valeurs d'un à plusieurs champs d'un ou plusieurs enregistrement de la table,</li>
+						<li>supprimer un à plusieurs enregistrements de la table.</li>
+					</ul>
+					<div class="h3-container">
+						<h3>A. L'insertion d'enregistrements</h3>
+						<p>L'instruction <span class="text_purple">INSERT</span> est complété par la clause <span class="text_purple">INTO</span>, qui indique le nom de la table complétée, en précisant éventuellement les colonnes (champs) affectées (les collones omises prendront la valeur <span class="text_purple">NULL</span> par défaut).</p>
+						<p>L'utilisation de la clause <span class="text_purple">VALUES</span> permet de créer un ou des enregistrements dont les valeurs sont passées en paramètres. Les données sont affectées aux champs dans l'ordre dans lequel ces champs ont été déclarés dans la clause <span class="text_purple">INTO</span>.</p>
+						<p><u>Il y a deux manières principales pour insérer des enregistrements</u> :</p>
+						<div class="pad_left_indent">
+							<span class="text_purple">INSERT INTO</span> nom_table <span class="text_purple">VALUES</span> (valeur_champ1 [, valeur_champ2,...]);
+						</div>
+						<p>et</p>
+						<p class="marge_bot_3 pad_left_indent"><span class="text_purple">INSERT INTO</span> nom_table (champ2[, champ5,...]) <span class="text_purple">VALUES</span> (valeur_champ2 [, valeur_champ5,...]);</p>
+						<div class="exemp_sig">
+							<p><u>Exemple</u> : <u>Insérons deux salariés dans la relation suivante</u> :</p>
+							<p>salarie (num, nom, prenom, date_embauche, salaire, poste)<br />num est auto-incrémenté.</p>
+							<div class="pad_left_3_indent">
+								<p><span class="text_purple">INSERT INTO</span> salarie <span class="text_purple">VALUES</span>
+								<br /><span class="pad_left_3_indent">(<span class="text_blue">NULL</span>, <span class="text_red">'Arist'</span>, <span class="text_red">'Léa'</span>, <span class="text_red">'2003-08-05'</span>, <span class="text_vert">1630.41</span>, <span class="text_red">'logisticienne'</span>),</span>
+								<br /><span class="pad_left_3_indent">(<span class="text_blue">NULL</span>, <span class="text_red">"Lakab"</span>, <span class="text_red">"Karim"</span>, <span class="text_red">'2011-12-22'</span>, , <span class="text_red">"ingénieur informatique"</span>);</span></p>
+							</div>
+							<p>Les valeurs sont insérées dans l'ordre des champs de la table.</p>
+							<p><span class="text_blue">NULL</span> est utilisé pour la valeur auto-incrémentée (les salariés recevront un numéro de salarié égal à celui du dernier salarié inséré +1 pour le premier et donc +2 pour le second).</p>
+							<p>La partie décimale du salaire est notée à l'aide d'un point puisque la virgule sert de séparateur des valeurs insérées.</p>
+							<p>Le salaire du deuxième salarié n'a pas encore été déterminé d'où l'absence de valeur entre les deux virgules correspondant à ce champ.</p>
+							<p>Par conséquent, l'insertion du deuxième salarié aurait pu aussi se faire en spécifiant les colonnes insérées (sans le salaire, ni le num car il est auto-incrémenté) :</p>
+							<div class="pad_left_3_indent">
+								<p><span class="text_purple">INSERT INTO</span> salarie (nom, prenom, date_embauche, poste) <span class="text_purple">VALUES</span><br /><span class="pad_left_3_indent">(<span class="text_red">"Lakab"</span>, <span class="text_red">"Karim"</span>, <span class="text_red">'2011-12-22'</span>, <span class="text_red">"ingénieur informatique"</span>);</span></p>
+							</div>
+						</div>
+						<p>On notera qu'il est possible d'insérer des enregistrements par une requête <span class="text_purple">SELECT</span> (projetant un nombre de valeurs correspondant au nombre de champs) grâce à l'enchaînement <span class="text_purple">INSERT INTO</span> ... <span class="text_purple">SELECT</span>, non documenté ici.</p>
+					</div>
+					<div class="h3-container">
+						<h3>B. La mise à jour de champs d'enregistrements</h3>
+						<p><u>La modification de données consiste à mettre à jour les valeurs d'un à plusieurs champs d'un à plusieurs enregistrements d'une table</u> :</p>
+						<ul>
+							<li>cette table est désignée par l'instruction <span class="text_purple">UPDATE</span>,</li>
+							<li>la ou les modification(s) à effectuer sont précisée(s) dans la clause <span class="text_purple">SET</span> en affectant (=) sa nouvelle valeur à chaque champ mis à jour (cette nouvelle valeur peut éventuellement être issue d'un calcul ou d'une sous-requête d'interrogation),</li>
+							<li>les enregistrements concernés par ces mises à jour peuvent être limités à l'aide de <b>critères de restriction</b> portés par les clauses <span class="text_purple">WHERE</span> (voir <a href="#criteres_restriction" class="approf_sig">partie VII</a>) ; en l'absence de telles restrictions, tous les enregistrements sont concernés.</li>
+						</ul>
+						<p><u>Syntaxe</u> :</p>
+						<div class="pad_left_indent marge_bot_4">
+							<span class="text_purple">UPDATE</span> nom_table
+							<br /><span class="text_purple">SET</span> champ_maj_1 = nouvelle_valeur [, champ_maj_2 = nouvelle_valeur...]
+							<br />[<span class="text_purple">WHERE</span> critere_restriction_1 <span class="text_purple">AND</span>/<span class="text_purple">OR</span> critere_restriction_2...];
+						</div>
+						<div class="exemp_sig">
+							<p><u>Exemples</u> :</p>
+							<p class="text_blue"><u>Ex 1 : Tous les salariés bénéficient d'une augmentation forfaitaire de 12€</u> :</p>
+							<div class="pad_left_indent">
+								<span class="text_purple">UPDATE</span> salarie <span class="text_purple">SET</span> salaire = salaire + <span class="text_vert">12</span>;
+							</div>
+							<p><i>Si le salaire de Karim est encore à Null lors de l'exécution de cette requête, il le restera (Null + 12 donne Null)</i>.</p>
+							<p class="text_blue"><u>Ex 2 : Léa Arist (salarié n°29) est désormais responsable commerciale</u> :</p>
+							<div class="pad_left_indent">
+								<span class="text_purple">UPDATE</span> salarie <span class="text_purple">SET</span> poste = <span class="text_red">"responsable commerciale"</span>
+								<br /><span class="text_purple">WHERE</span> num = <span class="text_vert">29</span>;
+							</div>
+							<p><i>On opère la restriction sur la salariée par sa clé primaire, du fait qu'elle lui est unique</i>.</p>
+						</div>
+					</div>
+					<div class="h3-container">
+						<h3>C. La suppression d'enregistrements</h3>
+						<p><u>La suppression (irréversible) d'enregistrements</u> :</p>
+						<ul>
+							<li>se fait grâce à l'instruction <span class="text_purple">DELETE</span> sur une table spécifiée par la clause <span class="text_purple">FROM</span>,</li>
+							<li>les enregistrements concernés par cette suppression peuvent être limités à l'aide de <a href="#restrictions" class="approf_sig" title="Lien vers partie VII">critères de restriction</a> portés par la clause <span class="text_purple">WHERE</span> ; en l'absence de telles restrictions, tous les enregistrements de la table sont concernés.</li>
+						</ul>
+						<p><u>Syntaxe</u> :</p>
+						<div class="pad_left_indent marge_bot_3">
+							<span class="text_purple">DELETE FROM</span> nom_table
+							<br />[<span class="text_purple">WHERE</span> critere_restriction_1 <span class="text_purple">AND</span>/<span class="text_purple">OR</span> critere_restriction_2...];
+						</div>
+						<div class="exemp_sig">
+							<p><u>Exemple</u> : Dans une relation commande (num, date, numClient), la commande n°2476 a été annulée, elle peut donc être supprimé.</p>
+							<table class="tab_ss_bord  marge_bot_3">
+								<tbody>
+									<tr>
+										<td class="pad_left_indent"><span class="text_purple">DELETE FROM</span> commande <span class="text_purple">WHERE</span> num = <span class="text_vert">2476</span>;</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="h3-container">
+						<h3>D. Une mise en perspective</h3>
+						<p>On notera que la saisie directe de requêtes SQL de manipulation n'a pas lieu d'être hors tâches d'administration de la base. Dans la plupart du temps ces requêtes sont insérées dans des programmes et leurs différentes valeurs (insérées, mises à jour) sont apportées par le programme à partir de différentes sources (traitement, formulaires...).</p>
+					</div>
+				</section>
+				<section class="h2-container">
+					<h2 id="restrictions">VII. Critères de restriction</h2>
+					<p>Les restrictions consistent à restreindre la portée de certaines requêtes aux seuls enregistrements respectant ces critères. La clause <span class="text_purple">WHERE</span> est le premier critère utilisé.</p>
+					<p><u>Des critères de restriction peuvent être utilisés par des requêtes</u> :</p>
+					<ul>
+						<li>d'interrogation (<span class="text_purple">SELECT</span>) : ils peuvent alors porter sur une à plusieurs tables (avec des <a href="#jointures" class="approf_sig" title="Lien vers partie VIII">critères de jointure</a>),</li>
+						<li>de mise à jour (<span class="text_purple">UPDATE</span>) et de suppression (<span class="text_purple">DELETE</span>) pour déterminer quels sont les enregistrements d'une table concernés par ces manipulations.</li>
+					</ul>
+					<p>Un critère de restriction associe généralement une expression liée aux champs, à une ou des valeurs définies. <u>La mise en relation de ces expressions avec ces valeurs se fait au moyen</u> :</p>
+					<ul>
+						<li>d'opérateur de comparaison : =, >, &lt;, >=, &lt;=, &lt;> (différent de ; dans certaines versions SQL, il est noté !=) ;</li>
+						<li>d'opérateurs SQL :
 							<ul>
-								<li>l'opérateur <span class="text_purple">AND</span> renvoie des enregistrements si toutes les conditions qu'il sépare sont vraies,</li>
-								<li>l'opérateur <span class="text_purple">OR</span> renvoie des enregistrements si une des conditions qu'il sépare est vraie.</li>
+								<li><span class="text_purple">BETWEEN</span> : qui sélectionne des valeurs dans une plage donnée ; les valeurs peuvent être des nombres, du texte ou des dates ; l'opérateur est inclusif, les valeurs données sont incluses dans la requête,</li>
+								<li><span class="text_purple">LIKE</span> : permettant de faire des recherches en utilisant des "jokers", c'est-à-dire des caractères qui représentent n'importe quel caractère ('&amp;' représente n'importe quelle chaîne de caractères, quelle que soit sa longueur et '_' représente un seul caractère, voir exemples plus bas),</li>
+								<li><span class="text_purple">IN</span> : qui permet de restreindre des valeurs (à placer entre parenthèses), il raccourci l'utilisation de multiples conditions <span class="text_purple">OR</span>.</li>
+								<li><span class="text_purple">NOT</span> : opérateur de négation,</li>
+								<li><span class="text_purple">AND</span> et <span class="text_purple">OR</span> servent à filtrer des enregistrements basés sur plus d'une condition :
+									<ul>
+										<li>l'opérateur <span class="text_purple">AND</span> renvoie des enregistrements si toutes les conditions qu'il sépare sont vraies,</li>
+										<li>l'opérateur <span class="text_purple">OR</span> renvoie des enregistrements si une des conditions qu'il sépare est vraie.</li>
+									</ul>
+								</li>
 							</ul>
 						</li>
 					</ul>
-				</li>
-			</ul>
-			<p><u>Illustrons ces opérateurs par des exemples</u> :</p>
-			<div class="exemp_sig">
-				<p><u>Exemples</u> : Nous ne présenterons les requêtes exemples qu'à partir de la clause <span class="text_purple">WHERE</span> puisque la syntaxe y est commune aux trois types de requêtes concernées. <u>La relation exemple est</u> :</p>
-				<p>salarie (num, nom, prenom, dateNaissance, dateEmbauche, salaire, poste)</p>
-				<table class="tab_ss_bord marge_bot_2">
-					<thead>
-						<tr>
-							<td class="text_blue pad_left_indent"><u>Ex 1 : requête restreinte aux salariés qui occupent le poste « commercial »</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> poste=<span class="text_red">"commercial"</span>;</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord marge_bot_2">
-					<thead>
-						<tr>
-							<td class="text_blue pad_left_indent"><u>Ex 2 : requête restreinte aux salariés ayant un salaire d'au moins 2 000€</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> salaire>=<span class="text_vert">2000</span>;</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord marge_bot_2">
-					<thead>
-						<tr>
-							<td class="text_blue pad_left_indent"><u>Ex 3 : requête restreinte aux salariés occupant le poste « commercial » et ayant un salaire inférieur à 2 000€</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> poste=<span class="text_red">"commercial"</span> <span class="text_purple">AND</span> salaire&lt;<span class="text_vert">2000</span>;</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord marge_bot_2">
-					<thead>
-						<tr>
-							<td class="text_blue pad_left_indent"><u>Ex 4 : requête restreinte aux salariés occupant le poste « commercial » ou ayant un salaire inférieur à 2 000€</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> poste=<span class="text_red">"commercial"</span> <span class="text_purple">OR</span> salaire&lt;<span class="text_vert">2000</span>;</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord marge_bot_2">
-					<thead>
-						<tr>
-							<td class="text_blue pad_left_indent"><u>Ex 5 : requête restreinte aux salariés embauchés avant 2004</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> dateEmbauche&lt;<span class="text_red">'01/01/2004'</span>;</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord marge_bot_2">
-					<thead>
-						<tr>
-							<td class="text_blue pad_left_indent"><u>Ex 6 : requête restreinte aux salariés dont le salaire est compris entre 1 000 et 2 000€ (inclus)</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> salaire <span class="text_purple">BETWEEN</span> <span class="text_vert">1000</span> <span class="text_purple">AND</span> <span class="text_vert">2000</span>;</td>
-						</tr>
-						<tr>
-							<td class="pad_left_indent"><u>ou</u></td>
-						</tr>
-						<tr>
-							<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> salaire>=<span class="text_vert">1000</span> <span class="text_purple">AND</span> salaire&lt;=<span class="text_vert">2000</span>;</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord marge_bot_2">
-					<thead>
-						<tr>
-							<td colspan="2" class="text_blue pad_left_indent"><u>Ex 7 : requête restreinte aux salariés embauchés en 2012</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td colspan="2" class="pad_left_2_indent"><span class="text_purple">WHERE</span> dateEmbauche <span class="text_purple">BETWEEN</span> <span class="text_red">'01/01/2012'</span> <span class="text_purple">AND</span> <span class="text_red">'31/12/2012'</span>;</td>
-						</tr>
-						<tr>
-							<td colspan="2" class="pad_left_indent"><u>ou</u></td>
-						</tr>
-						<tr>
-							<td class="pad_left_2_indent td_haut_gauche"><span class="text_purple">WHERE</span> <span class="text_blue">YEAR</span>(dateEmbauche)=<span class="text_vert">2012</span>;</td>
-							<td class="td_larg_55 td_haut_gauche"><i>La fonction <span class="text_blue">YEAR</span> extrait l'année d'une date (elle ne fait pas partie des normes SQL et n'est pas prise en charge par tous les SGBDR)</i>.</td>
-						</tr>
-						<tr>
-							<td colspan="2" class="pad_left_indent"><u>ou</u></td>
-						</tr>
-						<tr>
-							<td colspan="2" class="pad_left_2_indent"><span class="text_purple">WHERE</span> dateEmbauche>=<span class="text_red">'01/01/2012'</span> <span class="text_purple">AND</span> dateEmbauche&lt;=<span class="text_red">'31/12/2012'</span>;</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord marge_bot_2">
-					<thead>
-						<tr>
-							<td class="text_blue pad_left_indent"><u>Ex 8 : requête restreinte aux salariés occupant le poste « commercial » ou « ingénieur »</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> poste <span class="text_purple">IN</span> (<span class="text_red">"commercial"</span> <span class="text_purple">OR</span> <span class="text_red">"ingénieur"</span>);</td>
-						</tr>
-						<tr>
-							<td class="pad_left_indent"><u>ou</u></td>
-						</tr>
-						<tr>
-							<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> poste=<span class="text_red">"commercial"</span> <span class="text_purple">OR</span> poste=<span class="text_red">"ingénieur"</span>;</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord marge_bot_2">
-					<thead>
-						<tr>
-							<td class="text_blue pad_left_indent"><u>Ex 9 : requête restreinte aux salariés dont le nom commence par un "M"</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> nom <span class="text_purple">LIKE</span> <span class="text_red">"M%"</span>;</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord marge_bot_2">
-					<thead>
-						<tr>
-							<td class="text_blue pad_left_indent"><u>Ex 10 : requête restreinte aux salariés dont l'avant dernier caractère du prénom n'est pas un "z"</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> prenom <span class="text_purple">NOT LIKE</span> <span class="text_red">"%z_"</span>;</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord marge_bot_2">
-					<thead>
-						<tr>
-							<td class="text_blue pad_left_indent"><u>Ex 11 : requête restreinte aux salariés qui n'ont pas été embauché en 2007</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> dateEmbauche <span class="text_purple">NOT BETWEEN</span> <span class="text_red">'01/01/2007'</span> <span class="text_purple">AND</span> <span class="text_red">'31/12/2007'</span>;</td>
-						</tr>
-						<tr>
-							<td class="pad_left_indent"><u>ou</u></td>
-						</tr>
-						<tr>
-							<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> <span class="text_blue">YEAR</span>(dateEmbauche)&lt;><span class="text_vert">2007</span>;</td>
-						</tr>
-						<tr>
-							<td class="pad_left_indent"><u>ou</u></td>
-						</tr>
-						<tr>
-							<td class="pad_left_2_indent"><span class="text_purple">WHERE NOT</span> <span class="text_blue">YEAR</span>(dateEmbauche)=<span class="text_vert">2007</span>;</td>
-						</tr>
-						<tr>
-							<td class="pad_left_indent"><u>ou</u></td>
-						</tr>
-						<tr>
-							<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> dateEmbauche&lt;<span class="text_red">'01/01/2007'</span> <span class="text_purple">OR</span> dateEmbauche><span class="text_red">'31/12/2007'</span>;</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord marge_bot_2">
-					<thead>
-						<tr>
-							<td class="text_blue pad_left_indent"><u>Ex 12 : requête restreinte aux salariés qui n'occupent ni un poste de « commercial » ni un poste d'« ingénieur »</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> poste <span class="text_purple">NOT IN</span> (<span class="text_red">"commercial"</span>, <span class="text_red">"ingénieur"</span>);</td>
-						</tr>
-						<tr>
-							<td class="pad_left_indent"><u>ou</u></td>
-						</tr>
-						<tr>
-							<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> poste&lt;><span class="text_red">"commercial"</span> <span class="text_purple">AND</span> poste&lt;><span class="text_red">"ingénieur"</span>;</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord marge_bot_2">
-					<thead>
-						<tr>
-							<td class="text_blue pad_left_indent"><u>Ex 13 : requête restreinte aux commerciaux dont le salaire est supérieur à 2 000€, ou aux ingénieurs (peu importe leur salaire)</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> (poste=<span class="text_red">"commercial"</span> <span class="text_purple">AND</span> salaire><span class="text_vert">2000</span>) <span class="text_purple">OR</span> poste=<span class="text_red">"ingénieur"</span>;</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord marge_bot_2">
-					<thead>
-						<tr>
-							<td class="text_blue pad_left_indent"><u>Ex 14 : requête restreinte aux commerciaux ou aux ingénieurs dont le salaire (aux deux) est supérieur à 2 000€</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> (poste=<span class="text_red">"commercial"</span> <span class="text_purple">OR</span> poste=<span class="text_red">"ingénieur"</span>) <span class="text_purple">AND</span> salaire><span class="text_vert">2000</span>;</td>
-						</tr>
-						<tr>
-							<td class="pad_left_indent"><u>ou</u></td>
-						</tr>
-						<tr>
-							<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> poste <span class="text_purple">IN</span> (<span class="text_red">"commercial"</span>, <span class="text_red">"ingénieur"</span>) <span class="text_purple">AND</span> poste><span class="text_vert">2000</span>;</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<h2 id="LID">VIII. SQL - Langage d'interrogation des données - 1</h2>
-			<p>Le principal intérêt d'une base de données réside dans son exploitation : les données sont mémorisées dans le but d'être extraites, par des requêtes d'interrogation, notamment pour les transformer en de nouvelles informations.</p>
-			<h3>A. La projection</h3>
-			<p>La <b>projection</b> est l'opération qui consiste à <b>délivrer des données</b>. Le plus souvent, les requêtes sont exécutées par des programmes pour un affichage ou un traitement.</p>
-			<div class="exemp_sig">
-				<p><u>Exemple</u> : La projection d'une donnée « sexe » délivre les valeurs « F » et « M » qui ne seront pas forcément affichées telles quelles, mais qui peuvent être utilisées pour personnaliser un affichage (« Chère » ou « Cher »).</p>
-			</div>
-			<p>L'instruction <span class="text_purple">SELECT</span> (<span class="text_purple">ALL</span> par défaut si non spécifié) détermine les données à projeter en provenance de tables précisées dans la clause <span class="text_purple">FROM</span>.</p>
-			<p><u>Syntaxe</u> :</p>
-			<div class="pad_left_indent marge_bot_3">
-				<span class="text_purple">SELECT</span> champ_projete_1 [, champ_projete_2...] <span class="text_purple">FROM</span> nom_table;
-			</div>
-			<p><u>Syntaxe pour avoir directement tous les champs de la table projetés</u> :</p>
-			<div class="pad_left_indent marge_bot_4">
-				<span class="text_purple">SELECT</span> * <span class="text_purple">FROM</span> nom_table;
-			</div>
-			<div class="exemp_sig">
-				<p><u>Exemples</u> : <u>Utilisons la relation</u> :</p>
-				<p>salarie (num, nom, prenom, dateEmbauche, salaire, indemnite, poste)</p>
-				<table class="tab_ss_bord">
-					<thead>
-						<tr>
-							<td colspan="2" class="text_blue"><u>Ex 1 : liste des salariés avec leur nom et prénom</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> nom, prenom <span class="text_purple">FROM</span> salarie;</td>
-							<td class="td_haut_gauche"><i>La requête s'exécute enregistrement par enregistrement de la table et pour chacun d'eux, projette le nom et le prénom</i>.</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord marge_top_3">
-					<thead>
-						<tr>
-							<td colspan="2" class="text_blue"><u>Ex 2 : liste des libellés de postes de l'organisation</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> poste <span class="text_purple">FROM</span> salarie;</td>
-							<td class="td_haut_gauche"><i>Un poste sera projeté par salarié, même si plusieurs salariés occupent le même, ce qui est peu pertinent</i>.</td>
-						</tr>
-						<tr>
-							<td colspan="2"><u>Différent de</u></td>
-						</tr>
-						<tr>
-							<td class="td_haut_gauche pad_left_indent"><span class="text_purple">SELECT DISTINCT</span> poste <span class="text_purple">FROM</span> salarie;</td>
-							<td class="td_haut_gauche"><i>Seuls les enregistrements différents sur le(s) champ(s) demandé(s) seront projetés grâce à la clause <span class="text_purple">DISTINCT</span></i>.</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord marge_top_3 marge_bot_3">
-					<thead>
-						<tr>
-							<td colspan="2" class="text_blue"><u>Ex 3 : liste des salariés avec leur rémunération</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> nom, prenom, salaire+indemnite <span class="text_purple">FROM</span> salarie;</td>
-							<td class="td_haut_gauche"><i>La rémunération est une donnée calculée</i>.</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<h3>B. Les tris</h3>
-			<p>Les enregistrements projetés ne sont pas triés par défaut. On peut spécifier des critères hiérarchisés de tri grâce à la clause facultative <span class="text_purple">ORDER BY</span>.</p>
-			<p><u>Syntaxe</u> :</p>
-				<div class="pad_left_indent marge_bot_4">
-					<span class="text_purple">SELECT</span> champ_projete_1 [, champ_projete_2...] <span class="text_purple">FROM</span> nom_table
-					<br />[<span class="text_purple">ORDER BY</span> champ_tri_1 [DESC], champ_tri_2 [DESC]...];
-				</div>
-			<p>Les tris ont lieu selon l'ordre spécifié dans la clause <span class="text_purple">ORDER BY</span>. Pour chaque critère de tri, le classement peut être ascendant (<span class="text_purple">ASC</span> par défaut si non spécifié) ou descendant (<span class="text_purple">DESC</span> à spécifier).</p>
-			<div class="exemp_sig">
-				<p><u>Exemples</u> :</p>
-				<table class="tab_ss_bord">
-					<thead>
-						<tr>
-							<td colspan="2" class="text_blue"><u>Ex 4 : liste alphabétique des salariés</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> nom, prenom <span class="text_purple">FROM</span> salarie <span class="text_purple">ORDER BY</span> nom <span class="text_purple">ASC</span>, prenom <span class="text_purple">ASC</span>;</td>
-							<td class="td_haut_gauche"><i><span class="text_purple">ASC</span> est facultatif</i>.</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord marge_top_3">
-					<thead>
-						<tr>
-							<td colspan="2" class="text_blue"><u>Ex 5 : liste des salariés triés par salaires décroissants</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> nom, prenom <span class="text_purple">FROM</span> salarie <span class="text_purple">ORDER BY</span> salaire <span class="text_purple">DESC</span>;</td>
-							<td class="td_haut_gauche"><i>Un champ figurant dans la clause <span class="text_purple">ORDER BY</span> ne figure pas forcément dans l'instruction <span class="text_purple">SELECT</span></i>.</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord marge_top_3 marge_bot_3">
-					<thead>
-						<tr>
-							<td colspan="2" class="text_blue"><u>Ex 6 : liste des salariés triés par rémunération décroissante, celle-ci étant projetée</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> nom, prenom, salaire+indemnite  <span class="text_purple">AS</span> remuneration <span class="text_purple">FROM</span> salarie <span class="text_purple">ORDER BY</span> remuneration <span class="text_purple">DESC</span>;</td>
-							<td class="td_haut_gauche"><i>La clause <span class="text_purple">AS</span> (dans l'instruction <span class="text_purple">SELECT</span>) permet de définir un alias (nommage) réutilisable</i>.</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<p>À noter que les critères de restrictions (partie VII) prennent place avant la clause <span class="text_purple">ORDER BY</span>.</p>
-			<h3 id="jointures">C. Les jointures</h3>
-			<p>Les jointures permettent d'exploiter pleinement le modèle relationnel des tables d'une base de données. Elles sont faites pour mettre en relation des tables concourant à rechercher la réponse à des interrogations. Une jointure permet donc de combiner les colonnes (champs) de plusieurs tables. Les jointures entre tables s'effectuent en imposant l'égalité des valeurs d'une colonne d'une table à une colonne d'une autre table (on parle alors de jointure naturelle).</p>
-			<div class="exemp_sig">
-				<p><u>Exemple</u> : <u>Considérons le schéma relationnel suivant</u> :</p>
-				<p><b>service</b> (num, libelle, budget)</p>
-					<div class="pad_left_indent marge_top_neg2">
-						clé primaire : num (auto-incrémenté)
+					<p><u>Illustrons ces opérateurs par des exemples</u> :</p>
+					<div class="exemp_sig">
+						<p><u>Exemples</u> : Nous ne présenterons les requêtes exemples qu'à partir de la clause <span class="text_purple">WHERE</span> puisque la syntaxe y est commune aux trois types de requêtes concernées. <u>La relation exemple est</u> :</p>
+						<p>salarie (num, nom, prenom, dateNaissance, dateEmbauche, salaire, poste)</p>
+						<table class="tab_ss_bord marge_bot_2">
+							<thead>
+								<tr>
+									<th class="text_blue pad_left_indent"><u>Ex 1 : requête restreinte aux salariés qui occupent le poste « commercial »</u> :</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> poste=<span class="text_red">"commercial"</span>;</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="tab_ss_bord marge_bot_2">
+							<thead>
+								<tr>
+									<th class="text_blue pad_left_indent"><u>Ex 2 : requête restreinte aux salariés ayant un salaire d'au moins 2 000€</u> :</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> salaire>=<span class="text_vert">2000</span>;</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="tab_ss_bord marge_bot_2">
+							<thead>
+								<tr>
+									<th class="text_blue pad_left_indent"><u>Ex 3 : requête restreinte aux salariés occupant le poste « commercial » et ayant un salaire inférieur à 2 000€</u> :</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> poste=<span class="text_red">"commercial"</span> <span class="text_purple">AND</span> salaire&lt;<span class="text_vert">2000</span>;</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="tab_ss_bord marge_bot_2">
+							<thead>
+								<tr>
+									<th class="text_blue pad_left_indent"><u>Ex 4 : requête restreinte aux salariés occupant le poste « commercial » ou ayant un salaire inférieur à 2 000€</u> :</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> poste=<span class="text_red">"commercial"</span> <span class="text_purple">OR</span> salaire&lt;<span class="text_vert">2000</span>;</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="tab_ss_bord marge_bot_2">
+							<thead>
+								<tr>
+									<th class="text_blue pad_left_indent"><u>Ex 5 : requête restreinte aux salariés embauchés avant 2004</u> :</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> dateEmbauche&lt;<span class="text_red">'01/01/2004'</span>;</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="tab_ss_bord marge_bot_2">
+							<thead>
+								<tr>
+									<th class="text_blue pad_left_indent"><u>Ex 6 : requête restreinte aux salariés dont le salaire est compris entre 1 000 et 2 000€ (inclus)</u> :</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> salaire <span class="text_purple">BETWEEN</span> <span class="text_vert">1000</span> <span class="text_purple">AND</span> <span class="text_vert">2000</span>;</td>
+								</tr>
+								<tr>
+									<td class="pad_left_indent"><u>ou</u></td>
+								</tr>
+								<tr>
+									<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> salaire>=<span class="text_vert">1000</span> <span class="text_purple">AND</span> salaire&lt;=<span class="text_vert">2000</span>;</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="tab_ss_bord marge_bot_2">
+							<thead>
+								<tr>
+									<th colspan="2" class="text_blue pad_left_indent"><u>Ex 7 : requête restreinte aux salariés embauchés en 2012</u> :</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="2" class="pad_left_2_indent"><span class="text_purple">WHERE</span> dateEmbauche <span class="text_purple">BETWEEN</span> <span class="text_red">'01/01/2012'</span> <span class="text_purple">AND</span> <span class="text_red">'31/12/2012'</span>;</td>
+								</tr>
+								<tr>
+									<td colspan="2" class="pad_left_indent"><u>ou</u></td>
+								</tr>
+								<tr>
+									<td class="pad_left_2_indent td_haut_gauche"><span class="text_purple">WHERE</span> <span class="text_blue">YEAR</span>(dateEmbauche)=<span class="text_vert">2012</span>;</td>
+									<td class="td_larg_55 td_haut_gauche"><i>La fonction <span class="text_blue">YEAR</span> extrait l'année d'une date (elle ne fait pas partie des normes SQL et n'est pas prise en charge par tous les SGBDR)</i>.</td>
+								</tr>
+								<tr>
+									<td colspan="2" class="pad_left_indent"><u>ou</u></td>
+								</tr>
+								<tr>
+									<td colspan="2" class="pad_left_2_indent"><span class="text_purple">WHERE</span> dateEmbauche>=<span class="text_red">'01/01/2012'</span> <span class="text_purple">AND</span> dateEmbauche&lt;=<span class="text_red">'31/12/2012'</span>;</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="tab_ss_bord marge_bot_2">
+							<thead>
+								<tr>
+									<th class="text_blue pad_left_indent"><u>Ex 8 : requête restreinte aux salariés occupant le poste « commercial » ou « ingénieur »</u> :</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> poste <span class="text_purple">IN</span> (<span class="text_red">"commercial"</span> <span class="text_purple">OR</span> <span class="text_red">"ingénieur"</span>);</td>
+								</tr>
+								<tr>
+									<td class="pad_left_indent"><u>ou</u></td>
+								</tr>
+								<tr>
+									<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> poste=<span class="text_red">"commercial"</span> <span class="text_purple">OR</span> poste=<span class="text_red">"ingénieur"</span>;</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="tab_ss_bord marge_bot_2">
+							<thead>
+								<tr>
+									<th class="text_blue pad_left_indent"><u>Ex 9 : requête restreinte aux salariés dont le nom commence par un "M"</u> :</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> nom <span class="text_purple">LIKE</span> <span class="text_red">"M%"</span>;</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="tab_ss_bord marge_bot_2">
+							<thead>
+								<tr>
+									<th class="text_blue pad_left_indent"><u>Ex 10 : requête restreinte aux salariés dont l'avant dernier caractère du prénom n'est pas un "z"</u> :</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> prenom <span class="text_purple">NOT LIKE</span> <span class="text_red">"%z_"</span>;</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="tab_ss_bord marge_bot_2">
+							<thead>
+								<tr>
+									<th class="text_blue pad_left_indent"><u>Ex 11 : requête restreinte aux salariés qui n'ont pas été embauché en 2007</u> :</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> dateEmbauche <span class="text_purple">NOT BETWEEN</span> <span class="text_red">'01/01/2007'</span> <span class="text_purple">AND</span> <span class="text_red">'31/12/2007'</span>;</td>
+								</tr>
+								<tr>
+									<td class="pad_left_indent"><u>ou</u></td>
+								</tr>
+								<tr>
+									<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> <span class="text_blue">YEAR</span>(dateEmbauche)&lt;><span class="text_vert">2007</span>;</td>
+								</tr>
+								<tr>
+									<td class="pad_left_indent"><u>ou</u></td>
+								</tr>
+								<tr>
+									<td class="pad_left_2_indent"><span class="text_purple">WHERE NOT</span> <span class="text_blue">YEAR</span>(dateEmbauche)=<span class="text_vert">2007</span>;</td>
+								</tr>
+								<tr>
+									<td class="pad_left_indent"><u>ou</u></td>
+								</tr>
+								<tr>
+									<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> dateEmbauche&lt;<span class="text_red">'01/01/2007'</span> <span class="text_purple">OR</span> dateEmbauche><span class="text_red">'31/12/2007'</span>;</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="tab_ss_bord marge_bot_2">
+							<thead>
+								<tr>
+									<th class="text_blue pad_left_indent"><u>Ex 12 : requête restreinte aux salariés qui n'occupent ni un poste de « commercial » ni un poste d'« ingénieur »</u> :</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> poste <span class="text_purple">NOT IN</span> (<span class="text_red">"commercial"</span>, <span class="text_red">"ingénieur"</span>);</td>
+								</tr>
+								<tr>
+									<td class="pad_left_indent"><u>ou</u></td>
+								</tr>
+								<tr>
+									<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> poste&lt;><span class="text_red">"commercial"</span> <span class="text_purple">AND</span> poste&lt;><span class="text_red">"ingénieur"</span>;</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="tab_ss_bord marge_bot_2">
+							<thead>
+								<tr>
+									<th class="text_blue pad_left_indent"><u>Ex 13 : requête restreinte aux commerciaux dont le salaire est supérieur à 2 000€, ou aux ingénieurs (peu importe leur salaire)</u> :</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> (poste=<span class="text_red">"commercial"</span> <span class="text_purple">AND</span> salaire><span class="text_vert">2000</span>) <span class="text_purple">OR</span> poste=<span class="text_red">"ingénieur"</span>;</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="tab_ss_bord marge_bot_2">
+							<thead>
+								<tr>
+									<th class="text_blue pad_left_indent"><u>Ex 14 : requête restreinte aux commerciaux ou aux ingénieurs dont le salaire (aux deux) est supérieur à 2 000€</u> :</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> (poste=<span class="text_red">"commercial"</span> <span class="text_purple">OR</span> poste=<span class="text_red">"ingénieur"</span>) <span class="text_purple">AND</span> salaire><span class="text_vert">2000</span>;</td>
+								</tr>
+								<tr>
+									<td class="pad_left_indent"><u>ou</u></td>
+								</tr>
+								<tr>
+									<td class="pad_left_2_indent"><span class="text_purple">WHERE</span> poste <span class="text_purple">IN</span> (<span class="text_red">"commercial"</span>, <span class="text_red">"ingénieur"</span>) <span class="text_purple">AND</span> poste><span class="text_vert">2000</span>;</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
-				<p><b>salarie</b> (num, nom, prenom, date_embauche, salaire, num_service)</p>
-					<div class="pad_left_indent marge_top_neg2">
-						clé primaire : num (auto-incrémenté)
+				</section>
+				<section class="h2-container">
+					<h2 id="LID">VIII. SQL - Langage d'interrogation des données - 1</h2>
+					<p>Le principal intérêt d'une base de données réside dans son exploitation : les données sont mémorisées dans le but d'être extraites, par des requêtes d'interrogation, notamment pour les transformer en de nouvelles informations.</p>
+					<div class="h3-container">
+						<h3>A. La projection</h3>
+						<p>La <b>projection</b> est l'opération qui consiste à <b>délivrer des données</b>. Le plus souvent, les requêtes sont exécutées par des programmes pour un affichage ou un traitement.</p>
+						<div class="exemp_sig">
+							<p><u>Exemple</u> : La projection d'une donnée « sexe » délivre les valeurs « F » et « M » qui ne seront pas forcément affichées telles quelles, mais qui peuvent être utilisées pour personnaliser un affichage (« Chère » ou « Cher »).</p>
+						</div>
+						<p>L'instruction <span class="text_purple">SELECT</span> (<span class="text_purple">ALL</span> par défaut si non spécifié) détermine les données à projeter en provenance de tables précisées dans la clause <span class="text_purple">FROM</span>.</p>
+						<p><u>Syntaxe</u> :</p>
+						<div class="pad_left_indent marge_bot_3">
+							<span class="text_purple">SELECT</span> champ_projete_1 [, champ_projete_2...] <span class="text_purple">FROM</span> nom_table;
+						</div>
+						<p><u>Syntaxe pour avoir directement tous les champs de la table projetés</u> :</p>
+						<div class="pad_left_indent marge_bot_4">
+							<span class="text_purple">SELECT</span> * <span class="text_purple">FROM</span> nom_table;
+						</div>
+						<div class="exemp_sig">
+							<p><u>Exemples</u> : <u>Utilisons la relation</u> :</p>
+							<p>salarie (num, nom, prenom, dateEmbauche, salaire, indemnite, poste)</p>
+							<table class="tab_ss_bord">
+								<thead>
+									<tr>
+										<td colspan="2" class="text_blue"><u>Ex 1 : liste des salariés avec leur nom et prénom</u> :</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> nom, prenom <span class="text_purple">FROM</span> salarie;</td>
+										<td class="td_haut_gauche"><i>La requête s'exécute enregistrement par enregistrement de la table et pour chacun d'eux, projette le nom et le prénom</i>.</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="tab_ss_bord marge_top_3">
+								<thead>
+									<tr>
+										<td colspan="2" class="text_blue"><u>Ex 2 : liste des libellés de postes de l'organisation</u> :</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> poste <span class="text_purple">FROM</span> salarie;</td>
+										<td class="td_haut_gauche"><i>Un poste sera projeté par salarié, même si plusieurs salariés occupent le même, ce qui est peu pertinent</i>.</td>
+									</tr>
+									<tr>
+										<td colspan="2"><u>Différent de</u></td>
+									</tr>
+									<tr>
+										<td class="td_haut_gauche pad_left_indent"><span class="text_purple">SELECT DISTINCT</span> poste <span class="text_purple">FROM</span> salarie;</td>
+										<td class="td_haut_gauche"><i>Seuls les enregistrements différents sur le(s) champ(s) demandé(s) seront projetés grâce à la clause <span class="text_purple">DISTINCT</span></i>.</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="tab_ss_bord marge_top_3 marge_bot_3">
+								<thead>
+									<tr>
+										<td colspan="2" class="text_blue"><u>Ex 3 : liste des salariés avec leur rémunération</u> :</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> nom, prenom, salaire+indemnite <span class="text_purple">FROM</span> salarie;</td>
+										<td class="td_haut_gauche"><i>La rémunération est une donnée calculée</i>.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
-					<div class="pad_left_indent">
-						clé étrangère : num_service en référence à num de la relation service
+					<div class="h3-container">
+						<h3>B. Les tris</h3>
+						<p>Les enregistrements projetés ne sont pas triés par défaut. On peut spécifier des critères hiérarchisés de tri grâce à la clause facultative <span class="text_purple">ORDER BY</span>.</p>
+						<p><u>Syntaxe</u> :</p>
+						<div class="pad_left_indent marge_bot_4">
+							<span class="text_purple">SELECT</span> champ_projete_1 [, champ_projete_2...] <span class="text_purple">FROM</span> nom_table
+							<br />[<span class="text_purple">ORDER BY</span> champ_tri_1 [DESC], champ_tri_2 [DESC]...];
+						</div>
+						<p>Les tris ont lieu selon l'ordre spécifié dans la clause <span class="text_purple">ORDER BY</span>. Pour chaque critère de tri, le classement peut être ascendant (<span class="text_purple">ASC</span> par défaut si non spécifié) ou descendant (<span class="text_purple">DESC</span> à spécifier).</p>
+						<div class="exemp_sig">
+							<p><u>Exemples</u> :</p>
+							<table class="tab_ss_bord">
+								<thead>
+									<tr>
+										<td colspan="2" class="text_blue"><u>Ex 4 : liste alphabétique des salariés</u> :</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> nom, prenom <span class="text_purple">FROM</span> salarie <span class="text_purple">ORDER BY</span> nom <span class="text_purple">ASC</span>, prenom <span class="text_purple">ASC</span>;</td>
+										<td class="td_haut_gauche"><i><span class="text_purple">ASC</span> est facultatif</i>.</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="tab_ss_bord marge_top_3">
+								<thead>
+									<tr>
+										<td colspan="2" class="text_blue"><u>Ex 5 : liste des salariés triés par salaires décroissants</u> :</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> nom, prenom <span class="text_purple">FROM</span> salarie <span class="text_purple">ORDER BY</span> salaire <span class="text_purple">DESC</span>;</td>
+										<td class="td_haut_gauche"><i>Un champ figurant dans la clause <span class="text_purple">ORDER BY</span> ne figure pas forcément dans l'instruction <span class="text_purple">SELECT</span></i>.</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="tab_ss_bord marge_top_3 marge_bot_3">
+								<thead>
+									<tr>
+										<td colspan="2" class="text_blue"><u>Ex 6 : liste des salariés triés par rémunération décroissante, celle-ci étant projetée</u> :</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> nom, prenom, salaire+indemnite  <span class="text_purple">AS</span> remuneration <span class="text_purple">FROM</span> salarie <span class="text_purple">ORDER BY</span> remuneration <span class="text_purple">DESC</span>;</td>
+										<td class="td_haut_gauche"><i>La clause <span class="text_purple">AS</span> (dans l'instruction <span class="text_purple">SELECT</span>) permet de définir un alias (nommage) réutilisable</i>.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p>À noter que les critères de restrictions (partie VII) prennent place avant la clause <span class="text_purple">ORDER BY</span>.</p>
 					</div>
-				<table class="tab_ss_bord marge_bot_2">
-					<thead>
-						<tr>
-							<td class="text_blue"><u>ex 7 : liste alphabétique des salariés (toutes les données) avec le libellé de leur service</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="pad_left_indent"><span class="text_purple">SELECT</span> salarie.*, libelle <span class="text_purple">FROM</span> salarie, service
-							<br /><span class="text_purple">ORDER BY</span> nom, prenom;</td>
-						</tr>
-						<tr>
-							<td><i>En l'absence de jointure, le SGBDR ne « sait » pas comment associer les tables et projette pour chaque ligne de la première table, l'ensemble des lignes de la seconde. Si les tables <b>service</b> et <b>salarie</b> comporte respectivement 5 et 10 enregistrements, 50 seront projetés (au lieu des 10 souhaités).</i></td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord marge_bot_3 marge_top_neg2">
-					<tbody>
-						<tr>
-							<td class="pad_left_indent"><span class="text_purple">SELECT</span> salarie.*, libelle <span class="text_purple">FROM</span> salarie, service
-							<br /><span class="text_purple">WHERE</span> service.num = salarie.num_service
-							<br /><span class="text_purple">ORDER BY</span> nom, prenom;</td>
-						</tr>
-						<tr>
-							<td><div class="marge_bot_1"><i>Le critère de jointure associe la clé primaire num de la table <b>service</b> à la clé étrangère num_service de la table <b>salarie</b> qui lui fait référence</i>.</div>
-							<div><i>service.num correspond à un <b>préfixage</b> du champ num par le nom de la table à laquelle il appartient ; ce préfixage est ici obligatoire car il existe aussi un champ num dans la table <b>salarie</b>, or le SGBDR doit savoir lequel utiliser. Tous les champs peuvent être préfixés mais ce n'est obligatoire que pour les champs qui possédent un champ homonyme dans au moins une des autres tables appelées dans la clause <span class="text_purple">FROM</span></i>.</div></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<h3>D. La clause FROM</h3>
-			<p>La clause <span class="text_purple">FROM</span> énumère les tables dont au moins un champ est projeté ou nécessaire à un critère de restriction ou de jointure (certaines tables peuvent n'être qu'un intermédiaire pour établir des jointures entre toutes les tables).</p>
-			<h3>E. Une mise en perspective</h3>
-			<p>Le développeur doit optimiser les temps d'exécution des requêtes en exécutant les critères de restriction avant les jointures (exécutées avant, elles prendraient du temps à mettre en relation des enregistrements dont une partie seraient ensuite éliminée par les restrictions).</p>
-			<h2>IX. SQL - Langage d'interrogation des données - 2</h2>
-			<h3>A. Les fonctions d'agrégat</h3>
-			<p>Nous avons vu qu'il était possible d'introduire des calculs dans l'instruction <span class="text_purple">SELECT</span> ou dans les clauses <span class="text_purple">WHERE</span> ou <span class="text_purple">ORDER BY</span> mais il s'agit alors de calculs répétés de manière indépendante pour chaque enregistrement (calcul « en ligne »). Une <b>opération</b> est au contraire réalisée en colonne et concerne simultanément <b>tous les enregistrements d'un champ</b>.</p>
-			<table class="tab_sig">
-				<caption>Les fonctions d'agrégat SQL</caption>
-				<thead>
-					<tr>
-						<td class="td_background_sig td_sig td_milieu">Fonction d'agrégat SQL</td>
-						<td class="td_background_sig td_sig td_milieu">Description</td>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td class="td_sig"><span class="text_purple">SUM</span> (...)</td>
-						<td class="td_sig">retourne la somme des valeurs de données d'un champ de type numérique ou date/heure</td>
-					</tr>
-					<tr>
-						<td class="td_sig"><span class="text_purple">AVG</span> (...)</td>
-						<td class="td_sig">retourne la moyenne des valeurs de données d'un champ de type numérique ou date/heure</td>
-					</tr>
-					<tr>
-						<td class="td_sig"><span class="text_purple">COUNT</span> (...)</td>
-						<td class="td_sig">retourne le (compte du) nombre de lignes (enregistrements) d'une sélection</td>
-					</tr>
-					<tr>
-						<td class="td_sig"><span class="text_purple">MIN</span> (...)</td>
-						<td class="td_sig">retourne la plus petite valeur de données d'un champ de type numérique ou date/heure</td>
-					</tr>
-					<tr>
-						<td class="td_sig"><span class="text_purple">MAX</span> (...)</td>
-						<td class="td_sig">retourne la plus grande valeur de données d'un champ de type numérique ou date/heure</td>
-					</tr>
-				</tbody>
-			</table>
-			<p>Une opération d'agrégat effectuée dans l'instruction <span class="text_purple">SELECT</span> délivrera <b>un seul enregistrement-résultat</b>, la clause <span class="text_purple">ORDER BY</span> n'a donc pas lieu d'être. Par contre, une telle requête peut faire appel à des critères de restriction et de jointure.</p>
-			<div class="exemp_sig">
-				<p><u>Exemple</u> : <u>Utilisons la relation suivante</u> :</p>
-				<p>salarie (num,  nom, prenom, date_embauche, salaire, indemnite, poste)</p>
-				<table class="tab_ss_bord marge_bot_3">
-					<thead>
-						<tr>
-							<td colspan="2" class="text_blue"><u>ex 1 : le salaire moyen des salariés de l'organisation</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> <span class="text_purple">AVG</span>(salaire) <span class="text_purple">FROM</span> salarie;</td>
-							<td class="td_haut_gauche"><i>le résultat de la requête consistera en un seul enregistrement d'une seule valeur, la moyenne</i>.</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord marge_bot_2">
-					<thead>
-						<tr>
-							<td colspan="2" class="text_blue"><u>ex 2 : les salaires extrêmes de l'organisation</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> <span class="text_purple">MIN</span>(salaire), <span class="text_purple">MAX</span>(salaire) <span class="text_purple">FROM</span> salarie;</td>
-							<td class="td_haut_gauche"><i>le résultat de la requête consistera en un seul enregistrement comportant deux valeurs</i>.</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord marge_bot_1">
-					<thead>
-						<tr>
-							<td colspan="2" class="text_blue"><u>ex 3 : la date d'embauche de l'« ingénieur » ayant le plus d'ancienneté</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> <span class="text_purple">MIN</span>(date_embauche) <span class="text_purple">FROM</span> salarie
-							<br /><span class="text_purple">WHERE</span> poste=<span class="text_red">"ingénieur"</span>;</td>
-							<td class="td_haut_gauche"><i>la date la plus ancienne est la minimale</i>.</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord marge_bot_2">
-					<tbody>
-						<tr>
-							<td colspan="2"><u>Mais pas</u></td>
-						</tr>
-						<tr>
-							<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> <span class="text_purple">MIN</span>(date_embauche), nom <span class="text_purple">FROM</span> salarie
-							<br /><span class="text_purple">WHERE</span> poste=<span class="text_red">"ingénieur"</span>;</td>
-							<td class="td_haut_gauche"><i>Malgrès son aspect intuitif, <u>cette requête ne fonctionne pas</u>. On ne peut pas projeter une fonction d'agrégat avec un simple enregistrement (à moins d'utiliser la clause <span class="text_purple">GROUP BY</span>, <a href="#group_by" class="approf_sig">voir</a>)</i>.</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord marge_bot_2">
-					<thead>
-						<tr>
-							<td class="text_blue"><u>ex 4 : le total des indemnités versées</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="td_larg_45 pad_left_indent"><span class="text_purple">SELECT</span> <span class="text_purple">SUM</span>(indemnite) <span class="text_purple">FROM</span> salarie;</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord marge_bot_1">
-					<thead>
-						<tr>
-							<td colspan="2" class="text_blue"><u>ex 5 : le total des rémunérations versées</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> <span class="text_purple">SUM</span>(salaire)+<span class="text_purple">SUM</span>(indemnite) <span class="text_purple">FROM</span> salarie;</td>
-							<td class="td_haut_gauche"><i>Les deux totaux sont réalisés puis additionnés</i>.</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord marge_bot_2">
-					<tbody>
-						<tr>
-							<td colspan="2"><u>ou</u></td>
-						</tr>
-						<tr>
-							<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> <span class="text_purple">SUM</span>(salaire+indemnite) <span class="text_purple">FROM</span> salarie;</td>
-							<td class="td_haut_gauche"><i>Les deux champs sont additionnés pour chaque enregistrement puis totalisés</i>.</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord marge_bot_1">
-					<thead>
-						<tr>
-							<td colspan="2" class="text_blue"><u>ex 6 : le nombre de salariés</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> <span class="text_purple">COUNT</span>(num) <span class="text_purple">FROM</span> salarie;</td>
-							<td class="td_haut_gauche"><i>Pour compter un nombre d'enregistrements d'une table, le champ importe peu (sauf s'il on veut dénombrer des enregistrements distincts, voir exemple suivant)</i>.</td>
-						</tr>
-						<tr>
-							<td colspan="2"><u>ou</u></td>
-						</tr>
-						<tr>
-							<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> <span class="text_purple">COUNT</span>(*) <span class="text_purple">FROM</span> salarie;</td>
-							<td class="td_haut_gauche"><i>on peut donc compter sur l'étoile</i>.</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord">
-					<thead>
-						<tr>
-							<td colspan="2" class="text_blue"><u>ex 7 : le nombre de postes différents (distincts, qu'occupent les salariés)</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> <span class="text_purple">COUNT</span>(<span class="text_purple">DISTINCT</span> poste) <span class="text_purple">FROM</span> salarie;</td>
-							<td class="td_haut_gauche"><i>Le mot-clé <span class="text_purple">DISTINCT</span> permet de ne compter qu'une fois les postes occupés par plusieurs salariés</i>.</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<h3 id="group_by">B. Le regroupement des résultats</h3>
-			<p>Les opérations présentées auparavant et exécutées dans l'instruction <span class="text_purple">SELECT</span> délivraient un seul enregistrement-résultat. La clause <span class="text_purple">GROUP BY</span> permet d'effectuer des opérations par sous-groupes d'enregistrements, délivrant ainsi plusieurs enregistrements-résultat (un pour chaque sous-groupe d'enregistrement). La clause <span class="text_purple">ORDER BY</span> retrouve ici sa raison d'être. Les critères de restriction et de jointure peuvent toujours être présents.</p>
-			<div class="exemp_sig">
-				<p><u>Exemples</u> : <u>Considérons le schéma relationnel suivant</u> :</p>
-				<table class="tab_ss_bord">
-					<tbody>
-						<tr>
-							<td>service (num, libelle, budget)</td>
-						</tr>
-						<tr>
-							<td class="pad_left_indent marge_bot_2">clé primaire : num (auto-incrémenté)</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord">
-				<tbody>
-						<tr>
-							<td>qualification (num, libelle, niveau)</td>
-						</tr>
-						<tr>
-							<td class="pad_left_indent marge_bot_1">clé primaire : num (auto-incrémenté)</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord">
-					<tbody>
-						<tr>
-							<td >salarie (num, nom, prenom, dateEmbauche, salaire, indemnite, poste, numService)</td>
-						</tr>
-						<tr>
-							<td class="pad_left_indent marge_bot_1">clé primaire : num (auto-incrémenté)</td>
-						</tr>
-						<tr>
-							<td class="pad_left_indent">clé étrangère : numService en référence à num de la relation service</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord">
-					<tbody>
-						<tr>
-							<td colspan="2">competence (numSalarie, numQualif, dateAcq)</td>
-						</tr>
-						<tr>
-							<td colspan="2" class="pad_left_indent marge_bot_1">clé primaire : numSalarie, numQualif</td>
-						</tr>
-						<tr>
-							<td rowspan="2" class=" pad_left_indent width_10 td_left">clé&nbsp;étrangères&nbsp;:</td>
-							<td class="width_90 td_left pad_left_3_indent">numSalarie en référence à num de la relation salarie</td>
-						</tr>
-						<tr>
-							<td class="marge_bot_1 pad_left_3_indent">numQualif en référence à num de la relation qualification</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord">
-					<thead>
-						<tr>
-							<td colspan="2" class="text_blue"><u>ex 1 : le montant des salaires de chaque service</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="td_larg_55 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> libelle, <span class="text_purple">SUM</span>(salaire)
-							<br /><span class="text_purple">FROM</span> salarie, service
-							<br /><span class="text_purple">WHERE</span> service.num = salarie.numService
-							<br /><span class="text_purple">GROUP BY</span> libelle;</td>
-							<td class="td_haut_gauche"><i>Tous les salaires de salariés d'un même service seront totalisés ; il y aura autant d'enregistrements-résultat que de services</i>.</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord">
-					<tbody>
-						<tr>
-							<td colspan="2"><u>Mais pas</u></td>
-						</tr>
-						<tr>
-							<td class="td_larg_55 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT SUM</span>(salaire)
-							<br /><span class="text_purple">FROM</span> salarie, service
-							<br /><span class="text_purple">WHERE</span> service.num = salarie.numService
-							<br /><span class="text_purple">GROUP BY</span> libelle;</td>
-							<td class="td_haut_gauche"><i>Cette requête délivre un résultat exact mais inexploitable : juste des totaux sans projeter les services associés</i>.</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord">
-					<thead>
-						<tr>
-							<td colspan="2" class="text_blue"><u>ex 2 : le nombre de qualifications possédées par chaque salarié</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="td_larg_55 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> nom, <span class="text_purple">COUNT</span>(*)
-							<br /><span class="text_purple">FROM</span> salarie, competence
-							<br /><span class="text_purple">WHERE</span> salarie.num = competence.numSalarie
-							<br /><span class="text_purple">GROUP BY</span> num, nom;</td>
-							<td class="td_haut_gauche"><i>Le regroupement par numéro (clé primaire) assure que la requête traitera chaque enregistrement ; tous les champs figurant dans <span class="text_purple">SELECT</span> doivent être placés dans <span class="text_purple">GROUP BY</span>, qui peut porter des champs supplémentaires</i>.</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord">
-					<thead>
-						<tr>
-							<td colspan="2" class="text_blue"><u>ex 3 : le salaire moyen par service, sauf direction, par ordre décroissant</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="td_larg_55 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> libelle, <span class="text_purple">AVG</span>(salaire) <span class="text_purple">AS</span> salMoy
-							<br /><span class="text_purple">FROM</span> salarie, service
-							<br /><span class="text_purple">WHERE</span> libelle &lt;> "direction"
-							<br /><span class="text_purple">AND</span> service.num = salarie.numService
-							<br /><span class="text_purple">GROUP BY</span> service.num, libelle
-							<br /><span class="text_purple">ORDER BY</span> salMoy <span class="text_purple">DESC</span>;</td>
-							<td class="td_haut_gauche"><i>Le regroupement par numéro (clé primaire) assure que la requête traitera chaque enregistrement ; tous les champs figurant dans <span class="text_purple">SELECT</span> doivent être placés dans <span class="text_purple">GROUP BY</span>, qui peut porter des champs supplémentaires</i>.</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<h3>C. Les restrictions d'affichage des résultats</h3>
-			<p>La clause <span class="text_purple">HAVING</span> permet une restriction d'affichage sur les résultats d'une opération avec regroupement. Cette restriction intervient après l'exécution de l'opération. Elle ne doit pas être confondue avec la clause <span class="text_purple">WHERE</span> qui restreint les enregistrements auxquels doit s'appliquer l'opération et qui intervient donc avant.</p>
-			<div class="exemp_sig">
-				<table class="tab_ss_bord">
-					<thead>
-						<tr>
-							<td class="text_blue"><u>ex 4 : les services comptant au moins 4 salariés</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> libelle, <span class="text_purple">COUNT</span>(*)
-							<br /><span class="text_purple">FROM</span> salarie, service
-							<br /><span class="text_purple">WHERE</span> service.num = salarie.numService
-							<br /><span class="text_purple">GROUP BY</span> service.num, libelle
-							<br /><span class="text_purple">HAVING</span> <span class="text_purple">COUNT</span>(*)>=<span class="text_vert">4</span>;</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord">
-					<thead>
-						<tr>
-							<td class="text_blue"><u>ex 5 : le salaire moyen des services pour lesquels ce salaire moyen n'excède pas 2 000€</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> libelle, <span class="text_purple">COUNT</span>(*)
-							<br /><span class="text_purple">FROM</span> salarie, service
-							<br /><span class="text_purple">WHERE</span> service.num = salarie.numService
-							<br /><span class="text_purple">GROUP BY</span> service.num, libelle
-							<br /><span class="text_purple">HAVING</span> salMoy&lt;=<span class="text_vert">2000</span>
-							<br /><span class="text_purple">ORDER BY</span> salMoy <span class="text_purple">DESC</span>;</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="tab_ss_bord">
-					<thead>
-						<tr>
-							<td class="text_blue"><u>ex 6 : les salaires moyens, par service, des salariés dont le salaire n'excède pas 2 000€</u> :</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> libelle, <span class="text_purple">AVG</span>(salaire) <span class="text_purple">AS</span> salMoy
-							<br /><span class="text_purple">FROM</span> salarie, service
-							<br /><span class="text_purple">WHERE</span> salaire&lt;=<span class="text_vert">2000</span> <span class="text_purple">AND</span> service.num = salarie.numService
-							<br /><span class="text_purple">GROUP BY</span> service.num, libelle
-							<br /><span class="text_purple">ORDER BY</span> salMoy <span class="text_purple">DESC</span>;</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<h2>X. Les bases de données multi-utilisateurs</h2>
-			<h3>A. Les utilisateurs</h3>
-			<p>Les bases de données comptent souvent <b>plusieurs utilisateurs</b>, notamment lorsqu'elles sont partagées (par exemple entre les acteurs d'un processus). Ces utilisateurs ont des <b>besoins différents</b>.</p>
-			<p>Pour des raisons de sécurité des données, de responsabilisation des acteurs, de traçabilité des actions, il est possible et souhaitable de mettre en place un contrôle d'accès aux données.</p>
-			<p><u>Les risques portant sur les données sont</u> :</p>
-			<ul>
-				<li>la suppression ou la modification de données (accidentelle ou malveillante) pouvant provoquer des dysfonctionnements du système d'information et donc de l'organisation,</li>
-				<li>le vol de données confidentielles (mettant en péril la compétitivité ou l'image de l'organisation).</li>
-			</ul>
-			<p>Il s'agit d'attribuer à chaque utilisateur des droits d'accès (ou privilèges) ne correspondant qu'à ses besoins. L'attribution à une personne d'un compte d'utilisateur, associé àà un <b>profil de droits</b> est un <b>choix organisationnel</b> effectué conjointement par le gestionnaire du SI et les responsables métiers.</p>
-			<p>En pratique, on crée des <b>profils d'utilisateurs</b> définissant les <b>acteurs</b> par leur rôle organisationnel (comme dans les processus) et leurs attribuant des droits. Les <b>utilisateurs</b> sont des <b>personnes physiques</b> identifiées qu'on associe à un profil d'utilisateurs (plusieurs utilisateurs peuvent avoir le même profil).</p>
-			<p>À ces notions de droits s'ajoutent des considérations « techniques » que nous n'étudierons pas ici : partage en réseau, gestion des accès simultanés...</p>
-			<p><u>Il existe trois catégories de profils d'utilisateurs</u> :</p>
-			<ul>
-				<li><b>administrateur</b> :
-					<ul>
-						<li>l'administrateur du SGBDR possède tous les droits,</li>
-						<li>l'administrateur d'une base de données hébergée par le SGBDR, possède tous les droits sur cette base ;</li>
-					</ul>
-				</li>
-				<li><b>utilisateur final</b> dont les droits doivent être limités aux besoins ; il peut exister plusieurs profils d'utilisateur final, chacun d'eux pouvant être associés à plusieurs personnes physiques ;</li>
-				<li><b>développeur</b> dont les droits sont aussi limités aux besoins (généralement plus étendus que ceux d'un utilisateur final) ; là aussi plusieurs profils peuvent coexister et être associés à plusieurs personnes physiques.</li>
-			</ul>
-			<h3>B. Les droits sur les bases de données</h3>
-			<p>Les <b>droits d'accès</b> définissent ce que l'utilisateur a le droit de faire sur une base de données (tout ce qui ne lui est pas autorisé explicitement lui est interdit), via l'application. <u>Ils peuvent porter sur plusieurs domaines (on indique entre parenthèses l'instruction correspondante)</u> :</p>
-			<ul>
-				<li><u>l'exploitation des données</u> :
-					<ul>
-						<li>consultation d'enregistrements (<span class="text_purple">SELECT</span>),</li>
-						<li>ajout d'enregistrements (<span class="text_purple">INSERT INTO</span>),</li>
-						<li>mise à jour d'enregistrements (<span class="text_purple">UPDATE</span>),</li>
-						<li>suppression d'enregistrements (<span class="text_purple">DELETE</span>),</li>
-					</ul>
-				</li>
-				<li><u>la structure de la base de données</u> :
-					<ul>
-						<li>création de tables ou de vues (<span class="text_purple">CREATE</span>),</li>
-						<li>modification de tables ou de vues (<span class="text_purple">ALTER</span>),</li>
-						<li>suppression de tables ou de vues (<span class="text_purple">DROP</span>),</li>
-					</ul>
-				</li>
-				<li><u>l'administration des droits</u> :
-					<ul>
-						<li>création de droits (<span class="text_purple">GRANT</span>),</li>
-						<li>révocation de droits (<span class="text_purple">REVOKE</span>).</li>
-					</ul>
-				</li>
-			</ul>
-			<h3>C. Une mise en perspective</h3>
-			<p><b>L'utilisateur final</b> n'accède pas directement à la base de données, il le fait par l'intermédiaire d'une application métier et de ses interfaces (qui lui évite de saisir du SQL !). Pour lui, l'accès est transparent, on pourrait même dire que l'application est l'« utilisateur » de la  base de données puisque c'est elle qui s'y connecte et transmet des requêtes SQL.</p>
-			<p>Il est donc de la responsabilité des développeurs que l'application ne permette à un utilisateur de n'exécuter que les actions (et les répercussions sur la base de données) dont il a besoin, ce besoin étant défini d'un point de vue organisationnel.</p>
-			<p>Toutefois, il est quand même prudent de « doubler » ce contrôle au niveau de l'application, par un contrôle au niveau des données, pour parer à certaines attaques. Ainsi l'application se connectera à la base de données avec un profil d'utilisateur, enregistré dans le SGBDR, ne comportant que les droits nécessaires (si un pirate parvient à s'emparer de ce profil, sa capacité de nuisance sera limitée).</p>
+					<div class="h3-container">
+						<h3 id="jointures">C. Les jointures</h3>
+						<p>Les jointures permettent d'exploiter pleinement le modèle relationnel des tables d'une base de données. Elles sont faites pour mettre en relation des tables concourant à rechercher la réponse à des interrogations. Une jointure permet donc de combiner les colonnes (champs) de plusieurs tables. Les jointures entre tables s'effectuent en imposant l'égalité des valeurs d'une colonne d'une table à une colonne d'une autre table (on parle alors de jointure naturelle).</p>
+						<div class="exemp_sig">
+							<p><u>Exemple</u> : <u>Considérons le schéma relationnel suivant</u> :</p>
+							<p><b>service</b> (num, libelle, budget)</p>
+							<div class="pad_left_indent marge_top_neg2">
+								clé primaire : num (auto-incrémenté)
+							</div>
+							<p><b>salarie</b> (num, nom, prenom, date_embauche, salaire, num_service)</p>
+							<div class="pad_left_indent marge_top_neg2">
+								clé primaire : num (auto-incrémenté)
+							</div>
+							<div class="pad_left_indent">
+								clé étrangère : num_service en référence à num de la relation service
+							</div>
+							<table class="tab_ss_bord marge_bot_2">
+								<thead>
+									<tr>
+										<th class="text_blue"><u>ex 7 : liste alphabétique des salariés (toutes les données) avec le libellé de leur service</u> :</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="pad_left_indent"><span class="text_purple">SELECT</span> salarie.*, libelle <span class="text_purple">FROM</span> salarie, service<br /><span class="text_purple">ORDER BY</span> nom, prenom;</td>
+									</tr>
+									<tr>
+										<td><i>En l'absence de jointure, le SGBDR ne « sait » pas comment associer les tables et projette pour chaque ligne de la première table, l'ensemble des lignes de la seconde. Si les tables <b>service</b> et <b>salarie</b> comporte respectivement 5 et 10 enregistrements, 50 seront projetés (au lieu des 10 souhaités).</i></td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="tab_ss_bord marge_bot_3 marge_top_neg2">
+								<tbody>
+									<tr>
+										<td class="pad_left_indent"><span class="text_purple">SELECT</span> salarie.*, libelle <span class="text_purple">FROM</span> salarie, service<br /><span class="text_purple">WHERE</span> service.num = salarie.num_service<br /><span class="text_purple">ORDER BY</span> nom, prenom;</td>
+									</tr>
+									<tr>
+										<td><div class="marge_bot_1"><i>Le critère de jointure associe la clé primaire num de la table <b>service</b> à la clé étrangère num_service de la table <b>salarie</b> qui lui fait référence</i>.</div>
+											<div><i>service.num correspond à un <b>préfixage</b> du champ num par le nom de la table à laquelle il appartient ; ce préfixage est ici obligatoire car il existe aussi un champ num dans la table <b>salarie</b>, or le SGBDR doit savoir lequel utiliser. Tous les champs peuvent être préfixés mais ce n'est obligatoire que pour les champs qui possédent un champ homonyme dans au moins une des autres tables appelées dans la clause <span class="text_purple">FROM</span></i>.</div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="h3-container">
+						<h3>D. La clause FROM</h3>
+						<p>La clause <span class="text_purple">FROM</span> énumère les tables dont au moins un champ est projeté ou nécessaire à un critère de restriction ou de jointure (certaines tables peuvent n'être qu'un intermédiaire pour établir des jointures entre toutes les tables).</p>
+					</div>
+					<div class="h3-container">
+						<h3>E. Une mise en perspective</h3>
+						<p>Le développeur doit optimiser les temps d'exécution des requêtes en exécutant les critères de restriction avant les jointures (exécutées avant, elles prendraient du temps à mettre en relation des enregistrements dont une partie seraient ensuite éliminée par les restrictions).</p>
+					</div>
+				</section>
+				<section class="h2-container">
+					<h2>IX. SQL - Langage d'interrogation des données - 2</h2>
+					<div class="h3-container">
+						<h3>A. Les fonctions d'agrégat</h3>
+						<p>Nous avons vu qu'il était possible d'introduire des calculs dans l'instruction <span class="text_purple">SELECT</span> ou dans les clauses <span class="text_purple">WHERE</span> ou <span class="text_purple">ORDER BY</span> mais il s'agit alors de calculs répétés de manière indépendante pour chaque enregistrement (calcul « en ligne »). Une <b>opération</b> est au contraire réalisée en colonne et concerne simultanément <b>tous les enregistrements d'un champ</b>.</p>
+						<table class="tab_sig">
+							<caption>Les fonctions d'agrégat SQL</caption>
+							<thead>
+								<tr>
+									<th class="td_background_sig td_sig td_milieu">Fonction d'agrégat SQL</th>
+									<th class="td_background_sig td_sig td_milieu">Description</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="td_sig"><span class="text_purple">SUM</span> (...)</td>
+									<td class="td_sig">retourne la somme des valeurs de données d'un champ de type numérique ou date/heure</td>
+								</tr>
+								<tr>
+									<td class="td_sig"><span class="text_purple">AVG</span> (...)</td>
+									<td class="td_sig">retourne la moyenne des valeurs de données d'un champ de type numérique ou date/heure</td>
+								</tr>
+								<tr>
+									<td class="td_sig"><span class="text_purple">COUNT</span> (...)</td>
+									<td class="td_sig">retourne le (compte du) nombre de lignes (enregistrements) d'une sélection</td>
+								</tr>
+								<tr>
+									<td class="td_sig"><span class="text_purple">MIN</span> (...)</td>
+									<td class="td_sig">retourne la plus petite valeur de données d'un champ de type numérique ou date/heure</td>
+								</tr>
+								<tr>
+									<td class="td_sig"><span class="text_purple">MAX</span> (...)</td>
+									<td class="td_sig">retourne la plus grande valeur de données d'un champ de type numérique ou date/heure</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>Une opération d'agrégat effectuée dans l'instruction <span class="text_purple">SELECT</span> délivrera <b>un seul enregistrement-résultat</b>, la clause <span class="text_purple">ORDER BY</span> n'a donc pas lieu d'être. Par contre, une telle requête peut faire appel à des critères de restriction et de jointure.</p>
+						<div class="exemp_sig">
+							<p><u>Exemple</u> : <u>Utilisons la relation suivante</u> :</p>
+							<p>salarie (num,  nom, prenom, date_embauche, salaire, indemnite, poste)</p>
+							<table class="tab_ss_bord marge_bot_3">
+								<thead>
+									<tr>
+										<th colspan="2" class="text_blue"><u>ex 1 : le salaire moyen des salariés de l'organisation</u> :</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> <span class="text_purple">AVG</span>(salaire) <span class="text_purple">FROM</span> salarie;</td>
+										<td class="td_haut_gauche"><i>le résultat de la requête consistera en un seul enregistrement d'une seule valeur, la moyenne</i>.</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="tab_ss_bord marge_bot_2">
+								<thead>
+									<tr>
+										<th colspan="2" class="text_blue"><u>ex 2 : les salaires extrêmes de l'organisation</u> :</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> <span class="text_purple">MIN</span>(salaire), <span class="text_purple">MAX</span>(salaire) <span class="text_purple">FROM</span> salarie;</td>
+										<td class="td_haut_gauche"><i>le résultat de la requête consistera en un seul enregistrement comportant deux valeurs</i>.</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="tab_ss_bord marge_bot_1">
+								<thead>
+									<tr>
+										<th colspan="2" class="text_blue"><u>ex 3 : la date d'embauche de l'« ingénieur » ayant le plus d'ancienneté</u> :</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> <span class="text_purple">MIN</span>(date_embauche) <span class="text_purple">FROM</span> salarie<br /><span class="text_purple">WHERE</span> poste=<span class="text_red">"ingénieur"</span>;</td>
+										<td class="td_haut_gauche"><i>la date la plus ancienne est la minimale</i>.</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="tab_ss_bord marge_bot_2">
+								<tbody>
+									<tr>
+										<td colspan="2"><u>Mais pas</u></td>
+									</tr>
+									<tr>
+										<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> <span class="text_purple">MIN</span>(date_embauche), nom <span class="text_purple">FROM</span> salarie<br /><span class="text_purple">WHERE</span> poste=<span class="text_red">"ingénieur"</span>;</td>
+										<td class="td_haut_gauche"><i>Malgrès son aspect intuitif, <u>cette requête ne fonctionne pas</u>. On ne peut pas projeter une fonction d'agrégat avec un simple enregistrement (à moins d'utiliser la clause <span class="text_purple">GROUP BY</span>, <a href="#group_by" class="approf_sig">voir</a>)</i>.</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="tab_ss_bord marge_bot_2">
+								<thead>
+									<tr>
+										<td class="text_blue"><u>ex 4 : le total des indemnités versées</u> :</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="td_larg_45 pad_left_indent"><span class="text_purple">SELECT</span> <span class="text_purple">SUM</span>(indemnite) <span class="text_purple">FROM</span> salarie;</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="tab_ss_bord marge_bot_1">
+								<thead>
+									<tr>
+										<td colspan="2" class="text_blue"><u>ex 5 : le total des rémunérations versées</u> :</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> <span class="text_purple">SUM</span>(salaire)+<span class="text_purple">SUM</span>(indemnite) <span class="text_purple">FROM</span> salarie;</td>
+										<td class="td_haut_gauche"><i>Les deux totaux sont réalisés puis additionnés</i>.</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="tab_ss_bord marge_bot_2">
+								<tbody>
+									<tr>
+										<td colspan="2"><u>ou</u></td>
+									</tr>
+									<tr>
+										<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> <span class="text_purple">SUM</span>(salaire+indemnite) <span class="text_purple">FROM</span> salarie;</td>
+										<td class="td_haut_gauche"><i>Les deux champs sont additionnés pour chaque enregistrement puis totalisés</i>.</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="tab_ss_bord marge_bot_1">
+								<thead>
+									<tr>
+										<td colspan="2" class="text_blue"><u>ex 6 : le nombre de salariés</u> :</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> <span class="text_purple">COUNT</span>(num) <span class="text_purple">FROM</span> salarie;</td>
+										<td class="td_haut_gauche"><i>Pour compter un nombre d'enregistrements d'une table, le champ importe peu (sauf s'il on veut dénombrer des enregistrements distincts, voir exemple suivant)</i>.</td>
+									</tr>
+									<tr>
+										<td colspan="2"><u>ou</u></td>
+									</tr>
+									<tr>
+										<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> <span class="text_purple">COUNT</span>(*) <span class="text_purple">FROM</span> salarie;</td>
+										<td class="td_haut_gauche"><i>on peut donc compter sur l'étoile</i>.</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="tab_ss_bord">
+								<thead>
+									<tr>
+										<td colspan="2" class="text_blue"><u>ex 7 : le nombre de postes différents (distincts, qu'occupent les salariés)</u> :</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="td_larg_45 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> <span class="text_purple">COUNT</span>(<span class="text_purple">DISTINCT</span> poste) <span class="text_purple">FROM</span> salarie;</td>
+										<td class="td_haut_gauche"><i>Le mot-clé <span class="text_purple">DISTINCT</span> permet de ne compter qu'une fois les postes occupés par plusieurs salariés</i>.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="h3-container">
+						<h3 id="group_by">B. Le regroupement des résultats</h3>
+						<p>Les opérations présentées auparavant et exécutées dans l'instruction <span class="text_purple">SELECT</span> délivraient un seul enregistrement-résultat. La clause <span class="text_purple">GROUP BY</span> permet d'effectuer des opérations par sous-groupes d'enregistrements, délivrant ainsi plusieurs enregistrements-résultat (un pour chaque sous-groupe d'enregistrement). La clause <span class="text_purple">ORDER BY</span> retrouve ici sa raison d'être. Les critères de restriction et de jointure peuvent toujours être présents.</p>
+						<div class="exemp_sig">
+							<p><u>Exemples</u> : <u>Considérons le schéma relationnel suivant</u> :</p>
+							<table class="tab_ss_bord">
+								<tbody>
+									<tr>
+										<td>service (num, libelle, budget)</td>
+									</tr>
+									<tr>
+										<td class="pad_left_indent marge_bot_2">clé primaire : num (auto-incrémenté)</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="tab_ss_bord">
+								<tbody>
+									<tr>
+										<td>qualification (num, libelle, niveau)</td>
+									</tr>
+									<tr>
+										<td class="pad_left_indent marge_bot_1">clé primaire : num (auto-incrémenté)</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="tab_ss_bord">
+								<tbody>
+									<tr>
+										<td >salarie (num, nom, prenom, dateEmbauche, salaire, indemnite, poste, numService)</td>
+									</tr>
+									<tr>
+										<td class="pad_left_indent marge_bot_1">clé primaire : num (auto-incrémenté)</td>
+									</tr>
+									<tr>
+										<td class="pad_left_indent">clé étrangère : numService en référence à num de la relation service</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="tab_ss_bord">
+								<tbody>
+									<tr>
+										<td colspan="2">competence (numSalarie, numQualif, dateAcq)</td>
+									</tr>
+									<tr>
+										<td colspan="2" class="pad_left_indent marge_bot_1">clé primaire : numSalarie, numQualif</td>
+									</tr>
+									<tr>
+										<td rowspan="2" class=" pad_left_indent width_10 td_left">clé&nbsp;étrangères&nbsp;:</td>
+										<td class="width_90 td_left pad_left_3_indent">numSalarie en référence à num de la relation salarie</td>
+									</tr>
+									<tr>
+										<td class="marge_bot_1 pad_left_3_indent">numQualif en référence à num de la relation qualification</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="tab_ss_bord">
+								<thead>
+									<tr>
+										<td colspan="2" class="text_blue"><u>ex 1 : le montant des salaires de chaque service</u> :</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="td_larg_55 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> libelle, <span class="text_purple">SUM</span>(salaire)
+										<br /><span class="text_purple">FROM</span> salarie, service
+										<br /><span class="text_purple">WHERE</span> service.num = salarie.numService
+										<br /><span class="text_purple">GROUP BY</span> libelle;</td>
+										<td class="td_haut_gauche"><i>Tous les salaires de salariés d'un même service seront totalisés ; il y aura autant d'enregistrements-résultat que de services</i>.</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="tab_ss_bord">
+								<tbody>
+									<tr>
+										<td colspan="2"><u>Mais pas</u></td>
+									</tr>
+									<tr>
+										<td class="td_larg_55 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT SUM</span>(salaire)
+										<br /><span class="text_purple">FROM</span> salarie, service
+										<br /><span class="text_purple">WHERE</span> service.num = salarie.numService
+										<br /><span class="text_purple">GROUP BY</span> libelle;</td>
+										<td class="td_haut_gauche"><i>Cette requête délivre un résultat exact mais inexploitable : juste des totaux sans projeter les services associés</i>.</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="tab_ss_bord">
+								<thead>
+									<tr>
+										<td colspan="2" class="text_blue"><u>ex 2 : le nombre de qualifications possédées par chaque salarié</u> :</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="td_larg_55 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> nom, <span class="text_purple">COUNT</span>(*)
+										<br /><span class="text_purple">FROM</span> salarie, competence
+										<br /><span class="text_purple">WHERE</span> salarie.num = competence.numSalarie
+										<br /><span class="text_purple">GROUP BY</span> num, nom;</td>
+										<td class="td_haut_gauche"><i>Le regroupement par numéro (clé primaire) assure que la requête traitera chaque enregistrement ; tous les champs figurant dans <span class="text_purple">SELECT</span> doivent être placés dans <span class="text_purple">GROUP BY</span>, qui peut porter des champs supplémentaires</i>.</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="tab_ss_bord">
+								<thead>
+									<tr>
+										<td colspan="2" class="text_blue"><u>ex 3 : le salaire moyen par service, sauf direction, par ordre décroissant</u> :</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="td_larg_55 td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> libelle, <span class="text_purple">AVG</span>(salaire) <span class="text_purple">AS</span> salMoy
+										<br /><span class="text_purple">FROM</span> salarie, service
+										<br /><span class="text_purple">WHERE</span> libelle &lt;> "direction"
+										<br /><span class="text_purple">AND</span> service.num = salarie.numService
+										<br /><span class="text_purple">GROUP BY</span> service.num, libelle
+										<br /><span class="text_purple">ORDER BY</span> salMoy <span class="text_purple">DESC</span>;</td>
+										<td class="td_haut_gauche"><i>Le regroupement par numéro (clé primaire) assure que la requête traitera chaque enregistrement ; tous les champs figurant dans <span class="text_purple">SELECT</span> doivent être placés dans <span class="text_purple">GROUP BY</span>, qui peut porter des champs supplémentaires</i>.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="h3-container">
+						<h3>C. Les restrictions d'affichage des résultats</h3>
+						<p>La clause <span class="text_purple">HAVING</span> permet une restriction d'affichage sur les résultats d'une opération avec regroupement. Cette restriction intervient après l'exécution de l'opération. Elle ne doit pas être confondue avec la clause <span class="text_purple">WHERE</span> qui restreint les enregistrements auxquels doit s'appliquer l'opération et qui intervient donc avant.</p>
+						<div class="exemp_sig">
+							<table class="tab_ss_bord">
+								<thead>
+									<tr>
+										<td class="text_blue"><u>ex 4 : les services comptant au moins 4 salariés</u> :</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> libelle, <span class="text_purple">COUNT</span>(*)
+										<br /><span class="text_purple">FROM</span> salarie, service
+										<br /><span class="text_purple">WHERE</span> service.num = salarie.numService
+										<br /><span class="text_purple">GROUP BY</span> service.num, libelle
+										<br /><span class="text_purple">HAVING</span> <span class="text_purple">COUNT</span>(*)>=<span class="text_vert">4</span>;</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="tab_ss_bord">
+								<thead>
+									<tr>
+										<td class="text_blue"><u>ex 5 : le salaire moyen des services pour lesquels ce salaire moyen n'excède pas 2 000€</u> :</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> libelle, <span class="text_purple">COUNT</span>(*)
+										<br /><span class="text_purple">FROM</span> salarie, service
+										<br /><span class="text_purple">WHERE</span> service.num = salarie.numService
+										<br /><span class="text_purple">GROUP BY</span> service.num, libelle
+										<br /><span class="text_purple">HAVING</span> salMoy&lt;=<span class="text_vert">2000</span>
+										<br /><span class="text_purple">ORDER BY</span> salMoy <span class="text_purple">DESC</span>;</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="tab_ss_bord">
+								<thead>
+									<tr>
+										<td class="text_blue"><u>ex 6 : les salaires moyens, par service, des salariés dont le salaire n'excède pas 2 000€</u> :</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="td_haut_gauche pad_left_indent"><span class="text_purple">SELECT</span> libelle, <span class="text_purple">AVG</span>(salaire) <span class="text_purple">AS</span> salMoy
+										<br /><span class="text_purple">FROM</span> salarie, service
+										<br /><span class="text_purple">WHERE</span> salaire&lt;=<span class="text_vert">2000</span> <span class="text_purple">AND</span> service.num = salarie.numService
+										<br /><span class="text_purple">GROUP BY</span> service.num, libelle
+										<br /><span class="text_purple">ORDER BY</span> salMoy <span class="text_purple">DESC</span>;</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+				<section class="h2-container">
+					<h2>X. Les bases de données multi-utilisateurs</h2>
+					<div class="h3-container">
+						<h3>A. Les utilisateurs</h3>
+						<p>Les bases de données comptent souvent <b>plusieurs utilisateurs</b>, notamment lorsqu'elles sont partagées (par exemple entre les acteurs d'un processus). Ces utilisateurs ont des <b>besoins différents</b>.</p>
+						<p>Pour des raisons de sécurité des données, de responsabilisation des acteurs, de traçabilité des actions, il est possible et souhaitable de mettre en place un contrôle d'accès aux données.</p>
+						<p><u>Les risques portant sur les données sont</u> :</p>
+						<ul>
+							<li>la suppression ou la modification de données (accidentelle ou malveillante) pouvant provoquer des dysfonctionnements du système d'information et donc de l'organisation,</li>
+							<li>le vol de données confidentielles (mettant en péril la compétitivité ou l'image de l'organisation).</li>
+						</ul>
+						<p>Il s'agit d'attribuer à chaque utilisateur des droits d'accès (ou privilèges) ne correspondant qu'à ses besoins. L'attribution à une personne d'un compte d'utilisateur, associé àà un <b>profil de droits</b> est un <b>choix organisationnel</b> effectué conjointement par le gestionnaire du SI et les responsables métiers.</p>
+						<p>En pratique, on crée des <b>profils d'utilisateurs</b> définissant les <b>acteurs</b> par leur rôle organisationnel (comme dans les processus) et leurs attribuant des droits. Les <b>utilisateurs</b> sont des <b>personnes physiques</b> identifiées qu'on associe à un profil d'utilisateurs (plusieurs utilisateurs peuvent avoir le même profil).</p>
+						<p>À ces notions de droits s'ajoutent des considérations « techniques » que nous n'étudierons pas ici : partage en réseau, gestion des accès simultanés...</p>
+						<p><u>Il existe trois catégories de profils d'utilisateurs</u> :</p>
+						<ul>
+							<li><b>administrateur</b> :
+								<ul>
+									<li>l'administrateur du SGBDR possède tous les droits,</li>
+									<li>l'administrateur d'une base de données hébergée par le SGBDR, possède tous les droits sur cette base ;</li>
+								</ul>
+							</li>
+							<li><b>utilisateur final</b> dont les droits doivent être limités aux besoins ; il peut exister plusieurs profils d'utilisateur final, chacun d'eux pouvant être associés à plusieurs personnes physiques ;</li>
+							<li><b>développeur</b> dont les droits sont aussi limités aux besoins (généralement plus étendus que ceux d'un utilisateur final) ; là aussi plusieurs profils peuvent coexister et être associés à plusieurs personnes physiques.</li>
+						</ul>
+					</div>
+					<div class="h3-container">
+						<h3>B. Les droits sur les bases de données</h3>
+						<p>Les <b>droits d'accès</b> définissent ce que l'utilisateur a le droit de faire sur une base de données (tout ce qui ne lui est pas autorisé explicitement lui est interdit), via l'application. <u>Ils peuvent porter sur plusieurs domaines (on indique entre parenthèses l'instruction correspondante)</u> :</p>
+						<ul>
+							<li><u>l'exploitation des données</u> :
+								<ul>
+									<li>consultation d'enregistrements (<span class="text_purple">SELECT</span>),</li>
+									<li>ajout d'enregistrements (<span class="text_purple">INSERT INTO</span>),</li>
+									<li>mise à jour d'enregistrements (<span class="text_purple">UPDATE</span>),</li>
+									<li>suppression d'enregistrements (<span class="text_purple">DELETE</span>),</li>
+								</ul>
+							</li>
+							<li><u>la structure de la base de données</u> :
+								<ul>
+									<li>création de tables ou de vues (<span class="text_purple">CREATE</span>),</li>
+									<li>modification de tables ou de vues (<span class="text_purple">ALTER</span>),</li>
+									<li>suppression de tables ou de vues (<span class="text_purple">DROP</span>),</li>
+								</ul>
+							</li>
+							<li><u>l'administration des droits</u> :
+								<ul>
+									<li>création de droits (<span class="text_purple">GRANT</span>),</li>
+									<li>révocation de droits (<span class="text_purple">REVOKE</span>).</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="h3-container">
+						<h3>C. Une mise en perspective</h3>
+						<p><b>L'utilisateur final</b> n'accède pas directement à la base de données, il le fait par l'intermédiaire d'une application métier et de ses interfaces (qui lui évite de saisir du SQL !). Pour lui, l'accès est transparent, on pourrait même dire que l'application est l'« utilisateur » de la  base de données puisque c'est elle qui s'y connecte et transmet des requêtes SQL.</p>
+						<p>Il est donc de la responsabilité des développeurs que l'application ne permette à un utilisateur de n'exécuter que les actions (et les répercussions sur la base de données) dont il a besoin, ce besoin étant défini d'un point de vue organisationnel.</p>
+						<p>Toutefois, il est quand même prudent de « doubler » ce contrôle au niveau de l'application, par un contrôle au niveau des données, pour parer à certaines attaques. Ainsi l'application se connectera à la base de données avec un profil d'utilisateur, enregistré dans le SGBDR, ne comportant que les droits nécessaires (si un pirate parvient à s'emparer de ce profil, sa capacité de nuisance sera limitée).</p>
+					</div>
+				</section>
 		</div>
     <footer>
 			<a href="Question_5_La_numerisation_suffit_elle_a_valoriser_l_information.html" class="bouton_footer_sig">Question 5</a>
