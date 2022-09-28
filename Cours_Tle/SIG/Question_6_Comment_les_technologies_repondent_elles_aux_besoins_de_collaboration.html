@@ -205,26 +205,29 @@
 						<p>Les adresses réticulaires ou <b>URL</b> (Uniform resource locator) identifient des ressources, les localisent sur un réseau et décrivent leur mode d'accès.</p>
 					</div>
 				</section>
-    <footer>
-			<a href="Question_6_Comment_les_technologies_repondent_elles_aux_besoins_de_collaboration.html" class="bouton_footer_sig">Question 6</a>
-			<a href="Question_4_Comment_peut_on_produire_de_l_information_a_partir_de_donnees_contenues_dans_une_base.html" class="bouton_footer_sig">Question 4</a>
-      <a href="#haut" class="bouton_footer_sig">Haut de page</a>
-      <a href="Sommaire.html" class="bouton_footer_sig">Retour au sommaire</a>
-    </footer>
-    <!-- phpmyvisites -->
-    <a href="http://st.free.fr/" title="phpMyVisites | Open source web analytics"
-    onclick="window.open(this.href);return(false);"><script>
-    <!--
-    var a_vars = Array();
-    var pagename='';
-
-    var phpmyvisitesSite = 288732;
-    var phpmyvisitesURL = "http://st.free.fr/phpmyvisites.php";
-    //-->
-    </script>
-    <script src="http://st.free.fr/phpmyvisites.js"></script>
-    <img src="http://st.free.fr/phpmyvisites.php" alt="Statistics" style="border:0; color: transparent;" />
-    </a>
-    <!-- /phpmyvisites -->
-  </body>
+			</main>
+			<nav>
+				<a href="Sommaire.html" class="button night-mode-element">Sommaire</a>
+				<a href="Question_5_La_numerisation_suffit_elle_a_valoriser_l_information.html" class="button night-mode-element" title="La numérisation suffit-elle à valoriser l'information ?">Question 5</a>
+			</nav>
+			<div w3-include-html="../../fab_footer.html"></div>
+		</div>
+		<script src="../../js/include_html.js"></script>
+		<script src="../../js/wait_for_elm.js"></script>
+		<script>
+		waitForElm('header').then(elm => {
+			initHeaderOnScroll();
+			setHeaderLinksExpandable();
+		});
+		waitForElm('aside').then(elm => {
+			initSideNavCollapseHandle();
+			initSideNavHoverHandler();
+			setSideNavItemsExpandable();
+		});
+		waitForElm('footer').then(elm => {
+			initNightMode();
+			setFabBackToTop();
+		});
+		</script>
+  	</body>
 </html>

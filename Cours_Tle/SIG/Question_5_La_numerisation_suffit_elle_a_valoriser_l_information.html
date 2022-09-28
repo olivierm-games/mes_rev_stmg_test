@@ -361,26 +361,30 @@
 						<p>Si un fichier XML respecte les règles du schéma qui lui est associé, il est dit <b>valide</b> quant à son schéma. Il permet la génération de documents XML standardisés (respectant tous les mêmes règles) et l'automatisation de leur traitement. Ce schéma constitue une sorte de « contrat » entre les parties prenant par à l'échange.</p>
 					</div>
 				</section>
+			</main>
+			<nav>
+				<a href="Sommaire.html" class="button night-mode-element">Sommaire</a>
+				<a href="Question_4_Comment_peut_on_produire_de_l_information_a_partir_de_donnees_contenues_dans_une_base.html" class="button night-mode-element" title="Comment peut-on produire de l'information à partir de données contenues dans une base ?">Question 4</a>
+				<a href="Question_6_Comment_les_technologies_repondent_elles_aux_besoins_de_collaboration.html" class="button night-mode-element" title="Comment les technologies répondent-elles aux besoins de collaboration ?">Question 6</a>
+			</nav>
+			<div w3-include-html="../../fab_footer.html"></div>
 		</div>
-    <footer>
-			<a href="Question_6_Comment_les_technologies_repondent_elles_aux_besoins_de_collaboration.html" class="bouton_footer_sig">Question 6</a>
-			<a href="Question_4_Comment_peut_on_produire_de_l_information_a_partir_de_donnees_contenues_dans_une_base.html" class="bouton_footer_sig">Question 4</a>
-      <a href="#haut" class="bouton_footer_sig">Haut de page</a>
-      <a href="Sommaire.html" class="bouton_footer_sig">Retour au sommaire</a>
-    </footer>
-    <!-- phpmyvisites -->
-    <a href="http://st.free.fr/" title="phpMyVisites | Open source web analytics"
-    onclick="window.open(this.href);return(false);"><script>
-    <!--
-    var a_vars = Array();
-    var pagename='';
-
-    var phpmyvisitesSite = 288732;
-    var phpmyvisitesURL = "http://st.free.fr/phpmyvisites.php";
-    //-->
-    </script>
-    <script src="http://st.free.fr/phpmyvisites.js"></script>
-    <img src="http://st.free.fr/phpmyvisites.php" alt="Statistics" style="border:0; color: transparent;" /></a>
-    <!-- /phpmyvisites -->
-  </body>
+		<script src="../../js/include_html.js"></script>
+		<script src="../../js/wait_for_elm.js"></script>
+		<script>
+		waitForElm('header').then(elm => {
+			initHeaderOnScroll();
+			setHeaderLinksExpandable();
+		});
+		waitForElm('aside').then(elm => {
+			initSideNavCollapseHandle();
+			initSideNavHoverHandler();
+			setSideNavItemsExpandable();
+		});
+		waitForElm('footer').then(elm => {
+			initNightMode();
+			setFabBackToTop();
+		});
+		</script>
+  	</body>
 </html>

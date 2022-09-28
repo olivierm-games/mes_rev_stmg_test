@@ -1476,26 +1476,30 @@
 						<p>Toutefois, il est quand même prudent de « doubler » ce contrôle au niveau de l'application, par un contrôle au niveau des données, pour parer à certaines attaques. Ainsi l'application se connectera à la base de données avec un profil d'utilisateur, enregistré dans le SGBDR, ne comportant que les droits nécessaires (si un pirate parvient à s'emparer de ce profil, sa capacité de nuisance sera limitée).</p>
 					</div>
 				</section>
+			</main>
+			<nav>
+				<a href="Sommaire.html" class="button night-mode-element">Sommaire</a>
+				<a href="Question_3_La_resolution_de_tous_les_problemes_de_gestion_est_elle_automatisable.php" class="button night-mode-element" title="La résolution de tous les problèmes de gestion est-elle automatisable ?">Question 3</a>
+				<a href="Question_5_La_numerisation_suffit_elle_a_valoriser_l_information.html" class="button night-mode-element" title="La numérisation suffit-elle à valoriser l'information ?">Question 5</a>
+			</nav>
+			<div w3-include-html="../../fab_footer.html"></div>
 		</div>
-    <footer>
-			<a href="Question_5_La_numerisation_suffit_elle_a_valoriser_l_information.html" class="bouton_footer_sig">Question 5</a>
-			<a href="Question_3_La_resolution_de_tous_les_problemes_de_gestion_est_elle_automatisable.php" class="bouton_footer_sig">Question 3</a>
-      <a href="#haut" class="bouton_footer_sig">Haut de page</a>
-      <a href="Sommaire.html" class="bouton_footer_sig">Retour au sommaire</a>
-    </footer>
-    <!-- phpmyvisites -->
-    <a href="http://st.free.fr/" title="phpMyVisites | Open source web analytics"
-    onclick="window.open(this.href);return(false);"><script>
-    <!--
-    var a_vars = Array();
-    var pagename='';
-
-    var phpmyvisitesSite = 288732;
-    var phpmyvisitesURL = "http://st.free.fr/phpmyvisites.php";
-    //-->
-    </script>
-    <script src="http://st.free.fr/phpmyvisites.js"></script>
-    <img src="http://st.free.fr/phpmyvisites.php" alt="Statistics" style="border:0; color: transparent;" /></a>
-    <!-- /phpmyvisites -->
-  </body>
+		<script src="../../js/include_html.js"></script>
+		<script src="../../js/wait_for_elm.js"></script>
+		<script>
+		waitForElm('header').then(elm => {
+			initHeaderOnScroll();
+			setHeaderLinksExpandable();
+		});
+		waitForElm('aside').then(elm => {
+			initSideNavCollapseHandle();
+			initSideNavHoverHandler();
+			setSideNavItemsExpandable();
+		});
+		waitForElm('footer').then(elm => {
+			initNightMode();
+			setFabBackToTop();
+		});
+		</script>
+  	</body>
 </html>

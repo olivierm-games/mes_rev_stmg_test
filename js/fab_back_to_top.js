@@ -18,7 +18,7 @@ function setFabBackToTop() {
       () => styleFab(document.documentElement.scrollTop),
       { passive: true }
    );
-   styleFab();
+   styleFab(0);
 }
 
 function styleFab(scrollTop) {
