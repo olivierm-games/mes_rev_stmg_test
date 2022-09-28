@@ -13,6 +13,8 @@
    .col-s-9 {width: 75%;}
    .col-s-10 {width: 83.33%;}
    .col-s-11 {width: 91.66%;}
+
+   #all-container td, #all-container th {padding: 5px;}
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -30,6 +32,8 @@
    .col-m-9 {width: 75%;}
    .col-m-10 {width: 83.33%;}
    .col-m-11 {width: 91.66%;}
+
+   #all-container td, #all-container th {padding: 6px;}
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -186,6 +190,8 @@
    }
 
    #cours-1ere {margin-top: 64px;}
+
+   #all-container td, #all-container th {padding: 8px;}
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
