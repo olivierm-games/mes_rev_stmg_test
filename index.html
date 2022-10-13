@@ -24,8 +24,9 @@
 <body>
    <span id="haut"></span>
    <div id="all-container" class="night-mode-element">
-      <!-- WARNING: START OF: PAY ATTENTION WHEN MODIFTING: HEADER (header.html) -->
-      <header class="night-mode-element">
+      <div w3-include-html="header.html"></div>
+      <div w3-include-html="side_nav.html"></div>
+      <!-- <header class="night-mode-element">
          <div id="header-menu-index-container">
             <div id="menu-svg-container" onclick="onMenu()">
                <svg xmlns="http://www.w3.org/2000/svg"
@@ -58,15 +59,10 @@
                <span class="header-link-expandable-text">Cours T<sup>le</sup></span>
                <span class="material-icons-round night-mode-element">arrow_drop_down</span>
             </div>
-            <!-- <span class="header-link">Exercices</span>
-            <span class="header-link">Quiz</span> -->
             <a onclick="onToggleNightMode()" id="night-mode" class="material-icons-round night-mode-element">dark_mode</a>
          </div>
       </header>
-      <!-- WARNING: END OF: PAY ATTENTION WHEN MODIFTING: HEADER (header.html) -->
-      <!-- WARNING: START OF: PAY ATTENTION WHEN MODIFTING: ASIDE (side_nav.html) -->
       <aside class="night-mode-element">
-         <!-- <a href="#" id="side-nav-index-link" class="night-mode-element index-link"><span class="mes-rev">Mes révisions</span>STMG</a> -->
          <div id="cours-1ere" class="side-nav-lvl-0-link collapsible-1ere night-mode-element">
             <span class="material-icons-round night-mode-element">arrow_drop_down</span>Cours 1<sup>ère</sup>
          </div>
@@ -162,7 +158,7 @@
                </ul>
             </li>
          </ul>
-      </aside>
+      </aside> -->
       <!-- WARNING: END OF: PAY ATTENTION WHEN MODIFTING: ASIDE (side_nav.html) -->
       <main class="night-mode-element">
          <div class="h3-container">
@@ -184,9 +180,7 @@
          </div>
          <script src="js/message_expandable.js"></script>
       </main>
-      <!-- WARNING: START OF: PAY ATTENTION WHEN MODIFTING: FOOTER and "Fab" (fab_footer.html) -->
-      <a id="fab-back-to-top" href="#haut" class="material-icons-round night-mode-element">arrow_upward</a>
-<!-- <button id="fab-back-to-top"><a href="#haut" class="material-icons-round night-mode-element">arrow_upward</a></button> -->
+      <div w3-include-html="fab_footer.html"></div>
       <footer class="night-mode-element">
          <div id="footer-container">
             <div class="footer-list-container">
@@ -208,7 +202,24 @@
       </footer>
       <!-- WARNING: END OF: PAY ATTENTION WHEN MODIFTING: FOOTER and "Fab" (fab_footer.html) -->
    </div>
-<script>
+   <script src="js/include_html.js"></script>
+   <script src="js/wait_for_elm.js"></script>
+   <script>
+   waitForElm('header').then(elm => {
+      initHeaderOnScroll();
+      setHeaderLinksExpandable();
+   });
+   waitForElm('aside').then(elm => {
+      initSideNavCollapseHandle();
+      initSideNavHoverHandler();
+      setSideNavItemsExpandable();
+   });
+   waitForElm('footer').then(elm => {
+      initNightMode();
+      setFabBackToTop();
+   });
+   </script>
+<!-- <script>
 initHeaderOnScroll();
 initNightMode();
 initSideNavCollapseHandle();
@@ -216,6 +227,6 @@ initSideNavHoverHandler();
 setSideNavItemsExpandable();
 setHeaderLinksExpandable();
 setFabBackToTop();
-</script>
+</script> -->
 </body>
 </html>
