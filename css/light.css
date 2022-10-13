@@ -215,8 +215,10 @@ aside ul {
    display: flex;
    flex-direction: column;
    width: -webkit-fill-available;
-   padding-inline-start: 1.4em;
+   padding-inline-start: .8em;
 }
+
+aside ul li ul {padding-inline-start: 1em;}
 
 [class^=side-nav-lvl] {
    align-items: center;
@@ -290,6 +292,7 @@ aside ul, .side-nav-lvl-0-link, [class^=side-nav-lvl-1-link] {
 [class^=side-nav-lvl-2-link] > a {
    display: list-item;
    list-style-type: disc;
+   text-indent: 0;
 }
 
 a [class^=side-nav-lvl-2-link] {
