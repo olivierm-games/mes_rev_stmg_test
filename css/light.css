@@ -278,13 +278,18 @@ aside ul, .side-nav-lvl-0-link, [class^=side-nav-lvl-1-link] {
 }
 
 [class^=side-nav-lvl-2-link] {
-   display: list-item;
-   list-style-type: disc;
+   /* display: list-item; */
+   /* list-style-type: disc; */
    width: -webkit-fill-available;
    padding: var(--side-nav-vertical-padding);
    padding-left: 1.68571429em;
    text-indent: -1.28571429em;
    list-style-position: inside;
+}
+
+[class^=side-nav-lvl-2-link] > a {
+   display: list-item;
+   list-style-type: disc;
 }
 
 a [class^=side-nav-lvl-2-link] {
