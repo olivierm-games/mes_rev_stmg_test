@@ -209,7 +209,11 @@ aside.open {
    box-shadow: 1em 0 15em 9em #292929dd;
 }
 
-aside a:-webkit-any-link { color: inherit; }
+aside a:-webkit-any-link {
+   color: inherit;
+   padding: var(--side-nav-vertical-padding);
+   padding-left: 0;
+}
 
 aside ul {
    display: flex;
@@ -283,16 +287,16 @@ aside ul, .side-nav-lvl-0-link, [class^=side-nav-lvl-1-link] {
    /* display: list-item; */
    /* list-style-type: disc; */
    width: -webkit-fill-available;
-   padding: var(--side-nav-vertical-padding);
+   /* padding: var(--side-nav-vertical-padding); */
    padding-left: 1.68571429em;
-   text-indent: -1.28571429em;
-   list-style-position: inside;
+   /* text-indent: -1.28571429em; */
 }
 
 [class^=side-nav-lvl-2-link] > a {
    display: list-item;
    list-style-type: disc;
-   text-indent: 0;
+   list-style-position: outside;
+   /* text-indent: 0; */
 }
 
 a [class^=side-nav-lvl-2-link] {
