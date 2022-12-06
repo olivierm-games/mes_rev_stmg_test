@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="../../css/colors.css">
 		<link rel="stylesheet" href="../../css/dimens.css">
 		<link rel="stylesheet" href="../../css/tablet_desktop.css">
+		<link rel="stylesheet" href="c10_ord.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
 		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 		<script src="../../js/web-font-loader.js"></script>
@@ -28,9 +29,9 @@
 			<div w3-include-html="../../side_nav.html"></div>
 			<main class="night-mode-element">
 				<h1>Chapitre 10 : Comment réguler les échanges ?</h1>
-				<p><i>L'application des principes du libre-échange au niveau mondial n'est pas toujours évidente et les pratiques très divergentes du commerce mondial ont rendu indispensable la régulation des échanges.</i></p>
+				<p class="chapter-info">L'application des principes du libre-échange au niveau mondial n'est pas toujours évidente et les pratiques très divergentes du commerce mondial ont rendu indispensable la régulation des échanges.</p>
 				<section class="h2-container">
-					<h2>I. Qu'est-ce que l'omc ,</h2>
+					<h2>I. Qu'est-ce que l'OMC ?</h2>
 					<div class="h3-container">
 						<h3>A. La création de l'OMC et ses objectifs</h3>
 						<p><b>La libéralisation progressive des échanges internationaux et leur forte augmentation ont rendu indispensable l'existence d'un cadre réglementaire</b>.</p>
@@ -64,7 +65,49 @@
 						<h3>B. L'ORD : Organe de règlement des différends</h3>
 						<p><b>Lorsqu'un pays estime qu'un autre pays membre ne respecte pas un accord de l'OMC</b>, <b>il peut porter le conflit devant l'Organe de règlement des différends (ORD)</b> de l'OMC.</p>
 						<p>Cet <b>organisme</b> est constitué de représentants de tous les pays de l'OMC et <b>supervise le processus de règlement des différends</b> (schéma). Il peut en particulier prendre des mesures de sanction à l'encontre des pays contrevenants en cas de désaccord persistant.</p>
-						<canvas id="schema_ord" width="600" height="840">Votre navigateur (ou sa version trop ancienne) empêche de voir le schéma du processus de règlement des différends.</canvas>
+						<!-- <canvas id="schema_ord" width="600" height="840">Votre navigateur (ou sa version trop ancienne) empêche de voir le schéma du processus de règlement des différends.</canvas> -->
+						<p><u>Processus de règlement des différends</u> :</p>
+						<div id="ORD-container" class="col-s-10">
+							<span class="ORD-text">Différend entre 2 pays</span>
+							<span class="material-icons-round night-mode-element">arrow_downward</span>
+							<span class="ORD-text">Consultations</span>
+							<div class="ORD-split-arrows-container">
+								<span class="material-icons-round night-mode-element">south_west</span>
+								<span class="material-icons-round night-mode-element">south_east</span>
+							</div>
+							<div class="ORD-split-text-container">
+								<span class="ORD-text ORD-text-shrink">Solution amiable entre les parties</span>
+								<span class="ORD-text-separator">ou</span>
+								<span class="ORD-text-arrows ORD-text-shrink ORD-text">Mise en place d'un panel (groupe d'experts)</span>
+							</div>
+							<span class="material-icons-round night-mode-element ORD-right-arrow">arrow_downward</span>
+							<div class="ORD-text-container">
+								<span class="ORD-text">Rapport du panel</span>
+								<div class="ORD-split-arrows-container">
+									<span class="material-icons-round night-mode-element">south_west</span>
+									<span class="material-icons-round night-mode-element">south_east</span>
+								</div>
+							</div>
+							<div id="ORD-multi-arrows-container" class="ORD-split-text-container">
+								<span class="ORD-text ORD-text-shrink">Adoption du rapport</span>
+								<span class="ORD-text-separator">ou</span>
+								<span class="ORD-text-arrows ORD-text-shrink ORD-text">Appel de la décision</span>
+							</div>
+							<div class="ORD-split-text-container">
+								<span class="material-icons-round night-mode-element ORD-text-shrink">arrow_downward</span>
+								<div class="ORD-text-shrink ORD-text-container">
+									<span class="material-icons-round night-mode-element">arrow_downward</span>
+									<span class="ORD-text">Nouveau rapport</span>
+									<span class="material-icons-round night-mode-element">arrow_downward</span>
+								</div>
+							</div>
+							<span class="ORD-text">Application des recommandations</span>
+							<div id="ORD-text-arrow">
+								<span class="ORD-text-separator">Si non respect</span>
+								<span class="material-icons-round night-mode-element">arrow_downward</span>
+							</div>
+							<span class="ORD-text">Autorisation pour le plaignant d'appliquer des mesures de rétorsion</span>
+						</div>
 						<p>Cette possibilité de sanctionner les pays ne respectant pas les accords mis en œuvre dans le cadre de l'OMC permet d'assurer un plus grand respect des règles en vigueur qu'à l'époque du GATT.</p>
 						<p>Cependant, le processus de règlement n'est pas très rapide : il faut en moyenne un an et demi pour voir une action aboutir complètement. Et pendant ce temps, le pays qui commet les infractions peut continuer en toute impunité. Le système n'est donc pas complètement dissuasif.</p>
 					</div>

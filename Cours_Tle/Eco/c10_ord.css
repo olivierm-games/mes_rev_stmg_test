@@ -1,0 +1,70 @@
+/* .ORD-text-arrow-south {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+} */
+
+.ORD-text-arrows {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+#ORD-container {
+   margin: .5em auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.ORD-text {
+   background-color: #EAC788C0;
+   /* background-color: #EAC788; */
+   border-radius: .3em;
+   width: 100%;
+}
+
+.ORD-text, .ORD-secondary-text {
+   padding: .2em .5em;
+}
+
+.ORD-text, .ORD-text-shrink, .ORD-secondary-text {
+   text-align: center;
+}
+
+.ORD-text-container {
+   display: flex;
+   flex-direction: column;
+   width: -webkit-fill-available;
+}
+
+.ORD-text-shrink {width: 45%;}
+
+.ORD-split-arrows-container {
+   display: flex;
+   justify-content: space-evenly;
+   width: -webkit-fill-available;
+}
+
+.ORD-split-text-container {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: -webkit-fill-available;
+}
+
+#ORD-multi-arrows-container {
+   display: flex;
+}
+
+.ORD-text-separator {margin: 0 .9em;}
+
+.ORD-right-arrow {
+   position: relative;
+   left: 25%;
+}
+
+#ORD-text-arrow {
+   display: flex;
+   align-items: center;
+}

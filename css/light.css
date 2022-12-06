@@ -451,6 +451,20 @@ table ul {
 
 table p {margin-inline: 0;}
 
+.division-container {
+   display: flex;
+   margin-inline: 4%;
+   align-items: center;
+}
+
+.division-col {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+}
+
+.overline {text-decoration-line: overline;}
+
 #all-container td, #all-container th {
    padding: 4px;
    border: 0.01em solid var(--color-on-primary);
@@ -553,20 +567,15 @@ a:active.button {
    top: 2px;
 }
 
-.card-droit-1ere {
-   background-color: indianred;
-}
+.card-droit-1ere {background-color: indianred;}
 
-.card-eco-1ere {
-   background-color: #404245;
-}
-.card-mana-1ere {
-   background-color: seagreen;
-}
+.card-eco-1ere {background-color: #404245;}
 
-.card-droit-1ere, .card-eco-1ere, .card-mana-1ere {
-   padding: 0 2%;
-}
+.card-mana-1ere {background-color: seagreen;}
+
+.card-droit-1ere, .card-eco-1ere, .card-mana-1ere, .card-droit-tle, .card-eco-tle, .card-mana-tle {padding: 0 2%;}
+
+.card-droit-tle {background-color: #bf4f4f;}
 
 .card-text {
    width: fit-content;
@@ -593,12 +602,14 @@ a:active.button {
    margin-block-start: 1em;
 }
 
-#all-container td.borderless {
+/* #all-container td.borderless {
    border: none;
    text-align: center;
-}
+} */
 
-#all-container td.denominator {border-top: 0.01em solid var(--color-on-primary);}
+table.borderless {border-style: hidden;}
+
+/* #all-container td.denominator {border-top: 0.01em solid var(--color-on-primary);} */
 
 .message-tip {
     border-radius: 1em;
@@ -646,6 +657,39 @@ a:active.button {
    transition: font-size .6s, opacity .6s;
    /* overflow: hidden; */
    padding: 1% 0;
+}
+
+.example-tip {
+   border-radius: .5em;
+   margin: .5em 0;
+   margin-inline: 4%;
+   border: medium solid var(--color-button-background);
+}
+
+.example-tip-title {
+   /* display: block; */
+   /* width: -webkit-fill-available; */
+   font-weight: bold;
+   background-color: var(--color-button-background);
+   padding: 2%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.example-tip-content {
+   padding: 1% 2%;
+   transition: all var(--menu-anim-duration);
+   font-size: 100%;
+   display: block;
+}
+
+
+.example-tip.closed .example-tip-content {
+   font-size: 0;
+   padding: 0;
+   display: none;
+   /* max-height: 0; */
 }
 
 li a {
@@ -718,6 +762,10 @@ p.cite a {
    padding: 1%;
    /* margin: 0 2% 0 0; */
    max-width: 33.33%;
+}
+
+#flex-tables-container {
+   display: flex;
 }
 
 footer {
