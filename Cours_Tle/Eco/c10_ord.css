@@ -26,11 +26,11 @@
 
 #ORD-container.night-mode .ORD-text {background-color: #8e7357;}
 
-.ORD-text, .ORD-secondary-text {
+#ORD-container .ORD-text, .ORD-secondary-text {
    padding: .2em .5em;
 }
 
-.ORD-text, .ORD-text-shrink, .ORD-secondary-text {
+#ORD-container .ORD-text, .ORD-text-shrink, .ORD-secondary-text {
    text-align: center;
 }
 
