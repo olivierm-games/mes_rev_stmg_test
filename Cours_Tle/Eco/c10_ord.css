@@ -17,12 +17,14 @@
    align-items: center;
 }
 
-.ORD-text {
+#ORD-container .ORD-text {
    background-color: #EAC788C0;
    /* background-color: #EAC788; */
    border-radius: .3em;
    width: 100%;
 }
+
+#ORD-container.night-mode .ORD-text {background-color: #8e7357;}
 
 .ORD-text, .ORD-secondary-text {
    padding: .2em .5em;
