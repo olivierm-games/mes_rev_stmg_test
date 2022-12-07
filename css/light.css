@@ -571,11 +571,17 @@ a:active.button {
 
 .card-eco-1ere {background-color: #404245;}
 
-.card-mana-1ere {background-color: seagreen;}
+.card-mana-1ere {background-color: darkseagreen;}
 
-.card-droit-1ere, .card-eco-1ere, .card-mana-1ere, .card-droit-tle, .card-eco-tle, .card-mana-tle {padding: 0 2%;}
+.card-droit-1ere, .card-eco-1ere, .card-mana-1ere, .card-droit-tle, .card-eco-tle, .card-mana-tle, .card-sig {padding: 0 2%;}
 
 .card-droit-tle {background-color: #bf4f4f;}
+
+.card-eco-tle {background-color: #2e3540;}
+
+.card-mana-tle {background-color: seagreen;}
+
+.card-sig {background-color: #a58cd7;}
 
 .card-text {
    width: fit-content;
@@ -762,6 +768,12 @@ p.cite a {
    padding: 1%;
    /* margin: 0 2% 0 0; */
    max-width: 33.33%;
+}
+
+.fill-available-img {
+   width: 100%;
+   max-width: 200px;
+   padding: 0 1em;
 }
 
 #flex-tables-container {
