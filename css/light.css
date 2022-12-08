@@ -117,6 +117,11 @@ main a:hover {
    margin: .5em auto;
 }
 
+.table-big-img {
+   display: flex;
+   width: 100%;
+}
+
 #fab-back-to-top {
    position: fixed;
    width: 48px;
@@ -443,7 +448,7 @@ table {
    max-width: -webkit-fill-available;
 }
 
-table ul {
+table ul, table ol {
    list-style-position: inside;
    padding-inline-start: inherit;
    margin-block: .25em .5em;
@@ -778,6 +783,23 @@ p.cite a {
 
 #flex-tables-container {
    display: flex;
+}
+
+#sig-flex-sync-container {
+   /* max-width: 280px; */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.sig-flex-sync {
+   display: inline-flex;
+   flex-direction: column;
+}
+
+.sig-flex-sync img {
+   max-width: 280px;
+   margin: auto;
 }
 
 footer {

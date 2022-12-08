@@ -15,6 +15,18 @@
    .col-s-11 {width: 91.66%;}
 
    #all-container td, #all-container th {padding: 5px;}
+
+   #sig-flex-sync-container {
+      max-width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      /* justify-content: space-evenly; */
+   }
+
+   .sig-flex-sync img {max-width: 100%;}
+
+   .table-big-img {max-width: 360px;}
 }
 
 /* Medium devices (landscape tablets, 768px and up) */

@@ -28,7 +28,7 @@
 			<div w3-include-html="../../side_nav.html"></div>
 			<main class="night-mode-element">
 				<h1>Question 2 : Les évolutions technologiques sont-elles exemptes de risques pour l'organisation ?</h1>
-      		<p><i>Le développement des technologies numériques fait émerger de nouveaux modes de fonctionnement au sein des organisations qui bouleversent la place, le rôle et l’identité sociale des individus. L’intégration croissante du numérique dans les activités humaines, la numérisation généralisée des données suscitent des transformations culturelles, socio-économiques, juridiques et politiques profondes.</i></p>
+      		<p class="chapter-info">Le développement des technologies numériques fait émerger de nouveaux modes de fonctionnement au sein des organisations qui bouleversent la place, le rôle et l’identité sociale des individus. L’intégration croissante du numérique dans les activités humaines, la numérisation généralisée des données suscitent des transformations culturelles, socio-économiques, juridiques et politiques profondes.</p>
 				<section class="h2-container">
 					<h2>I. TIC et conditions de travail</h2>
 					<div class="h3-container">
@@ -49,7 +49,7 @@
 						<ul>
 							<li><b>technique</b> : l'ouverture du SI vers l'extérieur nécessite des mesures de sécurité ;</li>
 							<li><b>managérial</b> : le manager peut craindre une perte de contrôle, il adaptera son mode de management ou deviendra un animateur du travail, il peut espérer en contrepartie une implication et une fidélisation des salariés ;</li>
-							<li><b>juridique</b> : le télétravail salarié est régi par des textes de droit européens et nationaux dont le Code du travail (<a href="https://teletravail.fr/aspects-juridiques/" class="approf_sig" target="_blank">Approfondir</a>) ;</li>
+							<li><b>juridique</b> : le télétravail salarié est régi par des textes de droit européens et nationaux dont le Code du travail (<a href="https://teletravail.fr/aspects-juridiques/" class="open-in-new" target="_blank" title="teletravail.fr/aspects-juridiques">approfondir<span class="material-icons-round night-mode-element">open_in_new</span></a>) ;</li>
 							<li><b>financier</b> : l'équipement, les frais (abonnement, énergie du domicile) peuvent être tout ou partie pris en charge par l'employeur ;</li>
 							<li><b>social</b> : maintien d'un lien avec les autres membres de l'organisation ;</li>
 							<li><b>formatif</b> : il faut former et même "éduquer" les télétravailleurs et manageurs aux bons usages des outils.</li>
@@ -65,90 +65,155 @@
 						<h4>Épuisement des ressources non renouvelables</h4>
 						<p>La fabrication des composants électroniques qui constituent les éléments de base d’un ordinateur nécessite d’importantes quantités de métaux précieux, terres rares, et minerais (comme le terbium, l’hafnium, l’argent, l’or, le zinc, le coltan, etc.), dont les gisements connus seront épuisés d’ici 2 à 30 ans. Or, la quantité de puces électroniques produites chaque année ne cesse d’augmenter à mesure que les produits de la vie courante deviennent « intelligents ».</p>
 						<h4>Pollution par des substances toxiques</h4>
-						<p>Les TIC concentrent de nombreuses substances chimiques nocives pour l’environnement et la santé. Les impacts se situent essentiellement lors de la fabrication et la fin de vie des appareils (voir <a href="#analyse_cycle_de_vie" class="approf_sig">analyse du cycle de vie</a>).</p>
+						<p>Les TIC concentrent de nombreuses substances chimiques nocives pour l’environnement et la santé. Les impacts se situent essentiellement lors de la fabrication et la fin de vie des appareils (voir tableau ci-dessous).</p>
 					</div>
 					<div class="h3-container">
 						<h3>B. Responsabilité environnementale des organisations</h3>
 						<p><u>Les technologies des SI ont donc diverses conséquences écologiques que l'on peut représenter en suivant une analyse du cycle de vie (ACV)</u> :</p>
-						<table style="border: none;">
+						<table>
 							<tbody>
 								<tr>
-									<td rowspan="5">
-										<canvas id="canvas_sig_schema_cycle_vie" width="160" height="875">Votre navigateur (ou sa version trop ancienne) empêche de voir la frise : Extractions de matières premières, Fabrication, Transport, Utilisation, Fin de vie.</canvas></td>
-										<td style="width: 30%; vertical-align: middle;" class="td_top_centre"><img src="../../doc_externe/terres_rares.jpg" alt="mine de terres rares" /></td>
-										<td><i>Par exemple, les terres rares sont des métaux précieux dont l'extraction est polluante et dont le contrôle peut-être en arrière plan de conflits</i></td>
-									</tr>
-									<tr>
-										<td class="td_top_centre" style="vertical-align: middle;"><img src="../../doc_externe/circuit_imprime.jpg" alt="circuits imprimés" /></td>
-										<td><i>Par exemple, la fabrication d’une puce électronique de 2 grammes nécessite environ 2 kg de matières premières et 30 litres d’eau</i></td>
-									</tr>
-									<tr>
-										<td class="td_top_centre"><img src="../../doc_externe/transports.jpg" alt="moyens de transports de marchandises" /></td>
-										<td rowspan="2"><i>Consommation d'énergie (émission de gaz à effet de serre notamment)</i></td>
-									</tr>
-									<tr>
-										<td class="td_top_centre"><img src="../../doc_externe/utilisation_tic.jpg" alt="utilisation des TIC" /></td>
-									</tr>
-									<tr>
-										<td class="td_top_centre" style="padding-bottom:3%; vertical-align: middle;"><img src="../../doc_externe/decharge_prod_electro.jpg" alt="décharge de produits électroniques"  style="width: 98%;" /></td>
-										<td id="analyse_cycle_de_vie" style="padding-bottom:3%;"><i>Tri, recyclage, destruction (émission de polluants), abandon (pollution des sols)</i></td>
-									</tr>
-								</tbody>
-							</table>
+									<td>
+										<ol>
+											<li class="important">Extraction de matières premières</li>
+										</ol>
+										<img src="../../img/terres_rares.webp" alt="Mine de terres rares" title="Mine de terres rares" class="table-big-img">
+									</td>
+									<td>Par exemple, les terres rares sont des métaux dont l'extraction est polluante et dont le contrôle peut-être en arrière plan de conflits</td>
+								</tr>
+								<tr>
+									<td>
+										<ol>
+											<li value="2" class="important">Fabrication</li>
+										</ol>
+										<img src="../../img/chip.webp" alt="Composants de circuits électroniques" title="Composants de circuits électroniques" class="table-big-img">
+									</td>
+									<td>Par exemple, la fabrication d’une puce électronique de 2 grammes nécessite environ 2 kg de matières premières et 30 litres d’eau</td>
+								</tr>
+								<tr>
+									<td>
+										<ol>
+											<li value="3" class="important">Transport</li>
+										</ol>
+										<img src="../../img/transports.webp" alt="Moyens de transports de marchandises" class="table-big-img">
+									</td>
+									<td rowspan="2">Consommation d'énergie (émission de gaz à effet de serre notamment)</td>
+								</tr>
+								<tr>
+									<td>
+										<ol>
+											<li value="4" class="important">Utilisation</li>
+										</ol>
+										<img src="../../img/utilisation_tic.webp" alt="utilisation des TIC" class="table-big-img">
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<ol>
+											<li value="5" class="important">Fin de vie</li>
+										</ol>
+										<img src="../../img/decharge_prod_electro.webp" alt="Décharge de produits électroniques" title="Décharge de produits électroniques" class="table-big-img">
+									</td>
+									<td>Tri, recyclage, destruction (émission de polluants), abandon (pollution environnementale)</td>
+								</tr>
+							</tbody>
+						</table>
 							<p>L'<b>écoconception</b> consiste à prendre en compte l'ensemble des étapes du cycle de vie dès la conception afin d'en réduire les impacts sur l'environnement.</p>
 					</div>
 					<div class="h3-container">
 						<h3>C. Réduire l’impact négatif des TIC sur l’environnement</h3>
-						<table class="tab_sig">
-							<caption>Les actions à mener par la DSI (Direction des Systèmes d'Information)</caption>
-							<tbody>
-								<tr>
-									<td class="td_gauche_gros td_sig">Domaines concernés de la composante technologique du SI</td>
-									<td class="td_gauche_gros td_sig">Principales nocivitées</td>
-									<td class="td_gauche_gros td_sig">Actions à mener pour réduire l'impact environnementale</td>
-								</tr>
-								<tr>
-									<td class="td_centre_gros td_sig">Les postes de travail et terminaux mobiles des utilisateurs</td>
-									<td class="td_sig">Les ordinateurs concentrent une part prépondérante de l’empreinte du SI, tant en terme d’utilisation de ressources naturelles non renouvelables, de pollutions, de consommation électrique, que de coût. Le nombre de téléphones portables et l’augmentation de leurs fonctionnalités induisent aussi des impacts très importants.</td>
-									<td class="td_sig">
-										<ul>
-											<li>Prolonger la durée de vie du matériel existant ;</li>
-											<li>Éteindre ordinateurs et écrans (configurer la mise en veille prolongée ou utiliser un logiciel de gestion du parc informatique permettant d’éteindre et d’allumer les ordinateurs à une heure préprogrammée) ;</li>
-											<li>Acheter responsable (privilégier les éco-labels et les appareils ayant les meilleures performances environnementales).</li>
-										</ul>
-									</td>
-								</tr>
-								<tr>
-									<td class="td_centre_gros td_sig">Les serveurs et centres de données (data center ou « ferme de données »)</td>
-									<td class="td_sig">Contrairement à la plupart des autres domaines du SI, un centre de données consomme plus d’énergie lors de la phase d’utilisation que celle nécessaire à sa fabrication.</td>
-									<td class="td_sig">Si l’allongement de la durée de vie du matériel et la gestion des déchets restent importants, ce sont surtout les économies d’énergie à l’usage qu’il faut privilégier.</td>
-								</tr>
-								<tr>
-									<td class="td_centre_gros td_sig">Les logiciels</td>
-									<td class="td_sig">Les besoins des logiciels – mémoire, puissance processeur, espace disque – et leur fréquence de mise à jour conditionnent la durée d’utilisation du matériel informatique.</td>
-									<td class="td_sig">
-										<ul>
-											<li>Ne pas mettre systématiquement à jour les logiciels (à l’exception des MAJ sécurité) ;</li>
-											<li>Pour les développements internes, utiliser des patrons de conception, algorithmes, architecture du code, etc., qui réduisent les besoins en ressources matérielles.</li>
-										</ul>
-									</td>
-								</tr>
-								<tr>
-									<td class="td_centre_gros td_sig">L'impression</td>
-									<td class="td_sig">L’empreinte environnementale de l’impression se concentre sur la phase d’utilisation, au niveau des consommables : encre et papier. L’utilisateur est le seul à pouvoir réduire ces impacts, mais la DSI peut l’accompagner au quotidien.</td>
-									<td class="td_sig">
-										<ul>
-											<li>Imprimez uniquement si nécessaire ;</li>
-											<li>Imprimer sur du papier responsable, 100% recyclé ou FSC ;</li>
-											<li>Mettre en place un circuit de recyclage du papier et du toner.</li>
-										</ul>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						<blockquote>
-							Approfondir la dimension environnementale des SI avec le <a href="http://awsassets.wwfffr.panda.org/downloads/guidentic27042011_110801093454_phpapp01.pdf" target="_blank" class="approf_sig">Guide pour un système d’information éco-responsable</a> de l'ONG WWF datant de 2011.
-						</blockquote>
+						<div class="h4-container">
+							<h4>1°) Les postes de travail et terminaux mobiles des utilisateurs</h4>
+							<table>
+								<thead>
+									<tr>
+										<th>Principales nocivitées</th>
+										<th>Actions à mener pour réduire l'impact environnementale</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<p>Les ordinateurs concentrent une part prépondérante de l’empreinte du SI, tant en terme d’utilisation de ressources naturelles non renouvelables, de pollutions, de consommation électrique, que de coût.</p>
+											<p>Le nombre de téléphones portables et l’augmentation de leurs fonctionnalités induisent aussi des impacts très importants</p>
+										</td>
+										<td>
+											<ul>
+												<li>Prolonger la durée de vie du matériel existant ;</li>
+												<li>Éteindre ordinateurs et écrans (configurer la mise en veille prolongée ou utiliser un logiciel de gestion du parc informatique permettant d’éteindre et d’allumer les ordinateurs à une heure préprogrammée) ;</li>
+												<li>Acheter responsable (privilégier les éco-labels et les appareils ayant les meilleures performances environnementales)</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="h4-container">
+							<h4>2°) Les serveurs et centres de données (data centers ou « fermes de données »)</h4>
+							<table>
+								<thead>
+									<tr>
+										<th>Principales nocivitées</th>
+										<th>Actions à mener pour réduire l'impact environnementale</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Contrairement à la plupart des autres domaines du SI, un centre de données consomme plus d’énergie lors de la phase d’utilisation que celle nécessaire à sa fabrication</td>
+										<td>Si l’allongement de la durée de vie du matériel et la gestion des déchets restent importants, ce sont surtout les économies d’énergie à l’usage qu’il faut privilégier</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="h4-container">
+							<h4>3°) Les logiciels</h4>
+							<table>
+								<thead>
+									<tr>
+										<th>Principales nocivitées</th>
+										<th>Actions à mener pour réduire l'impact environnementale</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Les besoins des logiciels – mémoire, puissance processeur, espace disque – et leur fréquence de mise à jour conditionnent la durée d’utilisation du matériel informatique</td>
+										<td>
+											<ul>
+												<li>Ne pas mettre systématiquement à jour les logiciels (à l’exception des MAJ sécurité) ;</li>
+												<li>Pour les développements internes, utiliser des patrons de conception, algorithmes, architecture du code, etc., qui réduisent les besoins en ressources matérielles</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="h4-container">
+							<h4>4°) Les impressions</h4>
+							<table>
+								<thead>
+									<tr>
+										<th>Principales nocivitées</th>
+										<th>Actions à mener pour réduire l'impact environnementale</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<p>L’empreinte environnementale de l’impression se concentre sur la phase d’utilisation, au niveau des consommables : encre et papier.</p>
+											<p>L’utilisateur est le seul à pouvoir réduire ces impacts, mais la DSI peut l’accompagner au quotidien</p>
+										</td>
+										<td>
+											<ul>
+												<li>Imprimez uniquement si nécessaire ;</li>
+												<li>Imprimer sur du papier responsable, 100% recyclé ou FSC ;</li>
+												<li>Mettre en place un circuit de recyclage du papier et du toner</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p>Approfondir la dimension environnementale des SI avec le <a href="http://awsassets.wwfffr.panda.org/downloads/guidentic27042011_110801093454_phpapp01.pdf" target="_blank" class="open-in-new">Guide pour un système d’information éco-responsable<span class="material-icons-round night-mode-element">open_in_new</span></a> de l'ONG WWF datant de 2011.</p>
 					</div>
 				</section>
 				<section class="h2-container">
@@ -174,34 +239,34 @@
 					<div class="h3-container">
 						<h3>C. Traces numériques</h3>
 						<p>Les traces numériques concernant un internaute peuvent se caractériser en fonction de leur lieu de conservation et de leur source de diffusion :</p>
-						<table class="tab_sig">
+						<table>
 							<thead>
 								<tr>
-									<td class="td_centre_gros td_sig">Lieu de conservation</td>
-									<td class="td_centre_gros td_sig">Source de diffusion</td>
+									<th>Lieu de conservation</th>
+									<th>Source de diffusion</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td class="td_sig">
+									<td>
 										<ul>
-											<li>Sur l'<b>équipement de l'internaute</b> : le navigateur conserve l'historique (des sites visités, des téléchargements...) et des cookies implantés par les sites (avec un consentement préalable de l'utilisateur selon la réglementation européenne).<br>Ces données peuvent ne pas être collectées (navigation privée) ou être effacées ;</li>
-											<li>Chez les <b>fournisseurs d'accès Internet (FAI)</b> : conservation pendant un an des connexions, transmission possible à la justice ;</li>
-											<li>Les serveurs des <b>sites consultés</b> : données stockées dans des bases, informations publiées, requêtes effectuées).</li>
+											<li><b>Sur l'équipement de l'internaute</b> : le navigateur conserve l'historique (des sites visités, des téléchargements...) et des cookies implantés par les sites (avec un consentement préalable de l'utilisateur selon la réglementation européenne).<br>Ces données peuvent ne pas être collectées (navigation privée) ou être effacées ;</li>
+											<li><b>Chez les fournisseurs d'accès Internet (FAI)</b> : conservation pendant un an des connexions, transmission possible à la justice ;</li>
+											<li><b>Sur les serveurs des sites consultés</b> : données stockées dans des bases, informations publiées, requêtes effectuées</li>
 										</ul>
 									</td>
-									<td class="td_sig">
+									<td>
 										<ul>
 											<li>Laissées par <b>l'internaute</b> lui-même : les traces déclaratives (informations publiées) sont <i>a priori</i> intentionnelles et conscientes.<br>Les traces agissantes (navigation, requêtes...) sont moins conscientes et donc plus inintentionnelles.<br>L'internaute peut maîtriser ces traces par ses actions et son mode de navigation ;</li>
-											<li>Laissées par <b>d'autres</b> internautes : maîtriser ces traces est plus difficile car l'internaute ne peut pas agir directement sur elles ou ne peut pas en avoir conscience (articles, commentaires de blog, photos taguées, mise en relation demandée...) ;</li>
+											<li>Laissées par <b>d'autres internautes</b> : maîtriser ces traces est plus difficile car l'internaute ne peut pas agir directement sur elles ou ne peut pas en avoir conscience (articles, commentaires de blog, photos taguées, mise en relation demandée...) ;</li>
 											<li><b>Calculées</b> : le croisement de ces traces, chacune peu porteuses d'information, permet de profiler de façon fine et assez sûre l'internaute (même anonyme) : âge, sexe, activités, goûts...</li>
 										</ul>
 									</td>
 								</tr>
 							</tbody>
 						</table>
-						<p>Une partie des traces collectées sont associées à l'adresse IP (voir Chapitre 6) de l'équipement utilisé pour se connecter. Même si une adresse IP peut être associée à plusieurs personnes physiques (famille, organisation), les techniques de profilage se perfectionnent afin de pouvoir les distinguer par recoupement avec d'autres données. L'adresse IP est donc considérée comme une donnée à caractère personnel (voir <a href="#donnes_cara_perso" class="approf_sig">données à caractère personnel</a>).</p>
-						<p>Le passage par un serveur proxy (voir Chapitre 6) peut permettre de « masquer » l'adresse IP d'origine derrière celle du serveur proxy afin de réduire les traces de navigation laissées aux trois lieux de conservation mentionnés.</p>
+						<p>Une partie des traces collectées sont associées à l'adresse IP de l'équipement utilisé pour se connecter. Même si une adresse IP peut être associée à plusieurs personnes physiques (famille, organisation), les techniques de profilage se perfectionnent afin de pouvoir les distinguer par recoupement avec d'autres données. L'adresse IP est donc considérée comme une donnée à caractère personnel (<a href="#donnes_cara_perso">voir données à caractère personnel</a>).</p>
+						<p>Le passage par un serveur proxy peut permettre de « masquer » l'adresse IP d'origine derrière celle du serveur proxy afin de réduire les traces de navigation laissées aux trois lieux de conservation mentionnés.</p>
 						<p>Les traces numériques étant porteuses d'identité, il faut espérer qu'elles sont conservées de façon sécurisée (contrôle d'accès, chiffrement) afin de limiter les risques d'atteinte à la vie privée.</p>
 						<p>Les traces numériques déclaratives participent à l'e-réputation. Complétées par les traces agissantes et calculées, elles permettent un profilage comportemental (ciblage publicitaire, surveillance sécuritaire...).</p>
 					</div>
@@ -227,7 +292,7 @@
 							<li>La loi française du 6 janvier 1978 (I&L) a créé la <b>CNIL</b> (Commission Nationale de l'Informatique et des Libertés) et a inspiré des lois similaires dans le monde ;</li>
 							<li>La directive européenne du 24 octobre 1995 vise à harmoniser, par transposition, les lois nationales (cette directive est abrogée par le RGPD);</li>
 							<li>La loi du 6 août 2004 modifie la loi Informatique et Libertés pour transposer la directive européenne ;</li>
-							<li>Le <b>réglement général sur la protection des données (RGPD)</b> applicable à partir du 25 mai 2018 (à l'ensemble des pays de l'UE) et nécessitant une nouvelle loi I&L. <u>Cette réforme de la protection des données poursuit 3 objectifs</u> :
+							<li>Le <b>réglement général sur la protection des données (RGPD)</b> en application depuis le 25 mai 2018 (à l'ensemble des pays de l'UE) et nécessitant une nouvelle loi I&L. <u>Cette réforme de la protection des données poursuit 3 objectifs</u> :
 								<ol>
 									<li><b>Renforcer les droits des personnes</b>, notamment par la création d’un droit à la portabilité des données personnelles et de dispositions propres aux personnes mineures ;</li>
 									<li><b>Responsabiliser les acteurs traitant des données</b> (responsables de traitement et sous-traitants) tout en allégeant leurs démarches administratives ;</li>
@@ -238,38 +303,40 @@
 					<div class="h3-container">
 						<h3>C. Les droits des individus</h3>
 						<p>La loi I&L ainsi que le RGPD garantissent des droits spécifiques. Il est possible - dans la plupart des cas - de faire valoir ces droits soi-même.</p>
-						<table class="tab_sig">
+						<table>
+							<thead>
+								<tr>
+									<th>Droits</th>
+									<th colspan="2">Explications</th>
+								</tr>
+							</thead>
 							<tbody>
 								<tr>
-									<td class="td_gauche_gros td_sig">Droits</td>
-									<td colspan="2" class="td_gauche_gros">Explications</td>
+									<td class="important">d'Information</td>
+									<td>Pas de collecte à l'insu de l'individu, qui doit être informé de la finalité (les données collectées n'excédant pas cette finalité) et d'éventuels transferts à d'autres organismes</td>
+									<td rowspan="4"><a target="_blank" href="https://www.cnil.fr/fr/respecter-les-droits-des-personnes" class="open-in-new">Aller plus loin<span class="material-icons-round night-mode-element">open_in_new</span></a></td>
 								</tr>
 								<tr>
-									<td class="td_sig td_centre_gros">Information</td>
-									<td class="td_sig">Pas de collecte à l'insu de l'individu, qui doit être informé de la finalité (les données collectées n'excédant pas cette finalité) et d'éventuels transferts à d'autres organismes</td>
-									<td class="td_sig td_10_col" rowspan="4"><a class="approf_sig" target="_blank" href="https://www.cnil.fr/fr/respecter-les-droits-des-personnes">Aller plus loin</a></td>
+									<td class="important">d'Opposition</td>
+									<td>S'opposer pour des raisons légitimes à une collecte de données personnelles</td>
 								</tr>
 								<tr>
-									<td class="td_sig td_centre_gros">Opposition</td>
-									<td class="td_sig">S'opposer pour des raisons légitimes à une collecte de données personnelles</td>
+									<td class="important">d'Accès</td>
+									<td>Demander à un organisme s'il détient des données sur soi et les consulter ; pour certains fichiers (sécurité, justice...), l'accès est indirect (confié à un intermédiaire, la CNIL)</td>
 								</tr>
 								<tr>
-									<td class="td_sig td_centre_gros">Accès</td>
-									<td class="td_sig">Demander à un organisme s'il détient des données sur soi et les consulter ; pour certains fichiers (sécurité, justice...), l'accès est indirect (confié à un intermédiaire, la CNIL)</td>
+									<td class="important">de Rectification</td>
+									<td>Faire rectifier des données personnelles stockées inexactes ou incomplètes</td>
 								</tr>
 								<tr>
-									<td class="td_sig td_centre_gros">Rectification</td>
-									<td class="td_sig">Faire rectifier des données personnelles stockées inexactes ou incomplètes</td>
+									<td class="important">d'Oubli (ou effacement)</td>
+									<td>Demander la suppression de données personnelles stockées</td>
+									<td><a target="_blank" href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3#Article17" class="open-in-new">Aller plus loin<span class="material-icons-round night-mode-element">open_in_new</span></a></td>
 								</tr>
 								<tr>
-									<td class="td_sig td_centre_gros">Oubli (ou effacement)</td>
-									<td class="td_sig">Demander la suppression de données personnelles stockées</td>
-									<td class="td_sig"><a class="approf_sig" target="_blank" href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3#Article17">Aller plus loin</a></td>
-								</tr>
-								<tr>
-									<td class="td_sig td_centre_gros">Portabilité</td>
-									<td class="td_sig">Récupérer les données à caractère personnel fournies sous une forme aisément réutilisable et le cas échéant, transférer ces données à un tiers</td>
-									<td class="td_sig"><a class="approf_sig" target="_blank" href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3#Article20">Aller plus loin</a></td>
+									<td class="important">de Portabilité</td>
+									<td>Récupérer les données à caractère personnel fournies sous une forme aisément réutilisable et le cas échéant, transférer ces données à un tiers</td>
+									<td><a target="_blank" href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3#Article20" class="open-in-new">Aller plus loin<span class="material-icons-round night-mode-element">open_in_new</span></a></td>
 								</tr>
 							</tbody>
 						</table>
