@@ -35,38 +35,52 @@
 					<p>L'algorithmique est une démarche de résolution des problèmes dont la logique est : à partir de données (1) dont on dispose initialement, effectuer des traitements (2) afin d'arriver à un résultat (3).</p>
 					<table class="tab_sig">
 						<caption id="captionex">Exemple : Calcul d'un âge en années révolues</caption>
+						<thead>
+							<tr>
+								<th>Étapes</th>
+								<th>Mise en œuvre</th>
+								<th>Exemple</th>
+							</tr>
+						</thead>
 						<tbody>
 							<tr>
-								<td class="td_centre_gros td_sig td_background_sig" style="width: 20%;">Étapes</td>
-								<td class="td_centre_gros td_sig td_background_sig">Mise en œuvre</td>
-								<td class="td_centre_gros td_sig td_background_sig">Exemple</td>
+								<td rowspan="2">
+									<ol>
+										<li class="important">Données</li>
+									</ol>
+								</td>
+								<td>Date de naissance : entrée par l'utilisateur</td>
+								<td>23 / 07 / 2000</td>
 							</tr>
 							<tr>
-								<td rowspan="2" class="td_gauche_gros td_sig">1 - Données</td>
-								<td class="td_sig">Date de naissance : saisie au clavier</td>
-								<td class="td_sig">23/07/2000</td>
+								<td>Date du jour : récupération automatique auprès de l'horloge interne de l'ordinateur</td>
+								<td>15 / 10 / 2016</td>
 							</tr>
 							<tr>
-								<td class="td_sig">Date du jour : récupération automatique auprès de l'horloge interne de l'ordinateur</td>
-								<td class="td_sig">15/10/2016</td>
+								<td rowspan="3">
+									<ol>
+										<li value="2" class="important">Traitements</li>
+									</ol>
+								</td>
+								<td>Calcul du nombre de jours depuis la naissance</td>
+								<td>15 / 10 / 2016 - 23 / 07 / 2000 = 5 928 jours</td>
 							</tr>
 							<tr>
-								<td rowspan="3" class="td_gauche_gros td_sig">2 - Traitements</td>
-								<td class="td_sig">Calcul du nombre de jours depuis la naissance</td>
-								<td class="td_sig">15/10/2016 - 23/07/2000 = 5928 jours</td>
+								<td>Conversion de ce nombre de jours en années</td>
+								<td>5 928 / 365,25 = 16,23 années</td>
 							</tr>
 							<tr>
-								<td class="td_sig">Conversion de ce nombre de jours en années</td>
-								<td class="td_sig">5829 / 365,25 = 16,23 années</td>
+								<td>Arrondi inférieur du nombre d'années obtenu</td>
+								<td>Arrondi inférieur de 16,23 = 16 ans</td>
 							</tr>
 							<tr>
-								<td class="td_sig">Arrondi inférieur du nombre d'années obtenu</td>
-								<td class="td_sig">Arrondi inférieur de 16,23 = 16 ans</td>
-							</tr>
-							<tr>
-								<td class="td_gauche_gros td_sig">3 - Résultats</td>
-								<td class="td_sig">Affichage de l'âge</td>
-								<td class="td_sig">« Vous avez actuellement 16 ans. »</td>
+								<td>
+									<ol>
+										<li value="3" class="important">Résultat</li>
+									</ol>
+								</td>
+								<td>Affichage de l'âge</td>
+								<td>« Vous avez 16 ans. »</td>
 							</tr>
 						</tbody>
 					</table>
@@ -216,7 +230,7 @@
 							</tr>
 							<tr>
 								<td class="td_left"><span class="text_red">$a</span>=<span class="text_orange">5</span>;</td>
-								<td rowspan="5" class="td_sig">Aucun</td>
+								<td rowspan="5">Aucun</td>
 							</tr>
 							<tr>
 								<td class="td_left"><span class="text_red">$b</span>=<span class="text_orange">7</span>;</td>
@@ -232,7 +246,7 @@
 							</tr>
 							<tr>
 								<td class="td_left"><span class="text_red">$statut</span>=<span class="text_vert">"étudiant"</span>;</td>
-								<td rowspan="7" class="td_sig">Tarif réduit</td>
+								<td rowspan="7">Tarif réduit</td>
 							</tr>
 							<tr>
 								<td class="td_left"><span class="text_red">$age</span>=<span class="text_orange">21</span>;</td>
@@ -325,7 +339,7 @@
 						<table class="tab_sig">
 							<thead>
 								<tr>
-									<td class="td_centre_gros td_sig td_background_sig">Structure itérative avec compteur (POUR...FIN POUR)</td>
+									<th>Structure itérative avec compteur (POUR...FIN POUR)</td>
 								</tr>
 							</thead>
 							<tbody>
@@ -529,7 +543,7 @@
 									</thead>
 									<tbody>
 										<tr>
-											<td colspan="2" class="td_sig"><span class="text_purple">int</span><span class="text_turquoise"> time </span>()</td>
+											<td colspan="2"><span class="text_purple">int</span><span class="text_turquoise"> time </span>()</td>
 										</tr>
 										<tr>
 											<td colspan="2">Cette description signifie que la fonction renvoie un entier (<span class="text_purple">int</span>).</td>
@@ -559,7 +573,7 @@
 									</thead>
 									<tbody>
 										<tr>
-											<td colspan="2" class="td_sig"><span class="text_purple">string</span><span class="text_turquoise"> date </span>(<span class="text_purple">string</span><span class="text_red"> $format </span>[
+											<td colspan="2"><span class="text_purple">string</span><span class="text_turquoise"> date </span>(<span class="text_purple">string</span><span class="text_red"> $format </span>[
 												, <span class="text_purple">int</span><span class="text_red"> $timestamp </span>=<span class="text_turquoise"> time</span>()])</td>
 											</tr>
 											<tr>
@@ -576,12 +590,12 @@
 												<td class="td_background_sig td_centre td_sig">Affichages</td>
 											</tr>
 											<tr>
-												<td class="td_sig"><span class="text_turquoise">echo</span> <span class="text_vert">"Nous sommes en l'an "</span> . <span class="text_turquoise">date</span>(<span class="text_vert">'Y'</span>) . <span class="text_vert">"."</span>;</td>
-												<td class="td_sig"> <?php echo "Nous sommes en l'an " . date('Y') . "."; ?> </td>
+												<td><span class="text_turquoise">echo</span> <span class="text_vert">"Nous sommes en l'an "</span> . <span class="text_turquoise">date</span>(<span class="text_vert">'Y'</span>) . <span class="text_vert">"."</span>;</td>
+												<td> <?php echo "Nous sommes en l'an " . date('Y') . "."; ?> </td>
 											</tr>
 											<tr>
-												<td class="td_sig"><span class="text_turquoise">echo</span> <span class="text_vert">"Aujourd'hui nous sommes le "</span> . <span class="text_turquoise">date</span>(<span class="text_vert">'d / m / y'</span>) . <span class="text_vert">"."</span>;</td>
-												<td class="td_sig"> <?php echo "Aujourd'hui nous sommes le " . date('d / m / y', time()+7200) . "."; ?> </td>
+												<td><span class="text_turquoise">echo</span> <span class="text_vert">"Aujourd'hui nous sommes le "</span> . <span class="text_turquoise">date</span>(<span class="text_vert">'d / m / y'</span>) . <span class="text_vert">"."</span>;</td>
+												<td> <?php echo "Aujourd'hui nous sommes le " . date('d / m / y', time()+7200) . "."; ?> </td>
 											</tr>
 										</tbody>
 									</table>
@@ -594,7 +608,7 @@
 										</thead>
 										<tbody>
 											<tr>
-												<td colspan="2" class="td_sig"><span class="text_purple">float</span><span class="text_turquoise"> round</span>(<span class="text_purple">float</span><span class="text_red"> $val </span>[ , <span class="text_purple">int</span><span class="text_red"> $precision </span>=<span class="text_orange"> 0</span>])</td>
+												<td colspan="2"><span class="text_purple">float</span><span class="text_turquoise"> round</span>(<span class="text_purple">float</span><span class="text_red"> $val </span>[ , <span class="text_purple">int</span><span class="text_red"> $precision </span>=<span class="text_orange"> 0</span>])</td>
 											</tr>
 											<tr>
 												<td colspan="2" class="td_sig_bord_g">Cette description signifie que la fonction renvoie un nombre à virgule flottante (1<sup>er</sup> <span class="text_purple">float</span>, nombre réel ou naturel).</td>
