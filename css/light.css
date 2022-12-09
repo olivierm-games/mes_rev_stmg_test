@@ -260,7 +260,7 @@ aside::-webkit-scrollbar-thumb {
 }
 
 #cours-1ere-all-container, #cours-1ere-droit-all-container, #cours-1ere-eco-all-container, #cours-1ere-mana-all-container,
-#cours-tle-all-container, #cours-tle-droit-all-container, #cours-tle-eco-all-container, #cours-tle-mana-all-container {
+#cours-tle-all-container, #cours-tle-droit-all-container, #cours-tle-eco-all-container, #cours-tle-mana-all-container, #cours-sig-all-container {
    transition: max-height var(--side-nav-anim-duration) ease-out;
    overflow: hidden;
    max-height: 0;

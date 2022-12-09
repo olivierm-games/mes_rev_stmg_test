@@ -74,7 +74,7 @@ aside.night-mode {
 }
 
 [class^=side-nav-lvl-1-link].night-mode:hover, #cours-1ere-droit.night-mode.hover, #cours-1ere-eco.night-mode.hover, #cours-1ere-mana.night-mode.hover,
-#cours-tle-droit.night-mode.hover, #cours-tle-eco.night-mode.hover, #cours-tle-mana.night-mode.hover {
+#cours-tle-droit.night-mode.hover, #cours-tle-eco.night-mode.hover, #cours-tle-mana.night-mode.hover, #cours-sig.night-mode.hover {
 /* .side-nav-lvl-1-link.night-mode:hover { */
    background-color: steelblue;
 }
