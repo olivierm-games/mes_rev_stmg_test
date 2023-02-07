@@ -108,9 +108,7 @@ main a, footer a {
 main a:link { color: royalblue; }
 main a:visited { color: rebeccapurple; }
 
-footer a:link, footer a:visited {
-   color: #707A8A;
-}
+footer a:link, footer a:visited {color: #505A6A;}
 
 main a:hover, footer a:hover {
    color: var(--color-control-on-primary);
@@ -758,7 +756,7 @@ footer {
    display: flex;
    justify-content: center;
    width: 100%;
-   font-family: 'Comfortaa';
+   font-family: 'Balsamiq Sans';
    font-size: .9em;
    background-color: var(--color-primary);
    bottom: 0;

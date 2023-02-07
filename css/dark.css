@@ -60,16 +60,14 @@ a.button.night-mode:hover {color: #F0B90DED;}
 
 #all-container.night-mode h1 {background: linear-gradient(0deg, var(--color-background-dark), var(--color-primary-dark) 0.1%, var(--color-surface-dark) 4%, var(--color-surface-dark));}
 
-#all-container.night-mode h1, #all-container.night-mode h2 {
-   text-decoration-color: var(--color-on-primary-dark);
-}
+#all-container.night-mode h1, #all-container.night-mode h2 {text-decoration-color: var(--color-on-primary-dark);}
 
-#all-container.night-mode td, #all-container.night-mode th {
-   border-color: var(--color-on-primary-dark);
-}
+#all-container.night-mode td, #all-container.night-mode th {border-color: var(--color-on-primary-dark);}
 
 footer.night-mode {background-color: var(--color-primary-dark);}
 
-footer.night-mode ul {color: var(--color-on-primary-dark);}
+footer.night-mode div {color: #C0CADA;}
 
-footer.night-mode .footer-title {color: var(--color-on-primary-dark);}
+footer.night-mode a:link, footer.night-mode a:visited {color: #A0AABA;}
+
+footer.night-mode a:hover {color: var(--color-control-on-primary-dark);}
