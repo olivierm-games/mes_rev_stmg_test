@@ -371,7 +371,7 @@ h2 {
    padding: .25em 0;
 }
 
-.card-text h2 {
+.card-text ul:only-child, .card-text h2 {
    padding-top: 0.83em;
 }
 
@@ -592,8 +592,6 @@ a:active.button {top: 2px;}
    padding: 0 2.5% .01% 2.5%;
    box-shadow: 0 0 1em 0.1em #00000020;
 }
-
-.card-text > ul {padding-top: 0.83em;}
 
 .example-drop-down.night-mode-element {background-color: var(--color-button-background);}
 
