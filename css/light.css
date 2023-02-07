@@ -101,14 +101,18 @@ main {
     margin: auto;
 }
 
-main a {
+main a, footer a {
    transition: color var(--hover-anim-duration);
 }
 
 main a:link { color: royalblue; }
 main a:visited { color: rebeccapurple; }
 
-main a:hover {
+footer a:link, footer a:visited {
+   color: #707A8A;
+}
+
+main a:hover, footer a:hover {
    color: var(--color-control-on-primary);
 }
 
@@ -153,7 +157,7 @@ a:visited, a:hover, a:active {
    text-decoration: none;
 }
 
-a:visited {
+main a:visited {
    color: purple;
 }
 
@@ -891,6 +895,20 @@ p.cite a {
 
 footer {
    position: absolute;
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   font-family: 'Balsamiq Sans';
+   background-color: var(--color-primary);
+   bottom: 0;
+}
+
+footer div {padding: .8em 0;}
+
+/* footer a:visited {color: inherit;} */
+
+/* footer {
+   position: absolute;
    font-family: 'Lilita One';
    bottom: 0;
    left: 0;
@@ -961,4 +979,4 @@ footer .footer-title {
 
 .footer-list-container {
    margin-right: 3%;
-}
+} */
