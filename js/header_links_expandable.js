@@ -5,15 +5,15 @@ function setHeaderLinksExpandable() {
       const j=i;
       headerLinks[i].addEventListener("mouseenter", e => {
          // console.log("entered");
-         if(j==0) {
-            headerLinksExpandableLayouts[0].style.top="62px";
-         }
+         // if(j==0) {
+            headerLinksExpandableLayouts[j].style.top="62px";
+         // }
       });
       headerLinks[i].addEventListener("mouseleave", e => {
-         if(j==0) {
+         // if(j==0) {
             // console.log("left. "+headerLinksExpandableLayouts[0].clientHeight);
-            headerLinksExpandableLayouts[0].style.top=(62-headerLinksExpandableLayoutsHeights[0])+"px";
-         }
+            headerLinksExpandableLayouts[j].style.top=(62-headerLinksExpandableLayoutsHeights[j])+"px";
+         // }
       });
    }
 
