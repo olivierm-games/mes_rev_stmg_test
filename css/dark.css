@@ -1,30 +1,21 @@
-#all-container.night-mode {
-   /* background: var(--color-background-dark); */
-   /* background: repeating-linear-gradient(180deg, burlywood 30px, rgba(255, 153, 0, 0.5) 25%, rgba(255, 255, 0, 0.5) 37.5%, rgb(237 237 237 / 50%) 50%, rgba(0, 0, 255, 0.5) 62.5%, rgba(75, 0, 130, 0.5) 75%, rgba(238, 130, 238, 0.5) 87.5%, rgba(255, 0, 0, 0.5) 100%), repeating-linear-gradient(12deg, rgba(255, 0, 0, 0.5) 12.5%, rgba(255, 153, 0, 0.5) 35%, rgba(255, 255, 0, 0.5) 37.5%, limegreen 50%, rgba(0, 0, 255, 0.5) 62.5%, rgba(75, 0, 130, 0.5) 75%, rgba(238, 130, 238, 0.5) 87.5%, rgba(255, 0, 0, 0.5) 100%), repeating-linear-gradient(-6deg, rgb(95 158 160 / 50%) 50px, rgb(255 165 0 / 50%) 100px, rgb(255 255 0 / 50%) 150px, rgb(154 205 50 / 50%) 200px, rgb(123 104 238 / 50%) 250px, rgb(102 51 153 / 50%) 300px, rgb(238 130 238 / 50%) 350px, rgb(95 158 160 / 50%) 370px); */
-   /* background-blend-mode: multiply; */
-   background-color: var(--color-background-dark);
-}
+#all-container.night-mode {background-color: var(--color-background-dark);}
 
-main.night-mode a:link { color: steelblue; }
-main.night-mode a:visited { color: #8360cb; }
-main.night-mode a:hover { color: var(--color-control-on-primary-dark); }
+main.night-mode a:link {color: steelblue;}
+main.night-mode a:visited {color: #8360cb;}
+main.night-mode a:hover {color: var(--color-control-on-primary-dark);}
 
 main.night-mode {
    background-color: var(--color-surface-dark);
    color: var(--color-on-primary-dark);
 }
 
-main.night-mode .card-text {
-   background-color: var(--color-surface-dark);
-}
+main.night-mode .card-text {background-color: var(--color-surface-dark);}
 
-header.night-mode { background-color: var(--color-primary-dark); }
+header.night-mode {background-color: var(--color-primary-dark);}
 
-#menu-svg.night-mode { fill: var(--color-on-primary-dark); }
+#menu-svg.night-mode {fill: var(--color-on-primary-dark);}
 
-#menu-svg-container:hover > #menu-svg.night-mode { fill: var(--color-control-on-primary-dark); }
-
-/* #menu-svg.night-mode:hover { fill: var(--color-control-on-primary-dark); } */
+#menu-svg-container:hover > #menu-svg.night-mode {fill: var(--color-control-on-primary-dark);}
 
 .header-link.night-mode, #index-link.night-mode, a:link#index-link.night-mode, a:visited#index-link.night-mode, #night-mode.night-mode {
    color: var(--color-on-primary-dark);
@@ -34,69 +25,39 @@ header.night-mode { background-color: var(--color-primary-dark); }
    color: var(--color-control-on-primary-dark);
 }
 
-.header-link-expandable-list.night-mode {
-   /* background-color: darkslateblue; */
-   /* background-color: #202225; */
-   background-color: #2A2C2E;
-   /* box-shadow: 0 0 0.4em 0.01em #2f2f2f66; */
-   /* background-color: var(--color-primary-variant-dark); */
-}
+.header-link-expandable-list.night-mode {background-color: #2A2C2E;}
 
-.header-link-expandable-list.night-mode:hover {
-    box-shadow: 0 0 1em 0.1em #fff1;
-}
+.header-link-expandable-list.night-mode:hover {box-shadow: 0 0 1em 0.1em #fff1;}
 
-.header-link-expandable-list.night-mode li:hover {
-   /* background-color: #21252C; */
-   background-color: var(--color-on-primary);
-}
+.header-link-expandable-list.night-mode li:hover {background-color: var(--color-on-primary);}
 
-   .header-link-expandable-list.night-mode li a:link, .header-link-expandable-list.night-mode li a:visited {
-      color: var(--color-on-primary-dark);
-   }
+.header-link-expandable-list.night-mode li a:link, .header-link-expandable-list.night-mode li a:visited {color: var(--color-on-primary-dark);}
 
-   .header-link-expandable-list.night-mode li:hover .material-icons-round {
-      /* color: var(--color-primary); */
-      color: var(--color-control-on-primary-dark);
-   }
-
-      /* .header-link-expandable-list.night-mode li:hover a {
-         color: var(--color-control-on-primary-dark);
-      } */
+.header-link-expandable-list.night-mode li:hover .material-icons-round {color: var(--color-control-on-primary-dark);}
 
 aside.night-mode {
    background-color: var(--color-primary-variant-dark);
    color: var(--color-on-primary-dark);
 }
 
-.side-nav-lvl-0-link.night-mode:hover, .side-nav-lvl-0-link.night-mode.hover {
-   background-color: darkslateblue;
-}
+.side-nav-lvl-0-link.night-mode:hover, .side-nav-lvl-0-link.night-mode.hover {background-color: darkslateblue;}
 
 [class^=side-nav-lvl-1-link].night-mode:hover, #cours-1ere-droit.night-mode.hover, #cours-1ere-eco.night-mode.hover, #cours-1ere-mana.night-mode.hover,
 #cours-tle-droit.night-mode.hover, #cours-tle-eco.night-mode.hover, #cours-tle-mana.night-mode.hover, #cours-sig.night-mode.hover {
-/* .side-nav-lvl-1-link.night-mode:hover { */
    background-color: steelblue;
 }
 
-[class^=side-nav-lvl-2-link].night-mode:hover {
-   background-color: cadetblue;
-}
+[class^=side-nav-lvl-2-link].night-mode:hover {background-color: cadetblue;}
 
 .button.night-mode {
    box-shadow: 0 0.4rem 0.6rem rgb(0 0 0 / 50%);
    background: linear-gradient(325deg, #222236AA, #2F2F2FFF 70%, #222236AA 105%);
 }
 
-a:link.button.night-mode, a:visited.button.night-mode {
-   color: var(--color-on-primary-dark);
-}
+a:link.button.night-mode, a:visited.button.night-mode {color: var(--color-on-primary-dark);}
 
-a.button.night-mode:hover {
-    color: #F0B90DED;
-}
+a.button.night-mode:hover {color: #F0B90DED;}
 
-/* #all-container.night-mode h1 {box-shadow: 0 -0.65em 0.65em -0.65em inset var(--color-background-dark);} */
 #all-container.night-mode h1 {background: linear-gradient(0deg, var(--color-background-dark), var(--color-primary-dark) 0.1%, var(--color-surface-dark) 4%, var(--color-surface-dark));}
 
 #all-container.night-mode h1, #all-container.night-mode h2 {
@@ -107,31 +68,8 @@ a.button.night-mode:hover {
    border-color: var(--color-on-primary-dark);
 }
 
-/* .message-tip.night-mode { opacity: 1; } */
-/* .message-tip.night-mode:hover { opacity: .9; } */
+footer.night-mode {background-color: var(--color-primary-dark);}
 
-/* .popup-container.night-mode {
-   color: var(--color-on-primary);
-} */
+footer.night-mode ul {color: var(--color-on-primary-dark);}
 
-footer.night-mode {
-   /* background: linear-gradient(0deg, #24242466 10%, #242424); */
-   background-color: var(--color-primary-dark);
-}
-
-footer.night-mode ul {
-   color: var(--color-on-primary-dark);
-}
-
-footer.night-mode .footer-title {
-   color: var(--color-on-primary-dark);
-}
-
-/* .footer-text.night-mode {
-   border-bottom: medium solid var(--color-on-primary-dark);
-} */
-
-.footer-list.night-mode {
-   background: none;
-   color: #848E9C;
-}
+footer.night-mode .footer-title {color: var(--color-on-primary-dark);}
