@@ -461,9 +461,7 @@ table p {margin-inline: 0;}
    font-weight: bold;
 }
 
-#all-container tr.center > td, #all-container td.center {
-   text-align: center;
-}
+#all-container tr.center > td, #all-container td.center {text-align: center;}
 
 caption {
    font-size: 1.2em;
@@ -477,7 +475,6 @@ nav {
    justify-content: center;
    flex-wrap: wrap;
    align-items: center;
-   /* margin-top: 3em; */
    margin-top: 24px;
 }
 
@@ -672,7 +669,6 @@ pre.normal {white-space: normal;}
 .php code.condition {color: mediumpurple;}
 
 .sql code {color: #c792ea;} /* SELECT INTO CREATE TABLE REFERENCES PRIMARY FOREIGN KEY... IN AS DESC ASC  */
-/* .sql code.type {color: orange;} */
 .sql code.string {color: #c3e88d;}
 .sql code.type {color: #decb6b;} /* INT DATE FLOAT BOOL */
 .sql code.comment {
