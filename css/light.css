@@ -758,7 +758,8 @@ footer {
    display: flex;
    justify-content: center;
    width: 100%;
-   font-family: 'Balsamiq Sans';
+   font-family: 'Comfortaa';
+   font-size: .9em;
    background-color: var(--color-primary);
    bottom: 0;
 }

@@ -22,6 +22,7 @@ function setHeaderLinksExpandable() {
    // TODO: update loop when header links are all set and ready
    for (var i = 0; i < 2; i++) {
       headerLinksExpandableLayoutsHeights[i]=headerLinksExpandableLayouts[i].clientHeight;
-      headerLinksExpandableLayouts[0].style.top=(62-headerLinksExpandableLayoutsHeights[i])+"px";
+      // console.log("Expand layout ["+i+"] height: "+headerLinksExpandableLayoutsHeights[i]);
+      headerLinksExpandableLayouts[i].style.top=(62-headerLinksExpandableLayoutsHeights[i])+"px";
    }
 }
