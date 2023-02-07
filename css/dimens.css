@@ -11,5 +11,4 @@ header {
 aside {
    --side-nav-vertical-padding: .4em;
    --side-nav-anim-duration: .5s;
-   /* --side-nav-long-anim-duration: 1.5s; */
 }

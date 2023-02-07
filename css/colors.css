@@ -4,23 +4,11 @@
 
    --color-on-secondary: /* TODO:  */; /* "top of page" button, scrolling progress bar... (accent) text color */
    --color-on-secondary-dark: /* TODO:  */; /* "top of page" button, scrolling progress bar... (accent) text dark */
-
-   /*--color-secondary-variant:;  seems unnecessary for now (in app, would be status bar bg)
-   --color-secondary-variant-dark:; seems unnecessary for now */
-
-   /*--color-error:;  error background light
-   --color-error-dark:;  error background dark
-   --color-on-error:; /* error text light
-   --color-on-error-dark:; /* error text dark */
 }
 
 body {
-   /*--color-background: linear-gradient(0deg, #80cbc4, #b2dfdb);  body background light
-   --color-background-dark: linear-gradient(0deg, #263238, #37474f);  body background dark */
    --color-background: powderblue;
    --color-background-dark: #0B0E11;
-   /*--color-on-background: #263238; body text light (no text on bg)
-   --color-on-background-dark: #2F2F2F; body text dark */
 
    --color-surface: #FEFEFE; /* main background light */
    --color-surface-dark: #303639; /* main background dark */
@@ -29,12 +17,9 @@ body {
    --color-on-primary-dark: #EAECEF;
 
    --color-control-on-primary: #C99400;
-   /* --color-control-on-primary: #323232; */
-   /* --color-control-on-primary-dark: #E2E2E2ED; */
    --color-control-on-primary-dark: #F0B90B;
 
    --color-primary: aliceblue; /* header background light */
-   /* --color-primary: #64b5f6; */
    --color-primary-dark: #242424;
 
    --color-button: #181A20;
@@ -43,10 +28,5 @@ body {
 
 header, aside {
    --color-primary-variant: lightblue; /* should be status bar background light. Aside bg */
-   /* --color-primary-variant: #ECE5FF; /* should be status bar background light. Aside bg */
    --color-primary-variant-dark: #3A3A65;
-   /* --color-primary-variant-dark: #282c34; /* Aside bg dark */
-
-   /* --color-on-primary-dark: red; */
-
 }

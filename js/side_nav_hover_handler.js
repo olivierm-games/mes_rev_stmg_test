@@ -47,21 +47,5 @@ function setAllParentsHoverState(targets, parent, grandParent) {
          parent.classList.remove("hover");
          grandParent.classList.remove("hover");
       });
-
-
-      // targets[i].addEventListener("click", showTagElem, true);
-      // targets[i].nextSibling.addEventListener("click", showTagElem, true); //not
-
-
    }
-
-   // alert(coursTerDroit.nextSibling.tagName);
-}
-
-function showTagElem() {
-   alert(this.tagName);
-}
-
-function getLink() {
-   alert(coursTerDroit.nextSibling.tagName);
 }

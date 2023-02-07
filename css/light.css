@@ -23,7 +23,7 @@ html { scroll-behavior: smooth; }
    position: relative;
    min-height: 100%;
    padding-top: 6em;
-   padding-bottom: 104px;
+   padding-bottom: 76px;
    /* padding-bottom: 11.5em; */
    background-color: var(--color-background);
 }
@@ -475,7 +475,8 @@ nav {
    justify-content: center;
    flex-wrap: wrap;
    align-items: center;
-   margin-top: 3em;
+   /* margin-top: 3em; */
+   margin-top: 24px;
 }
 
 .explain {text-decoration-style: dashed;}
@@ -621,6 +622,7 @@ table.borderless {border-style: hidden;}
    margin: .5em 0;
    margin-inline: 4%;
    border: medium solid var(--color-button-background);
+   cursor: pointer;
 }
 
 .example-tip-title {
@@ -646,7 +648,7 @@ table.borderless {border-style: hidden;}
    display: none;
 }
 
-li a {font-size: 105%;}
+li a {font-size: 101%;}
 
 pre {
    overflow: auto;

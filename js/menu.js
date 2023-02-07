@@ -2,8 +2,6 @@ function onMenu() {
    requestMenuTick();
 }
 
-
-
 let menuTicking=false;
 // "debouncing" request to animation frame
 function requestMenuTick() {
@@ -15,9 +13,6 @@ function requestMenuTick() {
 
 function updateMenu() {
    toggleMenuClasses();
-   // if(lastScrollY-currentScrollY>5) pin();
-   // else if(lastScrollY-currentScrollY<-5) unpin();
-   // lastScrollY=currentScrollY;
    menuTicking=false;
 }
 
