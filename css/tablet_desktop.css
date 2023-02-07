@@ -133,7 +133,7 @@
    .header-link {
       flex-direction: column;
       align-items: center;
-      min-width: 215px;
+      min-width: 205px;
       /* min-width: 175px; */
       font-family: 'Comfortaa', 'Arial';
       font-weight: 600;
