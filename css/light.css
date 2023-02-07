@@ -23,7 +23,8 @@ html { scroll-behavior: smooth; }
    position: relative;
    min-height: 100%;
    padding-top: 6em;
-   padding-bottom: 11.5em;
+   padding-bottom: 104px;
+   /* padding-bottom: 11.5em; */
    background-color: var(--color-background);
 }
 
@@ -755,11 +756,14 @@ footer {
    position: absolute;
    display: flex;
    justify-content: center;
+   align-items: center;
    width: 100%;
    font-family: 'Balsamiq Sans';
    font-size: .9em;
    background-color: var(--color-primary);
    bottom: 0;
+   height: 52px;
+   box-shadow: 0 0.25em 0.45em 0.1em #222;
 }
 
 footer div {padding: .8em 0;}
