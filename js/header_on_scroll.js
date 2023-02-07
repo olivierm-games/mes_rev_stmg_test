@@ -27,7 +27,5 @@ function update() {
    ticking=false;
 }
 
-// function pin() { if(!header.classList.contains("show")) header.classList.toggle("show"); }
 function pin() { header.style.top="0"; }
-// function unpin() { if(header.classList.contains("show")) header.classList.toggle("show"); }
 function unpin() { header.style.top="-64px"; }
