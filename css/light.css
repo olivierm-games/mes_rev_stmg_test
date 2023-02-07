@@ -1,3 +1,5 @@
+/* :root {font-size: 16px;} */
+
 html,
 body {
    margin:0;
@@ -5,7 +7,7 @@ body {
    height:100%;
    width: 100%;
    font-family: 'Roboto';
-   /* font-size: 18px; */
+   /* font-size: 16px; */
 }
 
 html { scroll-behavior: smooth; }
@@ -355,12 +357,12 @@ h2 {
    margin: 2.5% 3% 1% 3%;
 }
 
-.h2-container > ul {
+.h2-container > ul, .h2-container > ol {
    margin-block: .5em;
    padding-inline-start: 8%;
 }
 
-.h2-container ul li {
+.h2-container ul li, .h2-container ol li {
    padding: .25em 0;
 }
 
@@ -393,7 +395,7 @@ h3 {
    margin-bottom: 1.4em;
 }
 
-.h3-container > ul, .h4-container > ul {
+.h3-container > ul, .h4-container > ul, .h3-container > ol, .h4-container > ol {
    padding-inline-start: 7%;
    margin-block: 0 .5em;
 }
@@ -430,7 +432,7 @@ p, .popup-p {
    display: inline-block;
 }
 
-main > ul {
+main > ul, main > ol {
    margin-block-start: 0;
    padding-inline-start: 9%;
    padding-right: 5%;
@@ -455,6 +457,8 @@ table ul, table ol {
 }
 
 table p {margin-inline: 0;}
+
+.center {margin: auto;}
 
 .division-container {
    display: flex;
@@ -707,6 +711,84 @@ li a {
     font-size: 105%;
 }
 
+pre {
+   overflow: auto;
+   background-color: #0C0F11;
+   color: #EFEFEF;
+   border-radius: .25em;
+   padding: .5em .125em;
+   margin: .75em 0;
+   margin-inline: 4%;
+}
+
+pre.normal {
+   white-space: normal;
+}
+
+.php code.tag {color: indianred;}
+.php code.variable {color: #ffd900;}
+.php code.number {color: lightskyblue;}
+.php code.string {color: yellowgreen;}
+.php code.method {color: dodgerblue;}
+.php code.condition {color: mediumpurple;}
+
+/* code.php {color: indianred;} */
+/* code.variable {color: #ffd900;}
+code.number {color: lightskyblue;}
+code.string {color: yellowgreen;}
+code.method {color: dodgerblue;}
+code.condition {color: mediumpurple;} */
+/* code.comment {color: orange;} */
+
+/* .sql code {color: #9cdf13;} */
+.sql code {color: #c792ea;} /* SELECT INTO CREATE TABLE REFERENCES PRIMARY FOREIGN KEY... IN AS DESC ASC  */
+/* .sql code.type {color: orange;} */
+.sql code.string {color: #c3e88d;}
+.sql code.type {color: #decb6b;} /* INT DATE FLOAT BOOL */
+.sql code.comment {
+   color: grey;
+   font-style: italic;
+}
+.sql code.comment::before {content: "/* "}
+.sql code.comment::after {content: " */"}
+.sql code.compare {color: #89ddff;} /* = < > <= >= <> AND OR IS NOT LIKE BETWEEN * */
+.sql code.number {color: #ff5370;} /* 0 0.0 NULL TRUE FALSE */
+.sql code.function {color: #dd4a68;}
+.sql code.punctu {color: #bbb;}
+.sql code.syntax {
+   color: inherit;
+   font-style: italic;}
+
+.xml code {color: #F92672;}
+.xml code.param {color: #A6E22E;}
+.xml code.string {color: #E6DB74;}
+.xml code.comment, .php code[class*="comment-"] {
+   color: #75715E;
+   font-style: italic;
+}
+.xml code.comment::before {content: "<!-- ";}
+.xml code.comment::after {content: "--> ";}
+
+.php code.comment-single::before {content: "// ";}
+.php code.comment-multi::before {content: "/* ";}
+.php code.comment-multi::after {content: " */";}
+
+/* code.xml {color: #F92672;}
+code.xml.param {color: #A6E22E;}
+code.xml.string {color: #E6DB74;}
+code.xml.comment {color: #75715E;}
+code.xml.comment::before {content: "<!-- ";}
+code.xml.comment::after {content: " -->";} */
+
+/* code::before {
+   content: '';
+   background-color: purple;
+   height: 100%;
+   width: 3px;
+} */
+
+.no-user-select {user-select: none;}
+
 .popup-target {
    display: inline;
 }
@@ -738,7 +820,7 @@ li a {
    height: 400px; */
 }
 
-.popup-container > ul {
+.popup-container > ul, .popup-container > ol {
    float: left;
    margin-block: 0 .5em;
 }
@@ -767,6 +849,11 @@ p.cite a {
 .cite a cite {
    display: contents;
 }
+
+.img-max-width {max-width: 100%;}
+
+.s-device {display: block;}
+.l-device {display: none;}
 
 .img-float {
    float: left;
