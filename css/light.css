@@ -385,22 +385,24 @@ h1, h2 {
 }
 
 h3 {
-   padding: 0 1.5%;
+   /* padding: 0 1.5%; */
    margin-block: 0;
 }
 
 .h3-container {
-   margin-top: .8em;
-   margin-bottom: 1.6em;
+   margin: .8em 1em 1.6em 1em;
+   /* margin-top: .8em; */
+   /* margin-bottom: 1.6em; */
 }
 
 .h4-container {
-   margin-top: .7em;
-   margin-bottom: 1.4em;
+   margin: .7em .9em 1.4em .9em;
+   /* margin-top: .7em; */
+   /* margin-bottom: 1.4em; */
 }
 
 .h3-container > ul, .h4-container > ul, .h3-container > ol, .h4-container > ol {
-   padding-inline-start: 7%;
+   /* padding-inline: 10% 3.5%; */
    margin-block: 0 .5em;
 }
 
@@ -415,7 +417,7 @@ h3 {
 } */
 
 h4 {
-   padding: 0 3%;
+   /* padding: 0 3%; */
    margin-block: 0;
    font-size: 1.02em;
 }
@@ -426,7 +428,8 @@ h4 {
 
 p, .popup-p {
    text-align: justify;
-   margin-inline: 4%;
+   margin-inline: .5em;
+   /* margin-inline: 4%; */
    margin-block: .3em;
 }
 
@@ -438,8 +441,8 @@ p, .popup-p {
 
 main > ul, main > ol {
    margin-block-start: 0;
-   padding-inline-start: 9%;
-   padding-right: 5%;
+   /* padding-inline-start: 9%;
+   padding-right: 5%; */
 }
 
 u {

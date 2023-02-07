@@ -29,6 +29,8 @@
       /* justify-content: space-evenly; */
    }
 
+   /* .h3-container > ul, .h4-container > ul, .h3-container > ol, .h4-container > ol {padding-inline: 8.5% 3.5%;} */
+
    .sig-flex-sync img {max-width: 100%;}
 
    .table-big-img {max-width: 360px;}
