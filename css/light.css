@@ -593,6 +593,8 @@ a:active.button {top: 2px;}
    box-shadow: 0 0 1em 0.1em #00000020;
 }
 
+.card-text > ul {padding-top: 0.83em;}
+
 .example-drop-down.night-mode-element {background-color: var(--color-button-background);}
 
 .example-drop-down-title {
