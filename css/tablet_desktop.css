@@ -126,7 +126,7 @@
       align-items: center;
       min-width: 205px;
       /* min-width: 175px; */
-      font-family: 'Comfortaa', 'Arial';
+      font-family: 'Comfortaa', 'Roboto', 'Arial', sans-serif;
       font-weight: 600;
       font-style: italic;
       transform-style: preserve-3d;

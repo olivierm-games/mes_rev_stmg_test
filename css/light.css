@@ -6,7 +6,7 @@ body {
    padding:0;
    height:100%;
    width: 100%;
-   font-family: 'Roboto';
+   font-family: 'Roboto', sans-serif;
    /* font-size: 16px; */
 }
 
@@ -167,7 +167,8 @@ a:link { text-decoration: none; }
 #index-link {
    display: flex;
    flex-direction: column;
-   font-family: 'Oregano', 'Poiret One', 'Lilita One', 'Itim', 'Arial Black';
+   font-family: 'Oregano', 'Arial Black', sans-serif;
+   /* font-family: 'Oregano', 'Poiret One', 'Lilita One', 'Itim', 'Arial Black'; */
    font-weight: normal;
    font-size: 2em;
    font-style: italic;
@@ -189,7 +190,8 @@ a:link { text-decoration: none; }
 
 /* Used in header and side nav*/
 .mes-rev {
-   font-family: 'Road Rage', 'Yellowtail';
+   font-family: 'Road Rage', 'Roboto', sans-serif;
+   /* font-family: 'Road Rage', 'Yellowtail'; */
    font-size: 1em;
    font-weight: normal;
    font-style: normal;
@@ -760,7 +762,7 @@ footer {
    justify-content: center;
    align-items: center;
    width: 100%;
-   font-family: 'Balsamiq Sans';
+   font-family: 'Balsamiq Sans', 'Roboto', sans-serif;
    font-size: .9em;
    background-color: var(--color-primary);
    bottom: 0;
