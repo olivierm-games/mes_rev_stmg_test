@@ -116,6 +116,8 @@ main a:hover, footer a:hover {
    color: var(--color-control-on-primary);
 }
 
+ul {margin-block-start: 0.2em;}
+
 .table-img {
    display: flex;
    max-width: 140px;
@@ -356,15 +358,14 @@ h2 {
    margin-block: 0;
 }
 
-.h2-container, #notions-to-know {
-   /* margin: 1% 3% 4% 3%; */
+.h2-container/*, #notions-to-know*/ {
    margin: 2.5% 3% 1% 3%;
 }
 
-.h2-container > ul, .h2-container > ol {
+/* .h2-container > ul, .h2-container > ol {
    margin-block: .5em;
    padding-inline-start: 8%;
-}
+} */
 
 .h2-container ul li, .h2-container ol li {
    padding: .25em 0;
@@ -401,10 +402,10 @@ h3 {
    /* margin-bottom: 1.4em; */
 }
 
-.h3-container > ul, .h4-container > ul, .h3-container > ol, .h4-container > ol {
-   /* padding-inline: 10% 3.5%; */
-   margin-block: 0 .5em;
-}
+/* .h3-container > ul, .h4-container > ul, .h3-container > ol, .h4-container > ol { */
+   /* padding-inline: 10% 3.5%; weird diff screens */
+   /* margin-block: 0 .5em; */
+/* } */
 
 /* .h3-container p.open-in-new {
    display: flex;
@@ -439,11 +440,11 @@ p, .popup-p {
    display: inline-block;
 }
 
-main > ul, main > ol {
-   margin-block-start: 0;
+/* main > ul, main > ol {
+   margin-block-start: 0; */
    /* padding-inline-start: 9%;
    padding-right: 5%; */
-}
+/* } */
 
 u {
    text-underline-offset: 10%;
@@ -796,7 +797,7 @@ code.xml.comment::after {content: " -->";} */
 
 .no-user-select {user-select: none;}
 
-.popup-target {
+/* .popup-target {
    display: inline;
 }
 
@@ -805,14 +806,12 @@ code.xml.comment::after {content: " -->";} */
    cursor: pointer;
 
    display: inline-block;
-}
+} */
 
-.popup-container {
+/* .popup-container {
    position: absolute;
    display: none;
    color: var(--color-on-primary);
-   /* opacity: 0;
-   transition: opacity .5s; */
    background-color: var(--color-surface);
    border-radius: .2em;
    box-shadow: 0 0 .25em .1em #0008;
@@ -821,10 +820,7 @@ code.xml.comment::after {content: " -->";} */
 }
 
 .popup-container.show {
-   /* opacity: 1; */
    display: block;
-   /* width: 200px;
-   height: 400px; */
 }
 
 .popup-container > ul, .popup-container > ol {
@@ -833,16 +829,15 @@ code.xml.comment::after {content: " -->";} */
 }
 
 .popup-img {
-   /* height: 60px; */
    float: left;
    margin: 0 4% 4% 0;
-}
+} */
 
-#notions-to-know {
+/* #notions-to-know {
    background-color: bisque;
    border-radius: 0.2em;
    box-shadow: 0 0 0.3em 0.01em #05091566;
-}
+} */
 
 .cite {
    float: right;
