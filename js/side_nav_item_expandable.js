@@ -8,15 +8,15 @@ function setSideNavItemsExpandable() {
       for (var j = 0; j < subCollapsiblesCount; j++) {
          collapsibles[i][j].addEventListener("click", function() {
             this.classList.toggle("close");
-            var container=collapsibles[i][j].nextElementSibling;
-            // var container=this.nextElementSibling;
+            // var container=collapsibles[i][j].nextElementSibling;
+            var container=this.nextElementSibling;
             container.classList.toggle("close");
             if(container.style.maxHeight) { // collapse
                container.style.maxHeight=null;
             } else { // expand
                container.style.maxHeight=container.scrollHeight+"px";
-               if(!collapsibles[i][j].classList.contains("side-nav-lvl-0-link")) { // lvl 1 collapsible (not cours1ere/tle)
-               // if(!this.classList.contains("side-nav-lvl-0-link")) { // lvl 1 collapsible (not cours1ere/tle)
+               // if(!collapsibles[i][j].classList.contains("side-nav-lvl-0-link")) { // lvl 1 collapsible (not cours1ere/tle)
+               if(!this.classList.contains("side-nav-lvl-0-link")) { // lvl 1 collapsible (not cours1ere/tle)
                   coursAllContainerMaxHeights[constI]+=container.scrollHeight;
                   coursAllContainers[constI].style.maxHeight=coursAllContainerMaxHeights[constI]+"px";
                }
