@@ -1,5 +1,7 @@
 #all-container.night-mode {background-color: var(--color-background-dark);}
 
+body {background-color: var(--color-primary-dark);}
+
 main.night-mode a:link {color: steelblue;}
 main.night-mode a:visited {color: #8360cb;}
 main.night-mode a:hover {color: var(--color-control-on-primary-dark);}
