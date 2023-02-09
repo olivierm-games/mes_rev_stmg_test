@@ -1,24 +1,25 @@
 const ICONS_CODE=["dark_mode", "light_mode"]; // moon, sun
 const ICONS_TITLE=["sombre", "clair"]; // Passer en mode ...
-const STORAGE_KEYS=["day", "night"]; // storage key
+// storage key
+// const STORAGE_KEYS=["day", "night"];
 
-let storedNightMode=null;
+// let storedNightMode=null;
 /** by default 1 for day mode; 0 is night mode. Updated after toggling UI and eventually after storage*/
 let nightModeIndex=1;
 
-window.onload=function() { storedNightMode=localStorage.getItem("night-mode"); }
+// window.onload=function() { storedNightMode=localStorage.getItem("night-mode"); }
 
-function initNightMode() {
-   if(storedNightMode===null) storedNightMode=localStorage.getItem("night-mode");
-   const matchMedia=window.matchMedia;
-   if(storedNightMode!==null) {
-      if(storedNightMode==="night") toggleNightMode(); // since by default night mode is off (day on)
-   } else if(matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) toggleNightMode();
-   if(matchMedia) window.matchMedia("(prefers-color-scheme: dark)").addListener(e => toggleNightMode());
-}
+// function initNightMode() {
+//    if(storedNightMode===null) storedNightMode=localStorage.getItem("night-mode");
+//    const matchMedia=window.matchMedia;
+//    if(storedNightMode!==null) {
+//       if(storedNightMode==="night") toggleNightMode(); // since by default night mode is off (day on)
+//    } else if(matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) toggleNightMode();
+//    if(matchMedia) window.matchMedia("(prefers-color-scheme: dark)").addListener(e => toggleNightMode());
+// }
 
 function onToggleNightMode() {
-   saveInLocalStorage();
+   // saveInLocalStorage();
    toggleNightMode();
 }
 
@@ -28,9 +29,9 @@ function toggleNightMode() {
    updateIndex();
 }
 
-function saveInLocalStorage() {
-   localStorage.setItem("night-mode", STORAGE_KEYS[nightModeIndex]);
-}
+// function saveInLocalStorage() {
+//    localStorage.setItem("night-mode", STORAGE_KEYS[nightModeIndex]);
+// }
 
 function toggleNightModeClasses() {
    const elements=document.getElementsByClassName("night-mode-element");
