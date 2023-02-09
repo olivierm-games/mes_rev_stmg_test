@@ -12,6 +12,8 @@
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
    <script src="js/web-font-loader.js"></script>
+   <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9551137458638084"
+     crossorigin="anonymous"></script> -->
    <script src="js/fab_back_to_top.js"></script>
    <script src="js/header_links_expandable.js"></script>
    <script src="js/header_on_scroll.js"></script>
@@ -24,8 +26,166 @@
 <body>
    <span id="haut"></span>
    <div id="all-container" class="night-mode-element">
-      <div w3-include-html="header.html"></div>
-      <div w3-include-html="side_nav.html"></div>
+      <!-- <div w3-include-html="header.html"></div> -->
+      <header class="night-mode-element">
+         <div id="header-menu-index-container">
+            <div id="menu-svg-container" onclick="onMenu()">
+               <svg xmlns="http://www.w3.org/2000/svg"
+                  width="24px" height="24px"
+                  viewBox="0 0 24 24"
+                  id="menu-svg"
+                  class="night-mode-element">
+                  <path id="menu-svg-top-bar" d="M3 5H21C22 5,22 7,21 7H3C2 7,2 5,3 5z"/>
+                  <path id="menu-svg-center-bar" d="M3 11H21C22 11,22 13,21 13H3C2 13,2 11,3 11z"/>
+                  <path id="menu-svg-bottom-bar" d="M3 17H21C22 17,22 19,21 19H3C2 19,2 17,3 17z"/>
+               </svg>
+            </div>
+            <a href="#" id="index-link" class="night-mode-element"><span class="mes-rev">Mes révisions</span>STMG</a>
+         </div>
+         <div id="header-links" class="night-mode-element">
+            <div class="header-link night-mode-element">
+               <div class="header-link-expandable-layout">
+                  <ul class="header-link-expandable-list night-mode-element">
+                     <li><a href="Cours_1ere/Droit/Sommaire.html"><span class="material-icons-round night-mode-element">balance</span>Droit</a></li>
+                     <li><a href="Cours_1ere/Eco/Sommaire.html"><span class="material-icons-round night-mode-element">savings</span>Économie</a></li>
+                     <li><a href="Cours_1ere/Mana/Sommaire.html"><span class="material-icons-round night-mode-element">precision_manufacturing</span>Management</a></li>
+                  </ul>
+               </div>
+               <div class="header-link-title">
+                  <span class="header-link-expandable-text">Cours 1<sup>ère</sup></span>
+                  <span class="material-icons-round night-mode-element">arrow_drop_down</span>
+               </div>
+            </div>
+            <div class="header-link night-mode-element">
+               <div class="header-link-expandable-layout">
+                  <ul class="header-link-expandable-list night-mode-element">
+                     <li><a href="Cours_Tle/Droit/Sommaire.html"><span class="material-icons-round night-mode-element">balance</span>Droit</a></li>
+                     <li><a href="Cours_Tle/Eco/Sommaire.html"><span class="material-icons-round night-mode-element">savings</span>Économie</a></li>
+                     <li><a href="Cours_Tle/Mana/Sommaire.html"><span class="material-icons-round night-mode-element">precision_manufacturing</span>Management</a></li>
+                     <li><a href="Cours_Tle/SIG/Sommaire.html"><span class="material-icons-round night-mode-element">account_tree</span>SIG</a></li>
+                  </ul>
+               </div>
+               <div class="header-link-title">
+                  <span class="header-link-expandable-text">Cours T<sup>le</sup></span>
+                  <span class="material-icons-round night-mode-element">arrow_drop_down</span>
+               </div>
+            </div>
+            <!-- <span class="header-link">Exercices</span>
+            <span class="header-link">Quiz</span> -->
+            <a onclick="onToggleNightMode()" id="night-mode" class="material-icons-round night-mode-element">dark_mode</a>
+         </div>
+      </header>
+      <!-- <div w3-include-html="side_nav.html"></div> -->
+      <aside class="night-mode-element">
+         <div id="cours-1ere" class="side-nav-lvl-0-link collapsible-1ere night-mode-element">
+            <span class="material-icons-round night-mode-element">arrow_drop_down</span>Cours 1<sup>ère</sup>
+         </div>
+         <ul id="cours-1ere-all-container">
+            <li>
+               <div id="cours-1ere-droit" class="side-nav-lvl-1-link-0 close collapsible-1ere night-mode-element">
+                  <span class="material-icons-round night-mode-element">arrow_drop_down</span>Droit
+               </div>
+               <ul id="cours-1ere-droit-all-container" class="close">
+                  <li class="side-nav-lvl-2-link-0-0 night-mode-element"><a href="Cours_1ere/Droit/Chapitre_1_Les_principes_et_les_fonctions_du_droit.html">Chapitre 1 : Les principes et les fonctions du droit</a></li>
+                  <li class="side-nav-lvl-2-link-0-0 night-mode-element"><a href="Cours_1ere/Droit/Chapitre_3_Le_litige.html">Chapitre 3 : Le litige</a></li>
+                  <li class="side-nav-lvl-2-link-0-0 night-mode-element"><a href="Cours_1ere/Droit/Chapitre_4_La_preuve.html">Chapitre 4 : La preuve</a></li>
+               </ul>
+            </li>
+            <li>
+               <div id="cours-1ere-eco" class="side-nav-lvl-1-link-0 close collapsible-1ere night-mode-element">
+                  <span class="material-icons-round night-mode-element">arrow_drop_down</span>Économie
+               </div>
+               <ul id="cours-1ere-eco-all-container" class="close">
+                  <li class="side-nav-lvl-2-link-0-1 night-mode-element"><a href="Cours_1ere/Eco/Chapitre_1_Les_agents_economiques_et_les_differents_types_de_biens_et_services.html">Chapitre 1 : Les agents économiques et les différents types de biens et services</a></li>
+                  <li class="side-nav-lvl-2-link-0-1 night-mode-element"><a href="Cours_1ere/Eco/Chapitre_3_La_combinaison_des_facteurs_de_production_et_l_evolution_des_technologies.html">Chapitre 3 : La combinaison des facteurs de production et l'évolution des technologies</a></li>
+               </ul>
+            </li>
+            <li>
+               <div id="cours-1ere-mana" class="side-nav-lvl-1-link-0 close collapsible-1ere night-mode-element">
+                  <span class="material-icons-round night-mode-element">arrow_drop_down</span>Management
+               </div>
+               <ul id="cours-1ere-mana-all-container" class="close">
+                  <li class="side-nav-lvl-2-link-0-2 night-mode-element"><a href="Cours_1ere/Mana/Question_1_Qu_est_ce_qu_une_organisation.html">Question 1 : Qu'est-ce qu'une organisation ?</a></li>
+                  <li class="side-nav-lvl-2-link-0-2 night-mode-element"><a href="Cours_1ere/Mana/Question_2_Qu_apporte_le_management_a_la_gestion_des_organisations.html">Question 2 : Qu'apporte le management à la gestion des organisations ?</a></li>
+                  <li class="side-nav-lvl-2-link-0-2 night-mode-element"><a href="Cours_1ere/Mana/Question_3_La_finalite_de_l_entreprise_se_limite_t_elle_a_la_realisation_d_un_profit.html">Question 3 : La finalité de l'entreprise se limite-t-elle à la réalisation d'un profit ?</a></li>
+                  <li class="side-nav-lvl-2-link-0-2 night-mode-element"><a href="Cours_1ere/Mana/Question_4_Quelles_sont_les_finalites_des_organisations_publiques.html">Question 4 : Quelles sont les finalités des organisations publiques ?</a></li>
+                  <li class="side-nav-lvl-2-link-0-2 night-mode-element"><a href="Cours_1ere/Mana/Question_5_Quel_est_le_role_des_associations.html">Question 5 : Quel est le rôle des associations ?</a></li>
+                  <li class="side-nav-lvl-2-link-0-2 night-mode-element"><a href="Cours_1ere/Mana/Question_6_Quels_sont_les_objectifs_strategiques_des_organisations.html">Question 6 : Quels sont les objectifs stratégiques des organisations ?</a></li>
+                  <li class="side-nav-lvl-2-link-0-2 night-mode-element"><a href="Cours_1ere/Mana/Question_7_Sur_quoi_portent_les_decisions_et_comment_sont_elles_prises.html">Question 7 : Sur quoi portent les décisions et comment sont-elles prises ?</a></li>
+                  <li class="side-nav-lvl-2-link-0-2 night-mode-element"><a href="Cours_1ere/Mana/Question_8_Un_controle_strategique_s_impose_t_il.html">Question 8 : Un contrôle stratégique s'impose-t-il ?</a></li>
+                  <li class="side-nav-lvl-2-link-0-2 night-mode-element"><a href="Cours_1ere/Mana/Question_9_Le_systeme_d_information_contribue_t_il_a_l_efficacite_de_la_prise_de_decision.html">Question 9 : Le système d'information contribue-t-il à l'efficacité de la prise de décision ?</a></li>
+                  <li class="side-nav-lvl-2-link-0-2 night-mode-element"><a href="Cours_1ere/Mana/Question_10_Quel_mode_de_production_choisir.html">Question 10 : Quel mode de production choisir ?</a></li>
+                  <li class="side-nav-lvl-2-link-0-2 night-mode-element"><a href="Cours_1ere/Mana/Question_11_Une_organisation_du_travail_souple_ou_rigide.html">Question 11 : Une organisation du travail souple ou rigide ?</a></li>
+                  <li class="side-nav-lvl-2-link-0-2 night-mode-element"><a href="Cours_1ere/Mana/Question_12_Comment_assurer_la_coherence_de_l_ensemble_des_taches.html">Question 12 : Comment assurer la cohérence de l'ensemble des tâches ?</a></li>
+               </ul>
+            </li>
+         </ul>
+         <div id="cours-tle" class="side-nav-lvl-0-link collapsible-tle night-mode-element">
+            <span class="material-icons-round night-mode-element">arrow_drop_down</span>Cours T<sup>le</sup>
+         </div>
+         <ul id="cours-tle-all-container">
+            <li>
+               <div id="cours-tle-droit" class="side-nav-lvl-1-link-1 close collapsible-tle night-mode-element">
+                  <span class="material-icons-round night-mode-element">arrow_drop_down</span>Droit
+               </div>
+               <ul id="cours-tle-droit-all-container" class="close">
+                  <li class="side-nav-lvl-2-link-1-0 night-mode-element"><a href="Cours_Tle/Droit/Chapitre_1_La_responsabilite_civile_et_le_dommage.html">Chapitre 1 : La responsabilité civile et le dommage</a></li>
+                  <li class="side-nav-lvl-2-link-1-0 night-mode-element"><a href="Cours_Tle/Droit/Chapitre_2_Les_differents_regimes_de_responsabilite_civile.html">Chapitre 2 : Les différents régimes de responsabilité civile</a></li>
+                  <li class="side-nav-lvl-2-link-1-0 night-mode-element"><a href="Cours_Tle/Droit/Chapitre_3_La_reparation_du_dommage.html">Chapitre 3 : La réparation du dommage</a></li>
+                  <li class="side-nav-lvl-2-link-1-0 night-mode-element"><a href="Cours_Tle/Droit/Chapitre_4_Le_contrat_de_travail.html">Chapitre 4 : Le contrat de travail</a></li>
+                  <li class="side-nav-lvl-2-link-1-0 night-mode-element"><a href="Cours_Tle/Droit/Chapitre_5_Les_conditions_de_travail.html">Chapitre 5 : Les conditions de travail</a></li>
+                  <li class="side-nav-lvl-2-link-1-0 night-mode-element"><a href="Cours_Tle/Droit/Chapitre_6_Les_libertes_individuelles_et_collectives_des_salaries.html">Chapitre 6 : Les libertés individuelles et collectives des salariés</a></li>
+                  <li class="side-nav-lvl-2-link-1-0 night-mode-element"><a href="Cours_Tle/Droit/Chapitre_7_La_rupture_du_CDI.html">Chapitre 7 : La rupture du CDI</a></li>
+                  <li class="side-nav-lvl-2-link-1-0 night-mode-element"><a href="Cours_Tle/Droit/Chapitre_8_La_liberte_du_commerce_et_la_concurrence_loyale.html">Chapitre 8 : La liberté du commerce et la concurrence loyale</a></li>
+                  <li class="side-nav-lvl-2-link-1-0 night-mode-element"><a href="Cours_Tle/Droit/Chapitre_9_Les_pratiques_anticoncurrentielles_et_restrictives_de_concurrence.html">Chapitre 9 : Les pratiques anticoncurrentielles et restrictives de concurrence</a></li>
+                  <li class="side-nav-lvl-2-link-1-0 night-mode-element"><a href="Cours_Tle/Droit/Chapitre_10_Entreprendre_seul.html">Chapitre 10 : Entreprendre seul</a></li>
+                  <li class="side-nav-lvl-2-link-1-0 night-mode-element"><a href="Cours_Tle/Droit/Chapitre_11_Entreprendre_en_societe.html">Chapitre 11 : Entreprendre en société</a></li>
+                  <li class="side-nav-lvl-2-link-1-0 night-mode-element"><a href="Cours_Tle/Droit/Chapitre_12_Le_partenariat.html">Chapitre 12 : Le partenariat</a></li>
+               </ul>
+            </li>
+            <li>
+               <div id="cours-tle-eco" class="side-nav-lvl-1-link-1 close collapsible-tle night-mode-element">
+                  <span class="material-icons-round night-mode-element">arrow_drop_down</span>Économie
+               </div>
+               <ul id="cours-tle-eco-all-container" class="close">
+                  <li class="side-nav-lvl-2-link-1-1 night-mode-element"><a href="Cours_Tle/Economie/Chapitre_1_Comment_fonctionne_le_marche_du_travail.html">Chapitre 1 : Comment fonctionne le marché du travail ?</a></li>
+                  <li class="side-nav-lvl-2-link-1-1 night-mode-element"><a href="Cours_Tle/Economie/Chapitre_2_Quelles_sont_les_causes_du_chomage.html">Chapitre 2 : Quelles sont les causes du chômage ?</a></li>
+                  <li class="side-nav-lvl-2-link-1-1 night-mode-element"><a href="Cours_Tle/Economie/Chapitre_3_Quels_sont_les_domaines_d_intervention_de_l_etat_en_matiere_sociale.html">Chapitre 3 : Quels sont les domaines d'intervention de l'État en matière sociale ?</a></li>
+                  <li class="side-nav-lvl-2-link-1-1 night-mode-element"><a href="Cours_Tle/Economie/Chapitre_4_Quelle_est_l_efficacite_de_la_politique_sociale_de_l_etat.html">Chapitre 4 : Quelle est l'efficacité de la politique sociale de l'État ?</a></li>
+                  <li class="side-nav-lvl-2-link-1-1 night-mode-element"><a href="Cours_Tle/Economie/Chapitre_5_Qu_est_ce_que_l_economie_sociale_et_solidaire.html">Chapitre 5 : Qu'est-ce que l'économie sociale et solidaire ?</a></li>
+                  <li class="side-nav-lvl-2-link-1-1 night-mode-element"><a href="Cours_Tle/Economie/Chapitre_6_Qu_est_ce_que_la_politique_economique.html">Chapitre 6 : Qu'est-ce que la politique économique ?</a></li>
+                  <li class="side-nav-lvl-2-link-1-1 night-mode-element"><a href="Cours_Tle/Economie/Chapitre_7_Quelles_sont_les_contraintes_pesant_sur_les_politiques_economiques_de_la_zone_euro.html">Chapitre 7 : Quelles sont les contraintes pesant sur les politiques économiques de la zone euro ?</a></li>
+                  <li class="side-nav-lvl-2-link-1-1 night-mode-element"><a href="Cours_Tle/Economie/Chapitre_8_Quelles_sont_les_evolutions_recentes_du_commerce_mondial.html">Chapitre 8 : Quelles sont les évolutions récentes du commerce mondial ?</a></li>
+                  <li class="side-nav-lvl-2-link-1-1 night-mode-element"><a href="Cours_Tle/Economie/Chapitre_9_Quelles_sont_les_pratiques_d_echanges_au_niveau_international.html">Chapitre 9 : Quelles sont les pratiques d'échanges au niveau international ?</a></li>
+                  <li class="side-nav-lvl-2-link-1-1 night-mode-element"><a href="Cours_Tle/Economie/Chapitre_10_Comment_reguler_les_echanges.html">Chapitre 10 : Comment réguler les échanges ?</a></li>
+                  <li class="side-nav-lvl-2-link-1-1 night-mode-element"><a href="Cours_Tle/Economie/Chapitre_11_Quels_sont_les_desequilibres_actuels_de_la_croissance.html">Chapitre 11 : Quels sont les déséquilibres actuels de la croissance ?</a></li>
+                  <li class="side-nav-lvl-2-link-1-1 night-mode-element"><a href="Cours_Tle/Economie/Chapitre_12_Comment_le_developpement_peut_il_etre_durable.html">Chapitre 12 : Comment le développement peut-il être durable ?</a></li>
+               </ul>
+            </li>
+            <li>
+               <div id="cours-tle-mana" class="side-nav-lvl-1-link-1 close collapsible-tle night-mode-element">
+                  <span class="material-icons-round night-mode-element">arrow_drop_down</span>Management
+               </div>
+               <ul id="cours-tle-mana-all-container" class="close">
+                  <li class="side-nav-lvl-2-link-1-2 night-mode-element"><a href="Cours_Tle/Mana/Question_3_Peut_on_entretenir_durablement_la_motivation_des_hommes_par_la_seule_remuneration.html">Question 3 : Peut-on entretenir durablement la motivation des hommes par la seule rémunération ?</a></li>
+                  <li class="side-nav-lvl-2-link-1-2 night-mode-element"><a href="Cours_Tle/Mana/Question_6_Quelles_sont_les_principales_options_strategiques_pour_les_entreprises.html">Question 6 : Quelles sont les principales options stratégiques pour les entreprises ?</a></li>
+               </ul>
+            </li>
+            <li>
+               <div id="cours-sig" class="side-nav-lvl-1-link-1 close collapsible-tle night-mode-element">
+                  <span class="material-icons-round night-mode-element">arrow_drop_down</span>SIG
+               </div>
+               <ul id="cours-sig-all-container" class="close">
+                  <li class="side-nav-lvl-2-link-1-3 night-mode-element"><a href="Cours_Tle/SIG/Question_1_Pourquoi_la_qualite_du_systeme_d_information_est_elle_un_enjeu_pour_l_organisation.html">Question 1 : Pourquoi la qualité du système d'information est-elle un enjeu pour l'organisation ?</a></li>
+                  <li class="side-nav-lvl-2-link-1-3 night-mode-element"><a href="Cours_Tle/SIG/Question_2_Les_evolutions_technologiques_sont_elles_exemptes_de_risques_pour_l_organisation.html">Question 2 : Les évolutions technologiques sont-elles exemptes de risques pour l'organisation ?</a></li>
+                  <li class="side-nav-lvl-2-link-1-3 night-mode-element"><a href="Cours_Tle/SIG/Question_3_La_resolution_de_tous_les_problemes_de_gestion_est_elle_automatisable.html">Question 3 : La résolution de tous les problèmes de gestion est-elle automatisable ?</a></li>
+                  <li class="side-nav-lvl-2-link-1-3 night-mode-element"><a href="Cours_Tle/SIG/Question_4_Comment_peut_on_produire_de_l_information_a_partir_de_donnees_contenues_dans_une_base.html">Question 4 : Comment peut-on produire de l'information à partir de données contenues dans une base ?</a></li>
+                  <li class="side-nav-lvl-2-link-1-3 night-mode-element"><a href="Cours_Tle/SIG/Question_5_La_numerisation_suffit_elle_a_valoriser_l_information.html">Question 5 : La numérisation suffit-elle à valoriser l'information ?</a></li>
+                  <li class="side-nav-lvl-2-link-1-3 night-mode-element"><a href="Cours_Tle/SIG/Question_6_Comment_les_technologies_repondent_elles_aux_besoins_de_collaboration.html">Question 6 : Comment les technologies répondent-elles aux besoins de collaboration ?</a></li>
+               </ul>
+            </li>
+         </ul>
+      </aside>
       <main class="night-mode-element">
          <section class="h2-container">
             <h3>Bienvenue sur ce site de révisions du bac STMG !</h3>
@@ -34,27 +194,39 @@
                <li>des <b>cours de 1ère</b> : <a href="Cours_1ere/Droit/Sommaire.html"><b>Droit</b></a>, <a href="Cours_1ere/Eco/Sommaire.html"><b>Économie</b></a>, <a href="Cours_1ere/Mana/Sommaire.html"><b>Management</b></a> ;</li>
                <li>des cours de <b>terminale</b> : <a href="Cours_Tle/Droit/Sommaire.html"><b>Droit</b></a>, <a href="Cours_Tle/Eco/Sommaire.html"><b>Économie</b></a>, <a href="Cours_Tle/Mana/Sommaire.html"><b>Management</b></a> et <a href="Cours_Tle/SIG/Sommaire.html"><b>Systèmes d'Information de Gestion (SIG)</b></a> ;</li>
             </ul>
-            <p>Les publicités ne s'affichent que <b>sur</b> (ou en quittant) <b>cette page</b>.</p>
+            <!-- <p>Les publicités ne s'affichent que <b>sur</b> (ou <b>en quittant</b>) <b>cette page</b>.</p> -->
+            <div class="message-tip night-mode-element">
+               <div class="message-tip night-mode-element">
+                  <span class="material-icons-round night-mode-element">tips_and_updates</span>
+                  <span class="material-icons-round night-mode-element">arrow_drop_down</span>
+                  <span class="message-slider">Les publicités ne s'affichent que <b>sur</b> (ou <b>en quittant</b>) <b>cette page</b>.</span>
+               </div>
+            </div>
+            <!-- <p>Les publicités ne s'affichent que <b>sur</b> (ou en quittant) <b>cette page</b>.</p> -->
          </section>
       </main>
-      <div w3-include-html="fab_footer.html"></div>
+      <!-- <div w3-include-html="fab_footer.html"></div> -->
+      <a id="fab-back-to-top" href="#haut" class="material-icons-round night-mode-element">arrow_upward</a>
+      <footer class="night-mode-element">
+         <div><a href="mailto:oliviermu06@gmail.com" title="oliviermu06@gmail.com">Contact</a></div>
+      </footer>
    </div>
-   <script src="js/include_html.js"></script>
-   <script src="js/wait_for_elm.js"></script>
+   <!-- <script src="js/include_html.js"></script>
+   <script src="js/wait_for_elm.js"></script> -->
    <script>
-   waitForElm('header').then(elm => {
+   // waitForElm('header').then(elm => {
       initHeaderOnScroll();
       setHeaderLinksExpandable();
-   });
-   waitForElm('aside').then(elm => {
+   // });
+   // waitForElm('aside').then(elm => {
       initSideNavCollapseHandle();
       initSideNavHoverHandler();
       setSideNavItemsExpandable();
-   });
-   waitForElm('footer').then(elm => {
-      // initNightMode();
+   // });
+   // waitForElm('footer').then(elm => {
+      initNightMode();
       setFabBackToTop();
-   });
+   // });
    </script>
 </body>
 </html>
