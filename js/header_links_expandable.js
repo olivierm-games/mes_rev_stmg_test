@@ -8,7 +8,7 @@ function setHeaderLinksExpandable() {
    }
 
    const headerLinksExpandableLayouts=document.getElementsByClassName("header-link-expandable-layout");
-   const headerLinksExpandableLayoutsHeights=[null];
+   const headerLinksExpandableLayoutsHeights=[null, null];
    for (var i = 0; i < 2; i++) {
       headerLinksExpandableLayoutsHeights[i]=headerLinksExpandableLayouts[i].clientHeight;
       headerLinksExpandableLayouts[i].style.top=(62-headerLinksExpandableLayoutsHeights[i])+"px";
