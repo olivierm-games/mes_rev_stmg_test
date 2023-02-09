@@ -7,8 +7,7 @@ function setSideNavItemsExpandable() {
       const constI=i, subCollapsiblesCount=collapsibles[i].length;
       for (var j = 0; j < subCollapsiblesCount; j++) {
          collapsibles[i][j].addEventListener("click", function() {
-            collapsibles[i][j].classList.toggle("close");
-            // this.classList.toggle("close");
+            this.classList.toggle("close");
             var container=collapsibles[i][j].nextElementSibling;
             // var container=this.nextElementSibling;
             container.classList.toggle("close");
