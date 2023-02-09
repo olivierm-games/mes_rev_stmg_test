@@ -1,5 +1,5 @@
 function setSideNavItemsExpandable() {
-   const collapsibles=[document.getElementsByClassName("collapsible-1ere"), document.getElementsByClassName("collapsible-tle")];
+   var collapsibles=[document.getElementsByClassName("collapsible-1ere"), document.getElementsByClassName("collapsible-tle")];
    var coursAllContainers=[collapsibles[0][0].nextElementSibling, collapsibles[1][0].nextElementSibling];
    const collapsiblesCount=collapsibles.length;
 
