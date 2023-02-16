@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: free.fr
-Token: 55972ba3375610ff96799d5bcf2c72ba595aa04837e20912b8d2fb3a15524ac1

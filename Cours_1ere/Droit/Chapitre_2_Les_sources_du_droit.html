@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Les sources du droit Chapitre 2 Droit 1ère STMG</title>
+	   <link rel="stylesheet" href="../../css/light.css">
+	   <link rel="stylesheet" href="../../css/dark.css">
+	   <link rel="stylesheet" href="../../css/colors.css">
+	   <link rel="stylesheet" href="../../css/dimens.css">
+	   <link rel="stylesheet" href="../../css/tablet_desktop.css">
+	   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
+	   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+		<script src="../../js/web-font-loader.js"></script>
+		<script src="../../js/fab_back_to_top.js"></script>
+		<script src="../../js/header_links_expandable.js"></script>
+		<script src="../../js/header_on_scroll.js"></script>
+	   <script src="../../js/menu.js"></script>
+		<script src="../../js/night_mode.js"></script>
+		<script src="../../js/side_nav_collapse_handle.js"></script>
+      <script src="../../js/side_nav_hover_handler.js"></script>
+      <script src="../../js/side_nav_item_expandable.js"></script>
+	</head>
+	<body>
+	   <span id="haut"></span>
+		<div id="all-container" class="night-mode-element">
+			<div w3-include-html="../../header.html"></div>
+			<div w3-include-html="../../side_nav.html"></div>
+			<main class="night-mode-element" onclick="onClickMainPageOrHeader(this)">
+		  		<h1>Chapitre 2 : Les sources du droit</h1>
+				<section class="h2-container">
+					<h2>I. Le droit, un ensemble organisé de règles juridiques ?</h2>
+               <p>Le droit ayant vocation à saisir toutes les situations de la vie en société, il ne peut décrire chacune d'elles en raison du <a href="Chapitre_1_Les_principes_et_les_fonctions_du_droit.html#cara_general">caractère général</a> (Chapitre 1) de la règle de droit.</p>
+               <p>C'est pourquoi il se réfère à des <b>catégories juridiques</b> : la personne physique, la victime, le contrat, l'employeur, le salarié, etc.</p>
+               <p>Les règles de droit appartiennent à différentes branches du <b>droit public</b> (droits constitutionnel, administratif et fiscal, non étudiés en STMG) et du <b>droit privé</b>, regroupés dans des <b>codes</b> (accessibles sur <a href="https://www.legifrance.gouv.fr/liste/code?etatTexte=VIGUEUR" target="_blank">Legifrance.gouv.fr<span class="material-icons-round night-mode-element">open_in_new</span></a>)</p>
+               <table>
+
+               </table>
+					<!-- <div class="h3-container">
+						<h3>A. Le principe de la charge de la preuve</h3>
+						<p><u>Le principe général applicable est énoncé à l'article 1315 qui stipule que</u> :</p>
+						<p>« <b>Celui qui réclame l'exécution d'une obligation doit la prouver</b> ».</p>
+					</div> -->
+				</section>
+			</main>
+	    	<nav>
+			 	<a href="Sommaire.html" class="button night-mode-element">Sommaire</a>
+				<a href="Chapitre_3_Le_litige.html" class="button night-mode-element" title="Le litige">Chapitre 3</a>
+			</nav>
+  			<div w3-include-html="../../fab_footer.html"></div>
+		</div>
+  	   <script src="../../js/include_html.js"></script>
+  	   <script src="../../js/wait_for_elm.js"></script>
+  		<script>
+		waitForElm('header').then(elm => {
+			initHeaderOnScroll();
+			setHeaderLinksExpandable();
+		});
+		waitForElm('aside').then(elm => {
+	      initSideNavCollapseHandle();
+			initSideNavHoverHandler();
+			setSideNavItemsExpandable();
+		});
+		waitForElm('footer').then(elm => {
+			initNightMode();
+			setFabBackToTop();
+		});
+  		</script>
+  </body>
+</html>
