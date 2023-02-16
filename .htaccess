@@ -1,10 +1,9 @@
-<IfModule mod_alias.c>
-   Options -Indexes
-   Redirect permanent /mes_rev_stmg_test/Cours_1ere_STMG/Droit https://olivierm-games.github.io/mes_rev_stmg_test/Cours_1ere/Droit
-   Redirect permanent /mes_rev_stmg_test/Cours_1ere_STMG/Economie https://olivierm-games.github.io/mes_rev_stmg_test/Cours_1ere/Eco
-   Redirect permanent /mes_rev_stmg_test/Cours_1ere_STMG/Management https://olivierm-games.github.io/mes_rev_stmg_test/Cours_1ere/Mana
-   Redirect permanent /mes_rev_stmg_test/Cours_Terminale_STMG/SIG https://olivierm-games.github.io/mes_rev_stmg_test/Cours_Tle/SIG
-   Redirect permanent /mes_rev_stmg_test/Cours_Terminale_STMG/Economie https://olivierm-games.github.io/mes_rev_stmg_test/Cours_Tle/Eco
-   Redirect permanent /mes_rev_stmg_test/Cours_Terminale_STMG/Management https://olivierm-games.github.io/mes_rev_stmg_test/Cours_Tle/Mana
-   Redirect permanent /mes_rev_stmg_test/Cours_Terminale_STMG/Droit https://olivierm-games.github.io/mes_rev_stmg_test/Cours_Tle/Droit
-</IfModule>
+Options -Indexes -ExecCGI -FollowSymLinks -Includes
+Redirect permanent /Cours_1ere_STMG/Droit http://mes.revisions.stmg.free.fr/Cours_1ere/Droit
+Redirect permanent /Cours_1ere_STMG/Economie http://mes.revisions.stmg.free.fr/Cours_1ere/Eco
+Redirect permanent /Cours_1ere_STMG/Management http://mes.revisions.stmg.free.fr/Cours_1ere/Mana
+Redirect permanent /Cours_Terminale_STMG/Droit http://mes.revisions.stmg.free.fr/Cours_Tle/Droit
+Redirect permanent /Cours_Terminale_STMG/Economie http://mes.revisions.stmg.free.fr/Cours_Tle/Eco
+Redirect permanent /Cours_Terminale_STMG/Management http://mes.revisions.stmg.free.fr/Cours_Tle/Mana
+Redirect permanent /Cours_Terminale_STMG/SIG http://mes.revisions.stmg.free.fr/Cours_Tle/SIG
+ErrorDocument 404 /page_non_trouvee.html

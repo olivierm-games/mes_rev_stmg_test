@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Mes Révisions STMG, page non trouvée</title>
+   <link rel="stylesheet" href="http://mes.revisions.stmg.free.fr/css/light.css">
+   <link rel="stylesheet" href="http://mes.revisions.stmg.free.fr/css/dark.css">
+   <link rel="stylesheet" href="http://mes.revisions.stmg.free.fr/css/colors.css">
+   <link rel="stylesheet" href="http://mes.revisions.stmg.free.fr/css/dimens.css">
+   <link rel="stylesheet" href="http://mes.revisions.stmg.free.fr/css/tablet_desktop.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+   <script src="http://mes.revisions.stmg.free.fr/js/web-font-loader.js"></script>
+   <script src="http://mes.revisions.stmg.free.fr/js/fab_back_to_top.js"></script>
+   <script src="http://mes.revisions.stmg.free.fr/js/header_links_expandable.js"></script>
+   <script src="http://mes.revisions.stmg.free.fr/js/header_on_scroll.js"></script>
+   <script src="http://mes.revisions.stmg.free.fr/js/menu.js"></script>
+   <script src="http://mes.revisions.stmg.free.fr/js/night_mode.js"></script>
+   <script src="http://mes.revisions.stmg.free.fr/js/side_nav_collapse_handle.js"></script>
+   <script src="http://mes.revisions.stmg.free.fr/js/side_nav_hover_handler.js"></script>
+   <script src="http://mes.revisions.stmg.free.fr/js/side_nav_item_expandable.js"></script>
+</head>
+<body>
+   <span id="haut"></span>
+   <div id="all-container" class="night-mode-element">
+      <div w3-include-html="header.html"></div>
+      <div w3-include-html="side_nav.html"></div>
+      <main class="night-mode-element">
+         <section class="h2-container">
+            <h3>Page non trouvée (l'URL est incorrecte ou a changée).</h3>
+         </section>
+      </main>
+      <nav>
+         <a href="http://mes.revisions.stmg.free.fr/" class="button night-mode-element">Accueil du site</a>
+      </nav>
+      <div w3-include-html="fab_footer.html"></div>
+   </div>
+   <script src="http://mes.revisions.stmg.free.fr/js/include_html.js"></script>
+   <script src="http://mes.revisions.stmg.free.fr/js/wait_for_elm.js"></script>
+   <script>
+   waitForElm('header').then(elm => {
+      initHeaderOnScroll();
+      setHeaderLinksExpandable();
+   });
+   waitForElm('aside').then(elm => {
+      initSideNavCollapseHandle();
+      initSideNavHoverHandler();
+      setSideNavItemsExpandable();
+   });
+   waitForElm('footer').then(elm => {
+      initNightMode();
+      setFabBackToTop();
+   });
+   </script>
+</body>
+</html>
