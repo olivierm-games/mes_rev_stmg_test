@@ -1,7 +1,6 @@
 const ICONS_CODE=["dark_mode", "light_mode"], ICONS_TITLE=["sombre", "clair"], STORAGE_KEYS=["day", "night"];
 let storedNightMode=null;
 let nightModeIndex=1;
-// window.onload=function() {storedNightMode=localStorage.getItem("night-mode");}
 function initNightMode() {
    if(storedNightMode===null) storedNightMode=localStorage.getItem("night-mode");
    const matchMedia=window.matchMedia;
@@ -21,9 +20,9 @@ function toggleNightMode() {
 }
 function saveInLocalStorage() {localStorage.setItem("night-mode", STORAGE_KEYS[nightModeIndex]);}
 function toggleNightModeClasses() {
-   const elements=document.getElementsByClassName("night-mode-element");
-   const elementsCount=elements.length;
-   for(j=0;j<elementsCount;j++) elements[j].classList.toggle("night-mode");
+   const e=document.getElementsByClassName("night-mode-element");
+   const eCount=e.length;
+   for(j=0;j<eCount;j++) e[j].classList.toggle("night-mode");
 }
 function toggleNightModeBtn() {
    const nightModeBtn=document.getElementById("night-mode");

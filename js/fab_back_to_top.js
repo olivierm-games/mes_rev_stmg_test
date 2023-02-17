@@ -11,5 +11,4 @@ function setFabBackToTop() {
    );
    styleFab(0);
 }
-
 function styleFab(scrollTop) {fab.style.opacity=Math.min(.7, (scrollTop-100)/100), fab.style.bottom=Math.max(86, scrollTop-maxFabY)+"px";}
