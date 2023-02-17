@@ -1,7 +1,7 @@
 const ICONS_CODE=["dark_mode", "light_mode"], ICONS_TITLE=["sombre", "clair"], STORAGE_KEYS=["day", "night"];
 let storedNightMode=null;
 let nightModeIndex=1;
-window.onload=function() {storedNightMode=localStorage.getItem("night-mode");}
+// window.onload=function() {storedNightMode=localStorage.getItem("night-mode");}
 function initNightMode() {
    if(storedNightMode===null) storedNightMode=localStorage.getItem("night-mode");
    const matchMedia=window.matchMedia;
