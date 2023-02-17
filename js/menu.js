@@ -1,21 +1,15 @@
-function onMenu() {
-   requestMenuTick();
-}
-
 let menuTicking=false;
-// "debouncing" request to animation frame
+function onMenu() {requestMenuTick();}
 function requestMenuTick() {
    if(!menuTicking) {
       requestAnimationFrame(updateMenu);
       menuTicking=true;
    }
 }
-
 function updateMenu() {
    toggleMenuClasses();
    menuTicking=false;
 }
-
 function toggleMenuClasses() {
    document.getElementsByTagName("aside")[0].classList.toggle("open");
    document.getElementById("menu-svg").classList.toggle("anim");

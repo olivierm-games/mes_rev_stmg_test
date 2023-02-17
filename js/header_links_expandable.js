@@ -6,7 +6,6 @@ function setHeaderLinksExpandable() {
       headerLinks[i].addEventListener("mouseenter", e => {headerLinksExpandableLayouts[j].style.top="62px";});
       headerLinks[i].addEventListener("mouseleave", e => {headerLinksExpandableLayouts[j].style.top=(62-headerLinksExpandableLayoutsHeights[j])+"px";});
    }
-
    const headerLinksExpandableLayouts=document.getElementsByClassName("header-link-expandable-layout");
    const headerLinksExpandableLayoutsHeights=[null, null];
    for (var i = 0; i < 2; i++) {

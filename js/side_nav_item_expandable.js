@@ -2,19 +2,18 @@ function setSideNavItemsExpandable() {
    var collapsibles=[document.getElementsByClassName("collapsible-1ere"), document.getElementsByClassName("collapsible-tle")];
    var coursAllContainers=[collapsibles[0][0].nextElementSibling, collapsibles[1][0].nextElementSibling];
    const collapsiblesCount=collapsibles.length;
-
-   for (var i = 0; i < collapsiblesCount; i++) {
+   for (var i=0; i < collapsiblesCount; i++) {
       const constI=i, subCollapsiblesCount=collapsibles[i].length;
-      for (var j = 0; j < subCollapsiblesCount; j++) {
+      for (var j=0; j < subCollapsiblesCount; j++) {
          collapsibles[i][j].addEventListener("click", function() {
             this.classList.toggle("close");
             var container=this.nextElementSibling;
             container.classList.toggle("close");
-            if(container.style.maxHeight) { // collapse
+            if(container.style.maxHeight) {
                container.style.maxHeight=null;
-            } else { // expand
+            } else {
                container.style.maxHeight=container.scrollHeight+"px";
-               if(!this.classList.contains("side-nav-lvl-0-link")) { // lvl 1 collapsible (not cours1ere/tle)
+               if(!this.classList.contains("side-nav-lvl-0-link")) {
                   coursAllContainerMaxHeights[constI]+=container.scrollHeight;
                   coursAllContainers[constI].style.maxHeight=coursAllContainerMaxHeights[constI]+"px";
                }
