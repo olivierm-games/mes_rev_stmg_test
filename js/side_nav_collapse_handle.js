@@ -1,5 +1,6 @@
 let sideNav=null;
 function initSideNavCollapseHandle() {
+   console.log("initSideNavCollapseHandle");
    sideNav=document.getElementsByTagName("aside")[0];
    sideNav.addEventListener('click', e => e.stopPropagation());
    document.addEventListener('click', function(e) {
@@ -8,4 +9,5 @@ function initSideNavCollapseHandle() {
       if(target.id==='menu-svg' || target.tagName==='aside' || !isSideNavOpen) return;
       onMenu();
    }, false);
+   console.log("initSideNavCollapseHandle end");
 }
