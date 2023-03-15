@@ -1,10 +1,4 @@
-:root {
-   --color-secondary: blue; /* "top of page" button, scrolling progress bar... (accent) bg */
-   --color-secondary-dark: /* TODO:  */; /* accent dark bg */
-
-   --color-on-secondary: /* TODO:  */; /* "top of page" button, scrolling progress bar... (accent) text color */
-   --color-on-secondary-dark: /* TODO:  */; /* "top of page" button, scrolling progress bar... (accent) text dark */
-}
+:root {--color-secondary: blue;}
 
 body {
    --color-background: powderblue;

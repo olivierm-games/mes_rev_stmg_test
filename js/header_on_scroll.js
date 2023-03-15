@@ -2,10 +2,8 @@ let lastScrollY, currentScrollY;
 let ticking=false;
 let header=null;
 function initHeaderOnScroll() {
-   console.log("initHeaderOnScroll");
    header=document.getElementsByTagName("header")[0];
    document.addEventListener("scroll", onScroll, false);
-   console.log("initHeaderOnScroll end");
 }
 function onScroll() {
    currentScrollY=window.pageYOffset;

@@ -2,14 +2,12 @@ const ICONS_CODE=["dark_mode", "light_mode"], ICONS_TITLE=["sombre", "clair"], S
 let storedNightMode=null;
 let nightModeI=1;
 function initNightMode() {
-   console.log("initNightMode");
    if(storedNightMode===null) storedNightMode=localStorage.getItem("night-mode");
    const matchMedia=window.matchMedia;
    if(storedNightMode!==null) {
       if(storedNightMode==="night") toggleNightMode();
    } else if(matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) toggleNightMode();
    if(matchMedia) window.matchMedia("(prefers-color-scheme: dark)").addListener(e => toggleNightMode());
-   console.log("initNightMode end");
 }
 function onToggleNightMode() {
    saveInLocalStorage();

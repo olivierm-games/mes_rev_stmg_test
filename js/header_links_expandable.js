@@ -1,5 +1,4 @@
 function setHeaderLinksExpandable() {
-   console.log("setHeaderLinksExpandable");
    const headerLinks=document.getElementsByClassName("header-link");
    const headerLinksCount=headerLinks.length;
    for(i=0;i<headerLinksCount;i++) {
@@ -13,5 +12,4 @@ function setHeaderLinksExpandable() {
       headerLinksExpandableLayoutsHeights[i]=headerLinksExpandableLayouts[i].clientHeight;
       headerLinksExpandableLayouts[i].style.top=(62-headerLinksExpandableLayoutsHeights[i])+"px";
    }
-   console.log("setHeaderLinksExpandable end");
 }

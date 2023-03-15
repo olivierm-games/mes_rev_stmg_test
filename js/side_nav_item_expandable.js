@@ -1,5 +1,4 @@
 function setSideNavItemsExpandable() {
-   console.log("setSideNavItemsExpandable");
    var collapsibles=[document.getElementsByClassName("collapsible-1ere"), document.getElementsByClassName("collapsible-tle")];
    var coursAllContainers=[collapsibles[0][0].nextElementSibling, collapsibles[1][0].nextElementSibling];
    const collapsiblesCount=collapsibles.length;
@@ -25,5 +24,4 @@ function setSideNavItemsExpandable() {
    var coursAllContainerMaxHeights=[coursAllContainers[0].scrollHeight, coursAllContainers[1].scrollHeight];
    coursAllContainers[0].style.maxHeight=coursAllContainerMaxHeights[0]+"px";
    coursAllContainers[1].style.maxHeight=coursAllContainerMaxHeights[1]+"px";
-   console.log("setSideNavItemsExpandable end");
 }

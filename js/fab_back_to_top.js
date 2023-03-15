@@ -1,7 +1,6 @@
 let allContainer, fab=null;
 let maxFabY=0;
 function setFabBackToTop() {
-   console.log("setFabBackToTop");
    allContainer=document.getElementById('all-container');
    fab=document.getElementById('fab-back-to-top');
    maxFabY=allContainer.offsetHeight-window.innerHeight-86;
@@ -11,6 +10,5 @@ function setFabBackToTop() {
       {passive: true}
    );
    styleFab(0);
-   console.log("setFabBackToTop end");
 }
 function styleFab(scrollTop) {fab.style.opacity=Math.min(.7, (scrollTop-100)/100), fab.style.bottom=Math.max(86, scrollTop-maxFabY)+"px";}

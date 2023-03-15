@@ -12,7 +12,6 @@ html {scroll-behavior: smooth;}
 
 * {box-sizing: border-box;}
 
-/* For mobile phones: */
 [class*="col-"] {width: 100%;}
 
 #all-container {
@@ -61,7 +60,6 @@ header {
    fill: var(--color-on-primary);
 }
 
-/* Menu bars (svg) and anims */
 #menu-svg-top-bar {transform-origin: top left;}
 #menu-svg-bottom-bar {transform-origin: bottom left;}
 #menu-svg-top-bar, #menu-svg-bottom-bar {transition: transform var(--menu-anim-duration);}
@@ -149,7 +147,6 @@ a:link {text-decoration: none;}
    display: flex;
    flex-direction: column;
    font-family: 'Oregano', 'Arial Black', sans-serif;
-   /* font-family: 'Oregano', 'Poiret One', 'Lilita One', 'Itim', 'Arial Black'; */
    font-weight: normal;
    font-size: 2em;
    font-style: italic;
@@ -219,7 +216,6 @@ aside ul li ul {padding-inline-start: 1em;}
    transition: background-color var(--hover-anim-duration);
 }
 
-/* level 0 (Cours 1ere) */
 .side-nav-lvl-0-link {
    font-size: 108%;
    padding: var(--side-nav-vertical-padding) .2em;
@@ -522,46 +518,6 @@ a:active.button {top: 2px;}
 
 table.borderless {border-style: hidden;}
 
-.message-tip {
-    border-radius: 1em;
-    display: flex;
-    align-items: center;
-    padding: 0.7em 1em;
-    width: fit-content;
-    cursor: pointer;
-    box-shadow: 0.02em 0.05em 0.1em 0.05em #32323288;
-    margin: 0 0 2% 2%;
-    background-color: var(--color-button-background);
-    transition: opacity var(--hover-anim-duration);
-    opacity: .9;
-    min-height: 52px;
-}
-
-.message-tip.closed > .message-slider {
-   transition: font-size .6s, opacity .6s;
-   font-size: 0;
-   opacity: 0;
-}
-
-
-
-.message-tip span {color: var(--color-button);}
-
-.message-tip:hover {opacity: 0.8;}
-
-.message-tip span:nth-child(2) {
-   transform-origin: center;
-   transform: rotate(90deg);
-   transition: transform var(--menu-anim-duration);
-}
-
-.message-tip.closed span:nth-child(2) {transform: rotate(-90deg);}
-
-.message-slider {
-   transition: font-size .6s, opacity .6s;
-   padding: 1% 0;
-}
-
 .example-tip {
    border-radius: .5em;
    margin: .5em 0;
@@ -648,18 +604,14 @@ pre.normal {white-space: normal;}
 
 .no-user-select {user-select: none;}
 
-.cite {
-   float: right;
-}
+.cite {float: right;}
 
 p.cite a {
    display: inline-flex;
    align-items: center;
 }
 
-.cite a cite {
-   display: contents;
-}
+.cite a cite {display: contents;}
 
 .img-max-width {max-width: 100%;}
 
@@ -678,9 +630,7 @@ p.cite a {
    padding: 0 1em;
 }
 
-#flex-tables-container {
-   display: flex;
-}
+#flex-tables-container {display: flex;}
 
 #sig-flex-sync-container {
    display: flex;

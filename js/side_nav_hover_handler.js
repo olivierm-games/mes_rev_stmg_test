@@ -1,6 +1,5 @@
 let cours1Ere=coursTer=cours1ereDroit=cours1ereEco=cours1ereMana=coursTerDroit=coursTerEco=coursTerMana=coursSIG=null;
 function initSideNavHoverHandler() {
-   console.log("initSideNavHoverHandler");
    cours1Ere=document.getElementById("cours-1ere");
    coursTer=document.getElementById("cours-tle");
    cours1ereDroit=document.getElementsByClassName("side-nav-lvl-2-link-0-0");
@@ -19,7 +18,6 @@ function initSideNavHoverHandler() {
    setAllParentsHoverState(coursTerEco, document.getElementById("cours-tle-eco"), coursTer);
    setAllParentsHoverState(coursTerMana, document.getElementById("cours-tle-mana"), coursTer);
    setAllParentsHoverState(coursSIG, document.getElementById("cours-sig"), coursTer);
-   console.log("initSideNavHoverHandler end");
 }
 function setParentHoverState(targets, parent) {
    const targetsCount=targets.length;
